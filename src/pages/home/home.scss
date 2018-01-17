@@ -1,20 +1,29 @@
 page-home {
 
   ion-toolbar {
-    padding: 5px 18px 2px 12px !important;
+    padding: 6px 18px 2px 12px !important;
   }
 
   .tou-xiang {
-    width: 26px;
-    height: 26px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     vertical-align: top;
+    border: 2px solid #ffffff;
+    margin-right: 3px;
   }
 
   .jiao-biao {
+    display: inline-block;
     position: absolute;
     top: 0;
     left: 60%;
+    font-size: 0.8rem;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    background-color: #f52115;
+    border-radius: 50%;
   }
 
   .bottom-tabs{
