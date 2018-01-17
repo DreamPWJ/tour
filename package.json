@@ -5,16 +5,16 @@
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
+    "ionic:serve": "ionic-app-scripts serve",
+    "ionic cordova build android prod": "ionic cordova build android --prod",
+    "ionic cordova run android -l -c": "ionic cordova run android  -l -c",
+    "ionic cordova build android release": "ionic cordova build android --prod --release",
+    "ionic cordova platform rm android ": "ionic cordova platform rm android",
+    "ionic cordova platform add android ": "ionic cordova platform add android",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
-    "ionic:build": "ionic-app-scripts build",
-    "ionic cordova platform rm android ": "ionic cordova platform rm android",
-    "ionic cordova platform add android ": "ionic cordova platform add android",
-    "ionic cordova run android -l -c": "ionic cordova run android  -l -c",
-    "ionic cordova build android release": "ionic cordova build android --prod --release",
-    "ionic:serve": "ionic-app-scripts serve",
-    "ionic cordova build android prod": "ionic cordova build android --prod"
+    "ionic:build": "ionic-app-scripts build"
   },
   "dependencies": {
     "@angular/common": "5.0.3",
