@@ -9,7 +9,7 @@ General Animations
 }
 @keyframes pop-in {
     0% {
-        transform: scale(0); 
+        transform: scale(0);
     }
     45% {
         transform: scale(0);
@@ -112,6 +112,26 @@ General Animations
         transform: translate(0px, 0px) rotate(0deg);
     }
 }
+
+// FADE-IN UP ------------------------
+.fadein-up {
+  animation: fadein-up ease 1s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode: forwards;
+  /*when the spec is finished*/
+}
+@keyframes fadein-up {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
 
 // FADE-IN DOWN ------------------------
 .fadein-down {
