@@ -52,6 +52,25 @@ a {
   -webkit-transform: translate(-50%, -50%);
 }
 
+.border-radius-50 {
+  border-radius: 50%!important;
+}
+
+.no-border {
+  border: none;
+}
+
+.bottom-fixed {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.nowrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 .transparent-header {
   // This is just to make the header transparent and button/icon with white color
