@@ -52,8 +52,19 @@ a {
   -webkit-transform: translate(-50%, -50%);
 }
 
+.vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
 .border-radius-50 {
-  border-radius: 50%!important;
+  border-radius: 50% !important;
+}
+
+.opacity-6 {
+  opacity: 0.6;
 }
 
 .no-border {
