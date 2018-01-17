@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +12,61 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@import "../assets/fonts/iconfont.scss";
+
+$light: #fff;
+$stable: #f8f8f8;
+$positive: #00ACFF;
+$calm: #11c1f3;
+$balanced: #33cd5f;
+$energized: #f26604;
+$yellow: #f2cb20;
+$assertive: #ef473a;
+$royal: #886aea;
+$dark: #444;
+
+$colors-list: (light:$light, stable:$stable, positive:$positive, calm:$calm, balanced:$balanced, energized:$energized, yellow:$yellow, assertive:$assertive, royal:$royal, dark:$dark);
+@each $key, $value in $colors-list {
+  .#{$key} {
+    color: $value !important;
+  }
+  .#{$key}-bg {
+    background-color: $value !important;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.full-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.center-center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.is-not-data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+.is-not-data i, .is-not-data .icon {
+  font-size: 10rem !important;
+}
+
+.is-not-data p {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+}
