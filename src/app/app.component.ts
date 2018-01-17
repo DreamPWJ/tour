@@ -1,16 +1,15 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {IonicApp, Platform} from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-
-import { TabsPage } from '../pages/tabs/tabs';
+import {StatusBar} from '@ionic-native/status-bar';
+import {SplashScreen} from '@ionic-native/splash-screen';
 import {HardwareBackButtonProvider} from "../providers/native/back-button.provider";
+import {HomePage} from "../pages/home/home";
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = TabsPage;
+  rootPage:any = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,  ionicApp: IonicApp, hardwareBackButtonProvider: HardwareBackButtonProvider) {
     platform.ready().then(() => {
