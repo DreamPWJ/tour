@@ -10,6 +10,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {AppService} from "../providers/util/app.service";
+import {HardwareBackButtonProvider} from "../providers/native/back-button.provider";
 
 @NgModule({
   declarations: [
@@ -37,8 +39,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage
   ],
   providers: [
+    AppService,
     StatusBar,
     SplashScreen,
+    HardwareBackButtonProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
