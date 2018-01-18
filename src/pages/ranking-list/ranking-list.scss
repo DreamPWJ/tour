@@ -2,11 +2,56 @@ page-ranking-list {
   ion-navbar {
     padding: 5px 18px 5px 2px !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    opacity: 0.8;
+    opacity: 0.6;
+  }
+
+  .pai-ming-bg{
+    margin: 1px 0;
+    background-color:#886aea;
+    border-radius: 0 50px 50px  0;
+  }
+
+  .pai-ming-bg h4{
+    padding-left: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .pai-ming-bg h5{
+    font-size: 1.6rem;
+  }
+
+  .pai-ming-bg p{
+    font-size: 1rem;
+  }
+
+  .pai-ming-bg .col.num{
+    width: 2rem!important;
+  }
+
+  .km{
+    font-weight: 600;
   }
 
   .bottom {
     background-color: rgba(0, 0, 0, 0.5);
   }
 
+  .bottom .pai-ming-bg{
+    margin: 10px 0;
+    background-color:#886aea;
+    border-radius: 0 50px 50px  0;
+  }
+
+  .pai-ming-bg ion-col{
+    padding: 0 3px;
+  }
+
+  .tou-xiang {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    vertical-align: top;
+    border: 2px solid #ffffff;
+    margin-right: 2px;
+  }
 }
