@@ -20,8 +20,12 @@ export class MyApp {
       } else if (platform.is('android')) {
         statusBar.backgroundColorByHexString("#00A0FE");
       }*/
-      statusBar.styleDefault();
-      splashScreen.hide();
+
+      setTimeout(()=>{
+        statusBar.styleDefault();
+        splashScreen.hide();
+      },800);
+
       hardwareBackButtonProvider.registerBackButtonAction(ionicApp);//注册返回按键事件
     });
   }
