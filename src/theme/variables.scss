@@ -42,7 +42,7 @@ $colors: (
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
 
-$toolbar-background: color($colors, primary) !default;
+/*$toolbar-background: color($colors, blue) !default;*/
 $tabs-background: #fff !default;
 $list-border-color: #EBEBEB !default;
 $toast-max-width : 100%!default;
@@ -57,7 +57,6 @@ $tabs-ios-border-color: #EBEBEB !default;
 /*$toast-ios-background:color($colors, primary) !default;*/
 .ion-ios-arrow-back:before {
   content: "\e7ed"!important;
-  color: #585858 !important;
 }
 
 

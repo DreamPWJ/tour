@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'ranking-list.html',
 })
 export class RankingListPage {
-
+  backgroundImage = 'assets/imgs/main/home-bg.jpg';
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
