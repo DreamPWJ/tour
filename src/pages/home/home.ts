@@ -1,6 +1,7 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import {NavController, Slides} from 'ionic-angular';
 import ECharts from 'echarts';
+import '../../assets/js/china.js'
 
 @Component({
   selector: 'page-home',
@@ -28,8 +29,8 @@ export class HomePage {
     let element = this.chart.nativeElement;
     /*    element.style.width = (document.body.clientWidth - 16) + 'px';//设置容器宽度*/
     var data = [
-      {name: '成都', value: 80},
-      {name: '武汉', value: 50},
+      {name: '成都', value: 60},
+      {name: '武汉', value: 30},
 
     ];
     var geoCoordMap = {
@@ -52,6 +53,7 @@ export class HomePage {
       return res;
     };
     let myChart = ECharts.init(element);
+
     myChart.setOption({
       backgroundColor: '',
       title: {
@@ -82,13 +84,14 @@ export class HomePage {
             show: false
           }
         },
-        center: [115.97, 29.71],
-        zoom:0.3,
-        roam: true,
+/*        center: [115.97, 29.71],*/
+        zoom:1.2,
+        roam: false,
         itemStyle: {
           normal: {
-            areaColor: '#323c48',
-            borderColor: '#111'
+            areaColor: '#fff',
+            borderColor: '#111',
+            opacity:0.6
           },
           emphasis: {
             areaColor: '#2a333d'
@@ -97,7 +100,7 @@ export class HomePage {
       },
       series: [
         {
-          name: 'pm2.5',
+          name: '去过',
           type: 'scatter',
           coordinateSystem: 'geo',
           data: convertData(data),
@@ -111,7 +114,7 @@ export class HomePage {
               show: false
             },
             emphasis: {
-              show: true
+              show: false
             }
           },
           itemStyle: {
@@ -139,7 +142,7 @@ export class HomePage {
             normal: {
               formatter: '{b}',
               position: 'right',
-              show: true
+              show: false
             }
           },
           itemStyle: {
