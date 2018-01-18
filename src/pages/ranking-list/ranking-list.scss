@@ -1,19 +1,8 @@
 page-ranking-list {
   ion-navbar {
-    padding: 6px 18px 2px 2px !important;
+    padding: 5px 18px 5px 2px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0.8;
   }
-
-  .jiao-biao {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 60%;
-    opacity: 0.9;
-    font-size: 0.9rem;
-    width: 18px;
-    height: 18px;
-    line-height: 18px;
-    background-color: #B30500;
-    border-radius: 50%;
-  }
+  
 }
