@@ -21,18 +21,55 @@ page-home {
     position: absolute;
     top: 0;
     left: 60%;
+    opacity: 0.9;
     font-size: 0.9rem;
     width: 18px;
     height: 18px;
     line-height: 18px;
-    background-color: #f52115;
+    background-color: #B30500;
     border-radius: 50%;
   }
 
-  .di-tu {
+  .map {
     margin-top: 10vh;
     width: 100vw;
     height: 30vh;
+  }
+
+  .go-to p {
+    margin: auto;
+    width: 60vw;
+    padding: 3px 8px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #ECD14C;
+    color: rgba(34, 34, 34, 0.8);
+
+  }
+
+  .go-to p span {
+    font-size: 1.6rem;
+    padding: 0 3px;
+  }
+
+  .tour-data {
+    margin-top: 0.6rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .tour-data h2, .tour-data p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .tour-data h2 {
+    font-family: Radikal;
+    font-size: 3rem;
+  }
+
+  .tour-data p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
   }
 
   .bottom-tabs {

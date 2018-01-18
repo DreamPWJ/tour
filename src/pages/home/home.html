@@ -15,7 +15,17 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-  <div #chart class="di-tu" ></div>
+  <div #chart class="map" ></div>
+  <div class="go-to">
+    <p>我已经去过<span>2</span>个省/<span>2</span>个城市</p>
+  </div>
+  <ion-grid class="tour-data ">
+    <ion-row justify-content-around  text-center >
+      <ion-col><h2>9.8</h2><p>距离 KM</p></ion-col>
+      <ion-col><h2>2</h2><p>旅行 DAY</p></ion-col>
+      <ion-col><h2>0</h2><p>积分 POINT</p></ion-col>
+    </ion-row>
+  </ion-grid>
     <ion-grid class="bottom-tabs ">
       <ion-row  class="fadein-up" justify-content-around align-items-center text-center  >
         <ion-col col-2 [navPush]="'RankingListPage'" >

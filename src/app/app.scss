@@ -14,6 +14,8 @@
 // automatically applied to the <body> element in the app.
 @import "../assets/fonts/iconfont.scss";
 @import "../theme/animations.scss";
+@import "../assets/fonts/radikal.scss";
+@import "../assets/fonts/roboto.scss";
 
 $light: #fff;
 $stable: #f8f8f8;
@@ -34,6 +36,16 @@ $colors-list: (light:$light, stable:$stable, positive:$positive, calm:$calm, bal
   .#{$key}-bg {
     background-color: $value !important;
   }
+}
+
+.radikal {
+  font-family: Radikal !important;
+  font-style: normal;
+}
+
+.roboto {
+  font-family: Roboto !important;
+  font-style: normal;
 }
 
 a {
