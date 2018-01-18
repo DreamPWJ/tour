@@ -57,6 +57,7 @@ $tabs-ios-border-color: #EBEBEB !default;
 $toast-ios-background:color($colors, primary) !default;
 .ion-ios-arrow-back:before {
   content: "\e7ed"!important;
+  color: #585858 !important;
 }
 
 
