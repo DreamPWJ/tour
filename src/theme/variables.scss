@@ -47,7 +47,6 @@ $tabs-background: #fff !default;
 $list-border-color: #EBEBEB !default;
 $toast-max-width : 100%!default;
 $img-placeholder-background: transparent !default;
-
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
@@ -55,6 +54,11 @@ $img-placeholder-background: transparent !default;
 $toolbar-ios-border-color: transparent!default;
 $tabs-ios-border-color: #EBEBEB !default;
 /*$toast-ios-background:color($colors, primary) !default;*/
+
+.toolbar-title-ios{
+  font-weight: 500!important;
+}
+
 .ion-ios-arrow-back:before {
   content: "\e7ed"!important;
   font-size: 2.2rem;
