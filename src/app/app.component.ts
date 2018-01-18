@@ -24,7 +24,7 @@ export class MyApp {
       setTimeout(()=>{
         statusBar.styleDefault();
         splashScreen.hide();
-      },800);
+      },1000);
 
       hardwareBackButtonProvider.registerBackButtonAction(ionicApp);//注册返回按键事件
     });
