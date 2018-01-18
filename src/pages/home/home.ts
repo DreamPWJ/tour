@@ -97,7 +97,8 @@ export class HomePage {
             areaColor: '#2a333d'
           }
 
-        }
+        },
+        regions: [{name: '南海诸岛', value: 0, itemStyle: {normal: {opacity: 0, label: {show: false}}}}],
       },
       series: [
         {
