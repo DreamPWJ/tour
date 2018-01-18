@@ -33,10 +33,10 @@
   </ion-grid>
 
 
-  <ion-slides class="slides" (ionSlideDidChange)="slideChanged()" autoplay="6000" loop pager speed="1000">
+  <ion-slides [navPush]="'RankingListPage'" class="slides" (ionSlideDidChange)="slideChanged()" autoplay="6000" loop pager speed="1000">
     <ion-slide >
       <p>自驾游排行榜</p>
-      <ion-row tappable  [navPush]="'RankingListPage'" align-items-center justify-content-around>
+      <ion-row tappable   align-items-center justify-content-around>
         <ion-col>击败平台 <strong >29%</strong>的旅行者</ion-col>
         <ion-col text-right ><img class="tou-xiang-1" src="assets/imgs/main/head.jpg"/>
           <img class="tou-xiang-1" src="assets/imgs/main/head.jpg"/> <img
@@ -45,7 +45,7 @@
     </ion-slide>
     <ion-slide >
       <p>自驾游排行榜</p>
-      <ion-row tappable [navPush]="'RankingListPage'" align-items-center justify-content-around>
+      <ion-row tappable align-items-center justify-content-around>
         <ion-col>击败平台 <strong >50%</strong>的旅行者</ion-col>
         <ion-col text-right ><img class="tou-xiang-1" src="assets/imgs/main/head.jpg"/>
           <img class="tou-xiang-1" src="assets/imgs/main/head.jpg"/> <img
@@ -54,7 +54,7 @@
     </ion-slide>
     <ion-slide >
       <p>自驾游排行榜</p>
-      <ion-row tappable  [navPush]="'RankingListPage'" align-items-center justify-content-around>
+      <ion-row tappable  align-items-center justify-content-around>
         <ion-col>击败平台 <strong >80%</strong>的旅行者</ion-col>
         <ion-col text-right ><img class="tou-xiang-1" src="assets/imgs/main/head.jpg"/>
           <img class="tou-xiang-1" src="assets/imgs/main/head.jpg"/> <img
