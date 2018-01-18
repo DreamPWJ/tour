@@ -96,6 +96,7 @@ export class HomePage {
           emphasis: {
             areaColor: '#2a333d'
           }
+
         }
       },
       series: [
@@ -124,7 +125,7 @@ export class HomePage {
           }
         },
         {
-          name: 'Top 5',
+          name: '去过',
           type: 'effectScatter',
           coordinateSystem: 'geo',
           data: convertData(data.sort(function (a, b) {

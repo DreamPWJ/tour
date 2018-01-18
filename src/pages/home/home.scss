@@ -31,24 +31,25 @@ page-home {
   }
 
   .map {
-    margin-top: 3.2rem;
+    margin-top: 3rem;
     width: 100vw;
     height: 35vh;
   }
 
   .go-to p {
-    margin:1rem auto 0;
+    margin: 1rem auto 0;
     width: 60vw;
+    font-size: 1rem;
     padding: 2px 8px;
     text-align: center;
     border-radius: 15px;
     background-color: #ECD14C;
-    color: rgba(34, 34, 34, 0.8);
+    color: rgba(34, 34, 34, 0.7);
 
   }
 
   .go-to p span {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     padding: 0 3px;
   }
 
@@ -68,14 +69,14 @@ page-home {
   }
 
   .tour-data p {
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.7);
   }
 
   .slides {
     position: relative;
-    margin-top: 1.6rem;
+    margin-top: 1.5rem;
     background-color: rgba(255, 255, 255, 0.3);
     height: 8rem;
     color: #ffffff;
@@ -138,6 +139,7 @@ page-home {
   .bottom-tabs {
     position: fixed;
     bottom: 0;
+    padding-bottom: 0;
     color: #ffffff;
   }
 
@@ -160,7 +162,7 @@ page-home {
   }
 
   .bottom-tabs .icon ion-icon {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 3.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 3rem;
   }
 }
