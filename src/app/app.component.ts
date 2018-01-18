@@ -15,16 +15,15 @@ export class MyApp {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-/*      if (platform.is('ios')) {
-        statusBar.styleLightContent();
-      } else if (platform.is('android')) {
-        statusBar.backgroundColorByHexString("#00A0FE");
-      }*/
-
-      setTimeout(()=>{
+      if (platform.is('ios')) {
         statusBar.styleDefault();
+        /*          statusBar.styleLightContent();*/
+      } else if (platform.is('android')) {
+        statusBar.backgroundColorByHexString("#f4f4f4");
+      }
+      setTimeout(()=>{
         splashScreen.hide();
-      },1000);
+      },800);
 
       hardwareBackButtonProvider.registerBackButtonAction(ionicApp);//注册返回按键事件
     });
