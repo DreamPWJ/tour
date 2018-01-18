@@ -26,30 +26,37 @@ page-home {
     border-radius: 50%;
   }
 
-  .bottom-tabs{
+  .di-tu{
+    margin-top: 10vh;
+    width: 80vw;
+    height: 30vh;
+  }
+
+  .bottom-tabs {
     position: fixed;
     bottom: 1.2rem;
     color: #ffffff;
   }
 
-  .bottom-tabs ion-col{
+  .bottom-tabs ion-col {
     color: rgba(255, 255, 255, 0.6);
   }
 
-  .bottom-tabs ion-col:active .icon{
+  .bottom-tabs ion-col:active .icon {
     background-color: rgba(255, 255, 255, 0.3);
   }
 
-  .bottom-tabs .icon{
+  .bottom-tabs .icon {
     width: 5rem;
     height: 5rem;
     line-height: 5rem;
+    margin: auto;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
 
   }
 
-  .bottom-tabs .icon ion-icon{
+  .bottom-tabs .icon ion-icon {
     color: rgba(255, 255, 255, 0.7);
     font-size: 3.6rem;
   }
