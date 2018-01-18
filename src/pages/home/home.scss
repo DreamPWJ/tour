@@ -39,7 +39,7 @@ page-home {
   .go-to p {
     margin: auto;
     width: 60vw;
-    padding: 3px 8px;
+    padding: 2px 8px;
     text-align: center;
     border-radius: 15px;
     background-color: #ECD14C;
@@ -53,7 +53,7 @@ page-home {
   }
 
   .tour-data {
-    margin-top: 0.6rem;
+    margin-top: 1rem;
     color: rgba(255, 255, 255, 0.9);
   }
 
@@ -72,9 +72,71 @@ page-home {
     color: rgba(255, 255, 255, 0.7);
   }
 
+  .slides {
+    position: relative;
+    margin-top: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 8rem;
+    color: #ffffff;
+    border-top: 3px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .slides .swiper-pagination {
+    text-align: left;
+    padding-left: 8px;
+    bottom: 0px;
+  }
+
+  .slides .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+  }
+
+  .slides .swiper-pagination .swiper-pagination-bullet {
+    background-color: #ffffff;
+  }
+
+  .slides ion-slide {
+    margin-top: -0.5rem;
+  }
+
+  .slides ion-slide p {
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: left;
+    margin: 0;
+  }
+
+  .slides ion-slide ion-row {
+    padding-left: 0.6rem;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+  }
+
+  .slides ion-slide ion-row strong {
+    font-size: 1.8rem;
+    padding: 0 2px;
+    color: #ECD14C;
+
+  }
+  .slides .tou-xiang-1 {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    vertical-align: top;
+    border: 2px solid #eca722;
+    margin-right: 3px;
+  }
+
+  .slides .tou-xiang-1:first-of-type {
+    border: 2px solid #ec5d1c;
+  }
+
   .bottom-tabs {
     position: fixed;
-    bottom: 1.2rem;
+    bottom: 1rem;
     color: #ffffff;
   }
 
@@ -87,9 +149,9 @@ page-home {
   }
 
   .bottom-tabs .icon {
-    width: 5rem;
-    height: 5rem;
-    line-height: 5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
     margin: auto;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
@@ -98,6 +160,6 @@ page-home {
 
   .bottom-tabs .icon ion-icon {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 3.6rem;
+    font-size: 3.2rem;
   }
 }

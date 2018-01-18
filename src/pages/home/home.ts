@@ -1,5 +1,5 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {NavController, Slides} from 'ionic-angular';
 import ECharts from 'echarts';
 
 @Component({
@@ -8,6 +8,7 @@ import ECharts from 'echarts';
 })
 export class HomePage {
   @ViewChild('chart') chart: ElementRef;
+  @ViewChild(Slides) slides: Slides;
   backgroundImage = 'assets/imgs/main/home-bg.jpg';
 
   constructor(public navCtrl: NavController) {
@@ -16,6 +17,11 @@ export class HomePage {
 
   ionViewDidEnter() {
     this.initChart();
+  }
+
+  slideChanged() {
+    let currentIndex = this.slides.getActiveIndex();
+/*    console.log('Current index is', currentIndex);*/
   }
 
   initChart() {

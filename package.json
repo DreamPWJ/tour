@@ -13,8 +13,7 @@
     "ionic cordova platform add android ": "ionic cordova platform add android",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint",
-    "ionic:build": "ionic-app-scripts build"
+    "lint": "ionic-app-scripts lint"
   },
   "dependencies": {
     "@angular/common": "5.0.3",
