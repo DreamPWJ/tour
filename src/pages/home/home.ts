@@ -20,9 +20,16 @@ export class HomePage {
     this.initChart();
   }
 
+  /**
+   *   导航页面
+   */
+  push() {
+    this.navCtrl.push('MyProfilePage')
+  }
+
   slideChanged() {
-/*    let currentIndex = this.slides.getActiveIndex();*/
-/*    console.log('Current index is', currentIndex);*/
+    /*    let currentIndex = this.slides.getActiveIndex();*/
+    /*    console.log('Current index is', currentIndex);*/
   }
 
   initChart() {
@@ -84,14 +91,14 @@ export class HomePage {
             show: false
           }
         },
-/*        center: [115.97, 29.71],*/
-        zoom:1.2,
+        /*        center: [115.97, 29.71],*/
+        zoom: 1.2,
         roam: false,
         itemStyle: {
           normal: {
             areaColor: '#fff',
             borderColor: '#111',
-            opacity:0.6
+            opacity: 0.6
           },
           emphasis: {
             areaColor: '#2a333d'
