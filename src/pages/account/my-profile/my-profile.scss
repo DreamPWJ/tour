@@ -76,14 +76,20 @@ page-my-profile {
     position: absolute;
     width: 1px;
     height: 38%;
-    background-color: rgba(255, 255, 255, 0.65);
+    background-color: rgba(255, 255, 255, 0.6);
   }
+
+  .user-info .zu-ji{
+    margin-bottom: 3px;
+    font-size: 0.9rem ;
+  }
+
   .user-info button {
     height: 3rem;
   }
 
   .you-ji-list .you-ji-item {
-    padding: 12px 12px 0;
+    padding: 15px 12px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 0;
   }
@@ -97,12 +103,18 @@ page-my-profile {
     margin: 0;
     padding: 0;
   }
+
   .you-ji-list ion-row ion-item {
     height: 35px;
     min-height: 35px !important;
   }
+
   .you-ji-list ion-avatar img {
     width: 28px !important;
     height: 28px !important;
+  }
+
+  .you-ji-list .name{
+    margin: 0;
   }
 }
