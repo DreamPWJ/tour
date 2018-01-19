@@ -1,8 +1,21 @@
 page-my-profile {
+/*  .slide-zoom {
+    height: 100%;
+  }
+  .segment-md .segment-button {
+    color:#585858;
+  }
+
+  .segment-md .segment-button.segment-activated {
+    color:#000 ;
+    font-weight: bold;
+  }*/
+
   .header-list {
     padding: 5.6rem 0 0;
     background-image: url('../assets/imgs/account/profile-head-bg.png');
     background-size: cover;
+    margin-bottom: 0;
   }
 
   .icon-search {

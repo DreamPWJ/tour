@@ -39,7 +39,26 @@
       </ion-col>
     </ion-row>
   </ion-list>
-
+  <!-- mode="md":指定为Android手机模式的 -->
+  <ion-segment [(ngModel)]="testSegment" mode="md" color="primary" class="stable-bg">
+    <ion-segment-button *ngFor="let testItem of testArray" value="{{testItem}}">
+      {{testItem}}
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="testSegment" (swipe)="swipeEvnet($event)">
+    <div *ngSwitchCase="'菜单一'">
+     555555555555菜单一
+    </div>
+    <div *ngSwitchCase="'菜单二'">
+      555555555555 菜单二
+    </div>
+    <div *ngSwitchCase="'菜单三'">
+      555555555555 菜单三
+    </div>
+    <div *ngSwitchCase="'菜单四'">
+      555555555555 菜单四
+    </div>
+  </div>
 </ion-content>
 
 

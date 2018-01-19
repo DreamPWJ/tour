@@ -14,12 +14,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'my-profile.html',
 })
 export class MyProfilePage {
-  backgroundImage = 'assets/imgs/account/profile-head-bg.png';
+  testArray:string[]=[ '菜单一','菜单二' ,'菜单三' ,'菜单四' ];
+  testSegment:string=this.testArray[0];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
 
   }
-
+  swipeEvnet(event) {
+    //向左滑
+    if (event.direction == 2) {
+      if (this.testArray.indexOf(this.testSegment) < 3) {
+        this.testSegment = this.testArray[this.testArray.indexOf(this.testSegment) + 1];
+      }
+    }
+    //向右滑
+    if (event.direction == 4) {
+      if (this.testArray.indexOf(this.testSegment) > 0) {
+        this.testSegment = this.testArray[this.testArray.indexOf(this.testSegment) - 1];
+      }
+    }
+  }
 }
