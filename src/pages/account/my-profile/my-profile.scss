@@ -82,4 +82,19 @@ page-my-profile {
   .user-info button {
     height: 3rem;
   }
+
+  .youji-list h5{
+    font-size: 1.7rem;
+    margin:5px 0;
+  }
+
+  .youji-list ion-row{
+    margin: 0;
+    padding: 0;
+  }
+
+  .youji-list ion-avatar img{
+    width: 28px!important;
+    height: 28px!important;
+  }
 }

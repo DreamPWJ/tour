@@ -52,37 +52,39 @@
       行程
     </div>
     <div *ngSwitchCase="'游记 7'">
-      <ion-list *ngFor="let post of posts">
-        <img [src]="post.postImageUrl" (click)="imageTapped(post)">
-        <h5 class="nowrap">{{post.title}}</h5>
-        <ion-row align-items-center="" nowrap="">
-          <ion-col>
-            <ion-item no-lines="">
-              <ion-avatar item-start>
-                <img [src]="user.profileImage">
-              </ion-avatar>
-              <p>{{user.name}}</p>
-            </ion-item>
-          </ion-col>
-          <ion-col>
-            <button ion-button  color="dark" clear small icon-left (click)="like(post)">
-              <ion-icon name='thumbs-up'></ion-icon>
-              {{post.likes}}
-            </button>
-          </ion-col>
-          <ion-col>
-            <button ion-button color="dark" clear small icon-left (click)="comment(post)">
-              <ion-icon name='text'></ion-icon>
-              {{post.comments}}
-            </button>
-          </ion-col>
-          <ion-col>
-            <button ion-button color="dark" clear small icon-left (click)="comment(post)">
-              <ion-icon name='text'></ion-icon>
-              {{post.comments}}
-            </button>
-          </ion-col>
-        </ion-row>
+      <ion-list class="youji-list">
+        <div *ngFor="let post of posts">
+          <img [src]="post.postImageUrl" (click)="imageTapped(post)">
+          <h5 class="nowrap">{{post.title}}</h5>
+          <ion-row align-items-center="" nowrap="">
+            <ion-col>
+              <ion-item no-lines="" no-padding="">
+                <ion-avatar item-start >
+                  <img no-margin="" [src]="user.profileImage">
+                </ion-avatar>
+                <p>{{user.name}}</p>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <button ion-button color="dark" clear small icon-left (click)="like(post)">
+                <ion-icon name='thumbs-up'></ion-icon>
+                {{post.likes}}
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button color="dark" clear small icon-left (click)="comment(post)">
+                <ion-icon name='text'></ion-icon>
+                {{post.comments}}
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button color="dark" clear small icon-left (click)="comment(post)">
+                <ion-icon name='text'></ion-icon>
+                {{post.comments}}
+              </button>
+            </ion-col>
+          </ion-row>
+        </div>
       </ion-list>
     </div>
     <div *ngSwitchCase="'相册 6'" padding>
