@@ -15,7 +15,7 @@ import {AppService} from "../../../providers/util/app.service";
   templateUrl: 'my-profile.html',
 })
 export class MyProfilePage {
-  segmentArr:string[]=[ '行程 6','游记 7','相册 6' ,'评论 23' ];
+  segmentArr:string[]=[ '行程 6','游记 7' ,'评论 23' ];
   segment:string=this.segmentArr[1];
   posts = [
     {
