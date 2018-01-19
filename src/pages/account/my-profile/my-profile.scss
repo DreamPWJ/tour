@@ -1,20 +1,19 @@
 page-my-profile {
-/*  .slide-zoom {
-    height: 100%;
-  }
-  .segment-md .segment-button {
-    color:#585858;
-  }
+  /*  .slide-zoom {
+      height: 100%;
+    }
+    .segment-md .segment-button {
+      color:#585858;
+    }
 
-  .segment-md .segment-button.segment-activated {
-    color:#000 ;
-    font-weight: bold;
-  }*/
+    .segment-md .segment-button.segment-activated {
+      color:#000 ;
+      font-weight: bold;
+    }*/
 
-  .content{
+  .content {
     overflow-y: auto;
-    height:100%;
-    padding: 15px;
+    height: 100%;
   }
 
   .header-list {
@@ -43,13 +42,13 @@ page-my-profile {
   .header-list ion-item {
     background-color: transparent;
     color: #fff;
-/*    background-color: rgba(0, 0, 0, 0.3);*/
+    /*    background-color: rgba(0, 0, 0, 0.3);*/
   }
 
   .header-img {
     position: relative;
-/*    top: -10px;
-    z-index: 20000;*/
+    /*    top: -10px;
+        z-index: 20000;*/
     width: 70px !important;
     height: 70px !important;
     border-radius: 50%;
@@ -83,18 +82,27 @@ page-my-profile {
     height: 3rem;
   }
 
-  .youji-list h5{
-    font-size: 1.7rem;
-    margin:5px 0;
+  .you-ji-list .you-ji-item {
+    padding: 12px 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
   }
 
-  .youji-list ion-row{
+  .you-ji-list h5 {
+    font-size: 1.7rem;
+    margin: 5px 0;
+  }
+
+  .you-ji-list ion-row {
     margin: 0;
     padding: 0;
   }
-
-  .youji-list ion-avatar img{
-    width: 28px!important;
-    height: 28px!important;
+  .you-ji-list ion-row ion-item {
+    height: 35px;
+    min-height: 35px !important;
+  }
+  .you-ji-list ion-avatar img {
+    width: 28px !important;
+    height: 28px !important;
   }
 }

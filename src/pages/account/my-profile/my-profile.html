@@ -20,7 +20,7 @@
       <h2 class="">怀念记忆</h2>
       <p class="light opacity-6">Dream as if you'll live forever.</p>
     </ion-item>
-    <ion-row class="user-info " align-items-center="">
+    <ion-row class="user-info " nowrap="" align-items-center="">
       <ion-col>
         <p>6</p>
         <p>关注</p>
@@ -29,7 +29,7 @@
         <p>150</p>
         <p>粉丝</p>
       </ion-col>
-      <ion-col col-6 text-right="" align-self-end="">足迹 · 省 <span class="yellow">6</span> · 城市 <span
+      <ion-col col-5 text-right="" align-self-end="">足迹 · 省 <span class="yellow">6</span> · 城市 <span
         class="yellow">15</span></ion-col>
       <ion-col>
         <button small ion-button icon-left class="yellow-bg">
@@ -48,12 +48,12 @@
   </ion-segment>
 
   <div [ngSwitch]="segment" (swipe)="swipeEvnet($event)" class="content">
-    <div *ngSwitchCase="'行程 6'" padding="">
+    <div *ngSwitchCase="'行程 6'" >
       行程
     </div>
     <div *ngSwitchCase="'游记 7'">
-      <ion-list class="youji-list">
-        <div *ngFor="let post of posts">
+      <ion-list class="you-ji-list" >
+        <div *ngFor="let post of posts" class="you-ji-item">
           <img [src]="post.postImageUrl" (click)="imageTapped(post)">
           <h5 class="nowrap">{{post.title}}</h5>
           <ion-row align-items-center="" nowrap="">
@@ -67,19 +67,19 @@
             </ion-col>
             <ion-col>
               <button ion-button color="dark" clear small icon-left (click)="like(post)">
-                <ion-icon name='thumbs-up'></ion-icon>
+                <ion-icon class="icon-favor"></ion-icon>
                 {{post.likes}}
               </button>
             </ion-col>
             <ion-col>
               <button ion-button color="dark" clear small icon-left (click)="comment(post)">
-                <ion-icon name='text'></ion-icon>
+                <ion-icon class="icon-markfill"></ion-icon>
                 {{post.comments}}
               </button>
             </ion-col>
             <ion-col>
               <button ion-button color="dark" clear small icon-left (click)="comment(post)">
-                <ion-icon name='text'></ion-icon>
+                <ion-icon class="icon-appreciate"></ion-icon>
                 {{post.comments}}
               </button>
             </ion-col>
