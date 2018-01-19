@@ -17,7 +17,7 @@
   <ion-row class=" " style="margin-top: 5.2rem" align-items-center="" >
     <ion-col col-9 no-padding="" >
       <ion-row align-items-center="" class="pai-ming-bg pai-ming-bg-1 light" >
-        <ion-col class="nowrap num"><h4 class="radikal">1</h4></ion-col>
+        <div  class="nowrap num "><h4 class="radikal">1</h4></div>
         <ion-col>
           <h5 no-margin >小薇</h5>
           <p class="nowrap " no-margin="">打败 90% 平台旅者</p>
@@ -25,12 +25,12 @@
         <ion-col text-right=""> <img class="tou-xiang pai-ming-1" src="assets/imgs/main/head.jpg"/></ion-col>
       </ion-row>
     </ion-col>
-    <ion-col col-3 class="pai-ming-1 km">836km</ion-col>
+    <ion-col col-3 class="pai-ming-1 km">2636km</ion-col>
   </ion-row>
   <ion-row class=" " align-items-center="" >
   <ion-col col-8 no-padding="" >
     <ion-row align-items-center="" class="pai-ming-bg pai-ming-bg-23 light light" >
-      <ion-col class="nowrap num"><h4 class="radikal">2</h4></ion-col>
+      <div class="nowrap num"><h4 class="radikal">2</h4></div>
       <ion-col>
         <h5 no-margin >小薇</h5>
         <p class="nowrap" no-margin="">打败 90% 平台旅者</p>
@@ -38,12 +38,12 @@
       <ion-col text-right=""> <img class="tou-xiang pai-ming-23" src="assets/imgs/main/head.jpg"/></ion-col>
     </ion-row>
   </ion-col>
-  <ion-col col-3 class="pai-ming-23 km">836km</ion-col>
+  <ion-col col-3 class="pai-ming-23 km">1936km</ion-col>
 </ion-row>
   <ion-row class=" " align-items-center="" >
     <ion-col col-8 no-padding="" >
       <ion-row align-items-center="" class="pai-ming-bg pai-ming-bg-23 light light" >
-        <ion-col class="nowrap num"><h4 class="radikal">3</h4></ion-col>
+        <div class="nowrap num"><h4 class="radikal">3</h4></div>
         <ion-col>
           <h5 no-margin >小薇</h5>
           <p class="nowrap" no-margin="">打败 90% 平台旅者</p>
@@ -51,13 +51,13 @@
         <ion-col text-right=""> <img class="tou-xiang pai-ming-23" src="assets/imgs/main/head.jpg"/></ion-col>
       </ion-row>
     </ion-col>
-    <ion-col col-3 class="pai-ming-23 km">836km</ion-col>
+    <ion-col col-3 class="pai-ming-23 km">1836km</ion-col>
   </ion-row>
 
-  <ion-row class=" " align-items-center="" >
+  <ion-row class=" " align-items-center="" *ngFor="let item of numArry" >
     <ion-col col-7  no-padding="" >
       <ion-row align-items-center="" class="pai-ming-bg  light light" >
-        <ion-col class="nowrap num"><h4 class="radikal">4</h4></ion-col>
+        <div class="nowrap num"><h4 class="radikal">{{item}}</h4></div>
         <ion-col>
           <h5 no-margin >小薇</h5>
           <p class="nowrap" no-margin="">打败 90% 平台旅者</p>
@@ -67,13 +67,14 @@
     </ion-col>
     <ion-col col-3 class="pai-ming km">836km</ion-col>
   </ion-row>
+
 </ion-content>
 
 <ion-footer>
   <ion-row class="bottom " align-items-center="" >
     <ion-col no-padding="" >
       <ion-row align-items-center="" class="pai-ming-bg light" >
-        <ion-col class="nowrap num"><h4 class="radikal">9098</h4></ion-col>
+        <div class="nowrap num"><h4 class="radikal">9098</h4></div>
         <ion-col>
           <h5 no-margin >小薇</h5>
           <p class="nowrap" no-margin="">打败 90% 平台旅者</p>
@@ -81,6 +82,6 @@
         <ion-col text-right=""> <img class="tou-xiang" src="assets/imgs/main/head.jpg"/></ion-col>
       </ion-row>
     </ion-col>
-    <ion-col col-3 class="royal km">836km</ion-col>
+    <ion-col col-3 class="royal km">236km</ion-col>
   </ion-row>
 </ion-footer>

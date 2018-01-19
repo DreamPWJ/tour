@@ -1,8 +1,9 @@
 page-ranking-list {
   ion-navbar {
+    position: fixed;
     padding: 5px 18px 5px 2px !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    opacity: 0.6;
+    opacity: 0.8;
   }
 
   .pai-ming-bg {
@@ -28,12 +29,13 @@ page-ranking-list {
     font-size: 0.9rem;
   }
 
-  .pai-ming-bg .col.num {
-    font-family: "Roboto", "Helvetica Neue", sans-serif;
-    width: 2rem !important;
+  .pai-ming-bg .num {
+    text-align: center;
+    width: 4.2rem !important;
   }
 
   .km {
+    font-family: Roboto;
     font-weight: 600;
   }
 
