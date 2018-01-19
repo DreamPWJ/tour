@@ -3,7 +3,7 @@
     <ion-navbar color="transparent">
       <!--      <ion-title>排行榜</ion-title>-->
       <ion-buttons end>
-        <button class="search-btn"  ion-button icon-only>
+        <button class="search-btn" ion-button icon-only>
           <ion-icon class="icon-search"></ion-icon>
         </button>
         <button class="more-btn" ion-button icon-only>
@@ -20,7 +20,7 @@
       <h2 class="">怀念记忆</h2>
       <p class="light opacity-6">Dream as if you'll live forever.</p>
     </ion-item>
-    <ion-row class="  user-info " align-items-center="">
+    <ion-row class="user-info " align-items-center="">
       <ion-col>
         <p>6</p>
         <p>关注</p>
@@ -40,23 +40,56 @@
     </ion-row>
   </ion-list>
   <!-- mode="md":指定为Android手机模式的 -->
-  <ion-segment [(ngModel)]="testSegment" mode="md" color="primary" class="stable-bg">
-    <ion-segment-button *ngFor="let testItem of testArray" value="{{testItem}}">
-      {{testItem}}
+  <ion-segment [(ngModel)]="segment" mode="md" (ionChange)="segmentChanged($event)">
+    <ion-segment-button *ngFor="let item of segmentArr" value="{{item}}">
+      {{item}}
+      <div class="bolder-sm"></div>
     </ion-segment-button>
   </ion-segment>
-  <div [ngSwitch]="testSegment" (swipe)="swipeEvnet($event)">
-    <div *ngSwitchCase="'菜单一'">
-     555555555555菜单一
+
+  <div [ngSwitch]="segment" (swipe)="swipeEvnet($event)" class="content">
+    <div *ngSwitchCase="'行程 6'" padding="">
+      行程
     </div>
-    <div *ngSwitchCase="'菜单二'">
-      555555555555 菜单二
+    <div *ngSwitchCase="'游记 7'">
+      <ion-list *ngFor="let post of posts">
+        <img [src]="post.postImageUrl" (click)="imageTapped(post)">
+        <h5 class="nowrap">{{post.title}}</h5>
+        <ion-row align-items-center="" nowrap="">
+          <ion-col>
+            <ion-item no-lines="">
+              <ion-avatar item-start>
+                <img [src]="user.profileImage">
+              </ion-avatar>
+              <p>{{user.name}}</p>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <button ion-button  color="dark" clear small icon-left (click)="like(post)">
+              <ion-icon name='thumbs-up'></ion-icon>
+              {{post.likes}}
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button color="dark" clear small icon-left (click)="comment(post)">
+              <ion-icon name='text'></ion-icon>
+              {{post.comments}}
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button color="dark" clear small icon-left (click)="comment(post)">
+              <ion-icon name='text'></ion-icon>
+              {{post.comments}}
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-list>
     </div>
-    <div *ngSwitchCase="'菜单三'">
-      555555555555 菜单三
+    <div *ngSwitchCase="'相册 6'" padding>
+      相册
     </div>
-    <div *ngSwitchCase="'菜单四'">
-      555555555555 菜单四
+    <div *ngSwitchCase="'评论 23'" padding>
+      评论
     </div>
   </div>
 </ion-content>

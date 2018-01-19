@@ -5,15 +5,12 @@
 // roboto, and noto sans fonts
 $font-path: "../assets/fonts";
 
-
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
 // http://ionicframework.com/docs/theming/rtl-support/
 $app-direction: ltr;
 
-
 @import "ionic.globals";
-
 
 // Named Color Variables
 // --------------------------------------------------
@@ -40,46 +37,65 @@ $colors: (
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
-
 /*$toolbar-background: color($colors, blue) !default;*/
 $tabs-background: #fff !default;
 $list-border-color: #EBEBEB !default;
-$toast-max-width : 100%!default;
+$toast-max-width: 100% !default;
 $img-placeholder-background: transparent !default;
-
-
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-$toolbar-ios-border-color: transparent!default;
+$toolbar-ios-border-color: transparent !default;
 $tabs-ios-border-color: #EBEBEB !default;
 /*$toast-ios-background:color($colors, primary) !default;*/
 
-.toolbar-title-ios{
-  font-weight: 500!important;
+.toolbar-title-ios {
+  font-weight: 500 !important;
 }
 
 .ion-ios-arrow-back:before {
-  content: "\e7ed"!important;
+  content: "\e7ed" !important;
   font-size: 2.2rem;
 }
-
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-/*$segment-button-md-border-bottom-width:2px;*/
+$segment-button-md-border-bottom-width: 0px;
+$segment-button-md-font-size: 1.5rem;
+/*$segment-button-md-text-color-activated: #000;
+$segment-button-md-border-color-activated: #FFDE37;*/
+/*.segment-md .segment-button.segment-activated {
+  border-width: 3px;
+}*/
 
+/***** segment颜色定制 start *********/
+.segment-md {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.segment-md .segment-button {
+  color: #585858 !important;
+}
+
+.segment-md .segment-button.segment-activated {
+  /*  color: color($colors, primary) !important;*/
+  font-weight: bold;
+  .bolder-sm {
+    border: 3px solid color($colors, primary);
+    width: 36px;
+    margin: 0 auto;
+  }
+}
+
+/***** segment颜色定制 end ********/
 
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
-
-
-
 
 // App Theme
 // --------------------------------------------------
@@ -99,7 +115,7 @@ $tabs-ios-border-color: #EBEBEB !default;
 }
 
 .toast-error .toast-wrapper {
-  background-color: #ef473a!important;
+  background-color: #ef473a !important;
 }
 
 ion-header ion-icon {
@@ -112,7 +128,6 @@ ion-header ion-icon {
 // http://ionicframework.com/docs/ionicons/
 
 @import "ionic.ionicons";
-
 
 // Fonts
 // --------------------------------------------------

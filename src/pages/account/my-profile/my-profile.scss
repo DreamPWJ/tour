@@ -11,6 +11,12 @@ page-my-profile {
     font-weight: bold;
   }*/
 
+  .content{
+    overflow-y: auto;
+    height:100%;
+    padding: 15px;
+  }
+
   .header-list {
     padding: 5.6rem 0 0;
     background-image: url('../assets/imgs/account/profile-head-bg.png');
