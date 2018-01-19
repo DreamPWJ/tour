@@ -20,33 +20,30 @@ export class MyProfilePage {
   posts = [
     {
       postImageUrl: 'assets/imgs/account/youji1.png',
-      title: `【Tibet 十日】 向往二十二年终于出发 (卷一)`,
+      title: `【Tibet十日】向往二十二年终于出发 (卷一)`,
       likes: 12,
       comments: 4,
-      timestamp: '11h ago'
+
     },
     {
       postImageUrl: 'assets/imgs/account/youji2.png',
-      title: `【Tibet 十日】 向往二十二年终于出发 (卷二)`,
+      title: `【Tibet十日】向往二十二年终于出发 (卷二)`,
       likes: 30,
       comments: 64,
-      timestamp: '30d ago'
+      times: ''
     },
     {
       postImageUrl: 'assets/imgs/account/youji1.png',
-      title: `【Tibet 十日】 向往二十二年终于出发 (卷三)`,
+      title: `【Tibet十日】向往二十二年终于出发 (卷三)`,
       likes: 46,
       comments: 66,
-      timestamp: '4mo ago'
+      times: ''
     },
   ];
 
   user = {
     name: '怀念记忆',
     profileImage: 'assets/imgs/main/head.jpg',
-    followers: 456,
-    following: 1052,
-    tweets: 35
   };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService) {
