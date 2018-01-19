@@ -101,7 +101,6 @@ page-my-profile {
 
   .you-ji-list ion-row {
     margin: 0;
-    padding: 0;
   }
 
   .you-ji-list ion-row ion-item {
@@ -109,9 +108,12 @@ page-my-profile {
     min-height: 35px !important;
   }
 
-  .you-ji-list ion-avatar img {
+  .you-ji-list  .header-item {
+    border-radius: 50%;
     width: 28px !important;
     height: 28px !important;
+    vertical-align: middle;
+    margin-right: 5px;
   }
 
   .you-ji-list .name{

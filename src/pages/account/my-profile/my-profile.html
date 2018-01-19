@@ -57,15 +57,11 @@
           <img [src]="post.postImageUrl" (click)="imageTapped(post)">
           <h5 class="nowrap">{{post.title}}</h5>
           <ion-row align-items-center="" nowrap="">
-            <ion-col>
-              <ion-item no-lines="" no-padding="">
-                <ion-avatar item-start >
-                  <img no-margin="" [src]="user.profileImage">
-                </ion-avatar>
-                <p class="name">{{user.name}}</p>
-              </ion-item>
+            <ion-col col-5>
+                  <img no-margin="" class="header-item" [src]="user.profileImage">
+                <span class="name">{{user.name}}</span>
             </ion-col>
-            <ion-col>
+            <ion-col >
               <button ion-button color="dark" clear small icon-left (click)="like(post)">
                 <ion-icon class="icon-favor"></ion-icon>
                 {{post.likes}}
