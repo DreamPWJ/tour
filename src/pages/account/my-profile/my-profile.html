@@ -54,26 +54,26 @@
     <div *ngSwitchCase="'游记 7'">
       <ion-list class="you-ji-list" >
         <div *ngFor="let post of posts" class="you-ji-item">
-          <img [src]="post.postImageUrl" (click)="imageTapped(post)">
+          <img [src]="post.postImageUrl" (click)="imageTapped(post)" class="main-img">
           <h5 class="nowrap">{{post.title}}</h5>
           <ion-row align-items-center="" nowrap="">
             <ion-col col-5>
                   <img no-margin="" class="header-item" [src]="user.profileImage">
-                <span class="name">{{user.name}}</span>
+                <span class="name ">{{user.name}}</span>
             </ion-col>
-            <ion-col >
+            <ion-col col-2>
               <button ion-button color="dark" clear small icon-left (click)="like(post)">
                 <ion-icon class="icon-favor"></ion-icon>
                 {{post.likes}}
               </button>
             </ion-col>
-            <ion-col>
+            <ion-col col-2>
               <button ion-button color="dark" clear small icon-left (click)="comment(post)">
                 <ion-icon class="icon-markfill"></ion-icon>
                 {{post.comments}}
               </button>
             </ion-col>
-            <ion-col>
+            <ion-col col-2>
               <button ion-button color="dark" clear small icon-left (click)="comment(post)">
                 <ion-icon class="icon-appreciate"></ion-icon>
                 {{post.comments}}
