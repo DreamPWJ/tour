@@ -5,30 +5,35 @@ page-ranking-list {
     opacity: 0.6;
   }
 
-  .pai-ming-bg{
-    margin: 1px 0;
-    background-color:#886aea;
-    border-radius: 0 50px 50px  0;
+  .pai-ming-bg {
+    margin: 2px 0;
+    background-color: rgba(255, 216, 122, 0.6);
+    border-radius: 0 50px 50px 0;
   }
 
-  .pai-ming-bg h4{
+  .pai-ming {
+    color: #ffd87a;
+  }
+
+  .pai-ming-bg h4 {
     padding-left: 0.5rem;
     font-size: 1.8rem;
   }
 
-  .pai-ming-bg h5{
-    font-size: 1.6rem;
+  .pai-ming-bg h5 {
+    font-size: 1.5rem;
   }
 
-  .pai-ming-bg p{
-    font-size: 1rem;
+  .pai-ming-bg p {
+    font-size: 0.9rem;
   }
 
-  .pai-ming-bg .col.num{
-    width: 2rem!important;
+  .pai-ming-bg .col.num {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    width: 2rem !important;
   }
 
-  .km{
+  .km {
     font-weight: 600;
   }
 
@@ -36,13 +41,13 @@ page-ranking-list {
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-  .bottom .pai-ming-bg{
+  .bottom .pai-ming-bg {
     margin: 10px 0;
-    background-color:#886aea;
-    border-radius: 0 50px 50px  0;
+    background-color: rgba(136, 106, 234, 0.61);
+    border-radius: 0 50px 50px 0;
   }
 
-  .pai-ming-bg ion-col{
+  .pai-ming-bg ion-col {
     padding: 0 3px;
   }
 
@@ -51,7 +56,23 @@ page-ranking-list {
     height: 42px;
     border-radius: 50%;
     vertical-align: top;
-    border: 2px solid #ffffff;
+    border: 3px solid currentColor;
     margin-right: 2px;
+  }
+
+  .pai-ming-bg-1 {
+    background-color: rgba(242, 150, 150, 0.6);
+  }
+
+  .pai-ming-1 {
+    color: #f29696 !important;
+  }
+
+  .pai-ming-bg-23 {
+    background-color: rgba(255, 166, 62, 0.6);
+  }
+
+  .pai-ming-23 {
+    color: #ffa63e;
   }
 }
