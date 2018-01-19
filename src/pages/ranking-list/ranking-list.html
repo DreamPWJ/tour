@@ -2,7 +2,7 @@
 <ion-content class="transparent-header"
              [ngStyle]="{'background-image': 'url(' + backgroundImage +')', 'background-size': 'cover'}">
   <ion-header >
-    <ion-navbar color="blue">
+    <ion-navbar color="transparent">
       <ion-title>排行榜</ion-title>
       <ion-buttons end>
         <button ion-button icon-only >
@@ -54,7 +54,7 @@
     <ion-col col-3 class="pai-ming-23 km">1836km</ion-col>
   </ion-row>
 
-  <ion-row class=" " align-items-center="" *ngFor="let item of numArry" >
+  <ion-row class=" " align-items-center="" *ngFor="let item of numArr" >
     <ion-col col-7  no-padding="" >
       <ion-row align-items-center="" class="pai-ming-bg  light light" >
         <div class="nowrap num"><h4 class="radikal">{{item}}</h4></div>

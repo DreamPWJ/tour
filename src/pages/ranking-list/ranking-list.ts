@@ -15,13 +15,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RankingListPage {
   backgroundImage = 'assets/imgs/main/home-bg.jpg';
-  numArry:number[]=[];
+  numArr:number[]=[];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     for(let i=4;i<=15;i++)
-       this.numArry.push(i);
+       this.numArr.push(i);
   }
 
 }

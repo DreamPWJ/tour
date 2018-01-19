@@ -14,12 +14,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'my-profile.html',
 })
 export class MyProfilePage {
-
+  backgroundImage = 'assets/imgs/account/profile-head-bg.png';
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MyProfilePage');
+
   }
 
 }
