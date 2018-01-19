@@ -1,19 +1,44 @@
-<ion-header >
-  <ion-navbar color="transparent">
-    <!--      <ion-title>排行榜</ion-title>-->
-    <ion-buttons end>
-      <button ion-button icon-only >
-        <ion-icon  class="icon-search"></ion-icon>
-      </button>
-      <button ion-button icon-only >
-        <ion-icon class="icon-more_android_light "></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-navbar>
-</ion-header>
-<ion-content>
-  <img src="assets/imgs/account/profile-head-bg.png" alt="">
-
+<ion-content class="transparent-header">
+  <ion-header>
+    <ion-navbar color="transparent">
+      <!--      <ion-title>排行榜</ion-title>-->
+      <ion-buttons end>
+        <button class="search-btn"  ion-button icon-only>
+          <ion-icon class="icon-search"></ion-icon>
+        </button>
+        <button class="more-btn" ion-button icon-only>
+          <ion-icon class="icon-more_android_light "></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  <ion-list class="header-list" no-lines>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/main/head.jpg" class="header-img">
+      </ion-thumbnail>
+      <h2 class="">怀念记忆</h2>
+      <p class="light opacity-6">Dream as if you'll live forever.</p>
+    </ion-item>
+    <ion-row class="  user-info " align-items-center="">
+      <ion-col>
+        <p>6</p>
+        <p>关注</p>
+      </ion-col>
+      <ion-col>
+        <p>150</p>
+        <p>粉丝</p>
+      </ion-col>
+      <ion-col col-6 text-right="" align-self-end="">足迹 · 省 <span class="yellow">6</span> · 城市 <span
+        class="yellow">15</span></ion-col>
+      <ion-col>
+        <button small ion-button icon-left class="yellow-bg">
+          <ion-icon class="icon-add"></ion-icon>
+          关注
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-list>
 
 </ion-content>
 
