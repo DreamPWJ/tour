@@ -18,7 +18,7 @@ import {AppService} from "../../../providers/util/app.service";
 export class MyProfilePage {
   @ViewChild(Content) content: Content;
   segmentArr:string[]=[ '行程 6','游记 7' ,'评论 23' ];
-  segment:string=this.segmentArr[1];
+  segment:string=this.segmentArr[0];
   posts = [
     {
       postImageUrl: 'assets/imgs/account/youji1.png',

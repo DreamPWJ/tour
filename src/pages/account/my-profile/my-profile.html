@@ -48,8 +48,8 @@
   </ion-segment>
 
   <div [ngSwitch]="segment" (swipe)="swipeEvnet($event)" class="content">
-    <div *ngSwitchCase="'行程 6'" >
-      行程
+    <div *ngSwitchCase="'行程 6'" padding="">
+      行程时间轴
     </div>
     <div *ngSwitchCase="'游记 7'">
       <ion-list class="you-ji-list" >

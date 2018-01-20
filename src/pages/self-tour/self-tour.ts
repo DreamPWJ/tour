@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {IonicPage, NavController, NavParams, Slides} from 'ionic-angular';
 
 /**
  * Generated class for the SelfTourPage page.
@@ -14,12 +14,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'self-tour.html',
 })
 export class SelfTourPage {
-
+  @ViewChild(Slides) slides:Slides;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
   }
 
   ionViewDidLoad() {
-
+    this.slides.freeMode = true;
+    this.slides.slidesPerView = "auto";
   }
-
+  slideChanged() {
+/*    this.currentIndex = this.slides.getActiveIndex() + 1;*/
+  }
 }
