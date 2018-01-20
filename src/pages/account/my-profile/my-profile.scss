@@ -1,4 +1,8 @@
 page-my-profile {
+  ::-webkit-scrollbar {
+    display: none !important;
+  }
+
   /*  .slide-zoom {
       height: 100%;
     }
@@ -11,10 +15,10 @@ page-my-profile {
       font-weight: bold;
     }*/
 
-/*  .content {
-    overflow-y: auto;
-    height: 100%;
-  }*/
+  /*  .content {
+      overflow-y: auto;
+      height: 100%;
+    }*/
 
   .header-list {
     padding: 5.6rem 0 0;
@@ -79,16 +83,16 @@ page-my-profile {
     background-color: rgba(255, 255, 255, 0.6);
   }
 
-  .user-info .zu-ji{
+  .user-info .zu-ji {
     margin-bottom: 3px;
-    font-size: 1rem ;
+    font-size: 1rem;
   }
 
   .user-info button {
     height: 3rem;
   }
 
-  .you-ji-list .main-img{
+  .you-ji-list .main-img {
     width: 100%;
     height: 16rem;
   }
@@ -98,7 +102,6 @@ page-my-profile {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 0;
   }
-
 
   .you-ji-list h5 {
     font-size: 1.7rem;
@@ -114,7 +117,7 @@ page-my-profile {
     min-height: 35px !important;
   }
 
-  .you-ji-list  .header-item {
+  .you-ji-list .header-item {
     border-radius: 50%;
     width: 28px !important;
     height: 28px !important;
@@ -122,8 +125,34 @@ page-my-profile {
     margin-right: 5px;
   }
 
-  .you-ji-list .name{
+  .you-ji-list .name {
     margin: 0;
     color: #585858;
   }
+
+  /*  时间轴 css*/
+
+  .time-line .left:before {
+    content: "●";
+    position: absolute;
+    right: 0;
+    color: #585858;
+    z-index: 99;
+  }
+
+  .time-line .left:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #cccccc;
+    right: 4px;
+    z-index: 2;
+  }
+
+  .time-line-imgs img {
+    padding: 1px;
+    height: 33%;
+  }
+
 }
