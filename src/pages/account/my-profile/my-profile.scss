@@ -131,7 +131,17 @@ page-my-profile {
   }
 
   /*  时间轴 css*/
+  .time-line .left{
+    padding:5px 0;
+    text-align: left;
+  }
 
+  .time-line .left span{
+    padding:1px 2px;
+    border-radius: 3px;
+    font-size: 1.2rem;
+
+  }
   .time-line .left:before {
     content: "●";
     position: absolute;
@@ -148,6 +158,14 @@ page-my-profile {
     background-color: #cccccc;
     right: 4px;
     z-index: 2;
+  }
+
+/*  .time-line .left .icon-right{
+    font-size: 0.6rem!important;
+  }*/
+
+  .time-line-imgs{
+    margin-top: 0.6rem;
   }
 
   .time-line-imgs img {
