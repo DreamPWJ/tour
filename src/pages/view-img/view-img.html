@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="transparent">
+   <ion-title>{{currentIndex}}/5</ion-title>
+    <ion-buttons end>
+      <button  ion-button icon-only>
+        <ion-icon class="icon-more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-slides loop="true"  (ionSlideDidChange)="slideChanged()"    style="background-color: black">
+  <ion-slide *ngFor="let image of [1,2,3,4,5]">
+    <img data-src="./assets/imgs/slide/slide{{image}}.jpeg">
+  </ion-slide>
+</ion-slides>
+<ion-footer class="light" padding-left="">
+  <h5><ion-icon class="icon-picfill balanced"></ion-icon> 姊妹湖</h5>
+  <p> <ion-icon class="icon-message_fill_light"></ion-icon>  33 <ion-icon class="icon-likefill assertive" padding-left=""></ion-icon> 153 </p>
+</ion-footer>

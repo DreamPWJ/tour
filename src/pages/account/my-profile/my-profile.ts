@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {Content, IonicPage, NavController, NavParams} from 'ionic-angular';
 import {AppService} from "../../../providers/util/app.service";
+
 
 /**
  * Generated class for the MyProfilePage page.
@@ -15,6 +16,7 @@ import {AppService} from "../../../providers/util/app.service";
   templateUrl: 'my-profile.html',
 })
 export class MyProfilePage {
+  @ViewChild(Content) content: Content;
   segmentArr:string[]=[ '行程 6','游记 7' ,'评论 23' ];
   segment:string=this.segmentArr[1];
   posts = [
@@ -57,8 +59,13 @@ export class MyProfilePage {
 
 
   }
+  scrollToTop() {
+    this.content.scrollToTop();
+  }
+
   imageTapped(post) {
-    this.appService.toast('点击图片');
+    this.navCtrl.push('ViewImgPage')
+/*    this.appService.toast('点击图片');*/
   }
 
   comment(post) {
