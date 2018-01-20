@@ -46,9 +46,8 @@
       <div class="bolder-sm"></div>
     </ion-segment-button>
   </ion-segment>
-  <ion-scroll scrollY="true" style="height: 60vh">
-  <div [ngSwitch]="segment" (swipe)="swipeEvnet($event)" class="content">
-    <div *ngSwitchCase="'行程 6'" padding="" class="time-line">
+  <div  [ngSwitch]="segment" (swipe)="swipeEvnet($event)" class="content">
+    <ion-scroll  scrollY="true" style="height: 60vh" *ngSwitchCase="'行程 6'" padding="" class="time-line">
       <ion-row  *ngFor="let item of [1,2,3,4,5,6]">
         <ion-col class="left"> <span class="yellow-bg">12-1月</span></ion-col>
         <ion-col col-10 > <span>北京</span> <span float-right="">详细 > </span>
@@ -57,8 +56,8 @@
         </ion-row>
         </ion-col>
       </ion-row>
-    </div>
-    <div *ngSwitchCase="'游记 7'">
+    </ion-scroll>
+    <ion-scroll  scrollY="true" style="height: 60vh"  *ngSwitchCase="'游记 7'">
       <ion-list class="you-ji-list" >
         <div *ngFor="let post of posts" class="you-ji-item">
           <img  [src]="post.postImageUrl" (click)="imageTapped(post)" class="main-img">
@@ -89,15 +88,14 @@
           </ion-row>
         </div>
       </ion-list>
-    </div>
+    </ion-scroll>
 <!--    <div *ngSwitchCase="'相册 6'" padding>
       相册
     </div>-->
-    <div *ngSwitchCase="'评论 23'" padding>
+    <ion-scroll  scrollY="true" style="height: 60vh"  *ngSwitchCase="'评论 23'" padding>
       评论
-    </div>
+    </ion-scroll>
   </div>
-  </ion-scroll>
 </ion-content>
 
 
