@@ -1,6 +1,6 @@
 import {ErrorHandler, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
+import {Config, IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
 import {MyApp} from './app.component';
 
 import {HomePage} from '../pages/home/home';
@@ -9,6 +9,7 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {AppService} from "../providers/util/app.service";
 import {HardwareBackButtonProvider} from "../providers/native/back-button.provider";
+import {IOSCustomTransition} from "../shared/IOSCustomTransition";
 
 @NgModule({
   declarations: [
@@ -38,4 +39,8 @@ import {HardwareBackButtonProvider} from "../providers/native/back-button.provid
   ]
 })
 export class AppModule {
+  constructor(public config: Config) {
+
+    this.config.setTransition('ios-transition', IOSCustomTransition);
+  }
 }
