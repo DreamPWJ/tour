@@ -5,9 +5,9 @@
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
-    "ionic:serve": "ionic-app-scripts serve --address 192.168.31.178",
+    "ionic:serve": "ionic-app-scripts serve ",
     "ionic cordova build android prod": "ionic cordova build android --prod",
-    "ionic cordova run android -l -c": "ionic cordova run android  -l -c ",
+    "ionic cordova run android -l -c": "ionic cordova run android  -l -c --address 192.168.31.178",
     "ionic cordova build android release": "ionic cordova build android --prod --release",
     "ionic cordova platform rm android ": "ionic cordova platform rm android",
     "ionic cordova platform add android ": "ionic cordova platform add android",

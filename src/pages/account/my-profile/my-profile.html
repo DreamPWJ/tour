@@ -50,7 +50,7 @@
     <ion-scroll  scrollY="true" style="height: 60vh" *ngSwitchCase="'行程 6'" padding="" class="time-line">
       <ion-row  *ngFor="let item of [1,2,3,4,5,6]">
         <ion-col class="left"> <span class="yellow-bg">12-1月</span></ion-col>
-        <ion-col col-10 > <span>北京</span> <span float-right="">详细 > </span>
+        <ion-col col-10 > <span class="di-dian" >北京</span> <span class="note-ios" float-right="" (click)="imageTapped()">详细 <ion-icon class="icon-right" style="font-size: 1.1rem"></ion-icon> </span>
         <ion-row class="time-line-imgs" >
           <img *ngFor="let item of [1,2,3,4,5]" col-4 src="assets/imgs/timeline/1.png" (click)="imageTapped()"  alt="">
         </ion-row>

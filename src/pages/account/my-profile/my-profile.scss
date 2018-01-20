@@ -137,15 +137,23 @@ page-my-profile {
   }
 
   .time-line .left span{
-    margin-right: 3px;
+    margin-right: 5px;
     padding:1px 2px;
     border-radius: 3px;
     font-size: 1.2rem;
 
   }
+
+  .time-line .di-dian{
+    font-size: 1.4rem;
+    padding-left: 0.6rem;
+  }
+
   .time-line .left:before {
+    font-size: 1rem;
     content: "●";
     position: absolute;
+    top: 8px;
     right: 0;
     color: #585858;
     z-index: 99;
@@ -156,7 +164,7 @@ page-my-profile {
     position: absolute;
     width: 1px;
     height: 100%;
-    background-color: #cccccc;
+    background-color: rgba(204, 204, 204, 0.3);
     right: 4px;
     z-index: 2;
   }
@@ -166,7 +174,7 @@ page-my-profile {
   }*/
 
   .time-line-imgs{
-    margin-top: 0.6rem;
+    margin: 0.6rem;
   }
 
   .time-line-imgs img {
