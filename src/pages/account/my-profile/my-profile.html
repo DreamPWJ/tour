@@ -46,7 +46,7 @@
       <div class="bolder-sm"></div>
     </ion-segment-button>
   </ion-segment>
-
+  <ion-scroll scrollY="true" style="height: 60vh">
   <div [ngSwitch]="segment" (swipe)="swipeEvnet($event)" class="content">
     <div *ngSwitchCase="'行程 6'" padding="">
       行程时间轴
@@ -90,6 +90,7 @@
       评论
     </div>
   </div>
+  </ion-scroll>
 </ion-content>
 
 
