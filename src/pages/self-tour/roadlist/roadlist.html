@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar color="light">
+    <ion-toolbar no-border-top>
+      <ion-searchbar placeholder="输入想去的城市" (ionInput)="filterItems($event)"></ion-searchbar>
+    </ion-toolbar>
+    <ion-buttons end class="roadlist-nav">
+      <button  ion-button icon-only>
+        <ion-icon class="icon-more_android_light "></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment [(ngModel)]="roadseg" mode="md" (ionChange)="segmentChanged($event)">
+    <ion-segment-button *ngFor="let item of roadsegArr" value="{{item}}">
+      {{item}}
+      <div class="bolder-sm"></div>
+    </ion-segment-button>
+  </ion-segment>
+  <div  [ngSwitch]="roadseg" (swipe)="swipeEvnet($event)">
+    <ion-scroll  scrollY="true" style="height: 85vh" *ngSwitchCase="'全部'">
+      <ion-list>
+        <ion-item *ngFor="let road of roadList">
+          <ion-thumbnail item-start>
+            <img [src]="road.roadImageUrl" class="roadlist-img">
+          </ion-thumbnail>
+          <h2>{{road.title}}</h2>
+          <p text-wrap>{{road.content}}</p>
+          <ion-row>
+            <ion-col col-7>
+              <p>{{road.ticket}}</p>
+            </ion-col>
+            <ion-col>
+              <p style="margin-top: -0.5rem;"><span style="color: red;font-size: 18px;">{{road.price}}</span> 起</p>
+            </ion-col>
+          </ion-row>
+        </ion-item>
+      </ion-list>
+    </ion-scroll>
+    <ion-scroll  scrollY="true" style="height: 60vh" *ngSwitchCase="'当季'">当季
+    </ion-scroll>
+    <ion-scroll  scrollY="true" style="height: 60vh" *ngSwitchCase="'热门'">热门
+    </ion-scroll>
+    <ion-scroll  scrollY="true" style="height: 60vh" *ngSwitchCase="'朝圣'">朝圣
+    </ion-scroll>
+    <ion-scroll  scrollY="true" style="height: 60vh" *ngSwitchCase="'亲子'">亲子
+    </ion-scroll>
+    <ion-scroll  scrollY="true" style="height: 60vh" *ngSwitchCase="'拓展'">拓展
+    </ion-scroll>
+    <ion-scroll  scrollY="true" style="height: 60vh" *ngSwitchCase="'摄影'">摄影
+    </ion-scroll>
+  </div>
+
+  <ion-row class="road-bottom">
+    <ion-col no-padding>
+      <ion-row align-items-center class="footroad-bg">
+        <ion-col>
+          <p>价格</p>
+        </ion-col>
+        <ion-col class="arrow-style" col-1>
+          <p no-margin><ion-icon name="arrow-up"></ion-icon></p>
+          <p no-margin><ion-icon name="arrow-down"></ion-icon></p>
+        </ion-col>
+        <ion-col>
+          <p>天数</p>
+        </ion-col>
+        <ion-col class="arrow-style" col-1>
+          <p no-margin><ion-icon name="arrow-up"></ion-icon></p>
+          <p no-margin><ion-icon name="arrow-down"></ion-icon></p>
+        </ion-col>
+        <ion-col>
+          <p>销量</p>
+        </ion-col>
+        <ion-col class="arrow-style" col-1>
+          <p no-margin><ion-icon name="arrow-up"></ion-icon></p>
+          <p no-margin><ion-icon name="arrow-down"></ion-icon></p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col col-2></ion-col>
+    <ion-col text-right class="shaixuan-style" col-2><ion-icon name="funnel" class="border-radius-50"></ion-icon></ion-col>
+  </ion-row>
+</ion-content>
