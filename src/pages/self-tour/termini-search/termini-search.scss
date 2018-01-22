@@ -1,0 +1,27 @@
+page-termini-search {
+  .termini-div{
+    width: 20%;
+    position: absolute;
+  }
+  .termini-unselect{
+    padding-bottom: 10px;
+    border-bottom: 1px #f6f6f6 solid;
+  }
+
+  .termini-select{
+    padding-bottom: 10px;
+    border-bottom: 1px #f6f6f6 solid;
+    font-weight:bold;
+    border-left: 3px #FFDE37 solid;
+  }
+
+  .termini-div2{
+    padding-left: 20%;
+  }
+  .termini-div2 button{
+    width: 80px;
+    height: 30px;
+    color: #474747;
+    background-color: #f3f3f3;
+  }
+}
