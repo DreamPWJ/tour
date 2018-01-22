@@ -1,0 +1,74 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>目的地搜索</ion-title>
+      <ion-buttons end>
+        <button ion-button (click)="dismiss()">
+          <span ion-text color="dark">取消</span>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-toolbar>
+    <ion-searchbar placeholder="搜索目的地" (ionInput)="filterItems($event)"></ion-searchbar>
+  </ion-toolbar>
+  <div text-center class="termini-div">
+    <p class="{{selectFlg==1?'termini-select':'termini-unselect'}}" (click)="terminiSelect(1)">推荐</p>
+    <p class="{{selectFlg==2?'termini-select':'termini-unselect'}}" (click)="terminiSelect(2)">中国</p>
+    <p class="{{selectFlg==3?'termini-select':'termini-unselect'}}" (click)="terminiSelect(3)">四川</p>
+    <p class="{{selectFlg==4?'termini-select':'termini-unselect'}}" (click)="terminiSelect(4)">西藏</p>
+    <p class="{{selectFlg==5?'termini-select':'termini-unselect'}}" (click)="terminiSelect(5)">贵州</p>
+    <p class="{{selectFlg==6?'termini-select':'termini-unselect'}}" (click)="terminiSelect(6)">云南</p>
+    <p class="{{selectFlg==7?'termini-select':'termini-unselect'}}" (click)="terminiSelect(7)">甘肃</p>
+    <p class="{{selectFlg==8?'termini-select':'termini-unselect'}}" (click)="terminiSelect(8)">新疆</p>
+    <p class="{{selectFlg==9?'termini-select':'termini-unselect'}}" (click)="terminiSelect(9)">内蒙</p>
+    <p class="{{selectFlg==10?'termini-select':'termini-unselect'}}" (click)="terminiSelect(10)">青海</p>
+  </div>
+  <div class="termini-div2" *ngIf="selectFlg==1">
+    <ion-row>
+      <ion-col><h5 style="color: #787878;">GPS定位</h5></ion-col>
+      <ion-col text-right><button ion-button color="light">成都</button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><h5 style="color: #474747;">搜索历史</h5></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><button ion-button color="light">西藏</button></ion-col>
+      <ion-col><button ion-button color="light">林芝</button></ion-col>
+      <ion-col><button ion-button color="light">香格里拉</button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><h5 style="color: #474747;">热门目的地</h5></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><button ion-button color="light">四川</button></ion-col>
+      <ion-col><button ion-button color="light">西藏</button></ion-col>
+      <ion-col><button ion-button color="light">云南</button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><h5 style="color: #474747;">热门城市</h5></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngFor="let item of cityList"><button ion-button color="light">{{item.name}}</button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><h5 style="color: #474747;">全年当季推荐</h5></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngFor="let season of seasonList" col-4>
+        <p no-margin text-center><img [src]="season.seasonImageUrl" style="width: 70px;height: 70px;"/></p>
+        <p no-margin text-center>{{season.month}}</p>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="termini-div2" *ngIf="selectFlg==2">
+    <ion-row>
+      <ion-col *ngFor="let china of chinaList" col-4>
+        <p no-margin text-center><img [src]="china.chinaImageUrl" style="width: 70px;height: 70px;" /></p>
+        <p no-margin text-center>{{china.province}}</p>
+        <p no-margin text-center><ion-note>{{china.englishname}}</ion-note></p>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
