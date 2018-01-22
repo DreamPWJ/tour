@@ -25,11 +25,11 @@
   <ion-row align-items-center>
     <span col-3><ion-icon class="icon-locationfill yellow"></ion-icon> 成都 <ion-icon
       class="icon-unfold"></ion-icon></span>
-    <ion-searchbar class="searchbar" col-8 placeholder="搜索自驾游目的地" animated="true">
+    <ion-searchbar [navPush]="'TerminiSearchPage'" class="searchbar" col-8 placeholder="搜索自驾游目的地" animated="true">
     </ion-searchbar>
   </ion-row>
   <ion-row class="img-list" text-center="">
-    <ion-col>
+    <ion-col  [navPush]="'RoadlistPage'">
       <img src="assets/imgs/self-tour/05精品线路.png" alt="精品线路">
       <p>精品线路</p>
     </ion-col>
