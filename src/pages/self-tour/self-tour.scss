@@ -99,12 +99,12 @@ page-self-tour {
     position: absolute;
     width: 100%;
     padding: 3px 2px;
-/*    margin-bottom: 0;*/
+    margin-bottom: 0;
     left: 0;
-    bottom: -7px;
+   bottom: 0px;
     color: #fff;
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
     z-index: 2;
   }
 
