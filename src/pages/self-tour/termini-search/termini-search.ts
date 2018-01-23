@@ -28,6 +28,12 @@ export class TerminiSearchPage {
     this.selectFlg = flg;
   }
 
+  //搜索
+  filterItems(ev: any) {
+    let val = ev.target.value;
+
+  }
+
   //关闭
   dismiss() {
     this.viewCtrl.dismiss();
