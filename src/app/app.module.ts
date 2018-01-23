@@ -10,6 +10,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {AppService} from "../providers/util/app.service";
 import {HardwareBackButtonProvider} from "../providers/native/back-button.provider";
 import {IOSCustomTransition} from "../shared/IOSCustomTransition";
+import {CityProvider} from "../providers/cityprovider";
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {IOSCustomTransition} from "../shared/IOSCustomTransition";
   ],
   providers: [
     AppService,
+    CityProvider,
     StatusBar,
     SplashScreen,
     HardwareBackButtonProvider,
