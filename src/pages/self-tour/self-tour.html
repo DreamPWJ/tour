@@ -58,9 +58,10 @@
     <span float-right><strong>{{currentIndex}}</strong>/{{slidesLength}}</span>
   </div>
 
-  <ion-slides #slides class="jin-ri-slides" freeMode="true" slidesPerView="auto" spaceBetween="1px" loop="false" (ionSlideDidChange)="slideChanged()">
-    <ion-slide *ngFor="let image of [1,2,3,4,5]" style="width: 80vw;">
-      <ion-card text-left>
+  <ion-slides #slides class="jin-ri-slides" freeMode="true" slidesPerView="auto" spaceBetween="-30px" loop="false"
+              (ionSlideDidChange)="slideChanged()">
+    <ion-slide *ngFor="let image of [1,2,3,4,5]">
+      <ion-card text-left ngClass="{{image==currentIndex?'':'scale-img'}}">
         <img data-src="assets/imgs/slide/slide{{image}}.jpeg">
         <h5>国庆旅游回程顺风车特价</h5>
         <p>回程无忧, 部分城市套餐已售罄！</p>
@@ -68,6 +69,7 @@
     </ion-slide>
   </ion-slides>
 
+  <p class="partition"></p>
   <ion-scroll class="jin-ri-scroll" scrollX="true" style="width: 100vw;height: 280px;">
     <ion-card style="width: calc(400vw + 50px);margin-right: 10px;">
       <img *ngFor="let image of [1,2,3,4,5]" style="width: 80vw;height: 200px;"
