@@ -31,7 +31,7 @@
   <ion-row class="img-list" text-center="">
     <ion-col  [navPush]="'RoadlistPage'">
       <img src="assets/imgs/self-tour/05精品线路.png" alt="精品线路">
-      <p>精品线路</p>
+      <p>线路</p>
     </ion-col>
     <ion-col>
       <img src="assets/imgs/self-tour/06攻略.png" alt="攻略">
@@ -53,8 +53,8 @@
 
   <p class="partition"></p>
 
-  <ion-slides #slides>
-    <ion-slide *ngFor="let image of [1,2,3,4,5]" style="width: 80vw;  ">
+  <ion-slides #slides >
+    <ion-slide *ngFor="let image of [1,2,3,4,5]" style="width: 80vw;">
       <img data-src="assets/imgs/slide/slide{{image}}.jpeg" >
     </ion-slide>
   </ion-slides>

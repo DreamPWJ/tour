@@ -23,6 +23,7 @@ export class SelfTourPage {
   ionViewDidLoad() {
     this.slides.freeMode = true;
     this.slides.slidesPerView = "auto";
+    this.slides.spaceBetween="20px";
   }
   slideChanged() {
 /*    this.currentIndex = this.slides.getActiveIndex() + 1;*/
