@@ -38,7 +38,7 @@
       <p>攻略</p>
     </ion-col>
     <ion-col>
-      <img src="assets/imgs/self-tour/07游记.png" alt="07游记">
+      <img src="assets/imgs/self-tour/07游记.png" alt="游记">
       <p>游记</p>
     </ion-col>
     <ion-col>
@@ -53,9 +53,9 @@
 
   <p class="partition"></p>
 
-  <ion-slides class="slides">
-    <ion-slide *ngFor="let image of [1,2,3,4,5]">
-      <img data-src="assets/imgs/slide/slide{{image}}.jpeg">
+  <ion-slides #slides>
+    <ion-slide *ngFor="let image of [1,2,3,4,5]" style="width: 80vw;  ">
+      <img data-src="assets/imgs/slide/slide{{image}}.jpeg" >
     </ion-slide>
   </ion-slides>
 

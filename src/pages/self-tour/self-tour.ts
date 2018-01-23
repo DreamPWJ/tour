@@ -14,7 +14,7 @@ import {IonicPage, NavController, NavParams, Slides} from 'ionic-angular';
   templateUrl: 'self-tour.html',
 })
 export class SelfTourPage {
-  @ViewChild(Slides) slides:Slides;
+  @ViewChild("slides") slides:Slides;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
