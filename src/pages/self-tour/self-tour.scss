@@ -74,6 +74,47 @@ page-self-tour {
     line-height: 28px;
   }
 
+  .qiang-gou ion-row{
+    padding-bottom: 0!important;
+  }
+
+  .qiang-gou div{
+    position: relative;
+    padding: 0;
+  }
+
+  .qiang-gou img{
+    position: relative;
+/*    z-index: -1;*/
+  }
+
+  .qiang-gou .hong-bao{
+    margin:5px;
+    background: url('../assets/imgs/self-tour/14红包背板.png') no-repeat;
+    background-size: 100% 100%;
+
+  }
+
+  .huo-dong div p{
+    position: absolute;
+    width: 100%;
+    padding: 3px 2px;
+/*    margin-bottom: 0;*/
+    left: 0;
+    bottom: -7px;
+    color: #fff;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+    z-index: 2;
+  }
+
+  .huo-dong> p{
+     margin:3px;
+  }
+  .huo-dong> p strong{
+    font-size: 1.8rem;
+    font-family: Roboto;
+  }
   .jin-ri-scroll img {
     display: inline-block !important;
   }
