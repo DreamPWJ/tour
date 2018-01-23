@@ -15,7 +15,7 @@ import {IonicPage, NavController, NavParams, Slides} from 'ionic-angular';
 })
 export class ViewImgPage {
   @ViewChild(Slides) slides: Slides;
-  slidesLength: number = 1;
+  slidesLength: number = 0;
   currentIndex: number = 1;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

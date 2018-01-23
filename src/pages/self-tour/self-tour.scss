@@ -26,7 +26,17 @@ page-self-tour {
     margin: 0;
   }
 
-  .jin-ri-scroll img{
-    display:inline-block!important;
+  .jin-ri-slides h5, .jin-ri-slides p {
+    padding: 1px 10px;
+  }
+
+  .jin-ri-slides h5{
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+  }
+  .jin-ri-scroll img {
+    display: inline-block !important;
   }
 }

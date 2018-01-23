@@ -14,18 +14,23 @@ import {IonicPage, NavController, NavParams, Slides} from 'ionic-angular';
   templateUrl: 'self-tour.html',
 })
 export class SelfTourPage {
-  @ViewChild("slides") slides:Slides;
+  @ViewChild("slides") slides: Slides;
+  slidesLength: number = 0;
+  currentIndex: number = 1;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
 
   ionViewDidLoad() {
-    this.slides.freeMode = true;
-    this.slides.slidesPerView = "auto";
-    this.slides.spaceBetween="20px";
+
   }
+
+  ionViewDidEnter(){
+    this.slidesLength = this.slides.length()
+  }
+
   slideChanged() {
-/*    this.currentIndex = this.slides.getActiveIndex() + 1;*/
+    this.currentIndex = this.slides.getActiveIndex() + 1;
   }
 }
