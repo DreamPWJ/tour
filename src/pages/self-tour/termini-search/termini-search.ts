@@ -17,7 +17,7 @@ export class TerminiSearchPage {
   public selectFlg:number;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public viewCtrl: ViewController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
@@ -30,7 +30,7 @@ export class TerminiSearchPage {
 
   //搜索
   filterItems(ev: any) {
-    let val = ev.target.value;
+/*    let val = ev.target.value;*/
 
   }
 

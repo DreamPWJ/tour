@@ -24,7 +24,7 @@ export class SetoutSearchPage {
   @ViewChild(Content) content: Content;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public viewCtrl: ViewController, public cityProvider: CityProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private viewCtrl: ViewController, public cityProvider: CityProvider) {
     this.indexes = cityProvider.getIndexes();
     this.cities = cityProvider.getGroupCities();
   }
@@ -80,7 +80,7 @@ export class SetoutSearchPage {
   }
   //搜索
   filterItems(ev: any) {
-    let val = ev.target.value;
+/*    let val = ev.target.value;*/
   }
 
   cityList = [
