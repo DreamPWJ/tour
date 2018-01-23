@@ -9,9 +9,7 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-toolbar>
-    <ion-searchbar placeholder="搜索目的地" (ionInput)="filterItems($event)"></ion-searchbar>
-  </ion-toolbar>
+  <ion-searchbar placeholder="搜索目的地" (ionInput)="filterItems($event)" style="background-color: #ffffff!important;"></ion-searchbar>
   <div text-center class="termini-div">
     <p class="{{selectFlg==1?'termini-select':'termini-unselect'}}" (click)="terminiSelect(1)">推荐</p>
     <p class="{{selectFlg==2?'termini-select':'termini-unselect'}}" (click)="terminiSelect(2)">中国</p>
