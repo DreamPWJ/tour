@@ -1,10 +1,10 @@
-<ion-header>
+<ion-header class="white-header">
   <ion-navbar color="light">
-    <ion-toolbar no-border-top>
+    <ion-toolbar>
       <ion-searchbar placeholder="输入想去的城市" (ionInput)="filterItems($event)"></ion-searchbar>
     </ion-toolbar>
-    <ion-buttons end class="roadlist-nav">
-      <button  ion-button icon-only>
+    <ion-buttons end>
+      <button ion-button icon-only>
         <ion-icon class="icon-more_android_light "></ion-icon>
       </button>
     </ion-buttons>
@@ -78,7 +78,7 @@
         </ion-col>
       </ion-row>
     </ion-col>
-    <ion-col col-2></ion-col>
+    <ion-col col-3></ion-col>
     <ion-col text-right class="shaixuan-style" col-2><ion-icon name="funnel" class="border-radius-50"></ion-icon></ion-col>
   </ion-row>
 </ion-content>

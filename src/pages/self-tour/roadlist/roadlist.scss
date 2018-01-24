@@ -8,34 +8,34 @@ page-roadlist {
     z-index: 9;
     position: fixed;
     width: 100%;
-    bottom: 0;left: 0;right: 0;
+    bottom: 30px;left: 0;right: 0;
   }
   .footroad-bg {
-    margin: 20px 0;
+    //margin: 20px 0;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 0 50px 50px 0;
     box-shadow: -2px 0 3px grey,0 -2px 3px grey,0 2px 3px grey,2px 0 3px grey;
   }
 
-  .footroad-bg ion-col {
-    padding: 0 -5px;
+  .footroad-bg ion-col p{
+    margin: 0.8rem 0;
   }
 
   /*价格天数 销量 悬浮框*/
   .arrow-style p{
-    margin-bottom: -0.5rem;
-    margin-left: -1.5rem;
+    margin: -0.5rem 0 -0.5rem -1.6rem!important;
   }
 
+  /*筛选*/
   .shaixuan-style{
-    margin: 20px 10px;
+    margin-right:12px;
   }
   .shaixuan-style ion-icon{
-    width:50px;height: 50px;
+    width:46px;height: 46px;
     background-color: #41c5ad;
     color: #ffffff;
-    font-size: 20px;
-    padding-top:15px;
+    font-size: 22px;
+    padding-top:12px;
     text-align: center;
   }
 }

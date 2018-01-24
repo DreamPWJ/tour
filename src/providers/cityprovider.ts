@@ -10,9 +10,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class CityProvider {
 
-  constructor() {
-    console.log('Hello City Provider');
-  }
+  constructor() {  }
 
   public getIndexes(): Array<any> {
     var indexes = this.cities.map(c => {
