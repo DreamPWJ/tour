@@ -1,7 +1,7 @@
 <ion-header class="white-header">
   <ion-navbar color="light">
     <ion-toolbar>
-      <ion-searchbar placeholder="输入想去的城市" (ionInput)="filterItems($event)"></ion-searchbar>
+      <ion-searchbar tappable [navPush]="'SetoutSearchPage'" placeholder="输入想去的城市" (ionInput)="filterItems($event)"></ion-searchbar>
     </ion-toolbar>
     <ion-buttons end>
       <button ion-button icon-only>
