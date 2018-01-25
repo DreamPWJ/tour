@@ -46,7 +46,7 @@ page-self-tour {
     -webkit-transform: scale(0.8);
   }
 
-  .qiang-gou .title{
+  .qiang-gou .title {
     display: inline-block;
     width: 120px;
     height: 28px;
@@ -54,67 +54,69 @@ page-self-tour {
     margin-right: 1rem;
     background: url('../assets/imgs/self-tour/11限时抢购标题黄色背景.png') no-repeat;
     background-size: 100% 100%;
-    color:#fff;
+    color: #fff;
     text-align: center;
     font-size: 1.6rem;
     font-weight: 600;
-    font-style: oblique ;
+    font-style: oblique;
   }
 
-  .qiang-gou .time span{
+  .qiang-gou .time span {
     background-color: #000;
-    color:#fff;
-    padding:0px 2px;
+    color: #fff;
+    padding: 0px 2px;
     border-radius: 3px;
   }
 
-  .qiang-gou .more{
+  .qiang-gou .more {
     padding-right: 0.8rem;
     height: 28px;
     line-height: 28px;
   }
 
-  .qiang-gou ion-row{
-    padding-bottom: 0!important;
+  .qiang-gou ion-row {
+    padding-bottom: 0 !important;
   }
 
-  .qiang-gou div{
+  .qiang-gou div {
     position: relative;
     padding: 0;
   }
 
-  .qiang-gou img{
+  .qiang-gou img {
     position: relative;
-/*    z-index: -1;*/
+    /*    z-index: -1;*/
   }
 
-  .qiang-gou .hong-bao{
-    margin:5px;
+  .qiang-gou .hong-bao {
+    margin: 5px;
     background: url('../assets/imgs/self-tour/14红包背板.png') no-repeat;
     background-size: 100% 100%;
 
   }
 
-  .huo-dong div p{
+  .huo-dong div p {
     position: absolute;
     width: 100%;
     padding: 3px 2px;
     margin-bottom: 0;
     left: 0;
-   bottom: 0px;
+    bottom: 0px;
     color: #fff;
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
     z-index: 2;
   }
 
-  .huo-dong> p{
-     margin:3px;
+  .huo-dong > p {
+    margin: 3px;
   }
-  .huo-dong> p strong{
+
+  .huo-dong > p strong {
     font-size: 1.8rem;
     font-family: Roboto;
   }
+
   .jin-ri-scroll img {
     display: inline-block !important;
   }
