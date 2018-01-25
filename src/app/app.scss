@@ -39,6 +39,13 @@ $colors-list: (light:$light, stable:$stable, positive:$positive, calm:$calm, bal
   }
 }
 
+.platform-android {
+  ion-header {
+    padding-top: $cordova-md-statusbar-padding;
+/*    background-color: color($colors, primary);*/
+  }
+}
+
 .radikal {
   font-family: Radikal !important;
   font-style: normal;

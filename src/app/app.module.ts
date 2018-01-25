@@ -9,7 +9,6 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {AppService} from "../providers/util/app.service";
 import {HardwareBackButtonProvider} from "../providers/native/back-button.provider";
-import {IOSCustomTransition} from "../shared/IOSCustomTransition";
 import {CityProvider} from "../providers/cityprovider";
 
 @NgModule({
@@ -43,6 +42,6 @@ import {CityProvider} from "../providers/cityprovider";
 export class AppModule {
   constructor(public config: Config) {
 
-    this.config.setTransition('ios-transition', IOSCustomTransition);
+/*    this.config.setTransition('ios-transition', IOSCustomTransition);*/
   }
 }
