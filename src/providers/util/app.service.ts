@@ -30,7 +30,7 @@ export class AppGlobal {
 export class AppService {
   public nav: NavController;
   public toasts: Toast;
-
+  public loading:any;
   constructor(private app: App, public loadingCtrl: LoadingController, private alertCtrl: AlertController, private toastCtrl: ToastController) {
     this.nav = this.app.getActiveNav();
   }
@@ -88,6 +88,17 @@ export class AppService {
     if (callback) {
       callback();
     }
+  }
+
+  loadingShow(content?:string){
+    this.loading = this.loadingCtrl.create({
+      content: content
+    });
+    this.loading.present();
+  }
+
+  loadingHide(){
+    this.loading.dismiss();
   }
 
   setItem(key: string, obj: any) {

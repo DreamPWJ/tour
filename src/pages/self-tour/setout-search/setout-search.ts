@@ -1,6 +1,7 @@
 import {Component, ViewChild, ViewChildren} from '@angular/core';
 import {Content, IonicPage, NavController, NavParams, ViewController} from 'ionic-angular';
 import {CityProvider} from "../../../providers/cityprovider";
+import {AppService} from "../../../providers/util/app.service";
 
 /**
  * Generated class for the SetoutSearchPage page.
@@ -24,12 +25,14 @@ export class SetoutSearchPage {
   @ViewChild(Content) content: Content;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private viewCtrl: ViewController, public cityProvider: CityProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private viewCtrl: ViewController, public appService: AppService, public cityProvider: CityProvider) {
     this.indexes = cityProvider.getIndexes();
     this.cities = cityProvider.getGroupCities();
   }
 
+
   ionViewDidLoad() {
+    this.appService.loadingShow();
     let $this = this;
     function alphabetMove(e, move) {
       let pPositionY = e.changedTouches[0].clientY;
@@ -56,6 +59,10 @@ export class SetoutSearchPage {
       alphabetMove(e, true);
       document.getElementById('indexs-title').style.display = 'none';
     });
+  }
+
+  ionViewWillEnter(){
+    this.appService.loadingHide();
   }
 
   citySelect(city) {

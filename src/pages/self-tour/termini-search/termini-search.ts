@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {IonicPage, NavController, NavParams, ViewController} from 'ionic-angular';
+import {AppService} from "../../../providers/util/app.service";
 
 /**
  * Generated class for the TerminiSearchPage page.
@@ -17,12 +18,18 @@ export class TerminiSearchPage {
   public selectFlg:number;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private viewCtrl: ViewController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public appService: AppService,private viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
+    this.appService.loadingShow();
     this.selectFlg = 1;
   }
+
+  ionViewWillEnter(){
+    this.appService.loadingHide();
+  }
+
 
   terminiSelect(flg:number){
     this.selectFlg = flg;

@@ -1,5 +1,6 @@
 import {Component, ViewChild} from '@angular/core';
 import {NavController, NavParams, Slides} from 'ionic-angular';
+import {AppService} from "../../providers/util/app.service";
 
 /**
  * Generated class for the SelfTourPage page.
@@ -18,15 +19,20 @@ export class SelfTourPage {
   slidesLength: number = 0;
   currentIndex: number = 1;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService) {
 
   }
 
   ionViewDidLoad() {
+    this.appService.loadingShow();
+  }
 
+  ionViewWillEnter(){
+    this.appService.loadingHide();
   }
 
   ionViewDidEnter(){
+
     this.slidesLength = this.slides.length()
   }
 

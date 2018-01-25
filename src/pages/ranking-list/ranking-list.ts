@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
+import {AppService} from "../../providers/util/app.service";
 
 /**
  * Generated class for the RankingListPage page.
@@ -15,12 +16,17 @@ import {NavController, NavParams} from 'ionic-angular';
 export class RankingListPage {
   backgroundImage = 'assets/imgs/main/home-bg.jpg';
   numArr:number[]=[];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService) {
   }
 
   ionViewDidLoad() {
+    this.appService.loadingShow();
     for(let i=4;i<=15;i++)
        this.numArr.push(i);
   }
 
+
+  ionViewWillEnter() {
+    this.appService.loadingHide();
+  }
 }

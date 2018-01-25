@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {Content, IonicPage, NavController, NavParams} from 'ionic-angular';
+import {Content, NavController, NavParams} from 'ionic-angular';
 import {AppService} from "../../../providers/util/app.service";
 
 
@@ -51,7 +51,11 @@ export class MyProfilePage {
   }
 
   ionViewDidLoad() {
+    this.appService.loadingShow();
+  }
 
+  ionViewWillEnter() {
+    this.appService.loadingHide();
   }
 
   segmentChanged(event){

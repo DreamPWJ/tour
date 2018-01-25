@@ -64,6 +64,17 @@ export class RoadlistPage {
     },
   ];
 
+  constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService) {
+  }
+
+  ionViewDidLoad() {
+    this.appService.loadingShow();
+  }
+
+  ionViewWillEnter(){
+    this.appService.loadingHide();
+  }
+
   //搜索
   filterItems(ev: any) {
     let val = ev.target.value;
@@ -95,11 +106,7 @@ export class RoadlistPage {
     }
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService) {
-  }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RoadlistPage');
-  }
+
 
 }
