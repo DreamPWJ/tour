@@ -1,7 +1,7 @@
 <ion-header class="white-header">
   <ion-navbar color="light">
     <ion-toolbar>
-      <ion-searchbar tappable [navPush]="'SetoutSearchPage'" placeholder="输入想去的城市" (ionInput)="filterItems($event)"></ion-searchbar>
+      <ion-searchbar tappable placeholder="输入想去的城市" (ionInput)="filterItems($event)"></ion-searchbar>
     </ion-toolbar>
     <ion-buttons end>
       <button ion-button icon-only>
@@ -22,7 +22,29 @@
     <ion-scroll  scrollY="true" style="height: 85vh" *ngSwitchCase="'全部'">
       <ion-list>
         <ion-item *ngFor="let road of roadList">
-          <ion-thumbnail item-start class="roadlist-img">
+          <ion-row no-margin>
+            <ion-col col-3>
+              <img [src]="road.roadImageUrl" width="75px" height="90px"/>
+            </ion-col>
+            <ion-col>
+              <ion-row>
+                <h2>{{road.title}}</h2>
+              </ion-row>
+              <ion-row>
+                <p text-wrap>{{road.content}}</p>
+              </ion-row>
+              <ion-row>
+                <ion-col col-7>
+                  <p>{{road.ticket}}</p>
+                </ion-col>
+                <ion-col>
+                  <p style="margin-top: -0.5rem;"><span style="color: red;font-size: 18px;">{{road.price}}</span> 起</p>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+
+          <!--<ion-thumbnail item-start class="roadlist-img">
             <img [src]="road.roadImageUrl" >
           </ion-thumbnail>
           <h2>{{road.title}}</h2>
@@ -34,7 +56,7 @@
             <ion-col>
               <p style="margin-top: -0.5rem;"><span style="color: red;font-size: 18px;">{{road.price}}</span> 起</p>
             </ion-col>
-          </ion-row>
+          </ion-row>-->
         </ion-item>
       </ion-list>
     </ion-scroll>
@@ -56,29 +78,29 @@
     <ion-col no-padding>
       <ion-row align-items-center class="footroad-bg">
         <ion-col>
-          <p>价格</p>
+          <p class="price-style">价格</p>
         </ion-col>
         <ion-col class="arrow-style" col-1>
-          <p no-margin><ion-icon name="arrow-up"></ion-icon></p>
-          <p no-margin><ion-icon name="arrow-down"></ion-icon></p>
+          <p no-margin><ion-icon class="icon-triangleupfill"></ion-icon></p>
+          <p no-margin><ion-icon class="icon-triangledownfill"></ion-icon></p>
         </ion-col>
         <ion-col>
           <p>天数</p>
         </ion-col>
         <ion-col class="arrow-style" col-1>
-          <p no-margin><ion-icon name="arrow-up"></ion-icon></p>
-          <p no-margin><ion-icon name="arrow-down"></ion-icon></p>
+          <p no-margin><ion-icon class="icon-triangleupfill"></ion-icon></p>
+          <p no-margin><ion-icon class="icon-triangledownfill"></ion-icon></p>
         </ion-col>
         <ion-col>
           <p>销量</p>
         </ion-col>
         <ion-col class="arrow-style" col-1>
-          <p no-margin><ion-icon name="arrow-up"></ion-icon></p>
-          <p no-margin><ion-icon name="arrow-down"></ion-icon></p>
+          <p no-margin><ion-icon class="icon-triangleupfill"></ion-icon></p>
+          <p no-margin><ion-icon class="icon-triangledownfill"></ion-icon></p>
         </ion-col>
       </ion-row>
     </ion-col>
     <ion-col col-3></ion-col>
-    <ion-col text-right class="shaixuan-style" col-2><ion-icon name="funnel" class="border-radius-50"></ion-icon></ion-col>
+    <ion-col text-right class="shaixuan-style" col-2><ion-icon class="icon-filter border-radius-50"></ion-icon></ion-col>
   </ion-row>
 </ion-content>

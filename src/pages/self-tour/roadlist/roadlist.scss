@@ -1,10 +1,7 @@
 page-roadlist {
-  .roadlist-img{
-    margin:0 5px 0 0!important;
-  }
   .roadlist-img img{
     width: 75px!important;
-    height: 70px!important;
+    height: 90px!important;
   }
 
   .road-bottom{
@@ -25,8 +22,17 @@ page-roadlist {
   }
 
   /*价格天数 销量 悬浮框*/
+  .price-style{
+    background-color: #ffdb27;
+    width:30px;
+    height:22px;
+  }
   .arrow-style p{
-    margin: -0.5rem 0 -0.5rem -1.6rem!important;
+    margin: -0.6rem 0 -0.5rem -1.7rem!important;
+  }
+  .arrow-style p ion-icon{
+    color: #474747;
+    font-size: 14px;
   }
 
   /*筛选*/
@@ -37,8 +43,8 @@ page-roadlist {
     width:46px;height: 46px;
     background-color: #41c5ad;
     color: #ffffff;
-    font-size: 22px;
-    padding-top:12px;
+    font-size: 25px;
+    padding-top:11px;
     text-align: center;
   }
 }
