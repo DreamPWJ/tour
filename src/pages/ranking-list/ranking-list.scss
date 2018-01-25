@@ -1,9 +1,18 @@
+.platform-ios .pai-hang{
+  margin-top: 5rem!important;
+}
+
+.platform-android .pai-hang{
+  margin-top: 6.2rem!important;
+}
+
 page-ranking-list {
   ion-navbar {
     padding: 5px 18px 5px 2px !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     opacity: 0.8;
   }
+
 
   .pai-ming-bg {
     margin: 2px 0;
