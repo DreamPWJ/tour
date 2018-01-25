@@ -29,4 +29,9 @@ export class MyApp {
       hardwareBackButtonProvider.registerBackButtonAction(ionicApp);//注册返回按键事件
     });
   }
+
+  ngAfterViewInit() {
+    // Let's navigate from TabsPage to Page1
+/*    this.nav.push(LoginPage);*/
+  }
 }

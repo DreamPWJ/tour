@@ -2,6 +2,9 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
 import {NavController, Slides} from 'ionic-angular';
 import ECharts from 'echarts';
 import '../../assets/js/china.js'
+import {SelfTourPage} from "../self-tour/self-tour";
+import {RankingListPage} from "../ranking-list/ranking-list";
+import {MyProfilePage} from "../account/my-profile/my-profile";
 
 @Component({
   selector: 'page-home',
@@ -11,6 +14,9 @@ export class HomePage {
   @ViewChild('chart') chart: ElementRef;
   @ViewChild(Slides) slides: Slides;
   backgroundImage = 'assets/imgs/main/home-bg.jpg';
+  selfTourPage:any=SelfTourPage;
+  rankingListPage:any=RankingListPage;
+  myProfilePage:any=MyProfilePage;
 
   constructor(public navCtrl: NavController) {
 
@@ -24,7 +30,7 @@ export class HomePage {
    *   导航页面
    */
   push() {
-    this.navCtrl.push('MyProfilePage')
+    this.navCtrl.push(this.myProfilePage)
   }
 
   slideChanged() {

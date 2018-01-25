@@ -10,11 +10,17 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {AppService} from "../providers/util/app.service";
 import {HardwareBackButtonProvider} from "../providers/native/back-button.provider";
 import {CityProvider} from "../providers/cityprovider";
+import {SelfTourPage} from "../pages/self-tour/self-tour";
+import {RankingListPage} from "../pages/ranking-list/ranking-list";
+import {MyProfilePage} from "../pages/account/my-profile/my-profile";
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    SelfTourPage,
+    RankingListPage,
+    MyProfilePage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,10 @@ import {CityProvider} from "../providers/cityprovider";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    SelfTourPage,
+    RankingListPage,
+    MyProfilePage
   ],
   providers: [
     AppService,

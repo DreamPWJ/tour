@@ -10,7 +10,6 @@ import {AppService} from "../../../providers/util/app.service";
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-my-profile',
   templateUrl: 'my-profile.html',

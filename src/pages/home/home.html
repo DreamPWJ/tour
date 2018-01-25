@@ -7,7 +7,7 @@
         <span (click)="push()" class="light opacity-6">小薇</span>
 <!--      </ion-buttons>-->
       <!--      <ion-title>自驾游</ion-title>-->
-      <ion-buttons end (click)="push()">
+      <ion-buttons end >
         <button ion-button icon-only>
           <ion-icon class="icon-markfill opacity-6"></ion-icon>
           <span class="jiao-biao roboto">2</span>
@@ -33,7 +33,7 @@
   </ion-grid>
 
 
-  <ion-slides tappable [navPush]="'RankingListPage'"  class="slides" (ionSlideDidChange)="slideChanged()" autoplay="6000" loop pager speed="1000">
+  <ion-slides tappable [navPush]="rankingListPage"  class="slides" (ionSlideDidChange)="slideChanged()" autoplay="6000" loop pager speed="1000">
     <ion-slide >
       <p>自驾游排行榜</p>
       <ion-row    align-items-center justify-content-around>
@@ -68,13 +68,13 @@
 <ion-footer>
   <ion-grid class="bottom-tabs fadein-up">
     <ion-row  justify-content-around align-items-center text-center>
-      <ion-col tappable  col-2 [navPush]="'RankingListPage'">
+      <ion-col tappable  col-2 >
         <p class="icon">
           <ion-icon class="icon-taxi "></ion-icon>
         </p>
         <p class="text">租车</p>
       </ion-col>
-      <ion-col col-2 tappable  [navPush]="'SelfTourPage'">
+      <ion-col col-2 tappable  [navPush]="selfTourPage">
         <p class="icon">
           <ion-icon class="icon-global_light "></ion-icon>
         </p>

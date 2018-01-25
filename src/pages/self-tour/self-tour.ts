@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {IonicPage, NavController, NavParams, Slides} from 'ionic-angular';
+import {NavController, NavParams, Slides} from 'ionic-angular';
 
 /**
  * Generated class for the SelfTourPage page.
@@ -8,7 +8,7 @@ import {IonicPage, NavController, NavParams, Slides} from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+
 @Component({
   selector: 'page-self-tour',
   templateUrl: 'self-tour.html',
