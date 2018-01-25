@@ -8,7 +8,7 @@ export class IOSCustomTransition extends IOSTransition {
   init() {
 
     if (this.opts.duration === undefined || this.opts.duration === 0) {
-      this.opts.duration = 300;
+      this.opts.duration = 400;
     }
 
     super.init();
