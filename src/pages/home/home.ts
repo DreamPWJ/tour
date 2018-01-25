@@ -101,7 +101,8 @@ export class HomePage {
             opacity: 0.6
           },
           emphasis: {
-            areaColor: '#2a333d'
+            areaColor: '#fff',
+            opacity: 1
           }
 
         },
