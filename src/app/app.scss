@@ -195,3 +195,19 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
   }
 
 }
+
+.platform-ios{
+  ion-header  + ion-segment ,ion-header  + div ,ion-header  + ion-row{
+    margin-top: $navbar-ios-height;
+  }
+}
+
+
+.platform-android{
+  ion-header  + ion-segment ,ion-header  + div ,ion-header  + ion-row{
+    margin-top: 68px;
+  }
+
+}
+
+

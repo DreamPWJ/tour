@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import { Content,IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Content, IonicPage, NavController, NavParams} from 'ionic-angular';
 import {AppService} from "../../../providers/util/app.service";
 
 /**
@@ -65,6 +65,7 @@ export class RoadlistPage {
   ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService) {
+
   }
 
   ionViewDidLoad() {

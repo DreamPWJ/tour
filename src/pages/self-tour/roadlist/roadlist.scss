@@ -1,4 +1,12 @@
+/*
+ion-segment{
+  margin-top: $navbar-ios-height+$cordova-md-statusbar-padding;
+}
+*/
+
+
 page-roadlist {
+
   .roadlist-img img{
     width: 75px!important;
     height: 90px!important;
@@ -10,6 +18,7 @@ page-roadlist {
     width: 100%;
     bottom: 30px;left: 0;right: 0;
   }
+
   .footroad-bg {
     //margin: 20px 0;
     background-color: rgba(255, 255, 255, 0.9);

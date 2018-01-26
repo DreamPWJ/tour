@@ -10,6 +10,7 @@
 </ion-header>
 <ion-content>
   <ion-searchbar placeholder="搜索目的地" (ionInput)="filterItems($event)" style="background-color: #ffffff!important;"></ion-searchbar>
+
   <div text-center class="termini-div">
     <p class="{{selectFlg==1?'termini-select':'termini-unselect'}}" (click)="terminiSelect(1)">推荐</p>
     <p class="{{selectFlg==2?'termini-select':'termini-unselect'}}" (click)="terminiSelect(2)">中国</p>
@@ -22,6 +23,8 @@
     <p class="{{selectFlg==9?'termini-select':'termini-unselect'}}" (click)="terminiSelect(9)">内蒙</p>
     <p class="{{selectFlg==10?'termini-select':'termini-unselect'}}" (click)="terminiSelect(10)">青海</p>
   </div>
+
+  <ion-scroll  scrollY="true" style="height: 80vh">
   <div class="termini-div2" *ngIf="selectFlg==1">
     <ion-row>
       <ion-col col-8><h5 style="color: #787878;">GPS定位</h5></ion-col>
@@ -69,4 +72,5 @@
       </ion-col>
     </ion-row>
   </div>
+  </ion-scroll>
 </ion-content>
