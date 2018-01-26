@@ -51,15 +51,21 @@ page-ranking-list {
     font-weight: 600;
   }
 
+  $bottom:#C0B2E5;
+
   .bottom {
     background-color: rgba(0, 0, 0, 0.5);
+
+    .pai-ming-bg {
+      margin: 10px 0;
+      background-color:$bottom;
+      border-radius: 0 50px 50px 0;
+    }
+    .km{
+      color: $bottom;
+    }
   }
 
-  .bottom .pai-ming-bg {
-    margin: 10px 0;
-    background-color: rgba(136, 106, 234, 0.61);
-    border-radius: 0 50px 50px 0;
-  }
 
   .pai-ming-bg ion-col {
     padding: 0 3px;
