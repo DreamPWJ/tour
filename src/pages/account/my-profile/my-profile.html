@@ -47,9 +47,26 @@
     </ion-segment-button>
   </ion-segment>
   <div  [ngSwitch]="segment" (swipe)="swipeEvnet($event)" class="content">
-    <ion-scroll  scrollY="true" style="height: 60vh" *ngSwitchCase="'行程 6'" padding="" class="time-line">
-      <ion-row  *ngFor="let item of [1,2,3,4,5,6]">
-        <ion-col class="left"> <span class="yellow-bg">12-1月</span></ion-col>
+    <ion-scroll  scrollY="true" style="height: 60vh" *ngSwitchCase="'行程 6'" class="time-line">
+      <ion-row  class="been" >
+        <div>
+          <p>- 去过 3 座城市 -</p>
+          <p>拉萨 · 北京 ·  上海</p>
+        </div>
+      </ion-row >
+
+      <ion-row  class="year"  >
+        <ion-col col-4 text-center=""><h4 no-margin="">2018</h4>
+        </ion-col>
+      </ion-row >
+      <ion-row  class="guo-jia"  >
+        <ion-col ><img src="assets/imgs/icon/06中国图标大.png" height="20" width="20"/>
+        </ion-col>
+        <ion-col col-10 > <span >中国</span> <span>China</span></ion-col>
+      </ion-row >
+      <ion-row padding-horizontal=""  *ngFor="let item of [1,2,3,4,5]" >
+        <ion-col class="left"> <span class="yellow-bg">12-1月        <ion-icon class="icon-radioboxfill"></ion-icon></span>
+        </ion-col>
         <ion-col col-10 > <span class="di-dian" >北京</span> <span class="note-ios" float-right="" (click)="imageTapped()">详细 <ion-icon class="icon-right" style="font-size: 1.1rem"></ion-icon> </span>
         <ion-row class="time-line-imgs" >
           <img *ngFor="let item of [1,2,3,4,5]" col-4 src="assets/imgs/timeline/1.png" (click)="imageTapped()"  alt="">
