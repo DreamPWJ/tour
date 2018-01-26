@@ -20,21 +20,21 @@ export class MyProfilePage {
   segment:string=this.segmentArr[0];
   posts = [
     {
-      postImageUrl: 'assets/imgs/account/youji1.png',
+      postImageUrl: 'assets/imgs/slide/slide1.jpeg',
       title: `【Tibet十日】向往二十二年终于出发 (卷一)`,
       likes: 12,
       comments: 4,
-
     },
+
     {
-      postImageUrl: 'assets/imgs/account/youji2.png',
+      postImageUrl: 'assets/imgs/slide/slide2.jpeg',
       title: `【Tibet十日】向往二十二年终于出发 (卷二)`,
       likes: 30,
       comments: 64,
       times: ''
     },
     {
-      postImageUrl: 'assets/imgs/account/youji1.png',
+      postImageUrl: 'assets/imgs/slide/slide3.jpeg',
       title: `【Tibet十日】向往二十二年终于出发 (卷三)`,
       likes: 46,
       comments: 66,

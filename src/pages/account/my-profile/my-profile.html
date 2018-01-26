@@ -69,7 +69,10 @@
         </ion-col>
         <ion-col col-10 > <span class="di-dian" >北京</span> <span class="note-ios" float-right="" (click)="imageTapped()">详细 <ion-icon class="icon-right" style="font-size: 1.1rem"></ion-icon> </span>
         <ion-row class="time-line-imgs" >
-          <img *ngFor="let item of [1,2,3,4,5]" col-4 src="assets/imgs/timeline/1.png" (click)="imageTapped()"  alt="">
+          <div *ngFor="let item of [1,2,3,4,5]"  col-4>
+          <img   src="assets/imgs/slide/slide{{item}}.jpeg" (click)="imageTapped()"  alt=""/>
+          <p><ion-icon class="icon-like"></ion-icon> {{item}}</p>
+          </div>
         </ion-row>
         </ion-col>
       </ion-row>
@@ -78,6 +81,7 @@
       <ion-list class="you-ji-list" >
         <div *ngFor="let post of posts" class="you-ji-item">
           <img  [src]="post.postImageUrl" (click)="imageTapped(post)" class="main-img">
+          <div class="ri-qi"> <span>28 | </span><div><span>2017</span><p>JUN</p></div></div>
           <h5 class="nowrap">{{post.title}}</h5>
           <ion-row align-items-center="" nowrap="">
             <ion-col col-5>
@@ -85,22 +89,21 @@
                 <span class="name ">{{user.name}}</span>
             </ion-col>
             <ion-col col-2>
-              <button ion-button color="dark" clear small icon-left (click)="like(post)">
+              <button ion-button color="dark" clear small icon-left >
                 <ion-icon class="icon-favor"></ion-icon>
                 {{post.likes}}
               </button>
             </ion-col>
             <ion-col col-2>
-              <button ion-button color="dark" clear small icon-left (click)="comment(post)">
+              <button ion-button color="dark" clear small icon-left >
                 <ion-icon class="icon-markfill"></ion-icon>
                 {{post.comments}}
               </button>
             </ion-col>
-            <ion-col col-2>
-              <button ion-button color="dark" clear small icon-left (click)="comment(post)">
-                <ion-icon class="icon-appreciate"></ion-icon>
-                {{post.comments}}
-              </button>
+            <ion-col col-3 class="zan" text-right>
+              <button ion-button color="dark" clear small icon-left >
+                 2766
+                <img src="assets/imgs/icon/09赞图标.png" height="26" width="26"/></button>
             </ion-col>
           </ion-row>
         </div>

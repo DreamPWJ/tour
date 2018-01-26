@@ -98,9 +98,45 @@ page-my-profile {
   }
 
   .you-ji-list .you-ji-item {
+    position: relative;
     padding: 15px 12px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 0;
+
+    .ri-qi{
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 1px 10px;
+      top: 28px;
+      right: 12px;
+      color: rgba(0, 0, 0, 0.3);
+      >span{
+       font-size: 3rem;
+        font-weight: 600;
+      }
+      div{
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        font-size: 1.3rem;
+        p,span{
+          margin: 0;
+          padding: 0;
+        }
+        span{
+          position: relative;
+          top: 8px;
+        }
+      }
+
+    }
+
+    .zan button{
+      font-size: 1.6rem;
+      img{
+        margin-left: 0.3rem;
+      }
+    }
   }
 
   .you-ji-list h5 {
@@ -130,59 +166,61 @@ page-my-profile {
     color: #585858;
   }
 
-
   /*  时间轴 css*/
-  .time-line{
-    .been{
+  .time-line {
+    .been {
       background-image: url('../assets/imgs/account/profile-head-bg.png');
       background-size: cover;
       margin-bottom: 10px;
-      div{
-        margin:10px auto;
+      div {
+        margin: 10px auto;
         width: 90%;
-        padding:0 5px;
+        padding: 0 5px;
         text-align: center;
         border: 2px solid #FFDE37;
       }
 
-      p{
+      p {
         margin: 3px;
-        color: #111111!important;
+        color: #111111 !important;
       }
 
-      p:first-of-type{
+      p:first-of-type {
         font-size: 1.2rem;
         color: #585858;
       }
+      p:last-of-type {
+        font-weight: 600;
+      }
     }
-    .guo-jia{
-      img{
+    .guo-jia {
+      img {
         margin: 0;
         position: absolute;
         right: -5px;
       }
-      span:first-of-type{
+      span:first-of-type {
         padding-left: 0.6rem;
         font-size: 1.7rem;
       }
-      span:last-of-type{
+      span:last-of-type {
         font-size: 1.2rem;
         color: #585858;
       }
     }
   }
-  .time-line .left{
-    padding:5px 0;
+  .time-line .left {
+    padding: 5px 0;
     text-align: left;
   }
 
-  .time-line .left span{
+  .time-line .left span {
     margin-right: 5px;
-    padding:1px 2px;
+    padding: 1px 2px;
     border-radius: 3px;
     font-size: 1.2rem;
 
-    ion-icon{
+    ion-icon {
       font-size: 1rem;
       position: absolute;
       top: 10px;
@@ -193,20 +231,20 @@ page-my-profile {
 
   }
 
-  .time-line .di-dian{
+  .time-line .di-dian {
     font-size: 1.5rem;
     padding-left: 0.6rem;
   }
 
-/*  .time-line .left:before {
-    font-size: 1rem;
-    content: "●";
-    position: absolute;
-    top: 8px;
-    right: 0;
-    color: #585858;
-    z-index: 99;
-  }*/
+  /*  .time-line .left:before {
+      font-size: 1rem;
+      content: "●";
+      position: absolute;
+      top: 8px;
+      right: 0;
+      color: #585858;
+      z-index: 99;
+    }*/
 
   .time-line .left:after {
     content: "";
@@ -218,17 +256,31 @@ page-my-profile {
     z-index: 2;
   }
 
-/*  .time-line .left .icon-right{
-    font-size: 0.6rem!important;
-  }*/
+  /*  .time-line .left .icon-right{
+      font-size: 0.6rem!important;
+    }*/
 
-  .time-line-imgs{
+  .time-line-imgs {
     margin: 0.6rem;
-  }
+    div{
+      position: relative;
+      display: inline-block!important;
+      margin: 0;
+      padding: 0;
+    }
 
-  .time-line-imgs img {
-    padding: 1px;
-    height: 33%;
+    img {
+      padding: 1px;
+      height: 60px;
+    }
+
+    p{
+      position: absolute;
+      bottom: -3px;
+      right: 5px;
+      color: #fff;
+      font-size: 1.1rem;
+    }
   }
 
 }
