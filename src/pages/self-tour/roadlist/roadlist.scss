@@ -16,25 +16,27 @@ page-roadlist {
     z-index: 9;
     position: fixed;
     width: 100%;
-    bottom: 30px;left: 0;right: 0;
+    bottom: 20px;left: 0;right: 0;
   }
 
   .footroad-bg {
     //margin: 20px 0;
+    padding: 6px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 0 50px 50px 0;
-    box-shadow: -2px 0 3px grey,0 -2px 3px grey,0 2px 3px grey,2px 0 3px grey;
+    box-shadow: -2px 0 3px #DDDDDD,0 -2px 3px #DDDDDD,0 2px 3px #DDDDDD,2px 0 3px #DDDDDD;
+    font-size: 1.5rem;
   }
 
-  .footroad-bg ion-col p{
+/*  .footroad-bg ion-col p{
     margin: 0.8rem 0;
-  }
+  }*/
 
   /*价格天数 销量 悬浮框*/
   .price-style{
     background-color: #ffdb27;
-    width:30px;
-    height:22px;
+    border-radius: 2px;
+    padding: 1px 5px;
   }
   .arrow-style p{
     margin: -0.6rem 0 -0.5rem -1.7rem!important;
