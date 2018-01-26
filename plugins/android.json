@@ -13,6 +13,9 @@
         "cordova-plugin-ionic-webview": {
             "PACKAGE_NAME": "com.app.tour"
         },
+        "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "com.app.tour"
+        },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.app.tour"
         },
@@ -23,9 +26,6 @@
             "PACKAGE_NAME": "com.app.tour"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.app.tour"
-        },
-        "cordova-plugin-screen-orientation": {
             "PACKAGE_NAME": "com.app.tour"
         }
     },

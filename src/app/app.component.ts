@@ -26,7 +26,7 @@ export class MyApp {
       }*/
       setTimeout(()=>{
         splashScreen.hide();
-      },600);
+      },500);
       //锁定到主竖屏
       screen.orientation.lock('portrait-primary');
       hardwareBackButtonProvider.registerBackButtonAction(ionicApp);//注册返回按键事件
