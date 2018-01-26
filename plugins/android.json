@@ -24,7 +24,14 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.app.tour"
+        },
+        "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "com.app.tour"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "com.app.tour"
+        }
+    }
 }

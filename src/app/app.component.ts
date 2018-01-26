@@ -4,6 +4,7 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {HardwareBackButtonProvider} from "../providers/native/back-button.provider";
 import {HomePage} from "../pages/home/home";
+declare const screen :any;     //定义全局变量
 
 @Component({
   templateUrl: 'app.html'
@@ -26,7 +27,8 @@ export class MyApp {
       setTimeout(()=>{
         splashScreen.hide();
       },600);
-
+      //锁定到主竖屏
+      screen.orientation.lock('portrait-primary');
       hardwareBackButtonProvider.registerBackButtonAction(ionicApp);//注册返回按键事件
     });
   }
