@@ -2,12 +2,12 @@
   <ion-header class="white-header">
     <ion-navbar color="light">
       <ion-toolbar >
-        <ion-row>
-        <ion-select  col-4 interface="popover">
+        <ion-row nowrap="">
+        <ion-select   interface="popover">
           <ion-option value="成都" selected="true"  >成都出发</ion-option>
           <ion-option value="武汉">武汉出发</ion-option>
         </ion-select>
-        <ion-searchbar col-8 tappable placeholder="输入想去的城市" (ionInput)="filterItems($event)">
+        <ion-searchbar  tappable placeholder="输入想去的城市" (ionInput)="filterItems($event)">
         </ion-searchbar>
         </ion-row>
       </ion-toolbar>
