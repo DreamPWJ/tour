@@ -13,6 +13,7 @@ import {CityProvider} from "../providers/cityprovider";
 import {SelfTourPage} from "../pages/self-tour/self-tour";
 import {RankingListPage} from "../pages/ranking-list/ranking-list";
 import {MyProfilePage} from "../pages/account/my-profile/my-profile";
+import {DirectivesModule} from "../directives/directives.module";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MyProfilePage} from "../pages/account/my-profile/my-profile";
       tabsHideOnSubPages: true,//隐藏全部子页面tabs
       backButtonText: '',
       spinner: 'crescent'
-    })
+    }),
+    DirectivesModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
