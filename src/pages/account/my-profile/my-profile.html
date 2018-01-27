@@ -50,7 +50,7 @@
   </div>
   <div  [ngSwitch]="segment" (swipe)="swipeEvnet($event)" class="content">
     <div *ngSwitchCase="'行程 6'" class="time-line">
-      <ion-row  class="been" >
+      <ion-row   ngClass="been" >
         <div>
           <p>- 去过 3 座城市 -</p>
           <p>拉萨 · 北京 ·  上海</p>
