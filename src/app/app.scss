@@ -163,6 +163,13 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
   background-color: #F9F9F9;
 }
 
+.header-ios-white{
+  .toolbar-content,
+  .back-button,button,.toolbar-title {
+    color: #111111!important;
+  }
+}
+
 .white-header {
   // This is just to make the header white and button/icon with #111111 color
   .toolbar-content,
