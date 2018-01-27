@@ -84,14 +84,14 @@ export class MyProfilePage {
 
   segmentChanged(event) {
     if(this.isTabTop){
-      this.content.scrollTo(0,160)
+      this.content.scrollTo(0,150)
     }
 
   }
 
   swipeEvnet(event) {
     if(this.isTabTop){
-      this.content.scrollTo(0,160)
+      this.content.scrollTo(0,150)
     }
     //向左滑
     if (event.direction == 2) {
