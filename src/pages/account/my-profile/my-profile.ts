@@ -65,7 +65,7 @@ export class MyProfilePage {
 
   scrollHandler(event) {
     /*    console.log(this.content.scrollTop);*/
-    this.content.scrollTop >= 160 ? this.isTabTop = true : this.isTabTop = false;
+    this.content.scrollTop >= 150 ? this.isTabTop = true : this.isTabTop = false;
     if (this.platform.is("cordova")) {
       this.isTabTop?this.statusBar.backgroundColorByHexString("#ffffff"):this.statusBar.styleDefault();
     }
