@@ -1,4 +1,4 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, NgZone, ViewChild} from '@angular/core';
 import {Content, NavController, NavParams} from 'ionic-angular';
 import {AppService} from "../../../providers/util/app.service";
 
@@ -18,6 +18,7 @@ export class MyProfilePage {
   @ViewChild(Content) content: Content;
   segmentArr:string[]=[ '行程 6','游记 7' ,'评论 23' ];
   segment:string=this.segmentArr[0];
+  isTabTop:boolean=false;
   posts = [
     {
       postImageUrl: 'assets/imgs/slide/slide1.jpeg',
@@ -46,8 +47,9 @@ export class MyProfilePage {
     name: '怀念记忆',
     profileImage: 'assets/imgs/main/head.jpg',
   };
+  scrollAmount = 0;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService,public zone: NgZone) {
   }
 
   ionViewDidLoad() {
@@ -62,6 +64,19 @@ export class MyProfilePage {
 
 
   }
+
+  scrollHandler(event) {
+/*    console.log(this.content.scrollTop);*/
+    this.content.scrollTop>=160?this.isTabTop=true:this.isTabTop=false;
+
+/*    console.log(`ScrollEvent: ${event}`)
+    this.zone.run(()=>{
+      // since scrollAmount is data-binded,
+      // the update needs to happen in zone
+      this.scrollAmount++
+    })*/
+  }
+
   scrollToTop() {
     this.content.scrollToTop();
   }

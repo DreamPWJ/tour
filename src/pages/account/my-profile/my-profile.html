@@ -1,7 +1,7 @@
-<ion-content class="transparent-header">
-  <ion-header>
-    <ion-navbar color="transparent">
-      <!--      <ion-title>排行榜</ion-title>-->
+<ion-content class="transparent-header" (ionScroll)="scrollHandler($event)">
+  <ion-header class="{{isTabTop?'white-header':''}}">
+    <ion-navbar color="transparent" >
+        <ion-title *ngIf="isTabTop"> <img  src="assets/imgs/main/head.jpg" class="header-item"> 怀念记忆</ion-title>
       <ion-buttons end>
         <button class="search-btn" ion-button icon-only>
           <ion-icon class="icon-search"></ion-icon>
@@ -40,14 +40,16 @@
     </ion-row>
   </ion-list>
   <!-- mode="md":指定为Android手机模式的 -->
-  <ion-segment [(ngModel)]="segment" mode="md" (ionChange)="segmentChanged($event)">
+  <div class="{{isTabTop?'tabs-fixed':''}}">
+  <ion-segment  [(ngModel)]="segment" mode="md" (ionChange)="segmentChanged($event)">
     <ion-segment-button *ngFor="let item of segmentArr" value="{{item}}">
       {{item}}
       <div class="bolder-sm"></div>
     </ion-segment-button>
   </ion-segment>
+  </div>
   <div  [ngSwitch]="segment" (swipe)="swipeEvnet($event)" class="content">
-    <ion-scroll  scrollY="true" style="height: 60vh" *ngSwitchCase="'行程 6'" class="time-line">
+    <div *ngSwitchCase="'行程 6'" class="time-line">
       <ion-row  class="been" >
         <div>
           <p>- 去过 3 座城市 -</p>
@@ -76,8 +78,8 @@
         </ion-row>
         </ion-col>
       </ion-row>
-    </ion-scroll>
-    <ion-scroll  scrollY="true" style="height: 60vh"  *ngSwitchCase="'游记 7'">
+    </div>
+    <div  *ngSwitchCase="'游记 7'">
       <ion-list class="you-ji-list" >
         <div *ngFor="let post of posts" class="you-ji-item">
           <img  [src]="post.postImageUrl" (click)="imageTapped(post)" class="main-img">
@@ -108,14 +110,18 @@
           </ion-row>
         </div>
       </ion-list>
-    </ion-scroll>
+    </div>
 <!--    <div *ngSwitchCase="'相册 6'" padding>
       相册
     </div>-->
-    <ion-scroll  scrollY="true" style="height: 60vh"  *ngSwitchCase="'评论 23'" padding>
+    <div *ngSwitchCase="'评论 23'" padding>
       评论
-    </ion-scroll>
+    </div>
   </div>
+
+  <ion-fab *ngIf="isTabTop" right bottom>
+    <button (click)="scrollToTop()"  ion-fab color="light" mini> <ion-icon class="icon-top"></ion-icon></button>
+  </ion-fab>
 </ion-content>
 
 

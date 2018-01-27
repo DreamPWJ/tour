@@ -166,8 +166,8 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
 .white-header {
   // This is just to make the header white and button/icon with #111111 color
   .toolbar-content,
-  .back-button {
-    color: #111111;
+  .back-button,button,.toolbar-title {
+    color: #111111!important;
   }
   .toolbar-background,
   ion-navbar,
