@@ -1,6 +1,7 @@
 import {Component, NgZone, ViewChild} from '@angular/core';
 import {Content, NavController, NavParams} from 'ionic-angular';
 import {AppService} from "../../../providers/util/app.service";
+import {StatusBar} from "@ionic-native/status-bar";
 
 
 /**
@@ -16,9 +17,9 @@ import {AppService} from "../../../providers/util/app.service";
 })
 export class MyProfilePage {
   @ViewChild(Content) content: Content;
-  segmentArr:string[]=[ '行程 6','游记 7' ,'评论 23' ];
-  segment:string=this.segmentArr[0];
-  isTabTop:boolean=false;
+  segmentArr: string[] = ['行程 6', '游记 7', '评论 23'];
+  segment: string = this.segmentArr[0];
+  isTabTop: boolean = false;
   posts = [
     {
       postImageUrl: 'assets/imgs/slide/slide1.jpeg',
@@ -49,7 +50,7 @@ export class MyProfilePage {
   };
   scrollAmount = 0;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService,public zone: NgZone) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService, public zone: NgZone, public statusBar: StatusBar) {
   }
 
   ionViewDidLoad() {
@@ -60,21 +61,25 @@ export class MyProfilePage {
     this.appService.loadingHide();
   }
 
-  segmentChanged(event){
+  segmentChanged(event) {
 
 
   }
 
   scrollHandler(event) {
-/*    console.log(this.content.scrollTop);*/
-    this.content.scrollTop>=160?this.isTabTop=true:this.isTabTop=false;
-
-/*    console.log(`ScrollEvent: ${event}`)
-    this.zone.run(()=>{
-      // since scrollAmount is data-binded,
-      // the update needs to happen in zone
-      this.scrollAmount++
-    })*/
+    /*    console.log(this.content.scrollTop);*/
+    this.content.scrollTop >= 160 ? this.isTabTop = true : this.isTabTop = false;
+    if (this.isTabTop) {
+      this.statusBar.backgroundColorByHexString("#ffffff");
+    } else {
+      this.statusBar.styleDefault();
+    }
+    /*    console.log(`ScrollEvent: ${event}`)
+        this.zone.run(()=>{
+          // since scrollAmount is data-binded,
+          // the update needs to happen in zone
+          this.scrollAmount++
+        })*/
   }
 
   scrollToTop() {
@@ -83,7 +88,7 @@ export class MyProfilePage {
 
   imageTapped(post) {
     this.navCtrl.push('ViewImgPage')
-/*    this.appService.toast('点击图片');*/
+    /*    this.appService.toast('点击图片');*/
   }
 
   comment(post) {
