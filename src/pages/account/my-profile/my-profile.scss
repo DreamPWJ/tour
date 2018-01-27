@@ -8,11 +8,22 @@
  .tabs-fixed{
   @include tabs-fixed;
   top:44px;
-}
+ }
+
 .platform-android.platform-cordova  .tabs-fixed{
   @include tabs-fixed;
   top:64px;
 }
+
+/*.tabs-fixed-been{
+  @include tabs-fixed;
+  top:94px;
+}
+
+.platform-android.platform-cordova  .tabs-fixed-been{
+  @include tabs-fixed;
+  top:114px;
+}*/
 
 page-my-profile {
   ::-webkit-scrollbar {
@@ -199,7 +210,7 @@ page-my-profile {
       }
 
       p {
-        margin: 3px;
+        margin: 5px;
         color: #111111 !important;
       }
 
