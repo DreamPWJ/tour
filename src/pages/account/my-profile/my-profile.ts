@@ -1,5 +1,5 @@
 import {Component, NgZone, ViewChild} from '@angular/core';
-import {Content, NavController, NavParams} from 'ionic-angular';
+import {Content, NavController, NavParams, Platform} from 'ionic-angular';
 import {AppService} from "../../../providers/util/app.service";
 import {StatusBar} from "@ionic-native/status-bar";
 
@@ -50,7 +50,7 @@ export class MyProfilePage {
   };
   scrollAmount = 0;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService, public zone: NgZone, public statusBar: StatusBar) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService, public zone: NgZone, public statusBar: StatusBar,public  platform: Platform) {
   }
 
   ionViewDidLoad() {
@@ -61,18 +61,13 @@ export class MyProfilePage {
     this.appService.loadingHide();
   }
 
-  segmentChanged(event) {
 
-
-  }
 
   scrollHandler(event) {
     /*    console.log(this.content.scrollTop);*/
     this.content.scrollTop >= 160 ? this.isTabTop = true : this.isTabTop = false;
-    if (this.isTabTop) {
-      this.statusBar.backgroundColorByHexString("#ffffff");
-    } else {
-      this.statusBar.styleDefault();
+    if (this.platform.is("cordova")) {
+      this.isTabTop?this.statusBar.backgroundColorByHexString("#ffffff"):this.statusBar.styleDefault();
     }
     /*    console.log(`ScrollEvent: ${event}`)
         this.zone.run(()=>{
@@ -86,20 +81,18 @@ export class MyProfilePage {
     this.content.scrollToTop();
   }
 
-  imageTapped(post) {
-    this.navCtrl.push('ViewImgPage')
-    /*    this.appService.toast('点击图片');*/
-  }
 
-  comment(post) {
-    this.appService.toast('评论');
-  }
+  segmentChanged(event) {
+    if(this.isTabTop){
+      this.content.scrollTo(0,160)
+    }
 
-  like(post) {
-    this.appService.toast('喜欢');
   }
 
   swipeEvnet(event) {
+    if(this.isTabTop){
+      this.content.scrollTo(0,160)
+    }
     //向左滑
     if (event.direction == 2) {
       if (this.segmentArr.indexOf(this.segment) < 3) {
@@ -114,5 +107,17 @@ export class MyProfilePage {
     }
   }
 
+  imageTapped(post) {
+    this.navCtrl.push('ViewImgPage')
+    /*    this.appService.toast('点击图片');*/
+  }
+
+  comment(post) {
+    this.appService.toast('评论');
+  }
+
+  like(post) {
+    this.appService.toast('喜欢');
+  }
 
 }
