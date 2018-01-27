@@ -15,7 +15,6 @@ export class HardwareBackButtonProvider {
   private nav: NavController;
 
   constructor(public platform: Platform, public app: App, public appService: AppService, private keyboard: Keyboard) {
-    console.log('Hello HardwareBackButtonProvider Provider');
 
   }
 
