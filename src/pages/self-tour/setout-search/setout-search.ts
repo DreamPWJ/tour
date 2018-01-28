@@ -1,6 +1,6 @@
 import {Component, ViewChild, ViewChildren} from '@angular/core';
 import {Content, IonicPage, NavController, NavParams, ViewController} from 'ionic-angular';
-import {CityProvider} from "../../../providers/cityprovider";
+import {CityProvider} from "../../../providers/util/city.provider";
 import {AppService} from "../../../providers/util/app.service";
 
 /**

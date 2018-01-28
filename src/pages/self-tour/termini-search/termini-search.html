@@ -28,15 +28,15 @@
 
   <div class="termini-div2" *ngIf="selectFlg==1">
     <ion-scroll scrollY="true" style="height: 80vh">
-      <ion-row>
+      <ion-row align-items-center="">
         <ion-col col-8><h5 style="color: #787878;">GPS定位</h5></ion-col>
-        <ion-col tappable [navPush]="'SetoutSearchPage'" col-4 padding-top class="gps-dingwei">
+        <ion-col tappable [navPush]="'SetoutSearchPage'" col-4  class="gps-dingwei">
           <ion-icon class="icon-location_light" color="primary"></ion-icon>
           成都
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col><h5 style="color: #474747;">搜索历史</h5></ion-col>
+        <ion-col><h5 class="grey">搜索历史</h5></ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
@@ -50,7 +50,7 @@
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col><h5 style="color: #474747;">热门目的地</h5></ion-col>
+        <ion-col><h5 class="grey">热门目的地</h5></ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
@@ -64,7 +64,7 @@
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col><h5 style="color: #474747;">热门城市</h5></ion-col>
+        <ion-col><h5 class="grey">热门城市</h5></ion-col>
       </ion-row>
       <ion-row>
         <ion-col *ngFor="let item of cityList">
@@ -72,7 +72,7 @@
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col><h5 style="color: #474747;">全年当季推荐</h5></ion-col>
+        <ion-col><h5 class="grey">全年当季推荐</h5></ion-col>
       </ion-row>
       <ion-row>
         <ion-col *ngFor="let season of seasonList" col-4>

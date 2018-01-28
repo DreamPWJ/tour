@@ -11,12 +11,12 @@
 <ion-content>
   <ion-searchbar placeholder="搜索出发地" (ionInput)="filterItems($event)" class="searchbar-style"></ion-searchbar>
   <div class="setout-div">
-    <ion-row>
+    <ion-row align-items-center="">
       <ion-col col-9><h5 style="color: #787878;">GPS定位</h5></ion-col>
-      <ion-col col-3  padding-top class="gps-dingwei"><ion-icon class="icon-location_light" color="primary"></ion-icon> 成都</ion-col>
+      <ion-col col-3   class="gps-dingwei"><ion-icon class="icon-location_light" color="primary"></ion-icon> 成都</ion-col>
     </ion-row>
     <ion-row>
-      <ion-col><h5 style="color: #474747;">搜索历史</h5></ion-col>
+      <ion-col><h5 class="grey">搜索历史</h5></ion-col>
     </ion-row>
     <ion-row>
       <ion-col col-4><button ion-button color="light">北京</button></ion-col>
@@ -24,7 +24,7 @@
       <ion-col col-4><button ion-button color="light">南京</button></ion-col>
     </ion-row>
     <ion-row>
-      <ion-col><h5 style="color: #474747;">热门城市</h5></ion-col>
+      <ion-col><h5 class="grey">热门城市</h5></ion-col>
     </ion-row>
     <ion-row>
       <ion-col *ngFor="let item of cityList" col-4>

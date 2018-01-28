@@ -26,10 +26,10 @@ $energized: #f26604;
 $yellow: #FFDE37;
 $assertive: #ef473a;
 $royal: #886aea;
-$grey: #585858;
+$grey: #474747;
 $dark: #444;
 
-$colors-list: (light:$light, stable:$stable, positive:$positive, calm:$calm, balanced:$balanced, energized:$energized, yellow:$yellow, assertive:$assertive, royal:$royal, dark:$dark);
+$colors-list: (light:$light, stable:$stable, positive:$positive, calm:$calm, balanced:$balanced, energized:$energized, yellow:$yellow, assertive:$assertive, royal:$royal, grey:$grey, dark:$dark);
 @each $key, $value in $colors-list {
   .#{$key} {
     color: $value !important;
