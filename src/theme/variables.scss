@@ -51,10 +51,7 @@ $toolbar-ios-border-color: transparent !default;
 $tabs-ios-border-color: #EBEBEB !default;
 $card-ios-box-shadow-color:rgba(0, 0, 0, .1);
 /*$toast-ios-background:color($colors, primary) !default;*/
-
-.toolbar-title-ios {
-  font-weight: 500 !important;
-}
+$toolbar-ios-title-font-weight:500!default;
 
 .ion-ios-arrow-back:before {
   content: "\e7ed" !important;

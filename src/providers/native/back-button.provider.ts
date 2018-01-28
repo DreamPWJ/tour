@@ -50,7 +50,7 @@ export class HardwareBackButtonProvider {
     if (this.backButtonPressed) { //当触发标志为true时，即2秒内双击返回按键则退出APP
       this.platform.exitApp();
     } else {
-      this.appService.toast("再按一次返回退出应用")
+      this.appService.toast("再按一次返回退出自驾游应用")
       this.backButtonPressed = true;
       setTimeout(() => this.backButtonPressed = false, 2000);//2秒内没有再次点击返回则将触发标志标记为false
     }
