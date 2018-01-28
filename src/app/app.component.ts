@@ -25,9 +25,9 @@ export class MyApp {
       /!*        statusBar.styleBlackTranslucent();*!/
               statusBar.styleLightContent();
             }*/
-      setTimeout(() => {
+/*      setTimeout(() => {*/
         splashScreen.hide();
-      }, 500);
+  /*    }, 500);*/
 
       //cordova APP
       if (platform.is("cordova")) {
