@@ -35,8 +35,8 @@ page-self-tour {
     margin: 0;
   }
 
-  .jin-ri-slides{
-    ion-card{
+  .jin-ri-slides {
+    ion-card {
       margin: 5px;
     }
   }
@@ -174,8 +174,6 @@ page-self-tour {
 
   }
 
-
-
   .huo-dong div p {
     position: absolute;
     width: 100%;
@@ -217,12 +215,12 @@ page-self-tour {
           width: 25vw;
           height: 26px;
         }
-        div{
+        div {
           position: absolute;
           top: -14px;
           color: #fff;
           font-size: 1rem;
-          strong{
+          strong {
             font-size: 1.5rem;
           }
         }
@@ -233,13 +231,13 @@ page-self-tour {
     }
 
   }
-  .re-men-more{
+  .re-men-more {
     border-top: 1px solid $border-color;
     margin: 0.5rem 0.8rem -10px;
-    padding: 0.9rem ;
+    padding: 0.9rem;
   }
 
-  .xi-xing{
+  .xi-xing {
     ion-card {
       margin: 5px;
       box-shadow: none;
@@ -248,13 +246,43 @@ page-self-tour {
         margin: 0;
         width: 100%;
         height: 200px;
-        img{
+        img {
           width: 100%;
         }
       }
+      .ri-qi {
+        position: absolute;
+        background-color: #FFDE37;
+        border-radius: 0 0 2px 2px;
+        padding: 1px 8px;
+        top: 5px;
+        left: 15px;
+        color: #474747;
+        z-index: 10;
+        > span {
+          font-size: 3rem;
+          font-weight: 600;
+        }
+        div {
+          margin: 0;
+          padding: 0;
+          display: inline-block;
+          font-size: 1.3rem;
+          p, span {
+            margin: 0;
+            padding: 0;
+          }
+          span {
+            position: relative;
+            top: 4px;
+          }
+        }
+
+      }
+
       ion-card-content {
         padding: 3px;
-        ion-card-title{
+        ion-card-title {
           font-weight: 600;
           text-align: left;
         }
@@ -281,6 +309,61 @@ page-self-tour {
       }
     }
 
+  }
 
+  .jin-pin-list {
+    padding: 6px 15px;
+
+    .card{
+      width: 100%;
+      height: 100%;
+      margin-top: 0.8rem;
+      box-shadow:1px 0 2px rgba(204, 204, 204, 0.2),0 1px  3px rgba(204, 204, 204, 0.2);
+      border-radius: 2px;
+      padding: 0!important;
+    }
+    ion-thumbnail{
+      margin: 0 5px 0 0!important;
+/*      width: 20%;
+      height: 100%;
+      img{
+        width: 100%;
+        height: auto!important;
+      }*/
+
+    }
+    ion-label{
+      padding-right: 0;
+    }
+    .btn{
+      button{
+        margin-right: 5px;
+        border-radius: 3px;
+        color:#fff ;
+        &.one{
+          background: -webkit-linear-gradient(left,#6F96FB, #A67EF8);
+          background: linear-gradient(left,#6F96FB, #A67EF8);
+        }
+
+        &.two{
+          background: -webkit-linear-gradient(left,#A67EF8, #F76A9E);
+          background: linear-gradient(left,#A67EF8, #F76A9E);
+        }
+
+        &.three{
+          color:#585858;
+          border: 1px solid #cccccc;
+          background-color: #fff!important;
+        }
+      }
+
+    }
+    .sell-price{
+      font-size: 1.2rem;
+      .price{
+        font-size: 1.5rem;
+      }
+
+    }
   }
 }
