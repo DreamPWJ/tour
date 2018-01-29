@@ -84,6 +84,7 @@ page-self-tour {
   }
 
   .qiang-gou ion-row {
+    padding: 5px;
     padding-bottom: 0 !important;
   }
 
@@ -100,7 +101,7 @@ page-self-tour {
   $hong-bao: #ff3334;
 
   .qiang-gou .hong-bao {
-    position: relative!important;
+    position: relative !important;
     margin: 5px;
     background-color: $hong-bao;
     /*    background: url('../assets/imgs/self-tour/14红包背板.png') no-repeat;*/
@@ -122,7 +123,7 @@ page-self-tour {
       &:before {
         content: "●";
         position: absolute;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         color: $hong-bao;
         left: -5px;
         bottom: -8px;
@@ -131,7 +132,7 @@ page-self-tour {
       &:after {
         content: "●";
         position: absolute;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         color: $hong-bao;
         right: -5px;
         bottom: -8px;
@@ -167,6 +168,8 @@ page-self-tour {
 
   }
 
+
+
   .huo-dong div p {
     position: absolute;
     width: 100%;
@@ -181,7 +184,7 @@ page-self-tour {
   }
 
   .huo-dong > p {
-    margin: 3px;
+    margin: 5px;
   }
 
   .huo-dong > p strong {
@@ -189,7 +192,44 @@ page-self-tour {
     font-family: Roboto;
   }
 
-  .jin-ri-scroll img {
-    display: inline-block !important;
+  .re-men-scroll {
+    ion-card {
+      margin: 5px;
+      display: inline-block !important;
+      ion-img {
+        display: block;
+        margin: 0;
+      }
+      ion-card-content {
+        position: relative;
+        width: 100%;
+        padding: 2px 8px;
+        img {
+          position: absolute;
+          top: -14px;
+          left: 0;
+          width: 25vw;
+          height: 26px;
+        }
+        div{
+          position: absolute;
+          top: -14px;
+          color: #fff;
+          font-size: 1rem;
+          strong{
+            font-size: 1.5rem;
+          }
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+  }
+  .re-men-more{
+    border-top: 1px solid $border-color;
+    margin: 0.5rem 0.8rem -10px;
+    padding: 0.9rem ;
   }
 }
