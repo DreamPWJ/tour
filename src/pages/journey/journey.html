@@ -1,22 +1,15 @@
-<!--
-  Generated template for the JourneyPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar color="white" >
-<!--    <ion-title>行程</ion-title>-->
-    <ion-searchbar (input)="getItems($event)" placeholder="搜索景点关键字"></ion-searchbar>
-    <ion-buttons end>
-      <button ion-button icon-only>
-        <ion-icon class="icon-more_android_light"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-navbar>
-</ion-header>
 
 <ion-content >
+  <ion-header fixed>
+    <ion-navbar color="white" >
+      <!--    <ion-title>行程</ion-title>-->
+      <ion-searchbar (input)="getItems($event)" placeholder="搜索景点关键字"></ion-searchbar>
+      <ion-buttons end>
+        <button ion-button icon-only>
+          <ion-icon class="icon-more_android_light"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
   <div #maps class="map-container"></div>
 </ion-content>

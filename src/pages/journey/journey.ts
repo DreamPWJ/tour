@@ -1,5 +1,6 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {AppService} from "../../providers/util/app.service";
 declare let AMap;
 /**
  * Generated class for the JourneyPage page.
@@ -17,14 +18,16 @@ export class JourneyPage {
   @ViewChild('maps') maps: ElementRef;
   map: any;//地图对象
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService) {
   }
 
   ionViewDidLoad() {
-
+    this.appService.loadingShow();
   }
 
+
   ionViewDidEnter() {
+    this.appService.loadingHide();
     this.map = new AMap.Map(this.maps.nativeElement, {
       view: new AMap.View2D({//创建地图二维视口
         zoom: 13, //设置地图缩放级别
