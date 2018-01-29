@@ -110,9 +110,10 @@ page-self-tour {
   $hong-bao: #ff3334;
 
   .qiang-gou .hong-bao {
-    position: relative !important;
+    position: relative;
     margin: 5px;
     background-color: $hong-bao;
+  /*  line-height: 160px;*/
     /*    background: url('../assets/imgs/self-tour/14红包背板.png') no-repeat;*/
     /*    background-size: 100% 100%;*/
     p.name {
@@ -120,6 +121,12 @@ page-self-tour {
       color: #fff;
       font-weight: 500;
     }
+
+    /*
+    div.center{
+      @include center-center;
+    }
+    */
 
     div.money {
       position: relative;
@@ -169,7 +176,7 @@ page-self-tour {
         margin: auto;
         background-color: $hong-bao;
         color: #fff;
-        padding: 4px 12px;
+        padding: 5px 15px;
         border-radius: 15px;
         font-size: 1rem;
       }
@@ -303,6 +310,8 @@ page-self-tour {
 
         .zan button {
           img {
+            width: 25px!important;
+            height: 25px!important;
             margin-right: 0.3rem;
           }
         }
@@ -325,17 +334,21 @@ page-self-tour {
     img {
       margin: 0 5px 0 0 !important;
       width: 25%;
-      height: 100px !important;
+      height: 80px !important;
     }
     ion-label {
       margin: 5px 2px;
       padding-right: 0;
+      h2{
+        font-size: 1.6rem!important;
+      }
     }
     .btn {
       button {
+        display: inline-block;
         margin-right: 5px;
         border-radius: 3px;
-        padding: 2px 5px;
+        padding: 3px 5px;
         color: #fff;
         &.one {
           background: -webkit-linear-gradient(to left, #6F96FB, #A67EF8);

@@ -83,7 +83,8 @@
           <p>【5天】 拉萨 珠穆拉玛峰</p></div>
         <p >租车 <strong class="assertive">￥249</strong> 日</p>
       </ion-col>
-      <ion-col class="hong-bao " text-center="">
+      <ion-col class="hong-bao " text-center="" >
+<!--        <div class="center">-->
         <p class="name">摩卡优惠券</p>
         <div class="money">
         <h5><small>￥</small>30</h5>
@@ -92,6 +93,7 @@
         <div class="btn">
         <button>马上抢</button>
         </div>
+<!--        </div>-->
       </ion-col>
     </ion-row>
   </div>
@@ -151,15 +153,15 @@
               <span class="name ">Sea-Cen  <ion-icon class="icon-dingweitubiaodan yellow"></ion-icon>川西</span>
             </ion-col>
 
-            <ion-col col>
+            <ion-col col-2>
               <button ion-button color="dark" clear small icon-left >
                 <ion-icon class="icon-markfill"></ion-icon>
                 {{image}}
               </button>
             </ion-col>
-            <ion-col col class="zan" text-right>
-              <button ion-button color="dark" clear small icon-left >
-                <img src="assets/imgs/icon/09赞图标.png" height="25" width="25"/>   {{image}}</button>
+            <ion-col col-3 class="zan" text-right>
+              <button ion-button color="dark" clear small  >
+                <img src="assets/imgs/icon/09赞图标.png" />   {{image}}</button>
 
             </ion-col>
           </ion-row>
@@ -181,7 +183,7 @@
     <ion-item class="card" *ngFor="let image of [1,2,3,4,5]" >
         <img item-start src="assets/imgs/slide/slide{{image}}.jpeg">
       <h2 text-wrap=""><strong>【西藏探秘{{image}}日游】</strong> 临近不丹40号冰川  · 珠穆拉玛峰 </h2>
-      <ion-row class="btn" no-padding=""><button class="one" >当地自己</button> <button class="two" >减500</button> <button  class="three">五星导游</button></ion-row>
+      <ion-row class="btn" no-padding=""><button  class="one" >当地自己</button> <button class="two" >减500</button> <button  class="three">五星导游</button></ion-row>
       <ion-row class="sell-price" no-padding="" justify-content-between="" align-items-center=""><ion-col class="grey">已售 106</ion-col> <ion-col text-right=""><span class="assertive">￥<strong class=" price">3390</strong></span> <span class="grey">起</span></ion-col></ion-row>
     </ion-item>
 
