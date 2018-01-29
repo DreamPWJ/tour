@@ -24,10 +24,10 @@ $calm: #11c1f3;
 $balanced: #33cd5f;
 $energized: #f26604;
 $yellow: #FFDE37;
-$assertive: #ef473a;
+$assertive: #ff3334;
 $royal: #886aea;
 $grey: #474747;
-$dark: #444;
+$dark: #000;
 
 $colors-list: (light:$light, stable:$stable, positive:$positive, calm:$calm, balanced:$balanced, energized:$energized, yellow:$yellow, assertive:$assertive, royal:$royal, grey:$grey, dark:$dark);
 @each $key, $value in $colors-list {
@@ -58,6 +58,8 @@ a {
   height: 100vh;
 }
 
+$border-color:rgba(0, 0, 0, 0.1);
+
 .center-center {
   position: relative;
   top: 50%;
@@ -71,6 +73,14 @@ a {
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
+}
+
+@mixin  center-center{
+  @extend .center-center;
+}
+
+@mixin  vertical-center{
+  @extend .vertical-center;
 }
 
 .border-radius-50 {

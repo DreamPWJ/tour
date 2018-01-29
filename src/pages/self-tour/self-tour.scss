@@ -91,21 +91,43 @@ page-self-tour {
   $hong-bao: #ff3334;
 
   .hong-bao {
-    position: relative;
+/*    position: relative;*/
+    height: auto;
     margin: 5px;
-    background: url('../assets/imgs/self-tour/14红包背板.png') no-repeat;
-    background-size: 100% 100%;
+    background-color: $hong-bao;
+    /*    background: url('../assets/imgs/self-tour/14红包背板.png') no-repeat;*/
+    /*    background-size: 100% 100%;*/
     .name {
-      margin-top: -5px;
+      background-color: #FF6684;
       color: #fff;
       font-weight: 500;
     }
 
-    div {
+    div.money {
       position: relative;
-      top: 18%;
+      background-color: #fff;
+      padding: 15px 2px;
+      border-bottom: 1px solid $border-color;
       p {
-        font-size: 1rem;
+        font-size: 0.9rem;
+      }
+      &:before {
+        content: "●";
+        position: absolute;
+        font-size: 1.3rem;
+        color: $hong-bao;
+        left: -5px;
+        bottom: -8px;
+        z-index: 10;
+      }
+      &:after {
+        content: "●";
+        position: absolute;
+        font-size: 1.3rem;
+        color: $hong-bao;
+        right: -5px;
+        bottom: -8px;
+        z-index: 10;
       }
     }
 
@@ -118,17 +140,22 @@ page-self-tour {
     p {
       margin: 0;
     }
-
-    button {
-      display: block;
-      position: relative;
-      top: 33%;
-      margin: auto;
-      background-color: $hong-bao;
-      color: #fff;
-      padding: 5px 10px;
-      border-radius: 15px;
+    div.btn {
+      padding: 5px 2px;
+      background: #fff;
+      button {
+        display: block;
+        position: relative;
+        top: 35%;
+        margin: auto;
+        background-color: $hong-bao;
+        color: #fff;
+        padding: 4px 12px;
+        border-radius: 15px;
+        font-size: 1rem;
+      }
     }
+
   }
 
   .huo-dong div p {
