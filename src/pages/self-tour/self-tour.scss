@@ -1,4 +1,13 @@
 page-self-tour {
+  ion-header {
+    button {
+      width: 30px !important;
+      height: 30px !important;
+      min-height: 30px !important;
+      background-color: rgba(0, 0, 0, .5) !important;
+      border-radius: 50% !important;
+    }
+  }
 
   .slides {
     height: auto;
@@ -90,14 +99,13 @@ page-self-tour {
 
   $hong-bao: #ff3334;
 
-  .hong-bao {
-/*    position: relative;*/
-    height: auto;
+  .qiang-gou .hong-bao {
+    position: relative!important;
     margin: 5px;
     background-color: $hong-bao;
     /*    background: url('../assets/imgs/self-tour/14红包背板.png') no-repeat;*/
     /*    background-size: 100% 100%;*/
-    .name {
+    p.name {
       background-color: #FF6684;
       color: #fff;
       font-weight: 500;
@@ -140,6 +148,7 @@ page-self-tour {
     p {
       margin: 0;
     }
+
     div.btn {
       padding: 5px 2px;
       background: #fff;
