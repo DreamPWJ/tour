@@ -23,7 +23,7 @@
     </ion-slide>
   </ion-slides>
   <ion-row align-items-center>
-    <span col-3><ion-icon class="icon-locationfill yellow"></ion-icon> 成都 <ion-icon
+    <span col-3><ion-icon class="icon-dingweitubiaodan yellow"></ion-icon> 成都 <ion-icon
       class="icon-unfold font-size-1" ></ion-icon></span>
     <ion-searchbar readonly [navPush]="'TerminiSearchPage'" class="searchbar" col-8 placeholder="搜索自驾游目的地" animated="true">
     </ion-searchbar>
@@ -52,13 +52,13 @@
   </ion-row>
 
   <p class="partition"></p>
-  <div padding-horizontal=""><span style="font-size: 1.5rem">
+  <div padding-horizontal=""><span style="font-size: 1.6rem">
     今日推荐
   </span>
     <span float-right><strong>{{currentIndex}}</strong>/{{slidesLength}}</span>
   </div>
 
-  <ion-slides #slides class="jin-ri-slides" freeMode="true" slidesPerView="auto" spaceBetween="-30px" loop="false"
+  <ion-slides #slides class="jin-ri-slides" freeMode="true" slidesPerView="auto" spaceBetween="-40px" loop="false"
               (ionSlideDidChange)="slideChanged()">
     <ion-slide *ngFor="let image of [1,2,3,4,5]">
       <ion-card text-left ngClass="{{image==currentIndex?'':'scale-img'}}">
@@ -96,7 +96,7 @@
     </ion-row>
   </div>
   <p class="partition"></p>
-  <div padding-horizontal=""><span style="font-size: 1.5rem">
+  <div padding-horizontal=""><span style="font-size: 1.6rem">
     热门目的地</span>
   </div>
  <ion-scroll class="re-men-scroll"  scrollX="true" style="width: 100vw;height: 208px;">
@@ -117,13 +117,58 @@
   </ion-scroll>
   <div text-center="" class="re-men-more" > 查看更多 <ion-icon class="icon-right"></ion-icon></div>
   <p class="partition" ></p>
-  <div padding-horizontal=""><span style="font-size: 1.5rem">
+  <div padding-horizontal=""><span style="font-size: 1.6rem">
     西行取经 <ion-icon class="icon-xihangqujingjinghuatubiaon yellow"></ion-icon>
   </span>
     <span float-right="" class="more">查看更多 <ion-icon class="icon-right"></ion-icon></span>
   </div>
-  <ion-scroll scrollX="true" style="width: 100vw;height: 258px;">
-    <div style="width:calc(200vw + 50px)">
+<!--  <ion-scroll class="xi-xing" scrollX="true" style="width: 100vw;height: 258px;">
+    <div style="width:calc(450vw + 50px)">
+      <ion-card *ngFor="let image of [1,2,3,4,5]" style="width:90vw;height: 250px;">
+        <ion-img src="assets/imgs/slide/slide{{image}}.jpeg" width="100%" height="200px"></ion-img>
+        <ion-card-content >
+          <ion-card-title>
+            西藏
+          </ion-card-title>
+          <p>
+            世界屋脊 · 神山圣湖 · 藏传佛教 · 自驾天堂</p>
+        </ion-card-content>
+      </ion-card>
     </div>
-  </ion-scroll>
+  </ion-scroll>-->
+  <ion-slides class="xi-xing"   freeMode="true" slidesPerView="auto" spaceBetween="-25px" loop="false">
+        <ion-slide *ngFor="let image of [1,2,3,4,5]">
+          <ion-card  style="width:90vw;height: 300px;">
+        <ion-img src="assets/imgs/slide/slide{{image}}.jpeg"  ></ion-img>
+        <ion-card-content >
+          <ion-card-title no-padding="">
+            远方很远,藏行川西,只为许你一个魔幻神奇的世界
+          </ion-card-title>
+          <ion-row no-padding="" align-items-center="" nowrap="">
+            <ion-col col-7 align-self-center="" text-left="">
+              <img no-margin="" class="header-item" src="assets/imgs/main/head.jpg"/>
+              <span class="name ">Sea-Cen  <ion-icon class="icon-dingweitubiaodan yellow"></ion-icon>川西</span>
+            </ion-col>
+
+            <ion-col col>
+              <button ion-button color="dark" clear small icon-left >
+                <ion-icon class="icon-markfill"></ion-icon>
+                {{image}}
+              </button>
+            </ion-col>
+            <ion-col col class="zan" text-right>
+              <button ion-button color="dark" clear small icon-left >
+                <img src="assets/imgs/icon/09赞图标.png" height="25" width="25"/>   {{image}}</button>
+
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+          </ion-card>
+
+
+        </ion-slide>
+
+
+  </ion-slides>
+  <p class="partition" ></p>
 </ion-content>
