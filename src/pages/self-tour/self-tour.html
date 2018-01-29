@@ -139,9 +139,8 @@
   <ion-slides class="xi-xing"   freeMode="true" slidesPerView="auto" spaceBetween="-25px" loop="false">
         <ion-slide *ngFor="let image of [1,2,3,4,5]">
           <ion-card  style="width:90vw;height: 300px;">
-            <div class="ri-qi"> <span class="roboto">10 | </span><div><span>2018</span><p>JAN</p></div></div>
-        <ion-img src="assets/imgs/slide/slide{{image}}.jpeg"  ></ion-img>
-
+          <div class="ri-qi"> <span class="roboto">10 | </span><div><span>2018</span><p>JAN</p></div></div>
+         <img src="assets/imgs/slide/slide{{image}}.jpeg" />
         <ion-card-content >
           <ion-card-title no-padding="">
             远方很远,藏行川西,只为许你一个魔幻神奇的世界
@@ -180,12 +179,21 @@
   </div>
   <ion-list class="jin-pin-list" no-lines="">
     <ion-item class="card" *ngFor="let image of [1,2,3,4,5]" >
-      <ion-thumbnail item-start>
-        <img src="assets/imgs/slide/slide{{image}}.jpeg">
-      </ion-thumbnail>
+        <img item-start src="assets/imgs/slide/slide{{image}}.jpeg">
       <h2 text-wrap=""><strong>【西藏探秘{{image}}日游】</strong> 临近不丹40号冰川  · 珠穆拉玛峰 </h2>
-      <ion-row class="btn" no-padding=""><button class="one" col-3="">当地自己</button> <button class="two" col-3>减500</button> <button col-3 class="three">五星导游</button></ion-row>
+      <ion-row class="btn" no-padding=""><button class="one" >当地自己</button> <button class="two" >减500</button> <button  class="three">五星导游</button></ion-row>
       <ion-row class="sell-price" no-padding="" justify-content-between="" align-items-center=""><ion-col class="grey">已售 106</ion-col> <ion-col text-right=""><span class="assertive">￥<strong class=" price">3390</strong></span> <span class="grey">起</span></ion-col></ion-row>
     </ion-item>
+
   </ion-list>
+  <ion-card  class="jin-pin-card">
+    <img  src="assets/imgs/slide/slide3.jpeg">
+    <div class="day">12天</div>
+    <ion-card-content>
+      <ion-card-title>
+        【香格里拉环线定制12日游】聆听茶马公道传奇 ·  探秘香巴拉国王
+      </ion-card-title>
+      <p > <span>每一公里都是精彩</span> <span>公里</span> <span>精彩</span></p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

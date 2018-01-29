@@ -60,6 +60,9 @@ page-self-tour {
     -webkit-transform: scale(0.8);
     -webkit-transform: scale(0.8);
   }
+  .qiang-gou,.xi-xing{
+    margin-bottom: -10px;
+  }
 
   .qiang-gou .title {
     display: inline-block;
@@ -241,14 +244,11 @@ page-self-tour {
     ion-card {
       margin: 5px;
       box-shadow: none;
-      ion-img {
+      img {
         display: block;
         margin: 0;
-        width: 100%;
-        height: 200px;
-        img {
-          width: 100%;
-        }
+        width: 100% !important;
+        height: 200px !important;
       }
       .ri-qi {
         position: absolute;
@@ -312,58 +312,85 @@ page-self-tour {
   }
 
   .jin-pin-list {
+    margin-bottom: 0;
     padding: 6px 15px;
 
-    .card{
+    .card {
       width: 100%;
-      height: 100%;
-      margin-top: 0.8rem;
-      box-shadow:1px 0 2px rgba(204, 204, 204, 0.2),0 1px  3px rgba(204, 204, 204, 0.2);
+      margin-top: 1rem;
+      box-shadow: 1px 0 2px rgba(204, 204, 204, 0.2), 0 1px 3px rgba(204, 204, 204, 0.2);
       border-radius: 2px;
-      padding: 0!important;
+      padding: 0 !important;
     }
-    ion-thumbnail{
-      margin: 0 5px 0 0!important;
-/*      width: 20%;
-      height: 100%;
-      img{
-        width: 100%;
-        height: auto!important;
-      }*/
-
+    img {
+      margin: 0 5px 0 0 !important;
+      width: 25%;
+      height: 100px !important;
     }
-    ion-label{
+    ion-label {
+      margin: 5px 2px;
       padding-right: 0;
     }
-    .btn{
-      button{
+    .btn {
+      button {
         margin-right: 5px;
         border-radius: 3px;
-        color:#fff ;
-        &.one{
-          background: -webkit-linear-gradient(left,#6F96FB, #A67EF8);
-          background: linear-gradient(left,#6F96FB, #A67EF8);
+        padding: 2px 5px;
+        color: #fff;
+        &.one {
+          background: -webkit-linear-gradient(to left, #6F96FB, #A67EF8);
+          background: linear-gradient(to left, #6F96FB, #A67EF8);
         }
 
-        &.two{
-          background: -webkit-linear-gradient(left,#A67EF8, #F76A9E);
-          background: linear-gradient(left,#A67EF8, #F76A9E);
+        &.two {
+          background: -webkit-linear-gradient(to left, #A67EF8, #F76A9E);
+          background: linear-gradient(to left, #A67EF8, #F76A9E);
         }
 
-        &.three{
-          color:#585858;
+        &.three {
+          color: #585858;
           border: 1px solid #cccccc;
-          background-color: #fff!important;
+          background-color: #fff !important;
         }
       }
 
     }
-    .sell-price{
+    .sell-price {
       font-size: 1.2rem;
-      .price{
+      .price {
         font-size: 1.5rem;
       }
 
     }
+  }
+
+  .jin-pin-card{
+    position: relative;
+    .day{
+      position: absolute;
+      top: 2px;
+      right: 6px;
+      color: #fff;
+    }
+    img{
+      display: inline-block;
+      height: 200px;
+    }
+    ion-card-content{
+      padding: 3px 6px 10px;
+      ion-card-title{
+        padding: 0;
+      }
+     p{
+       span{
+         margin-right: 5px;
+         border: 1px solid $border-color;
+         padding: 2px 3px;
+         border-radius: 3px;
+       }
+     }
+    }
+
+
   }
 }
