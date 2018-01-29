@@ -88,11 +88,47 @@ page-self-tour {
     /*    z-index: -1;*/
   }
 
-  .qiang-gou .hong-bao {
+  $hong-bao: #ff3334;
+
+  .hong-bao {
+    position: relative;
     margin: 5px;
     background: url('../assets/imgs/self-tour/14红包背板.png') no-repeat;
     background-size: 100% 100%;
+    .name {
+      margin-top: -5px;
+      color: #fff;
+      font-weight: 500;
+    }
 
+    div {
+      position: relative;
+      top: 18%;
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    h5 {
+      color: $hong-bao;
+      font-size: 2.2rem;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    button {
+      display: block;
+      position: relative;
+      top: 33%;
+      margin: auto;
+      background-color: $hong-bao;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 15px;
+    }
   }
 
   .huo-dong div p {
