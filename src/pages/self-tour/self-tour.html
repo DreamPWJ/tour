@@ -22,11 +22,12 @@
       <img data-src="./assets/imgs/self-tour/{{image}}.png">
     </ion-slide>
   </ion-slides>
-  <ion-row align-items-center>
-    <span col-3><ion-icon class="icon-dingweitubiaodan yellow"></ion-icon> 成都 <ion-icon
+  <ion-row align-items-center padding-horizontal="" nowrap="">
+    <span col-auto="" ><ion-icon class="icon-dingweitubiaodan yellow font-size-1"></ion-icon> 成都 <ion-icon
       class="icon-unfold font-size-1" ></ion-icon></span>
-    <ion-searchbar readonly [navPush]="'TerminiSearchPage'" class="searchbar" col-8 placeholder="搜索自驾游目的地" animated="true">
+    <ion-searchbar  readonly [navPush]="'TerminiSearchPage'" class="searchbar" col-7 placeholder="搜索自驾游目的地" >
     </ion-searchbar>
+    <ion-row col-auto align-items-center="" class="logo">  <img col-auto="" src="assets/imgs/self-tour/04logo图标.png" height="22" width="25"/><span class="grey" col-auto align-self-center="">摩 · 卡  <p no-margin="" >morecar</p></span> </ion-row>
   </ion-row>
   <ion-row class="img-list" text-center="">
     <ion-col [navPush]="'RoadlistPage'">
@@ -177,7 +178,7 @@
   <div padding-horizontal=""><span style="font-size: 1.7rem">
     特惠精品路线
   </span>
-    <span float-right="" class="more">查看更多 <ion-icon class="icon-right"></ion-icon></span>
+    <span float-right="" class="more" [navPush]="'RoadlistPage'">查看更多 <ion-icon class="icon-right"></ion-icon></span>
   </div>
   <ion-list class="jin-pin-list" no-lines="">
     <ion-item class="card" *ngFor="let image of [1,2,3,4,5]" >

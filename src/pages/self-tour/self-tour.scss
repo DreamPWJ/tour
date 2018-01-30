@@ -4,7 +4,7 @@ page-self-tour {
       width: 30px !important;
       height: 30px !important;
       min-height: 30px !important;
-      background-color: rgba(0, 0, 0, .5) !important;
+      background-color: rgba(0, 0, 0, .3) !important;
       border-radius: 50% !important;
     }
   }
@@ -21,7 +21,19 @@ page-self-tour {
   .searchbar input {
     border: 1px solid rgba(0, 0, 0, 0.3);
   }
+  .logo {
+     img{
+       margin-right: 5px;
+     }
+    span{
+      margin: 0;
+      font-size: 1.2rem;
+      p{
 
+        font-size: 0.9rem;
+      }
+    }
+  }
   .img-list {
     margin: 0.6rem 1rem 0;
   }
@@ -60,7 +72,7 @@ page-self-tour {
     -webkit-transform: scale(0.8);
     -webkit-transform: scale(0.8);
   }
-  .qiang-gou,.xi-xing{
+  .qiang-gou, .xi-xing {
     margin-bottom: -10px;
   }
 
@@ -113,7 +125,7 @@ page-self-tour {
     position: relative;
     margin: 5px;
     background-color: $hong-bao;
-  /*  line-height: 160px;*/
+    /*  line-height: 160px;*/
     /*    background: url('../assets/imgs/self-tour/14红包背板.png') no-repeat;*/
     /*    background-size: 100% 100%;*/
     p.name {
@@ -310,8 +322,8 @@ page-self-tour {
 
         .zan button {
           img {
-            width: 25px!important;
-            height: 25px!important;
+            width: 25px !important;
+            height: 25px !important;
             margin-right: 0.3rem;
           }
         }
@@ -339,8 +351,8 @@ page-self-tour {
     ion-label {
       margin: 5px 2px;
       padding-right: 0;
-      h2{
-        font-size: 1.6rem!important;
+      h2 {
+        font-size: 1.6rem !important;
       }
     }
     .btn {
@@ -377,33 +389,32 @@ page-self-tour {
     }
   }
 
-  .jin-pin-card{
+  .jin-pin-card {
     position: relative;
-    .day{
+    .day {
       position: absolute;
       top: 2px;
       right: 6px;
       color: #fff;
     }
-    img{
+    img {
       display: inline-block;
       height: 200px;
     }
-    ion-card-content{
+    ion-card-content {
       padding: 3px 6px 10px;
-      ion-card-title{
+      ion-card-title {
         padding: 0;
       }
-     p{
-       span{
-         margin-right: 5px;
-         border: 1px solid $border-color;
-         padding: 2px 3px;
-         border-radius: 3px;
-       }
-     }
+      p {
+        span {
+          margin-right: 5px;
+          border: 1px solid $border-color;
+          padding: 2px 3px;
+          border-radius: 3px;
+        }
+      }
     }
-
 
   }
 }
