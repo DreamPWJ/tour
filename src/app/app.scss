@@ -207,6 +207,17 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
   padding: 0 10px;
 }
 
+.platform-ios.platform-cordova {
+  ion-content{
+    ion-toolbar,
+    ion-navbar,
+    ion-header {
+      padding-top: $cordova-ios-statusbar-padding;
+    }
+  }
+
+}
+
 .platform-android.platform-cordova {
   ion-header {
     padding-top: $cordova-md-statusbar-padding;
