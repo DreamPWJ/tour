@@ -86,9 +86,9 @@
     </ion-row>
   </ion-grid>
   <p class="partition"></p>
-  <div class="padding-lr-10"><span class="font-size-18 grey">特色景点</span>
-    <span float-right><strong>{{currentIndex}}</strong>/{{slidesLength}} <ion-icon class="icon-right"></ion-icon></span>
-  </div>
+  <ion-row align-items-center="" class="padding-lr-10"><span col  class="font-size-18 grey">特色景点</span>
+    <span col text-right=""><strong>{{currentIndex}}</strong>/{{slidesLength}} <ion-icon class="icon-right"></ion-icon></span>
+  </ion-row>
   <ion-slides #slides  loop="false" (ionSlideDidChange)="slideChanged()" class="padding-lr-10">
     <ion-slide>
       <ion-row>
