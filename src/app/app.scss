@@ -110,31 +110,6 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
   white-space: nowrap;
 }
 
-.transparent-header {
-  // This is just to make the header transparent and button/icon with white color
-  .toolbar-content,
-  .back-button {
-    color: white;
-  }
-  .toolbar-background,
-  ion-navbar,
-  ion-header {
-    position: fixed;
-    background: transparent !important;
-    background-color: transparent !important;
-
-  }
-  .header-md::after,
-  .toolbar-background-ios {
-    background-image: none;
-    border-bottom: 0;
-  }
-  .header-ios .toolbar-background-ios,
-  .footer-ios .toolbar-background-ios {
-    border: 0;
-  }
-
-}
 
 .is-not-data {
   position: absolute;
@@ -173,12 +148,44 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
   background-color: #F9F9F9;
 }
 
+.font-size-1{
+  font-size: 1rem;
+}
+
+
 .header-ios-white{
   .toolbar-content,
   .back-button,button,.toolbar-title {
     color: #111111!important;
   }
 }
+
+.transparent-header {
+  // This is just to make the header transparent and button/icon with white color
+  .toolbar-content,
+  .back-button {
+    color: white;
+  }
+  .toolbar-background,
+  ion-navbar,
+  ion-header {
+    position: fixed;
+    background: transparent !important;
+    background-color: transparent !important;
+
+  }
+  .header-md::after,
+  .toolbar-background-ios {
+    background-image: none;
+    border-bottom: 0;
+  }
+  .header-ios .toolbar-background-ios,
+  .footer-ios .toolbar-background-ios {
+    border: 0;
+  }
+
+}
+
 
 .white-header {
   // This is just to make the header white and button/icon with #111111 color
@@ -207,6 +214,15 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
   padding: 0 10px;
 }
 
+.platform-ios.platform-cordova {
+  ion-content{
+    ion-header {
+      padding-top: $cordova-ios-statusbar-padding;
+    }
+  }
+
+}
+
 .platform-android.platform-cordova {
   ion-header {
     padding-top: $cordova-md-statusbar-padding;
@@ -214,18 +230,22 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
   }
 }
 
-ion-header + ion-segment, ion-header + div, ion-header + ion-row {
-  margin-top: $navbar-ios-height;
+ion-content{
+  ion-header + ion-segment, ion-header + div, ion-header + ion-row {
+    margin-top: $navbar-ios-height;
+  }
 }
 
+
 .platform-android.platform-cordova {
-  ion-header + ion-segment, ion-header + div, ion-header + ion-row {
-    margin-top: 68px;
+  ion-content{
+    ion-header + ion-segment, ion-header + div, ion-header + ion-row {
+      margin-top: 68px;
+    }
   }
 
- .font-size-1{
-   font-size: 1rem;
- }
+
+
 }
 
 
