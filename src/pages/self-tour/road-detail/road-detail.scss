@@ -1,0 +1,185 @@
+page-road-detail {
+  ion-header {
+    button {
+      width: 30px !important;
+      height: 30px !important;
+      min-height: 30px !important;
+      background-color: rgba(0, 0, 0, .26) !important;
+      border-radius: 50% !important;
+    }
+  }
+
+  .font-size-16{
+    font-size:1.6rem;
+  }
+  .font-size-18{
+    font-size:1.8rem;
+  }
+  .color-8a{
+    color: #8a8a8a;
+  }
+  .margin-5{
+    margin-bottom: 5px!important;
+  }
+  .slides {
+    height: auto;
+  }
+
+  .slides ion-slide{
+    position: relative;
+    text-align: center;
+  }
+  .card-title {
+    font-size: 1.7rem;
+    position: absolute;
+    top: 32%;
+    width: 90%;
+    color: #fff;
+  }
+  .card-subtitle {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 75%;
+    width: 90%;
+    color: #fff;
+  }
+
+  .detail-btn1{
+    color: #fff;
+    background: -webkit-linear-gradient(left, #6b96fe , #a581fe); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right,#6b96fe , #a581fe); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #6b96fe , #a581fe); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #6b96fe , #a581fe); /* 标准的语法（必须放在最后） */
+  }
+  .detail-btn2{
+    color: #fff;
+    background: -webkit-linear-gradient(left, #ab7ffa , #fd6a9d); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right,#ab7ffa , #fd6a9d); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #ab7ffa , #fd6a9d); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #ab7ffa , #fd6a9d); /* 标准的语法（必须放在最后） */
+  }
+  .detail-btn3{
+    color: #838383;
+    background-color:#fff;
+    border: 1px #838383 solid;
+  }
+
+  .seg-card-style{
+    padding:10px 5px;
+    width: 90%;
+    text-align: center;
+    box-shadow: -2px 0 2px rgba(0, 0, 0, .1),0 -2px 2px rgba(0, 0, 0, .1),0 2px 2px rgba(0, 0, 0, .1),2px 0 2px rgba(0, 0, 0, .1);
+  }
+  .seg-card-style h3{
+    font-weight:bold;
+    font-size: 18px;
+  }
+  .seg-card-style p{
+    font-size: 12px;
+  }
+
+  .seg-card-col2{
+    margin-top: -5px;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    width: 100%;
+    height: 80px;
+    border-left: 1px #dcdada solid;
+   }
+  .seg-card-col2 span{
+    font-size: 16px;
+    color: #4eb0da;
+    padding-top: 5px;
+    text-align: center;
+    margin: auto;display: block;
+  }
+  /*4个card下的check*/
+  .check-style{
+    font-size: 12px;
+    padding-top: 15px;
+  }
+  .check-style ion-icon{
+    color: #ffdb27;
+  }
+
+  /*赞*/
+  .roaddet-zan{
+    padding-top: 3px;
+    text-align: center;
+    color: #fff;
+    width: 22px;height: 22px;
+    background-color: #f1b350;
+  }
+
+  /*特色景点轮播*/
+  .tesejingdian img{
+    position: relative;
+  }
+  .tesejingdian-wenzi{
+    position: absolute;
+    top:9px;left: 5px;
+    background-color: rgba(0,0,0,.5);
+    font-size: 14px;
+    color: #fff;
+    padding: 3px;
+  }
+  /*游客点评 中间的border*/
+  .youkedianping-border:after {
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 2px;
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    background-color: #e5e5e5;
+  }
+
+  .btnFlg-unselect{
+    color: #474747;
+    background-color: #ffffff;
+    width:100%;height: 3rem;
+  }
+  .btnFlg-select{
+    color: #474747;
+    background-color: #fff4bd;
+    width:100%;height: 3rem;
+  }
+  /*行程详情DAY 1 */
+  .xingcheng-day:before{
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 1px;
+    position: absolute;
+    width: 3px;
+    height: 50%;
+    background-color: #41c6ad;
+  }
+  .xingcheng-day{
+    margin-left: 5px;
+    color: #111111;
+  }
+  .xingcheng-map{
+    color: #00abdc;
+  }
+  .xingcheng-xingcheng{
+    margin-left: 5px;
+    padding-bottom: 1.3rem;
+  }
+
+  .footer-row{
+    box-shadow: 0 -3px 2px rgba(0, 0, 0, .1);
+  }
+  .footer-row ion-col{
+    padding:0!important;
+    margin:0!important;
+  }
+  .footer-row ion-col button{
+    padding:0!important;
+    margin:0!important;
+  }
+}

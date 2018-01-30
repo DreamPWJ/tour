@@ -28,7 +28,7 @@
     <ion-scroll scrollY="true" style="height: 82vh" *ngSwitchCase="'全部'">
       <ion-list>
         <ion-item *ngFor="let road of roadList">
-          <ion-row no-margin>
+          <ion-row no-margin (click)="goRoadDetail(road.title)">
             <ion-col col-3>
               <img [src]="road.roadImageUrl" width="100%" height="60px"/>
             </ion-col>
@@ -95,7 +95,7 @@
       </ion-row>
     </ion-col>
 
-    <ion-col text-right class="shaixuan-style" >
+    <ion-col text-right class="shaixuan-style" [navPush]="'RoadFilterPage'">
       <ion-icon class="icon-filter border-radius-50"></ion-icon>
     </ion-col>
   </ion-row>

@@ -1,0 +1,71 @@
+<ion-header class="white-header">
+  <ion-toolbar>
+    <ion-title>筛选</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="dark">取消</span>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="roadfilter-div">
+    <ion-row>
+      <ion-col><h5 class="grey">单人预算 (元)</h5></ion-col>
+    </ion-row>
+    <ion-row class="yusuan-style">
+      <ion-col col-5><ion-input type="number" text-center placeholder="最低价"></ion-input></ion-col>
+      <ion-col class="yusuan-col2"><p></p></ion-col>
+      <ion-col col-5><ion-input type="number" text-center placeholder="最高价"></ion-input></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4><button ion-button color="light">3千元以下</button></ion-col>
+      <ion-col col-4><button ion-button color="light">3千~5千元</button></ion-col>
+      <ion-col col-4><button ion-button color="light">5千~1万元</button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4><button ion-button color="light">1万~2万元</button></ion-col>
+      <ion-col col-4><button ion-button color="light">2万元以上</button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><h5 class="grey">游玩天数</h5></ion-col>
+      <ion-col text-right><p style="color: #959595;"><span style="font-size: 18px;color: #474747!important;">{{contrast}}</span> 天</p></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-range min="1" max="30" pin="true" [(ngModel)]="contrast" no-margin>
+          <ion-label range-left>1</ion-label>
+          <ion-label range-right>30</ion-label>
+        </ion-range>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngFor="let item of dayList" col-4>
+        <button ion-button color="light">{{item.day}}</button>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col><h5 class="grey">必玩景点</h5></ion-col>
+      <ion-col text-right><p style="color: #0fb7cb;">更多 <ion-icon class="icon-unfold"></ion-icon></p></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngFor="let item of jingdianList" col-4>
+        <button ion-button color="light" (click)="jingdianSelect(item.id)" style="position: relative;">{{item.name}}</button>
+        <ion-icon class="icon-youxiajiaogouxuanda jingdian-select" text-right *ngIf="jingdianSel==item.id"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><h5 class="grey">产品类型</h5></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4><button ion-button color="light">租车出发</button></ion-col>
+      <ion-col col-4><button ion-button color="light">当地用车</button></ion-col>
+    </ion-row>
+  </div>
+  <div style="margin-top: 5rem;"></div>
+  <ion-row class="footer-row">
+    <ion-col><button full ion-button style="color:#ffffff;background-color: #41c6ad; ">重置</button></ion-col>
+    <ion-col><button full ion-button style="color:#474747;background-color: #f0f0f0; ">确认</button></ion-col>
+  </ion-row>
+</ion-content>

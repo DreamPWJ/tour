@@ -201,7 +201,10 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
   .footer-ios .toolbar-background-ios {
     border: 0;
   }
+}
 
+.padding-lr-10{
+  padding: 0 10px;
 }
 
 .platform-android.platform-cordova {

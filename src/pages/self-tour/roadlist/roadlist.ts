@@ -107,7 +107,10 @@ export class RoadlistPage {
     }
   }
 
-
+  //跳转goRoadDetail页面
+  goRoadDetail(title:any){
+    this.navCtrl.push("RoadDetailPage");
+  }
 
 
 }

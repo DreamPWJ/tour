@@ -1,0 +1,183 @@
+<ion-content class="transparent-header">
+  <ion-header>
+    <ion-navbar color="transparent">
+      <!--     <ion-title>自驾游</ion-title>-->
+      <ion-buttons end>
+        <ion-buttons end>
+          <button ion-button icon-only>
+            <ion-icon class="icon-share_light" ></ion-icon>
+          </button>
+          <button ion-button icon-only>
+            <ion-icon class="icon-more_android_light"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  <ion-slides class="slides"><!--轮播-->
+    <ion-slide *ngFor="let image of [1]">
+      <img data-src="./assets/imgs/self-tour/{{image}}.png"/>
+      <div class="card-title">【最美林芝2日】桃花季预售•雅鲁藏布大峡谷•嘎啦桃花村/拉如桃花村</div>
+      <div class="card-subtitle">私人定制小包团•初春民宿体验•雪山脚下的春天</div>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid class="padding-lr-10">
+    <ion-row align-items-center>
+      <ion-col><span style="color: red;font-size: 18px;font-weight: bold;">￥1280</span> 起/人</ion-col>
+      <ion-col text-right class="grey">去拼车 <ion-icon class="icon-right"></ion-icon></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="color: #838383;">价格说明：按4成人出行共用1辆车，住2间房核算</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><button ion-button small class="detail-btn1">当地自驾</button></ion-col>
+      <ion-col><button ion-button small class="detail-btn2">优惠券</button></ion-col>
+      <ion-col><button ion-button small clear class="detail-btn3">回程租车大优惠</button></ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+  <p class="partition"></p>
+  <ion-segment [(ngModel)]="roadDetailseg" mode="md" (ionChange)="segmentChanged($event)">
+    <ion-segment-button *ngFor="let item of roadDetailsegArr" value="{{item}}">
+      {{item}}
+      <div class="bolder-sm"></div>
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="roadDetailseg" (swipe)="swipeEvnet($event)">
+    <ion-scroll style="height: 30vh" *ngSwitchCase="'豪华游'" padding="">
+      <ion-row  align-items-center>
+        <ion-col class="font-size-16">出发日期及价格</ion-col>
+        <ion-col text-right><span class="color-8a">以下价格均为起价 <ion-icon class="icon-tishi" style="color: #6fb5e9"></ion-icon></span></ion-col>
+      </ion-row>
+      <ion-row style="padding-top: 12px;">
+        <ion-col *ngFor="let item of pricedateList" col-3 no-margin no-padding >
+          <ion-card class="seg-card-style" no-margin no-padding>
+            <h3>{{item.price}}</h3>
+            <p style="border: 1px #dcdada solid;margin: 5px;"></p>
+            <p>{{item.date}} {{item.week}}</p>
+          </ion-card>
+        </ion-col>
+        <ion-col col-2 class="seg-card-col2" align-items-center text-center="">
+          <span>查看</span>
+          <span>更多</span>
+        </ion-col>
+      </ion-row>
+      <ion-row class="check-style grey">
+        <ion-col><ion-icon class="icon-roundcheckfill"></ion-icon> 豪华车辆</ion-col>
+        <ion-col><ion-icon class="icon-roundcheckfill"></ion-icon> 五星酒店</ion-col>
+        <ion-col><ion-icon class="icon-roundcheckfill"></ion-icon> 专业地接</ion-col>
+        <ion-col><ion-icon class="icon-roundcheckfill"></ion-icon> 特级美食</ion-col>
+      </ion-row>
+    </ion-scroll>
+    <ion-scroll style="height: 30vh" *ngSwitchCase="'商务游'" padding>商务游</ion-scroll>
+  </div>
+  <p class="partition"></p>
+  <ion-grid class="padding-lr-10">
+    <ion-row><ion-col text-center class="font-size-18 grey">- 行程亮点 -</ion-col></ion-row>
+    <ion-row>
+      <ion-col col-1><ion-icon class="icon-zan roaddet-zan border-radius-50"></ion-icon></ion-col>
+      <ion-col class="grey">火车之旅：“高山火车”，可以看到最美的高山茶园，最美的琥珀最神圣的土地</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-1><ion-icon class="icon-zan roaddet-zan border-radius-50"></ion-icon></ion-col>
+      <ion-col class="grey">桃花美景：三生三世桃花十里，别样西藏江南风景。</ion-col>
+    </ion-row>
+  </ion-grid>
+  <p class="partition"></p>
+  <div class="padding-lr-10"><span class="font-size-18 grey">特色景点</span>
+    <span float-right><strong>{{currentIndex}}</strong>/{{slidesLength}} <ion-icon class="icon-right"></ion-icon></span>
+  </div>
+  <ion-slides #slides  loop="false" (ionSlideDidChange)="slideChanged()" class="padding-lr-10">
+    <ion-slide>
+      <ion-row>
+        <ion-col class="tesejingdian" col-6>
+          <p><img src="assets/imgs/slide/slide1.jpeg" no-margin no-padding/></p>
+          <p class="tesejingdian-wenzi">珠穆朗玛峰</p>
+        </ion-col>
+        <ion-col class="tesejingdian" col-6>
+          <p><img src="assets/imgs/slide/slide2.jpeg" no-margin no-padding/></p>
+          <p class="tesejingdian-wenzi">尼洋河</p>
+        </ion-col>
+      </ion-row>
+    </ion-slide>
+    <ion-slide>
+      <ion-row>
+        <ion-col class="tesejingdian">
+          <p><img src="assets/imgs/slide/slide3.jpeg" no-margin no-padding/></p>
+          <p class="tesejingdian-wenzi">青海湖</p>
+        </ion-col>
+        <ion-col class="tesejingdian">
+          <p><img src="assets/imgs/slide/slide4.jpeg" no-margin no-padding/></p>
+          <p class="tesejingdian-wenzi">青海湖</p>
+        </ion-col>
+      </ion-row>
+    </ion-slide>
+  </ion-slides>
+  <p class="partition"></p>
+  <div class="padding-lr-10">
+    <span class="font-size-18 grey">游客点评</span>
+    <span class="color-8a">(<span style="color: #c12b74;">100%</span>好评率)</span>
+    <span float-right class="color-8a">共有20条点评 <ion-icon class="icon-right"></ion-icon></span>
+  </div>
+  <ion-row>
+    <ion-col text-center col-3>
+      <p class="grey font-size-16 margin-5">5.00</p>
+      <p class="color-8a" no-margin no-padding>用车</p>
+    </ion-col>
+    <ion-col text-center col-3 class="youkedianping-border">
+      <p class="grey font-size-16 margin-5">5.00</p>
+      <p class="color-8a" no-margin no-padding>食宿</p>
+    </ion-col>
+    <ion-col text-center col-3 class="youkedianping-border">
+      <p class="grey font-size-16 margin-5">5.00</p>
+      <p class="color-8a" no-margin no-padding>行程</p>
+    </ion-col>
+    <ion-col text-center col-3 class="youkedianping-border">
+      <p class="grey font-size-16 margin-5">5.00</p>
+      <p class="color-8a" no-margin no-padding>地接服务</p>
+    </ion-col>
+  </ion-row>
+  <p class="partition"></p>
+  <ion-grid>
+    <ion-row style="border: 1px #474747 solid;">
+      <ion-col text-center col-3 no-padding>
+        <button ion-button clear small class="{{btnFlg==1?'btnFlg-select':'btnFlg-unselect'}}" (click)="btnFlgSelect(1)">行程详情</button>
+      </ion-col>
+      <ion-col text-center col-3 no-padding>
+        <button ion-button clear small class="{{btnFlg==2?'btnFlg-select':'btnFlg-unselect'}}" (click)="btnFlgSelect(2)">费用说明</button></ion-col>
+      <ion-col text-center col-3 no-padding>
+        <button ion-button clear small class="{{btnFlg==3?'btnFlg-select':'btnFlg-unselect'}}" (click)="btnFlgSelect(3)">使用说明</button></ion-col>
+      <ion-col text-center col-3 no-padding>
+        <button ion-button clear small class="{{btnFlg==4?'btnFlg-select':'btnFlg-unselect'}}" (click)="btnFlgSelect(4)">购买须知</button></ion-col>
+    </ion-row>
+    <ion-row style="margin: 1rem 0;">
+      <ion-col col-8></ion-col>
+      <ion-col col-2> <ion-toggle checked="true"></ion-toggle> </ion-col>
+      <ion-col col-2 style="color: #bababa;">展开</ion-col>
+    </ion-row>
+    <div *ngIf="btnFlg==1">
+      <div *ngFor="let day of xingchengList" class="padding-lr-10" >
+        <ion-row>
+          <ion-col class="font-size-18 "><span class="xingcheng-day"></span>{{day.day}}</ion-col>
+          <ion-col text-right class="xingcheng-map"><ion-icon class="icon-daolanjiantouda"></ion-icon> 地图</ion-col>
+        </ion-row>
+        <ion-row >
+          <ion-col class="grey xingcheng-xingcheng">{{day.xingcheng}}</ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </ion-grid>
+
+  <div style="margin-top: 5rem;"></div>
+  <ion-row class="footer-row" align-items-center>
+    <ion-col col-3><button full ion-button style="color:#474747;background-color: #ffffff; "><ion-icon class="icon-kefu"></ion-icon>  客服</button></ion-col>
+    <ion-col col-3><button full ion-button style="color:#474747;background-color: #ffffff; "><ion-icon class="icon-shoucangtubiao"></ion-icon>  收藏</button></ion-col>
+    <ion-col col-6><button full ion-button style="color:#474747;background-color: #ffd94a; ">立即定制</button></ion-col>
+  </ion-row>
+
+
+  <ion-fab *ngIf="isTabTop" right bottom>
+    <button (click)="scrollToTop()"  ion-fab color="light" mini> <ion-icon class="icon-top"></ion-icon></button>
+  </ion-fab>
+</ion-content>

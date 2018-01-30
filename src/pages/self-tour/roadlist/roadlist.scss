@@ -6,12 +6,6 @@ ion-segment{
 
 
 page-roadlist {
-
-  .roadlist-img img{
-    width: 75px!important;
-    height: 90px!important;
-  }
-
   .road-bottom{
     z-index: 9;
     position: fixed;
@@ -37,13 +31,6 @@ page-roadlist {
     background-color: #ffdb27;
     border-radius: 2px;
     padding: 1px 5px;
-  }
-  .arrow-style p{
-    margin: -0.6rem 0 -0.5rem -1.7rem!important;
-  }
-  .arrow-style p ion-icon{
-    color: #474747;
-    font-size: 14px;
   }
 
   /*筛选*/
