@@ -61,6 +61,10 @@ $toggle-ios-background-color-off: #f2f2f2;
   font-size: 2.2rem;
 }
 
+ion-header ion-icon {
+  font-size: 2.6rem !important;
+}
+
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
@@ -119,9 +123,7 @@ $segment-button-md-border-color-activated: #FFDE37;*/
   background-color: #ef473a !important;
 }
 
-ion-header ion-icon {
-  font-size: 2.6rem !important;
-}
+
 
 // Ionicons
 // --------------------------------------------------

@@ -1,5 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import {NavController, NavParams, Slides} from 'ionic-angular';
+import {Content, NavController, NavParams, Slides} from 'ionic-angular';
 import {AppService} from "../../providers/util/app.service";
 
 /**
@@ -15,9 +15,11 @@ import {AppService} from "../../providers/util/app.service";
   templateUrl: 'self-tour.html',
 })
 export class SelfTourPage {
+  @ViewChild(Content) content: Content;
   @ViewChild("slides") slides: Slides;
   slidesLength: number = 0;
   currentIndex: number = 1;
+  isTabTop: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService) {
 
@@ -38,5 +40,10 @@ export class SelfTourPage {
 
   slideChanged() {
     this.currentIndex = this.slides.getActiveIndex() + 1;
+  }
+
+  scrollHandler(event) {
+    this.content.scrollTop >= 200 ? this.isTabTop = true : this.isTabTop = false;
+
   }
 }

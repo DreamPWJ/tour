@@ -6,7 +6,7 @@
 -->
 
 
-<ion-content class="transparent-header">
+<ion-content class="transparent-header" (ionScroll)="scrollHandler($event)">
   <ion-header>
     <ion-navbar color="transparent">
       <!--     <ion-title>自驾游</ion-title>-->
@@ -199,4 +199,8 @@
       <p > <span>每一公里都是精彩</span> <span>公里</span> <span>精彩</span></p>
     </ion-card-content>
   </ion-card>
+
+  <ion-fab *ngIf="isTabTop" right bottom>
+    <button [scroll-to-top]="content"  ion-fab color="light" mini> <ion-icon class="icon-top"></ion-icon></button>
+  </ion-fab>
 </ion-content>
