@@ -38,6 +38,14 @@ page-self-tour {
       }
     }
   }
+  .header-title{
+    margin-bottom: 6px;
+    padding: 0 10px;
+    span:first-of-type{
+      font-size: 1.7rem;
+    }
+
+  }
   .img-list {
     margin: 0.6rem 1rem 0;
   }
@@ -52,8 +60,10 @@ page-self-tour {
   }
 
   .jin-ri-slides {
+
     ion-card {
       margin: 5px;
+      padding-bottom: 8px;
     }
   }
 
@@ -102,10 +112,15 @@ page-self-tour {
     border-radius: 3px;
   }
 
-  .qiang-gou .more {
+  .more {
+    color: #474747;
     padding-right: 0.8rem;
     height: 28px;
     line-height: 28px;
+    ion-icon{
+      font-size: 1.3rem;
+    }
+
   }
 
   .qiang-gou ion-row {
@@ -233,7 +248,7 @@ page-self-tour {
       ion-card-content {
         position: relative;
         width: 100%;
-        padding: 2px 8px;
+        padding: 3px 8px 2px;
         img {
           position: absolute;
           top: -14px;
@@ -258,9 +273,13 @@ page-self-tour {
 
   }
   .re-men-more {
+    color: #474747;
     border-top: 1px solid $border-color;
-    margin: 0.5rem 0.8rem -10px;
+    margin: 16px 0.8rem -10px;
     padding: 0.9rem;
+    ion-icon{
+      font-size: 1.3rem;
+    }
   }
 
   .xi-xing {
@@ -342,7 +361,7 @@ page-self-tour {
 
     .card {
       width: 100%;
-      margin-top: 1rem;
+      margin-bottom: 1rem;
       box-shadow: 1px 0 2px rgba(204, 204, 204, 0.2), 0 1px 3px rgba(204, 204, 204, 0.2);
       border-radius: 2px;
       padding: 0 !important;
@@ -356,7 +375,7 @@ page-self-tour {
       margin: 5px 2px;
       padding-right: 0;
       h2 {
-        font-size: 1.6rem !important;
+        font-size: 1.5rem !important;
       }
     }
     .btn {
@@ -394,6 +413,7 @@ page-self-tour {
   }
 
   .jin-pin-card {
+    margin-top: 0;
     position: relative;
     .day {
       position: absolute;
@@ -408,7 +428,8 @@ page-self-tour {
     ion-card-content {
       padding: 3px 6px 10px;
       ion-card-title {
-        padding: 0;
+        padding: 0 0 10px 0;
+        font-size: 1.6rem ;
       }
       p {
         span {

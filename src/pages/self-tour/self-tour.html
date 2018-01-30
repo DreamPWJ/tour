@@ -53,11 +53,11 @@
   </ion-row>
 
   <p class="partition"></p>
-  <div padding-horizontal=""><span style="font-size: 1.7rem">
+  <ion-row align-items-center="" class="header-title" ><span  col>
     今日推荐
   </span>
-    <span float-right><strong>{{currentIndex}}</strong>/{{slidesLength}}</span>
-  </div>
+    <span  col text-right><strong>{{currentIndex}}</strong>/{{slidesLength}}</span>
+  </ion-row>
 
   <ion-slides #slides class="jin-ri-slides" freeMode="true" slidesPerView="auto" spaceBetween="-40px" loop="false"
               (ionSlideDidChange)="slideChanged()">
@@ -82,7 +82,7 @@
         <div >
           <img src="assets/imgs/self-tour/02限时抢购活动图片.png" alt="">
           <p>【5天】 拉萨 珠穆拉玛峰</p></div>
-        <p >租车 <strong class="assertive">￥249</strong> 日</p>
+        <p >租车 <span class="assertive"><small>￥</small><strong >249</strong></span> 日</p>
       </ion-col>
       <ion-col class="hong-bao " text-center="" >
 <!--        <div class="center">-->
@@ -99,9 +99,9 @@
     </ion-row>
   </div>
   <p class="partition"></p>
-  <div padding-horizontal=""><span style="font-size: 1.7rem">
+  <ion-row class="header-title" ><span>
     热门目的地</span>
-  </div>
+  </ion-row>
  <ion-scroll class="re-men-scroll"  scrollX="true" style="width: 100vw;height: 208px;">
     <div style="width:calc(200vw + 50px)">
     <ion-card *ngFor="let image of [1,2,3,4,5]" style="width:40vw;height: 200px;">
@@ -120,25 +120,12 @@
   </ion-scroll>
   <div text-center="" class="re-men-more" > 查看更多 <ion-icon class="icon-right"></ion-icon></div>
   <p class="partition" ></p>
-  <div padding-horizontal=""><span style="font-size: 1.7rem">
+  <ion-row class="header-title" align-items-center=""><span col>
     西行取经 <ion-icon class="icon-xihangqujingjinghuatubiaon yellow"></ion-icon>
   </span>
-    <span float-right="" class="more">查看更多 <ion-icon class="icon-right"></ion-icon></span>
-  </div>
-<!--  <ion-scroll class="xi-xing" scrollX="true" style="width: 100vw;height: 258px;">
-    <div style="width:calc(450vw + 50px)">
-      <ion-card *ngFor="let image of [1,2,3,4,5]" style="width:90vw;height: 250px;">
-        <ion-img src="assets/imgs/slide/slide{{image}}.jpeg" width="100%" height="200px"></ion-img>
-        <ion-card-content >
-          <ion-card-title>
-            西藏
-          </ion-card-title>
-          <p>
-            世界屋脊 · 神山圣湖 · 藏传佛教 · 自驾天堂</p>
-        </ion-card-content>
-      </ion-card>
-    </div>
-  </ion-scroll>-->
+    <span col text-right="" class="more">查看更多 <ion-icon class="icon-right"></ion-icon></span>
+  </ion-row>
+
   <ion-slides class="xi-xing"   freeMode="true" slidesPerView="auto" spaceBetween="-25px" loop="false">
         <ion-slide *ngFor="let image of [1,2,3,4,5]">
           <ion-card  style="width:90vw;height: 300px;">
@@ -156,7 +143,7 @@
 
             <ion-col col-2>
               <button ion-button color="dark" clear small icon-left >
-                <ion-icon class="icon-markfill"></ion-icon>
+                <ion-icon class="icon-markfill grey"></ion-icon>
                 {{image}}
               </button>
             </ion-col>
@@ -175,11 +162,11 @@
 
   </ion-slides>
   <p class="partition" ></p>
-  <div padding-horizontal=""><span style="font-size: 1.7rem">
+  <ion-row class="header-title" align-items-center=""><span col>
     特惠精品路线
   </span>
-    <span float-right="" class="more" [navPush]="'RoadlistPage'">查看更多 <ion-icon class="icon-right"></ion-icon></span>
-  </div>
+    <span text-right col class="more" [navPush]="'RoadlistPage'">查看更多 <ion-icon class="icon-right"></ion-icon></span>
+  </ion-row>
   <ion-list class="jin-pin-list" no-lines="">
     <ion-item class="card" *ngFor="let image of [1,2,3,4,5]" >
         <img item-start src="assets/imgs/slide/slide{{image}}.jpeg">
@@ -194,7 +181,7 @@
     <div class="day">12天</div>
     <ion-card-content>
       <ion-card-title>
-        【香格里拉环线定制12日游】聆听茶马公道传奇 ·  探秘香巴拉国王
+        <strong>【香格里拉环线定制12日游】</strong>聆听茶马公道传奇 ·  探秘香巴拉国王
       </ion-card-title>
       <p > <span>每一公里都是精彩</span> <span>公里</span> <span>精彩</span></p>
     </ion-card-content>

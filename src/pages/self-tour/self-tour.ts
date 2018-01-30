@@ -43,7 +43,7 @@ export class SelfTourPage {
   }
 
   scrollHandler(event) {
-    this.content.scrollTop >= 200 ? this.isTabTop = true : this.isTabTop = false;
+    this.content.scrollTop >= 900 ? this.isTabTop = true : this.isTabTop = false;
 
   }
 }
