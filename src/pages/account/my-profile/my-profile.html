@@ -32,7 +32,7 @@
       <ion-col col-5 text-right="" class="zu-ji"  align-self-end="">足迹 · 省 <span class="yellow">6</span> · 城市 <span
         class="yellow">15</span></ion-col>
       <ion-col>
-        <button small ion-button icon-left class="yellow-bg">
+        <button small ion-button icon-left class="yellow-bg"  >
           <ion-icon class="icon-add"></ion-icon>
           关注
         </button>
@@ -120,7 +120,7 @@
   </div>
 
   <ion-fab *ngIf="isTabTop" right bottom>
-    <button (click)="scrollToTop()"  ion-fab color="light" mini> <ion-icon class="icon-top"></ion-icon></button>
+    <button [scroll-to-top]="content"  ion-fab color="light" mini> <ion-icon class="icon-top"></ion-icon></button>
   </ion-fab>
 </ion-content>
 

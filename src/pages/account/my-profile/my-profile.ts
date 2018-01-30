@@ -77,9 +77,9 @@ export class MyProfilePage {
         })*/
   }
 
-  scrollToTop() {
+/*  scrollToTop() {
     this.content.scrollToTop();
-  }
+  }*/
 
 
   segmentChanged(event) {
