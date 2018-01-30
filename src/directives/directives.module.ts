@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { ScrollToTopDirective } from './scroll-to-top/scroll-to-top';
+
+export const DIRECTIVES = [
+  ScrollToTopDirective
+];
+
 @NgModule({
-	declarations: [ScrollToTopDirective],
+	declarations: [DIRECTIVES],
 	imports: [],
-	exports: [ScrollToTopDirective]
+	exports: [DIRECTIVES]
 })
 export class DirectivesModule {}

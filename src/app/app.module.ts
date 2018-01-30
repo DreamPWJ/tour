@@ -15,13 +15,27 @@ import {RankingListPage} from "../pages/ranking-list/ranking-list";
 import {MyProfilePage} from "../pages/account/my-profile/my-profile";
 import {DirectivesModule} from "../directives/directives.module";
 
+export const COMPONENTS = [
+  MyApp,
+  HomePage,
+  SelfTourPage,
+  RankingListPage,
+  MyProfilePage
+]
+
+export const MODULES = [
+  DirectivesModule
+]
+
+export const PROVIDERS = [
+  AppService,
+  CityProvider,
+  HardwareBackButtonProvider,
+]
+
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    SelfTourPage,
-    RankingListPage,
-    MyProfilePage
+    COMPONENTS
   ],
   imports: [
     BrowserModule,
@@ -31,28 +45,24 @@ import {DirectivesModule} from "../directives/directives.module";
       backButtonText: '',
       spinner: 'crescent'
     }),
-    DirectivesModule
+    MODULES
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage,
-    SelfTourPage,
-    RankingListPage,
-    MyProfilePage
+    COMPONENTS
   ],
   providers: [
-    AppService,
-    CityProvider,
+    PROVIDERS,
     StatusBar,
     SplashScreen,
-    HardwareBackButtonProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
+
+
 export class AppModule {
   constructor(public config: Config) {
 
-/*    this.config.setTransition('ios-transition', IOSCustomTransition);*/
+    /*    this.config.setTransition('ios-transition', IOSCustomTransition);*/
   }
 }
