@@ -22,17 +22,17 @@
       <img data-src="./assets/imgs/self-tour/{{image}}.png">
     </ion-slide>
   </ion-slides>
-  <ion-row align-items-center padding-horizontal="" nowrap="">
-    <span col-auto="" ><ion-icon class="icon-dingweitubiaodan yellow font-size-1"></ion-icon> 成都 <ion-icon
+  <ion-row align-items-center class="padding-lr-10" nowrap="">
+    <span col-auto="" class="grey" align-self-center><ion-icon class="icon-dingweitubiaodan yellow "></ion-icon> 成都 <ion-icon
       class="icon-unfold font-size-1" ></ion-icon></span>
-    <ion-searchbar  readonly [navPush]="'TerminiSearchPage'" class="searchbar" col-7 placeholder="搜索自驾游目的地" >
+    <ion-searchbar  readonly [navPush]="'TerminiSearchPage'" class="searchbar" col-7 placeholder="自驾游目的地" >
     </ion-searchbar>
-    <ion-row col-auto align-items-center="" class="logo">  <img col-auto="" src="assets/imgs/self-tour/04logo图标.png" height="22" width="25"/><span class="grey" col-auto align-self-center="">摩 · 卡  <p no-margin="" >morecar</p></span> </ion-row>
+    <ion-row col-auto align-items-center="" class="logo">  <img col-auto="" src="assets/imgs/self-tour/04logo图标.png" height="22" width="23"/><span class="grey" col-auto align-self-center="">摩 · 卡  <p no-margin="" >morecar</p></span> </ion-row>
   </ion-row>
-  <ion-row class="img-list" text-center="">
+  <ion-row class="img-list grey" text-center="">
     <ion-col [navPush]="'RoadlistPage'">
       <img src="assets/imgs/self-tour/05精品线路.png" alt="精品线路">
-      <p>线路</p>
+      <p text-nowrap="">精品线路</p>
     </ion-col>
     <ion-col [navPush]="'GuideIndexPage'">
       <img src="assets/imgs/self-tour/06攻略.png" alt="攻略">
