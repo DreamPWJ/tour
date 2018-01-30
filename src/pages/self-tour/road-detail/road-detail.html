@@ -1,4 +1,4 @@
-<ion-content class="transparent-header">
+<ion-content class="transparent-header" (ionScroll)="scrollHandler($event)">
   <ion-header>
     <ion-navbar color="transparent">
       <!--     <ion-title>自驾游</ion-title>-->
@@ -7,6 +7,7 @@
           <button ion-button icon-only>
             <ion-icon class="icon-share_light" ></ion-icon>
           </button>
+          <span style="padding: 0 3px;"></span>
           <button ion-button icon-only>
             <ion-icon class="icon-more_android_light"></ion-icon>
           </button>
