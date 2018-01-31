@@ -1,7 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
 import {Content, IonicPage, ModalController, NavController, NavParams, Platform, Slides} from 'ionic-angular';
 import {StatusBar} from "@ionic-native/status-bar";
-import {CalendarModal, CalendarModalOptions} from "ion2-calendar";
+import {CalendarModal, CalendarModalOptions,DayConfig} from "ion2-calendar";
 
 /**
  * Generated class for the RoadDetailPage page.
@@ -70,20 +70,25 @@ export class RoadDetailPage {
    * 打开日历模态框模式
    */
   openCalendar() {
+    let _daysConfig: DayConfig[] = [];
+    for (let i = 0; i < 31; i++) {
+      _daysConfig.push({
+        date: new Date(2018, 0, i + 1),
+        subTitle: `￥${i + 1}`
+      })
+    }
+
     const options: CalendarModalOptions = {
       pickMode:"single",
       monthFormat: 'YYYY 年 MM 月 ',
-      weekdays: ['天', '一', '二', '三', '四', '五', '六'],
+      weekdays: ['日', '一', '二', '三', '四', '五', '六'],
       weekStart: 1,
       defaultDate: new Date(),
       title:"日期价格",
       color:'white',
       doneLabel:"",
       closeLabel:"关闭",
-      daysConfig:[{
-        date:new Date(),
-        subTitle:"￥569"
-      }]
+      daysConfig:_daysConfig
     };
 
     let myCalendar =  this.modalCtrl.create(CalendarModal, {
