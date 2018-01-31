@@ -29,31 +29,20 @@ export class RoadDetailPage {
   }
 
   segmentChanged(event){
-    if(this.isTabTop){
-      this.content.scrollTo(0,150)
-    }
+
   }
 
-  swipeEvnet(event) {
-    //向左滑
-    if (event.direction == 2) {
-      if (this.roadDetailsegArr.indexOf(this.roadDetailseg) < 2) {
-        this.roadDetailseg = this.roadDetailsegArr[this.roadDetailsegArr.indexOf(this.roadDetailseg) + 1];
-      }
-    }
-    //向右滑
-    if (event.direction == 4) {
-      if (this.roadDetailsegArr.indexOf(this.roadDetailseg) > 0) {
-        this.roadDetailseg = this.roadDetailsegArr[this.roadDetailsegArr.indexOf(this.roadDetailseg) - 1];
-      }
-    }
-  }
+
 
   pricedateList=[
     {price:'￥1380',date:'1/13',week:'周六'},
     {price:'￥1580',date:'1/14',week:'周日'},
     {price:'￥1580',date:'1/15',week:'周一'},
-    {price:'￥1980',date:'1/16',week:'周二'},
+    {price:'￥1380',date:'1/16',week:'周二'},
+    {price:'￥1380',date:'1/17',week:'周三'},
+    {price:'￥1580',date:'1/18',week:'周四'},
+    {price:'￥1580',date:'1/19',week:'周五'},
+
   ];
 
   xingchengList=[
