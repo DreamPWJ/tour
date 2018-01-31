@@ -70,11 +70,15 @@ export class RoadDetailPage {
    * 打开日历模态框模式
    */
   openCalendar() {
+    let date = new Date();
     let _daysConfig: DayConfig[] = [];
-    for (let i = 0; i < 31; i++) {
+    for (let i = 1; i <= 31; i++) {
       _daysConfig.push({
-        date: new Date(2018, 0, i + 1),
-        subTitle: `￥${i + 1}`
+        date: new Date(date.getFullYear(), date.getMonth(), i ),
+        subTitle: `￥${812 + i}`
+      },{
+        date: new Date(date.getFullYear(), date.getMonth()+1, i ),
+          subTitle: `￥${760 + i}`
       })
     }
 
@@ -84,7 +88,7 @@ export class RoadDetailPage {
       monthFormat: 'YYYY 年 MM 月 ',
       weekdays: ['日','一','二','三','四','五','六'],
       weekStart: 1,
-      defaultDate: new Date(),
+      defaultDate: date,
       title:"日期价格查看",
       color:'danger',
       closeIcon:true,
