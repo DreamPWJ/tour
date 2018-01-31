@@ -71,10 +71,19 @@ export class RoadDetailPage {
    */
   openCalendar() {
     const options: CalendarModalOptions = {
+      pickMode:"single",
       monthFormat: 'YYYY 年 MM 月 ',
       weekdays: ['天', '一', '二', '三', '四', '五', '六'],
       weekStart: 1,
-      defaultDate: new Date()
+      defaultDate: new Date(),
+      title:"日期价格",
+      color:'white',
+      doneLabel:"",
+      closeLabel:"关闭",
+      daysConfig:[{
+        date:new Date(),
+        subTitle:"￥569"
+      }]
     };
 
     let myCalendar =  this.modalCtrl.create(CalendarModal, {
