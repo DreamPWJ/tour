@@ -4,7 +4,7 @@ page-self-tour {
       width: 30px !important;
       height: 30px !important;
       min-height: 30px !important;
-      background-color: rgba(0, 0, 0, .3) !important;
+      background-color: rgba(0, 0, 0, .26) !important;
       border-radius: 50% !important;
     }
 
@@ -115,8 +115,8 @@ page-self-tour {
   .more {
     color: #474747;
     padding-right: 0.8rem;
-    height: 28px;
-    line-height: 28px;
+/*    height: 28px;
+    line-height: 28px;*/
     ion-icon{
       font-size: 1.3rem;
     }
@@ -323,8 +323,9 @@ page-self-tour {
       }
 
       ion-card-content {
-        padding: 3px;
+        padding:6px 3px 3px;
         ion-card-title {
+          font-size: 1.6rem;
           font-weight: 600;
           text-align: left;
         }
@@ -368,23 +369,24 @@ page-self-tour {
     }
     img {
       margin: 0 5px 0 0 !important;
-      width: 25%;
-      height: 80px !important;
+      width: 26%;
+      height: 90px !important;
     }
     ion-label {
-      margin: 5px 2px;
+      margin: 6px 2px;
       padding-right: 0;
       h2 {
         font-size: 1.5rem !important;
       }
     }
     .btn {
-      button {
+      span {
         display: inline-block;
         margin-right: 5px;
         border-radius: 3px;
-        padding: 3px 5px;
+        padding: 1px 5px;
         color: #fff;
+        font-size: 1.3rem;
         &.one {
           background: -webkit-linear-gradient(to left, #6F96FB, #A67EF8);
           background: linear-gradient(to left, #6F96FB, #A67EF8);
