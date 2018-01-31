@@ -171,14 +171,17 @@
   </ion-grid>
 
   <div style="margin-top: 5rem;"></div>
-  <ion-row class="footer-row" align-items-center>
-    <ion-col col-3><button full ion-button style="color:#474747;background-color: #ffffff; "><ion-icon class="icon-kefu"></ion-icon>  客服</button></ion-col>
-    <ion-col col-3><button full ion-button style="color:#474747;background-color: #ffffff; "><ion-icon class="icon-shoucangtubiao"></ion-icon>  收藏</button></ion-col>
-    <ion-col col-6><button full ion-button style="color:#474747;background-color: #ffd94a; ">立即定制</button></ion-col>
-  </ion-row>
+
 
 
   <ion-fab *ngIf="isTabTop" right style="bottom:5rem;">
     <button (click)="scrollToTop()"  ion-fab color="light" mini> <ion-icon class="icon-top"></ion-icon></button>
   </ion-fab>
 </ion-content>
+<ion-footer>
+  <ion-row class="footer-row" align-items-center>
+    <ion-col col-3><button full ion-button style="color:#474747;background-color: #ffffff; "><ion-icon class="icon-kefu"></ion-icon>  客服</button></ion-col>
+    <ion-col col-3><button full ion-button style="color:#474747;background-color: #ffffff; "><ion-icon class="icon-shoucangtubiao"></ion-icon>  收藏</button></ion-col>
+    <ion-col col-6><button full ion-button style="color:#474747;background-color: #ffd94a; ">立即定制</button></ion-col>
+  </ion-row>
+</ion-footer>
