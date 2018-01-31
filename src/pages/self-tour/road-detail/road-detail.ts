@@ -79,15 +79,18 @@ export class RoadDetailPage {
     }
 
     const options: CalendarModalOptions = {
-      pickMode:"single",
+      pickMode:"range",
+      cssClass:'my-calendar',
       monthFormat: 'YYYY 年 MM 月 ',
-      weekdays: ['日', '一', '二', '三', '四', '五', '六'],
+      weekdays: ['日','一','二','三','四','五','六'],
       weekStart: 1,
       defaultDate: new Date(),
-      title:"日期价格",
-      color:'white',
+      title:"日期价格查看",
+      color:'danger',
+      closeIcon:true,
       doneLabel:"",
-      closeLabel:"关闭",
+      closeLabel:"",
+      showYearPicker:true,
       daysConfig:_daysConfig
     };
 
