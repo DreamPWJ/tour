@@ -9,37 +9,42 @@ page-road-detail {
     }
   }
 
-  .icon-share_light,.icon-more_android_light{
-    font-size: 20px!important;
+  .icon-share_light, .icon-more_android_light {
+    font-size: 20px !important;
   }
 
-  .font-size-16{
-    font-size:1.6rem;
+  .font-size-16 {
+    font-size: 1.6rem;
   }
-  .font-size-18{
-    font-size:1.8rem;
+  .font-size-18 {
+    font-size: 1.8rem;
   }
-  .color-8a{
+  .color-8a {
     color: #8a8a8a;
   }
-  .margin-5{
-    margin-bottom: 5px!important;
+  .margin-5 {
+    margin-bottom: 5px !important;
   }
   .slides {
-    height: 235px;
-    ion-slide{
+    height: auto;
+    &.slide-header {
+      height: 235px;
+    }
+    ion-slide {
       position: relative;
       text-align: center;
-      background-color: rgba(0,0,0,.3);
-      img{
+
+    }
+    ion-slide.header-img {
+      background-color: rgba(0, 0, 0, .3)!important;
+      img {
         position: relative;
         z-index: -10;
         width: 100%;
         height: 100%;
       }
     }
-
-   .swiper-pagination .swiper-pagination-bullet-active {
+    .swiper-pagination .swiper-pagination-bullet-active {
       background-color: #FFDE37 !important;
     }
 
@@ -63,41 +68,41 @@ page-road-detail {
     color: #fff;
   }
 
-  .detail-btn1{
+  .detail-btn1 {
     color: #fff;
-    background: -webkit-linear-gradient(left, #6b96fe , #a581fe); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(right,#6b96fe , #a581fe); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(right, #6b96fe , #a581fe); /* Firefox 3.6 - 15 */
-    background: linear-gradient(to right, #6b96fe , #a581fe); /* 标准的语法（必须放在最后） */
+    background: -webkit-linear-gradient(left, #6b96fe, #a581fe); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #6b96fe, #a581fe); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #6b96fe, #a581fe); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #6b96fe, #a581fe); /* 标准的语法（必须放在最后） */
   }
-  .detail-btn2{
+  .detail-btn2 {
     color: #fff;
-    background: -webkit-linear-gradient(left, #ab7ffa , #fd6a9d); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(right,#ab7ffa , #fd6a9d); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(right, #ab7ffa , #fd6a9d); /* Firefox 3.6 - 15 */
-    background: linear-gradient(to right, #ab7ffa , #fd6a9d); /* 标准的语法（必须放在最后） */
+    background: -webkit-linear-gradient(left, #ab7ffa, #fd6a9d); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #ab7ffa, #fd6a9d); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #ab7ffa, #fd6a9d); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #ab7ffa, #fd6a9d); /* 标准的语法（必须放在最后） */
   }
-  .detail-btn3{
+  .detail-btn3 {
     color: #838383;
-    background-color:#fff;
+    background-color: #fff;
     border: 1px #838383 solid;
   }
 
-  .seg-card-style{
-    padding:10px 5px;
+  .seg-card-style {
+    padding: 10px 5px;
     width: 90%;
     text-align: center;
-    box-shadow: -2px 0 2px rgba(0, 0, 0, .1),0 -2px 2px rgba(0, 0, 0, .1),0 2px 2px rgba(0, 0, 0, .1),2px 0 2px rgba(0, 0, 0, .1);
+    box-shadow: -2px 0 2px rgba(0, 0, 0, .1), 0 -2px 2px rgba(0, 0, 0, .1), 0 2px 2px rgba(0, 0, 0, .1), 2px 0 2px rgba(0, 0, 0, .1);
   }
-  .seg-card-style h3{
-    font-weight:bold;
+  .seg-card-style h3 {
+    font-weight: bold;
     font-size: 18px;
   }
-  .seg-card-style p{
+  .seg-card-style p {
     font-size: 12px;
   }
 
-  .seg-card-col2{
+  .seg-card-col2 {
     margin-top: -5px;
     position: absolute;
     right: 0;
@@ -105,40 +110,43 @@ page-road-detail {
     width: 100%;
     height: 80px;
     border-left: 1px #dcdada solid;
-   }
-  .seg-card-col2 span{
+  }
+  .seg-card-col2 span {
     font-size: 16px;
     color: #4eb0da;
     padding-top: 5px;
     text-align: center;
-    margin: auto;display: block;
+    margin: auto;
+    display: block;
   }
   /*4个card下的check*/
-  .check-style{
+  .check-style {
     font-size: 12px;
     padding-top: 15px;
   }
-  .check-style ion-icon{
+  .check-style ion-icon {
     color: #ffdb27;
   }
 
   /*赞*/
-  .roaddet-zan{
+  .roaddet-zan {
     padding-top: 3px;
     text-align: center;
     color: #fff;
-    width: 22px;height: 22px;
+    width: 22px;
+    height: 22px;
     background-color: #f1b350;
   }
 
   /*特色景点轮播*/
-  .tesejingdian img{
+  .tesejingdian img {
     position: relative;
   }
-  .tesejingdian-wenzi{
+  .tesejingdian-wenzi {
     position: absolute;
-    top:9px;left: 5px;
-    background-color: rgba(0,0,0,.5);
+    top: 9px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, .5);
     font-size: 14px;
     color: #fff;
     padding: 3px;
@@ -156,18 +164,20 @@ page-road-detail {
     background-color: #e5e5e5;
   }
 
-  .btnFlg-unselect{
+  .btnFlg-unselect {
     color: #474747;
     background-color: #ffffff;
-    width:100%;height: 3rem;
+    width: 100%;
+    height: 3rem;
   }
-  .btnFlg-select{
+  .btnFlg-select {
     color: #474747;
     background-color: #fff4bd;
-    width:100%;height: 3rem;
+    width: 100%;
+    height: 3rem;
   }
   /*行程详情DAY 1 */
-  .xingcheng-day:before{
+  .xingcheng-day:before {
     content: '';
     top: 50%;
     transform: translateY(-50%);
@@ -178,27 +188,27 @@ page-road-detail {
     height: 50%;
     background-color: #41c6ad;
   }
-  .xingcheng-day{
+  .xingcheng-day {
     margin-left: 5px;
     color: #111111;
   }
-  .xingcheng-map{
+  .xingcheng-map {
     color: #00abdc;
   }
-  .xingcheng-xingcheng{
+  .xingcheng-xingcheng {
     margin-left: 5px;
     padding-bottom: 1.3rem;
   }
 
-  .footer-row{
+  .footer-row {
     box-shadow: 0 -3px 2px rgba(0, 0, 0, .1);
   }
-  .footer-row ion-col{
-    padding:0!important;
-    margin:0!important;
+  .footer-row ion-col {
+    padding: 0 !important;
+    margin: 0 !important;
   }
-  .footer-row ion-col button{
-    padding:0!important;
-    margin:0!important;
+  .footer-row ion-col button {
+    padding: 0 !important;
+    margin: 0 !important;
   }
 }
