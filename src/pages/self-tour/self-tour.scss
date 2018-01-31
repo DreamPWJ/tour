@@ -62,7 +62,7 @@ page-self-tour {
   .jin-ri-slides {
 
     ion-card {
-      margin: 5px;
+      margin: 5px 5px 8px  9px;
       padding-bottom: 8px;
     }
   }
@@ -363,7 +363,7 @@ page-self-tour {
     .card {
       width: 100%;
       margin-bottom: 1rem;
-      box-shadow: 1px 0 8px rgba(204, 204, 204, 0.2), 0 1px 8px rgba(204, 204, 204, 0.2);
+      box-shadow: 2px 0 8px 0 rgba(204, 204, 204, 0.2), 0 2px 8px 0 rgba(204, 204, 204, 0.2);
       border-radius: 2px;
       padding: 0 !important;
     }
