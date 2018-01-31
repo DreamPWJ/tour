@@ -1,4 +1,4 @@
-import {ErrorHandler, NgModule} from '@angular/core';
+import {ErrorHandler, LOCALE_ID, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {Config, IonicApp, IonicErrorHandler, IonicModule} from 'ionic-angular';
 import {MyApp} from './app.component';
@@ -14,6 +14,7 @@ import {SelfTourPage} from "../pages/self-tour/self-tour";
 import {RankingListPage} from "../pages/ranking-list/ranking-list";
 import {MyProfilePage} from "../pages/account/my-profile/my-profile";
 import {DirectivesModule} from "../directives/directives.module";
+import {CalendarModule} from "ion2-calendar/dist";
 
 export const COMPONENTS = [
   MyApp,
@@ -24,7 +25,8 @@ export const COMPONENTS = [
 ]
 
 export const MODULES = [
-  DirectivesModule
+  DirectivesModule,
+  CalendarModule
 ]
 
 export const PROVIDERS = [
@@ -55,6 +57,7 @@ export const PROVIDERS = [
     PROVIDERS,
     StatusBar,
     SplashScreen,
+    {provide: LOCALE_ID, useValue: "zh-CN" },//本地化
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

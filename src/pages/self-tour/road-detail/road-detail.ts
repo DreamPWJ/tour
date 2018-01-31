@@ -1,6 +1,7 @@
 import {Component, ViewChild} from '@angular/core';
-import {Content, IonicPage, NavController, NavParams, Platform, Slides} from 'ionic-angular';
+import {Content, IonicPage, ModalController, NavController, NavParams, Platform, Slides} from 'ionic-angular';
 import {StatusBar} from "@ionic-native/status-bar";
+import {CalendarModal, CalendarModalOptions} from "ion2-calendar";
 
 /**
  * Generated class for the RoadDetailPage page.
@@ -25,7 +26,8 @@ export class RoadDetailPage {
   btnFlg:number = 1;
   isTabTop: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public statusBar: StatusBar,public  platform: Platform) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,  public modalCtrl: ModalController,
+              public statusBar: StatusBar,public  platform: Platform) {
   }
 
   segmentChanged(event){
@@ -62,6 +64,28 @@ export class RoadDetailPage {
 
   btnFlgSelect(index:number){
     this.btnFlg = index;
+  }
+
+  /**
+   * 打开日历模态框模式
+   */
+  openCalendar() {
+    const options: CalendarModalOptions = {
+      monthFormat: 'YYYY 年 MM 月 ',
+      weekdays: ['天', '一', '二', '三', '四', '五', '六'],
+      weekStart: 1,
+      defaultDate: new Date()
+    };
+
+    let myCalendar =  this.modalCtrl.create(CalendarModal, {
+      options: options
+    });
+
+    myCalendar.present();
+
+    myCalendar.onDidDismiss(date => {
+      console.log(date);
+    });
   }
 
   //回到顶部
