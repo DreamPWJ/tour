@@ -1,0 +1,122 @@
+<ion-header style="border-bottom:1px #a8a8a8 solid; ">
+  <ion-navbar color="white">
+    <ion-title>西藏自驾攻略</ion-title>
+    <ion-buttons end>
+      <button class="more-btn" ion-button icon-only>
+        <ion-icon class="icon-more_android_light "></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="menu-icon">
+    <button ion-button small clear (click)="menuSelect(true)">
+      <ion-icon class="icon-mulutubiaoda"></ion-icon>
+    </button>
+  </div>
+  <div>
+    <img src="assets/imgs/main/home-bg.jpg"/>
+  </div>
+  <!--侧边栏-->
+  <div *ngIf="menuFlg" class="menu-right-abso">
+    <div class="center-icon" (click)="menuSelect(false)"><ion-icon class="icon-right" ></ion-icon></div>
+    <ion-scroll scrollY="true" style="height: 100%">
+      <ion-row>
+        <ion-col>
+          <h5 style="color: #333333;" class="h5-margin"><ion-icon class="icon-mulutubiaoda"></ion-icon> 目录</h5>
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-center ngClass="{{indexSel==1?'menu-select':'menu-index'}}" (click)="indexSelect(1)">
+        <ion-col col-11><h5 class="grey h5-margin">01/概况</h5></ion-col>
+        <ion-col text-right col-1><ion-icon class="icon-right menu-icon-right"></ion-icon></ion-col>
+      </ion-row>
+      <ion-row align-items-center>
+        <ion-col col-6 *ngFor="let item of gaikuangList">
+          <button class="grey menu-name" text-center><span class="menu-point">•</span> {{item.name}}</button>
+        </ion-col>
+      </ion-row>
+      <p style="padding-bottom: 10px;" no-margin></p>
+      <ion-row align-items-center ngClass="{{indexSel==2?'menu-select':'menu-index'}}" (click)="indexSelect(2)">
+        <ion-col><h5 class="grey h5-margin">02/景点与亮点</h5></ion-col>
+        <ion-col text-right col-1><ion-icon class="icon-right menu-icon-right"></ion-icon></ion-col>
+      </ion-row>
+      <ion-row align-items-center>
+        <ion-col col-6>
+          <button class="grey menu-name" text-center><span class="menu-point">•</span>热门城市及景点</button>
+        </ion-col>
+        <ion-col col-6>
+          <button class="grey menu-name" text-center><span class="menu-point">•</span>特色活动</button>
+        </ion-col>
+      </ion-row>
+      <p style="padding-bottom: 10px;" no-margin></p>
+      <ion-row align-items-center ngClass="{{indexSel==3?'menu-select':'menu-index'}}" (click)="indexSelect(3)">
+        <ion-col col-11><h5 class="grey h5-margin">03/西藏深度玩法 <span class="remen-btn1">热门</span></h5></ion-col>
+        <ion-col text-right col-1><ion-icon class="icon-right menu-icon-right"></ion-icon></ion-col>
+      </ion-row>
+      <ion-row align-items-center>
+        <ion-col>
+          <button class="grey menu-name" text-center><span class="menu-point">•</span>神山圣湖，心灵的朝佛之旅</button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <button class="grey menu-name" text-center><span class="menu-point">•</span>三生三世十里桃花，西藏的江南风情</button>
+        </ion-col>
+      </ion-row>
+      <p style="padding-bottom: 10px;" no-margin></p>
+      <ion-row class="menu-index" align-items-center ngClass="{{indexSel==4?'menu-select':'menu-index'}}" (click)="indexSelect(4)">
+        <ion-col>
+          <h5 class="grey h5-margin">04/行前准备</h5>
+        </ion-col>
+        <ion-col text-right col-1><ion-icon class="icon-right menu-icon-right"></ion-icon></ion-col>
+      </ion-row>
+      <ion-row align-items-center>
+        <ion-col col-6 *ngFor="let item of zhunbeiList">
+          <button class="grey menu-name" text-center><span class="menu-point">•</span> {{item.name}}</button>
+          <span *ngIf="item.flg" class="bikan-btn1">必看</span>
+        </ion-col>
+      </ion-row>
+      <p style="padding-bottom: 10px;" no-margin></p>
+      <ion-row class="menu-index" align-items-center ngClass="{{indexSel==5?'menu-select':'menu-index'}}" (click)="indexSelect(5)">
+        <ion-col>
+          <h5 class="grey h5-margin">05/美食推荐</h5>
+        </ion-col>
+        <ion-col text-right col-1><ion-icon class="icon-right menu-icon-right"></ion-icon></ion-col>
+      </ion-row>
+      <ion-row align-items-center>
+        <ion-col col-6>
+          <button class="grey menu-name" text-center><span class="menu-point">•</span> 美食概况</button>
+        </ion-col>
+        <ion-col col-6>
+          <button class="grey menu-name" text-center><span class="menu-point">•</span> 特色美食</button>
+        </ion-col>
+      </ion-row>
+      <p style="padding-bottom: 10px;" no-margin></p>
+      <ion-row class="menu-index" align-items-center ngClass="{{indexSel==6?'menu-select':'menu-index'}}" (click)="indexSelect(6)">
+        <ion-col>
+          <h5 class="grey h5-margin">06/购物推荐</h5>
+        </ion-col>
+        <ion-col text-right col-1><ion-icon class="icon-right menu-icon-right"></ion-icon></ion-col>
+      </ion-row>
+      <ion-row align-items-center>
+        <ion-col col-6 *ngFor="let item of gouwuList">
+          <button class="grey menu-name" text-center><span class="menu-point">•</span> {{item.name}}</button>
+        </ion-col>
+      </ion-row>
+      <p style="padding-bottom: 10px;" no-margin></p>
+      <ion-row class="menu-index" align-items-center ngClass="{{indexSel==7?'menu-select':'menu-index'}}" (click)="indexSelect(7)">
+        <ion-col>
+          <h5 class="grey h5-margin">07/如何到达</h5>
+        </ion-col>
+        <ion-col text-right col-1><ion-icon class="icon-right menu-icon-right"></ion-icon></ion-col>
+      </ion-row>
+      <ion-row align-items-center>
+        <ion-col col-6 *ngFor="let item of jiaotongList">
+          <button class="grey menu-name" text-center><span class="menu-point">•</span> {{item.name}}</button>
+        </ion-col>
+      </ion-row>
+      <p></p>
+    </ion-scroll>
+  </div>
+
+</ion-content>

@@ -26,4 +26,8 @@ export class GuideIndexPage {
     {imgUrl:'assets/imgs/self-tour/guide5.jpg',name:'内蒙',pinyin:'INNER MONGOLIA'},
   ];
 
+  //跳转goGuideMenu页面
+  goGuideMenu(name:any){
+    this.navCtrl.push("GuideMenuPage");
+  }
 }

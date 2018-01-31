@@ -14,7 +14,7 @@
 <ion-content>
 
   <ion-row class="guide-row">
-    <ion-col *ngFor="let item of guideList" col-6>
+    <ion-col *ngFor="let item of guideList" col-6 (click)="goGuideMenu(item.name)">
       <img [src]="item.imgUrl"/>
       <div class="card-title">{{item.name}}</div>
       <div class="card-subtitle">{{item.pinyin}}</div>
