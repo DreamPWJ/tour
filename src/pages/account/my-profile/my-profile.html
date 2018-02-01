@@ -1,4 +1,4 @@
-<ion-content class="transparent-header" (ionScroll)="scrollHandler($event)">
+<ion-content class="transparent-header" [ngClass]="{'margin-top-20':isTabTop}" (ionScroll)="scrollHandler($event)">
   <ion-header class="{{isTabTop?'white-header':''}}">
     <ion-navbar color="transparent" >
         <ion-title *ngIf="isTabTop"> <img  src="assets/imgs/main/head.jpg" class="header-item"> 怀念记忆</ion-title>

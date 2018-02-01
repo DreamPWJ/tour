@@ -66,9 +66,9 @@ export class MyProfilePage {
   scrollHandler(event) {
     /*    console.log(this.content.scrollTop);*/
     this.content.scrollTop >= 150 ? this.isTabTop = true : this.isTabTop = false;
-    if (this.platform.is("cordova")) {
-      this.isTabTop?this.statusBar.backgroundColorByHexString("#ffffff"):this.statusBar.styleDefault();
-    }
+/*    if (this.platform.is("cordova")) {
+      this.isTabTop?this.statusBar.backgroundColorByHexString("#ffffff"):this.statusBar.backgroundColorByHexString("transparent");
+    }*/
     /*    console.log(`ScrollEvent: ${event}`)
         this.zone.run(()=>{
           // since scrollAmount is data-binded,

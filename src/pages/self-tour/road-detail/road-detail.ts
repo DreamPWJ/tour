@@ -83,11 +83,12 @@ export class RoadDetailPage {
     }
 
     const options: CalendarModalOptions = {
-      pickMode:"range",
+      pickMode:"single",
       cssClass:'my-calendar',
       monthFormat: 'YYYY 年 MM 月 ',
       weekdays: ['日','一','二','三','四','五','六'],
       weekStart: 1,
+      canBackwardsSelected:false,
       defaultDate: date,
       title:"日期价格查看",
       color:'danger',
@@ -112,9 +113,9 @@ export class RoadDetailPage {
   //回到顶部
   scrollHandler(event) {
     this.content.scrollTop >= 150 ? this.isTabTop = true : this.isTabTop = false;
-    if (this.platform.is("cordova")) {
+/*    if (this.platform.is("cordova")) {
       this.isTabTop?this.statusBar.backgroundColorByHexString("#ffffff"):this.statusBar.styleDefault();
-    }
+    }*/
   }
 
   scrollToTop() {
