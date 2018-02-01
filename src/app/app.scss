@@ -214,7 +214,15 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
   padding: 0 10px;
 }
 
-
+.cordova-statusbar-cover{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20000;
+  width: 100vw;
+  height: 20px;
+  background-color: #fff;
+}
 
 .platform-ios.platform-cordova {
   ion-content{
@@ -222,7 +230,9 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
       padding-top: $cordova-ios-statusbar-padding;
     }
   }
-
+  .statusbar-cover{
+    @extend .cordova-statusbar-cover;
+  }
 }
 
 .platform-android.platform-cordova {
@@ -231,13 +241,7 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
     /*    background-color: color($colors, primary);*/
   }
   .statusbar-cover{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 20000;
-    width: 100vw;
-    height: 20px;
-    background-color: #fff;
+    @extend .cordova-statusbar-cover;
   }
 }
 
