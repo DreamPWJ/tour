@@ -247,7 +247,7 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
 
 ion-content{
   ion-header + ion-segment, ion-header + div, ion-header + ion-row {
-    margin-top: $navbar-ios-height;
+    margin-top: 48px;
   }
 }
 
