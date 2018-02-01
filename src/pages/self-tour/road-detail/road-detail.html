@@ -1,20 +1,21 @@
-<ion-content class="transparent-header" (ionScroll)="scrollHandler($event)">
-  <ion-header>
-    <ion-navbar color="transparent">
-      <!--     <ion-title>自驾游</ion-title>-->
+<ion-header>
+  <ion-navbar color="transparent">
+    <!--     <ion-title>自驾游</ion-title>-->
+    <ion-buttons end>
       <ion-buttons end>
-        <ion-buttons end>
-          <button ion-button icon-only>
-            <ion-icon class="icon-share_light"></ion-icon>
-          </button>
-          <span style="padding: 0 3px;"></span>
-          <button ion-button icon-only>
-            <ion-icon class="icon-more_android_light"></ion-icon>
-          </button>
-        </ion-buttons>
+        <button ion-button icon-only>
+          <ion-icon class="icon-share_light"></ion-icon>
+        </button>
+        <span style="padding: 0 3px;"></span>
+        <button ion-button icon-only>
+          <ion-icon class="icon-more_android_light"></ion-icon>
+        </button>
       </ion-buttons>
-    </ion-navbar>
-  </ion-header>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content  (ionScroll)="scrollHandler($event)" class="content-top-0">
+
   <ion-slides class="slides slide-header" autoplay="5000" loop pager><!--轮播-->
     <ion-slide *ngFor="let image of [1,2]" class="header-img">
       <img data-src="./assets/imgs/slide/slide{{image}}.jpeg"/>

@@ -1,20 +1,20 @@
-<ion-content class="transparent-header" fullscreen
+<ion-header>
+  <ion-toolbar color="transparent">
+    <!--      <ion-buttons start  >-->
+    <img (click)="push()" class="tou-xiang" src="assets/imgs/main/head.jpg"/>
+    <span (click)="push()" class="light opacity-6">小薇</span>
+    <!--      </ion-buttons>-->
+    <!--      <ion-title>自驾游</ion-title>-->
+    <ion-buttons end >
+      <button ion-button icon-only>
+        <ion-icon class="icon-markfill opacity-6"></ion-icon>
+        <span class="jiao-biao roboto">2</span>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content
              [ngStyle]="{'background-image': 'url(' + backgroundImage +')', 'background-size': 'cover'}">
-  <ion-header>
-    <ion-toolbar color="transparent">
-<!--      <ion-buttons start  >-->
-        <img (click)="push()" class="tou-xiang" src="assets/imgs/main/head.jpg"/>
-        <span (click)="push()" class="light opacity-6">小薇</span>
-<!--      </ion-buttons>-->
-      <!--      <ion-title>自驾游</ion-title>-->
-      <ion-buttons end >
-        <button ion-button icon-only>
-          <ion-icon class="icon-markfill opacity-6"></ion-icon>
-          <span class="jiao-biao roboto">2</span>
-        </button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
   <div #chart class="map"></div>
   <div class="go-to">
     <p>我已经去过<span>2</span>个省/<span>2</span>个城市</p>

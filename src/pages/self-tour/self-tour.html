@@ -5,18 +5,18 @@
   Ionic pages and navigation.
 -->
 
+<ion-header>
+  <ion-navbar color="transparent">
+    <!--     <ion-title>自驾游</ion-title>-->
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon class="icon-more_android_light"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
 
-<ion-content class="transparent-header" (ionScroll)="scrollHandler($event)" fullscreen>
-  <ion-header>
-    <ion-navbar color="transparent">
-      <!--     <ion-title>自驾游</ion-title>-->
-      <ion-buttons end>
-        <button ion-button icon-only>
-          <ion-icon class="icon-more_android_light"></ion-icon>
-        </button>
-      </ion-buttons>
-    </ion-navbar>
-  </ion-header>
+<ion-content  (ionScroll)="scrollHandler($event)" class="content-top-0">
   <ion-slides class="slides">
     <ion-slide *ngFor="let image of [1]">
       <img data-src="./assets/imgs/self-tour/{{image}}.png">

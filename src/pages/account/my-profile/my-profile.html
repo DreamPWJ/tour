@@ -1,19 +1,19 @@
 <div *ngIf="isTabTop" class="statusbar-cover"></div>
-<ion-content  class="transparent-header"  (ionScroll)="scrollHandler($event)">
-  <ion-header class="{{isTabTop?'white-header':''}}">
-    <ion-navbar color="transparent" >
-        <ion-title *ngIf="isTabTop"> <img  src="assets/imgs/main/head.jpg" class="header-item"> 怀念记忆</ion-title>
-      <ion-buttons end>
-        <button class="search-btn" ion-button icon-only>
-          <ion-icon class="icon-search"></ion-icon>
-        </button>
-        <button class="more-btn" ion-button icon-only>
-          <ion-icon class="icon-more_android_light "></ion-icon>
-        </button>
-      </ion-buttons>
-    </ion-navbar>
-  </ion-header>
+<ion-header>
+  <ion-navbar color="{{isTabTop?'white':'transparent'}}" >
+    <ion-title *ngIf="isTabTop"> <img  src="assets/imgs/main/head.jpg" class="header-item"> 怀念记忆</ion-title>
+    <ion-buttons end>
+      <button class="search-btn" ion-button icon-only>
+        <ion-icon class="icon-search"></ion-icon>
+      </button>
+      <button class="more-btn" ion-button icon-only>
+        <ion-icon class="icon-more_android_light "></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
 
+<ion-content fullscreen=""  (ionScroll)="scrollHandler($event)" class="content-top-0">
   <ion-list class="header-list" no-lines>
     <ion-item>
       <ion-thumbnail item-start>

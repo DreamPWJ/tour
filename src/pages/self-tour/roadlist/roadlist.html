@@ -1,23 +1,25 @@
-<ion-content>
-  <ion-header class="white-header">
-    <ion-navbar color="light">
-      <ion-toolbar >
-        <ion-row nowrap="">
+<ion-header >
+  <ion-navbar color="white">
+
+      <ion-row nowrap="">
         <ion-select   interface="popover">
           <ion-option value="成都" selected="true"  >成都出发</ion-option>
           <ion-option value="武汉">武汉出发</ion-option>
         </ion-select>
         <ion-searchbar  tappable placeholder="输入想去的城市" (ionInput)="filterItems($event)">
         </ion-searchbar>
-        </ion-row>
-      </ion-toolbar>
-      <ion-buttons end>
-        <button ion-button icon-only>
-          <ion-icon class="icon-more_android_light "></ion-icon>
-        </button>
-      </ion-buttons>
-    </ion-navbar>
-  </ion-header>
+      </ion-row>
+
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon class="icon-more_android_light "></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
   <ion-segment [(ngModel)]="roadseg" mode="md" (ionChange)="segmentChanged($event)">
     <ion-segment-button *ngFor="let item of roadsegArr" value="{{item}}">
       {{item}}

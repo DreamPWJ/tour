@@ -153,14 +153,20 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
 }
 
 
-.header-ios-white{
+/*.header-ios-white{
   .toolbar-content,
   .back-button,button,.toolbar-title {
     color: #111111!important;
   }
+}*/
+
+
+.content-top-0 .scroll-content{
+    margin-top: 0!important;
+    padding-top: 0!important;
 }
 
-.transparent-header {
+/*.transparent-header {
   // This is just to make the header transparent and button/icon with white color
   .toolbar-content,
   .back-button {
@@ -184,9 +190,10 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
     border: 0;
   }
 
-}
+}*/
 
 
+/*
 .white-header {
   // This is just to make the header white and button/icon with #111111 color
   .toolbar-content,
@@ -209,6 +216,7 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
     border: 0;
   }
 }
+*/
 
 .padding-lr-10{
   padding: 0 10px;
@@ -225,11 +233,11 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
 }
 
 .platform-ios.platform-cordova {
-  ion-content{
+/*  ion-content{
     ion-header {
       padding-top: $cordova-ios-statusbar-padding;
     }
-  }
+  }*/
   .statusbar-cover{
     @extend .cordova-statusbar-cover;
   }
@@ -245,22 +253,27 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
   }
 }
 
+/*
 ion-content{
   ion-header + ion-segment, ion-header + div, ion-header + ion-row {
     margin-top: 48px;
   }
 }
+*/
 
 
+/*
 .platform-android.platform-cordova {
   ion-content{
     ion-header + ion-segment, ion-header + div, ion-header + ion-row {
       margin-top: 68px;
     }
   }
+  }
+*/
 
 
 
-}
+
 
 
