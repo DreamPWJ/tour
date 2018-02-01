@@ -8,6 +8,7 @@ page-home {
   }
 
   .tou-xiang {
+    margin-top: 1px;
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -18,9 +19,9 @@ page-home {
 
 
   .map {
-/*    margin-top: 40px!important;*/
+    margin-top: 0px!important;
     width: 100vw;
-    height: 35vh;
+    height: 34vh;
   }
 
   .go-to p {
@@ -63,7 +64,7 @@ page-home {
 
   .slides {
     position: relative;
-    margin-top: 1.5rem;
+    margin-top: 1.3rem;
     background-color: rgba(255, 255, 255, 0.3);
     height: 8rem;
     color: #ffffff;
