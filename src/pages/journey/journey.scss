@@ -1,6 +1,108 @@
 page-journey {
   .map-container {
     width: 100%;
-    height: 100%;
+    height: 300px;
+    position: fixed;
+    top:0;left: 0;right: 0;
+    z-index: 2;
+  }
+
+  .cardcontent-span{
+    font-weight: bold;
+    font-size: 15px;
+    color: #111111;
+  }
+
+  /*map上面*/
+  .journey-mapon{
+    margin-top: 248px;
+    z-index: -1;
+    background-color: #F8F4EC;
+  }
+  /*journey第一个card的标题*/
+  .jour-card-green{
+    background-color: #41D941;
+    margin-left: -10px;
+    font-size: 10px;
+    color: #fff;
+    height: 13px;
+    text-align: center;
+    padding-top: 1px;
+  }
+  .jour-card-col1{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .jour-card-col1 span{
+    margin-top: 0;
+    font-size: 10px;
+    font-weight: 100;
+    background-color: red;
+    padding:3px 4px;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+
+  /*card1景点简介*/
+  .jour-card1-title{
+    border-left: 4px #ffdb27 solid;
+    padding-left: 8px;
+  }
+  .icon-location_light{
+    font-size: 30px;
+    color: #FF7272;
+  }
+
+
+  .journey-foot-card1{
+    margin-top: 1.6rem;
+    padding: 1rem 0;
+    width: 50px;height: 50px;
+    font-weight: bold;
+    color: #3e3e3e;
+  }
+  /*footer中的card*/
+  .foot-card-select{
+    border:1px #ffdb27 solid;
+  }
+  .foot-card-unselect{
+    border:none;
+  }
+  .foot-card-index-select{
+    border-left: 3px #ffdb27 solid;
+    color: #474747;
+    font-weight: bold;
+  }
+  .foot-card-index-unselect{
+    border-left: none;
+    color: #8a8a8a;
+    font-weight: bold;
+  }
+
+  .foot-card-col2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff;
+    width: 100%;
+    height: 90px;
+    z-index: 5;
+    box-shadow: -3px 0 6px 0 #cccccc;
+  }
+  .foot-card-col2 span {
+    font-size: 16px;
+    color: #4eb0da;
+    text-align: center;
+    margin: auto;
+    display: block;
+  }
+
+  /*地图标记*/
+  .amap-marker {
+    width: 25px;
+    height: 25px;
+    background-color: #ff6b54;
+    border:5px #ffffff solid;
+    border-radius:50%;
   }
 }

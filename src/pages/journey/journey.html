@@ -11,4 +11,75 @@
 </ion-header>
 <ion-content >
   <div #maps class="map-container"></div>
+  <div class="journey-mapon">
+    <p style="border: 1px #F8F4EC solid"></p>
+    <ion-card>
+      <ion-card-header style="padding: 10px!important;">
+        <ion-row align-items-center>
+          <ion-col col-1 class="jour-card-green" no-padding>2</ion-col>
+          <ion-col col-6 class="jour-card-col1">
+            米拉山口<span>拉萨</span>
+          </ion-col>
+          <ion-col text-right>
+            <button ion-button clear small style="color:#4eb0da "><ion-icon class="icon-daolanjiantouda"></ion-icon>导航
+               <span style="font-size: 16px;color: #111111;padding-left: 3px;">93km</span>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-card-header>
+      <div>
+        <h2 class="grey jour-card1-title">景点简介</h2>
+      </div>
+      <ion-card-content>
+        <p>米拉山口,即西藏米拉山的山口，地处拉萨市到墨竹米拉山口即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹。</p>
+        <p><span class="cardcontent-span">交通攻略</span>
+          位于川藏线318国道上，自驾车路况良好，米拉山口，即西藏米拉山的山口，地处拉萨市到。
+        </p>
+        <ion-row align-items-center >
+          <ion-col col-10 no-padding>
+            <p><span class="cardcontent-span">地址</span>
+              拉萨市到墨竹工卡县与林芝区工布江达县的分界上
+            </p>
+          </ion-col>
+          <ion-col><ion-icon class="icon-location_light"></ion-icon></ion-col>
+        </ion-row>
+        <div text-center>
+          <button ion-button clear small style="color: #00abdc;">更多详情 <ion-icon class="icon-right"></ion-icon></button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <p style="border: 1px #F8F4EC solid"></p>
+  </div>
+
 </ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col col-auto>
+      <ion-card text-center class="journey-foot-card1" no-margin>
+        <h2>DAY1</h2>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-scroll scrollX="true" style="width: 80vw;height: 80px;" >
+        <ion-row style="width: 120vw;">
+          <div *ngFor="let item of dayList">
+              <p no-margin class="grey">{{item.gongli}}</p>
+              <ion-card style="width: 23vw;height: 50px;margin-right: 5px;" no-margin class="grey journey-foot-card"
+                        text-center (click)="daySelect(item.index)" ngClass="{{item.index==dayIndex?'foot-card-select':'foot-card-unselect'}}">
+                <ion-row align-items-center>
+                  <ion-col col-2 ngClass="{{item.index==dayIndex?'foot-card-index-select':'foot-card-index-unselect'}}">{{item.index}}</ion-col>
+                  <ion-col col-10 text-wrap class="grey">{{item.name}}</ion-col>
+                </ion-row>
+              </ion-card>
+          </div>
+        </ion-row>
+      </ion-scroll>
+    </ion-col>
+    <ion-col col-2 class="foot-card-col2"  text-center>
+      <p tappable (click)="openCalendar()" class="vertical-center" no-margin>
+        <span>全部</span>
+        <span>行程</span>
+      </p>
+    </ion-col>
+  </ion-row>
+</ion-footer>
