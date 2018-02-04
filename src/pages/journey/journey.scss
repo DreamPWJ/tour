@@ -19,28 +19,35 @@ page-journey {
     z-index: -1;
     background-color: #F8F4EC;
   }
+
   /*journey第一个card的标题*/
   .jour-card-green{
+    display: inline-block;
     background-color: #41D941;
     margin-left: -10px;
     font-size: 10px;
     color: #fff;
-    height: 13px;
+    height: 15px;
+    line-height: 15px;
+    border-radius: 2px;
     text-align: center;
-    padding-top: 1px;
+
   }
   .jour-card-col1{
+    position: relative;
     font-size: 18px;
     font-weight: bold;
   }
   .jour-card-col1 span{
-    margin-top: 0;
+    position: relative;
+    display: inline-block;
+    top: -5px;
     font-size: 10px;
     font-weight: 100;
     background-color: red;
-    padding:3px 4px;
+    padding:1px 5px;
     color: #ffffff;
-    border-radius: 5px;
+    border-radius: 8px;
   }
 
   /*card1景点简介*/
