@@ -272,6 +272,20 @@ ion-content{
   }
 */
 
+.cut-btn{
+  position: relative;
+  &:after {
+    content: '';
+    top: 50%;
+    left: calc(100% + 5px);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+}
 
 
 

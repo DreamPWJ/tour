@@ -70,21 +70,20 @@ page-home {
     color: #ffffff;
     border-top: 2px solid rgba(255, 255, 255, 0.5);
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    .swiper-pagination {
+      text-align: left;
+      padding-left: 8px;
+      bottom: 0px;
+      .swiper-pagination-bullet-active {
+        background-color: rgba(255, 255, 255, 0.8) !important;
+      }
+      .swiper-pagination-bullet {
+        background-color: #ffffff;
+      }
+    }
   }
 
-  .slides .swiper-pagination {
-    text-align: left;
-    padding-left: 8px;
-    bottom: 0px;
-  }
 
-  .slides .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: rgba(255, 255, 255, 0.8) !important;
-  }
-
-  .slides .swiper-pagination .swiper-pagination-bullet {
-    background-color: #ffffff;
-  }
 
   .slides ion-slide {
     margin-top: -0.5rem;

@@ -9,8 +9,9 @@
   <ion-navbar color="white">
     <ion-title>行程助手</ion-title>
     <ion-buttons end>
+      <button ion-button small  class="li-shi-btn cut-btn">查看历史</button>
       <button ion-button icon-only>
-        <ion-icon class="icon-more_android_light"></ion-icon>
+        <ion-icon class="icon-more_android_light "></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -18,6 +19,18 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content >
+
+  <ion-slides #slides class="journey-slides" pager  freeMode="true" slidesPerView="auto" spaceBetween="-25px" loop="true"
+              (ionSlideDidChange)="slideChanged()">
+    <ion-slide *ngFor="let item of slidesData">
+      <h3 class="title">{{item.title}}</h3>
+      <ion-card text-left >
+        <div class="prices grey"> <span>￥</span><strong>{{item.price}}</strong></div>
+        <img data-src="{{item.img}}">
+        <div class="wave-bg"></div>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
 
 </ion-content>
