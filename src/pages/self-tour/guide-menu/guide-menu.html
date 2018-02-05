@@ -1,4 +1,4 @@
-<ion-header style="border-bottom:1px #a8a8a8 solid; ">
+<ion-header >
   <ion-navbar color="white">
     <ion-title>西藏自驾攻略</ion-title>
     <ion-buttons end>
@@ -8,22 +8,20 @@
     </ion-buttons>
   </ion-navbar>
 </ion-header>
-<ion-content>
+<ion-content [ngStyle]="{'background-image': 'url(' + backgroundImage +')', 'background-size': 'cover'}">
   <div class="menu-icon">
     <button ion-button small clear (click)="menuSelect(true)">
       <ion-icon class="icon-mulutubiaoda"></ion-icon>
     </button>
   </div>
-  <div>
-    <img src="assets/imgs/main/home-bg.jpg"/>
-  </div>
+
   <!--侧边栏-->
   <div *ngIf="menuFlg" class="menu-right-abso">
     <div class="center-icon" (click)="menuSelect(false)"><ion-icon class="icon-right" ></ion-icon></div>
-    <ion-scroll scrollY="true" style="height: 100%">
-      <ion-row>
-        <ion-col>
-          <h5 style="color: #333333;" class="h5-margin"><ion-icon class="icon-mulutubiaoda"></ion-icon> 目录</h5>
+    <ion-scroll scrollY="true" style="height: calc(100vh - 44px)">
+      <ion-row >
+        <ion-col >
+          <h5 class="mu-lu" ><ion-icon class="icon-mulutubiaoda"></ion-icon> 目录</h5>
         </ion-col>
       </ion-row>
       <ion-row align-items-center ngClass="{{indexSel==1?'menu-select':'menu-index'}}" (click)="indexSelect(1)">
@@ -71,7 +69,7 @@
         <ion-col text-right col-1><ion-icon class="icon-right menu-icon-right"></ion-icon></ion-col>
       </ion-row>
       <ion-row align-items-center>
-        <ion-col col-6 *ngFor="let item of zhunbeiList">
+        <ion-col  col-6 *ngFor="let item of zhunbeiList">
           <button class="grey menu-name" text-center><span class="menu-point">•</span> {{item.name}}</button>
           <span *ngIf="item.flg" class="bikan-btn1">必看</span>
         </ion-col>

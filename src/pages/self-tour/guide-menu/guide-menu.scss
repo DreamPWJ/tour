@@ -1,4 +1,5 @@
 page-guide-menu {
+
   .menu-icon{
     position: absolute;
     top: 0;right: 10px;
@@ -20,6 +21,10 @@ page-guide-menu {
     width:75%;
     background-color: #ffffff;
     z-index: 4;
+    border-top: 1px solid $border-color;
+    .mu-lu{
+      color: #333333;
+    }
   }
 
   .center-icon{
@@ -46,6 +51,7 @@ page-guide-menu {
     background-color: #ffcd20;
   }
   .h5-margin{
+    position: relative;
     margin: 5px 0 5px 15px!important;
   }
   .menu-icon-right{
@@ -66,23 +72,24 @@ page-guide-menu {
 
   /*热门*/
   .remen-btn1{
-    padding:2px 5px;
+    position: relative;
+    top: -5px;
+    padding:1px 5px;
     border-radius: 3px;
-    font-size: 13px;
+    font-size: 11px;
     color: #fff;
     background: -webkit-linear-gradient(left, #DF0807, #FC7163); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(right, #DF0807, #FC7163); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(right, #DF0807, #FC7163); /* Firefox 3.6 - 15 */
     background: linear-gradient(to right, #DF0807, #FC7163); /* 标准的语法（必须放在最后） */
   }
+
   .bikan-btn1{
-    padding:2px 5px;
+    position: relative;
+    top: -2px;
+    padding:1px 5px;
     border-radius: 3px;
-    font-size: 12px;
+    font-size: 11px;
     color: #fff;
     background: -webkit-linear-gradient(left, #528BFB, #7DA8FF); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(right, #528BFB, #7DA8FF); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(right, #528BFB, #7DA8FF); /* Firefox 3.6 - 15 */
     background: linear-gradient(to right, #528BFB, #7DA8FF); /* 标准的语法（必须放在最后） */
   }
 }

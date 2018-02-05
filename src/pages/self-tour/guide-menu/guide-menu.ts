@@ -16,6 +16,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class GuideMenuPage {
   public menuFlg:boolean = true;//侧边栏显示隐藏
   public indexSel:number = 1;//侧边栏选择
+  backgroundImage = 'assets/imgs/main/home-bg.jpg';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
