@@ -4,7 +4,7 @@ import {AppService} from "../../providers/util/app.service";
 import  "../../assets/js/map.js";
 declare let AMap;
 /**
- * Generated class for the JourneyPage page.
+ * Generated class for the JourneyMapPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,10 +12,10 @@ declare let AMap;
 
 @IonicPage()
 @Component({
-  selector: 'page-journey',
-  templateUrl: 'journey.html',
+  selector: 'page-journey-map',
+  templateUrl: 'journey-map.html',
 })
-export class JourneyPage {
+export class JourneyMapPage {
   @ViewChild('maps') maps: ElementRef;
   map: any;//地图对象
   dayIndex:number = -1; //footer选择
