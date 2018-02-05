@@ -14,7 +14,9 @@
       <ion-icon class="icon-mulutubiaoda"></ion-icon>
     </button>
   </div>
+  <div *ngIf="menuFlg" class="menu-left-abso">
 
+  </div>
   <!--侧边栏-->
   <div *ngIf="menuFlg" class="menu-right-abso">
     <div class="center-icon" (click)="menuSelect(false)"><ion-icon class="icon-right" ></ion-icon></div>

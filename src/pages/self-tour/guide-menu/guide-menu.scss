@@ -1,42 +1,57 @@
 page-guide-menu {
 
-  .menu-icon{
+  .menu-icon {
     position: absolute;
-    top: 0;right: 10px;
+    top: 0;
+    right: 10px;
     z-index: 2;
   }
-  .menu-icon button{
+  .menu-icon button {
     color: #838383;
-    background-color:#fff;
-    border: 1px #838383 solid;padding:1rem 0.5rem;
+    background-color: #fff;
+    border: 1px #838383 solid;
+    padding: 1rem 0.5rem;
   }
-  .menu-icon ion-icon{
+  .menu-icon ion-icon {
     font-size: 22px;
   }
 
-  /*右边menu页*/
-  .menu-right-abso{
+  /*左侧背景*/
+  .menu-left-abso {
     position: absolute;
-    top:0;bottom: 0;right: 0;
-    width:75%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    background-color: rgba(0,0,0,0.6);
+  }
+
+  /*右边menu页*/
+  .menu-right-abso {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 75%;
     background-color: #ffffff;
     z-index: 4;
     border-top: 1px solid $border-color;
-    .mu-lu{
+    .mu-lu {
       color: #333333;
     }
   }
 
-  .center-icon{
+  .center-icon {
     position: absolute;
     top: 50%;
-    left:-20px;
+    left: -20px;
     text-align: left;
     z-index: -1;
   }
-  .center-icon ion-icon{
+  .center-icon ion-icon {
     background-color: #ffffff;
-    width: 40px;height: 40px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     color: #767676;
     font-size: 20px;
@@ -44,37 +59,37 @@ page-guide-menu {
     z-index: -1;
   }
 
-  .menu-index{
+  .menu-index {
     background-color: #eeeeee;
   }
-  .menu-select{
+  .menu-select {
     background-color: #ffcd20;
   }
-  .h5-margin{
+  .h5-margin {
     position: relative;
-    margin: 5px 0 5px 15px!important;
+    margin: 5px 0 5px 15px !important;
   }
-  .menu-icon-right{
+  .menu-icon-right {
     padding-right: 10px;
     color: #767676;
   }
 
-  .menu-point{
+  .menu-point {
     font-size: 20px;
     color: #e5e5e5;
     padding-right: 2px;
   }
-  .menu-name{
+  .menu-name {
     background-color: #ffffff;
     font-size: 15px;
-    padding:10px 0 0 6px;
+    padding: 10px 0 0 6px;
   }
 
   /*热门*/
-  .remen-btn1{
+  .remen-btn1 {
     position: relative;
     top: -5px;
-    padding:1px 5px;
+    padding: 1px 5px;
     border-radius: 3px;
     font-size: 11px;
     color: #fff;
@@ -82,10 +97,10 @@ page-guide-menu {
     background: linear-gradient(to right, #DF0807, #FC7163); /* 标准的语法（必须放在最后） */
   }
 
-  .bikan-btn1{
+  .bikan-btn1 {
     position: relative;
     top: -2px;
-    padding:1px 5px;
+    padding: 1px 5px;
     border-radius: 3px;
     font-size: 11px;
     color: #fff;
