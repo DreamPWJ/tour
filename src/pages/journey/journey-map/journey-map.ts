@@ -1,14 +1,8 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {AppService} from "../../providers/util/app.service";
-import  "../../assets/js/map.js";
+import {AppService} from "../../../providers/util/app.service";
+import "../../../assets/js/map.js";
 declare let AMap;
-/**
- * Generated class for the JourneyMapPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
