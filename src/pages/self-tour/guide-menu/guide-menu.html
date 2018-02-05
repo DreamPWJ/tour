@@ -20,7 +20,7 @@
   <!--侧边栏-->
   <div *ngIf="menuFlg" class="menu-right-abso">
     <div class="center-icon" (click)="menuSelect(false)"><ion-icon class="icon-right" ></ion-icon></div>
-    <ion-scroll scrollY="true" style="height: calc(100vh - 44px)">
+    <div class="ion-scroll "  >
       <ion-row >
         <ion-col >
           <h5 class="mu-lu" ><ion-icon class="icon-mulutubiaoda"></ion-icon> 目录</h5>
@@ -116,7 +116,7 @@
         </ion-col>
       </ion-row>
       <p></p>
-    </ion-scroll>
+    </div>
   </div>
 
 </ion-content>

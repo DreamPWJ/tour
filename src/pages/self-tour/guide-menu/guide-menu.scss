@@ -39,6 +39,12 @@ page-guide-menu {
     .mu-lu {
       color: #333333;
     }
+
+    .ion-scroll{
+      height:100%;
+      overflow: hidden;
+      overflow-y: auto;
+    }
   }
 
   .center-icon {
