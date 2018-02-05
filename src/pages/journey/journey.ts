@@ -18,7 +18,7 @@ declare let AMap;
 export class JourneyPage {
   @ViewChild('maps') maps: ElementRef;
   map: any;//地图对象
-  dayIndex:number = 1;
+  dayIndex:number = -1; //footer选择
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService) {
   }
@@ -67,10 +67,10 @@ export class JourneyPage {
   }
 
   dayList = [
-    {gongli:'出发',index:1,name:'布达拉宫白塔'},
-    {gongli:'-93公里-',index:2,name:'米拉山口'},
-    {gongli:'-93公里-',index:3,name:'雅鲁藏布大峡谷'},
-    {gongli:'-93公里-',index:4,name:'珠穆朗玛峰'},
+    {gongli:'出发',index:1,name:'布达拉宫白塔',img1:'assets/imgs/self-tour/guide1.jpg',content:'布达拉宫白塔,即布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔。'},
+    {gongli:'-93公里-',index:2,name:'米拉山口',img1:'assets/imgs/self-tour/guide2.jpg',content:'米拉山口,即西藏米拉山的山口，地处拉萨市到墨竹米拉山口即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹。'},
+    {gongli:'-93公里-',index:3,name:'雅鲁藏布大峡谷',img1:'assets/imgs/self-tour/guide3.jpg',content:'雅鲁藏布大峡谷,即西藏雅鲁藏布大峡谷，地处拉萨市雅鲁藏布大峡谷，雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷，雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷。'},
+    {gongli:'-93公里-',index:4,name:'珠穆朗玛峰',img1:'assets/imgs/self-tour/guide4.jpg',content:'珠穆朗玛峰，珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠，穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰，珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰。'},
   ];
 
   daySelect(index:number){

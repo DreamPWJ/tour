@@ -1,10 +1,8 @@
 page-journey {
   .map-container {
     width: 100%;
-    height: 300px;
-    position: fixed;
-    top:0;left: 0;right: 0;
-    z-index: 2;
+    height: 100%;
+    z-index: -1;
   }
 
   .cardcontent-span{
@@ -15,9 +13,8 @@ page-journey {
 
   /*map上面*/
   .journey-mapon{
-    margin-top: 248px;
-    z-index: -1;
-    background-color: #F8F4EC;
+    position: absolute;
+    top: 300px;
   }
 
   /*journey第一个card的标题*/
@@ -31,7 +28,6 @@ page-journey {
     line-height: 15px;
     border-radius: 2px;
     text-align: center;
-
   }
   .jour-card-col1{
     position: relative;
@@ -60,7 +56,6 @@ page-journey {
     color: #FF7272;
   }
 
-
   .journey-foot-card1{
     margin-top: 1.6rem;
     padding: 1rem 0;
@@ -69,6 +64,12 @@ page-journey {
     color: #3e3e3e;
   }
   /*footer中的card*/
+  .foot-day-select{
+    background-color: #ffdb27;
+  }
+  .foot-day-unselect{
+    background-color: #ffffff;
+  }
   .foot-card-select{
     border:1px #ffdb27 solid;
   }

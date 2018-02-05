@@ -11,14 +11,13 @@
 </ion-header>
 <ion-content >
   <div #maps class="map-container"></div>
-  <div class="journey-mapon">
-    <p style="border: 1px #F8F4EC solid"></p>
+  <div class="journey-mapon" *ngIf="dayIndex>0">
     <ion-card>
       <ion-card-header style="padding: 10px!important;">
         <ion-row align-items-center >
-          <ion-col col-1 class="jour-card-green" no-padding>2</ion-col>
+          <ion-col col-1 class="jour-card-green" no-padding>{{dayList[dayIndex-1].index}}</ion-col>
           <ion-col col-6 class="jour-card-col1">
-            米拉山口<span>拉萨</span>
+            {{dayList[dayIndex-1].name}}<span>拉萨</span>
           </ion-col>
           <ion-col text-right>
             <button ion-button clear small style="color:#4eb0da "><ion-icon class="icon-daolanjiantouda"></ion-icon>导航
@@ -27,11 +26,23 @@
           </ion-col>
         </ion-row>
       </ion-card-header>
+      <ion-row><!--图片-->
+        <ion-col col-8 style="padding: 0 5px 10px 10px!important;"><img [src]="dayList[dayIndex-1].img1" width="210" height="225"/></ion-col>
+        <ion-col col-4 no-padding>
+          <ion-row>
+            <ion-col style="padding: 0 10px 5px 0!important;"><img src="assets/imgs/self-tour/china6.png" width="115" height="110"/></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col style="padding: 0 10px 10px 0!important;"><img src="assets/imgs/self-tour/termini5.png" width="115" height="110"/></ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
       <div>
         <h2 class="grey jour-card1-title">景点简介</h2>
       </div>
       <ion-card-content>
-        <p>米拉山口,即西藏米拉山的山口，地处拉萨市到墨竹米拉山口即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹。</p>
+        <p>{{dayList[dayIndex-1].content}}</p>
         <p><span class="cardcontent-span">交通攻略</span>
           位于川藏线318国道上，自驾车路况良好，米拉山口，即西藏米拉山的山口，地处拉萨市到。
         </p>
@@ -48,14 +59,13 @@
         </div>
       </ion-card-content>
     </ion-card>
-    <p style="border: 1px #F8F4EC solid"></p>
   </div>
 
 </ion-content>
 <ion-footer>
   <ion-row>
     <ion-col col-auto>
-      <ion-card text-center class="journey-foot-card1" no-margin>
+      <ion-card text-center class="journey-foot-card1" no-margin (click)="daySelect(0)" ngClass="{{dayIndex==0?'foot-day-select':'foot-day-unselect'}}">
         <h2>DAY1</h2>
       </ion-card>
     </ion-col>
