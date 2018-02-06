@@ -61,18 +61,18 @@ a {
 $border-color:rgba(0, 0, 0, 0.1);
 
 .center-center {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
+  position: relative!important;
+  top: 50%!important;
+  left: 50%!important;
+  transform: translate(-50%, -50%)!important;
+  -webkit-transform: translate(-50%, -50%)!important;
 }
 
 .vertical-center {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
+  position: relative!important;
+  top: 50%!important;
+  transform: translateY(-50%)!important;
+  -webkit-transform: translateY(-50%)!important;
 }
 
 @mixin  center-center{
