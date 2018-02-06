@@ -1,5 +1,8 @@
 page-guide-menu {
-
+  ion-content .scroll-content{
+    background-image: url(../assets/imgs/main/home-bg.jpg);
+    background-size: cover;
+  }
   .menu-icon {
     position: absolute;
     top: 0;

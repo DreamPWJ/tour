@@ -5,11 +5,10 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar color="white">
     <ion-title>行程助手</ion-title>
     <ion-buttons end>
-      <button ion-button small  class="li-shi-btn cut-btn">查看历史</button>
+      <button [navPush]="'JourneyMapPage'" ion-button small  class="li-shi-btn cut-btn">查看历史</button>
       <button ion-button icon-only>
         <ion-icon class="icon-more_android_light "></ion-icon>
       </button>
@@ -18,13 +17,11 @@
 
 </ion-header>
 
-
-<ion-content >
-
+<ion-content>
   <ion-slides #slides class="journey-slides" pager  freeMode="true" slidesPerView="auto" spaceBetween="-25px" loop="true"
               (ionSlideDidChange)="slideChanged()">
     <ion-slide *ngFor="let item of slidesData">
-      <h3 class="title">{{item.title}}</h3>
+      <h4 class="title">{{item.title}}</h4>
       <ion-card text-left >
         <div class="prices grey"> <span>￥</span><strong>{{item.price}}</strong></div>
         <img data-src="{{item.img}}">
