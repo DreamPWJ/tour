@@ -114,6 +114,7 @@ page-journey-map {
     display: block;
   }
 
+
   /*地图标记*/
   .amap-marker-label{
     z-index: -1;
@@ -122,5 +123,10 @@ page-journey-map {
     border: 1px #ffffff solid;
     border-radius: 0 50px 50px 0;
     box-shadow: -2px 0 5px rgba(0, 0, 0, .1),0 -2px 5px rgba(0, 0, 0, .1),0 2px 5px rgba(0, 0, 0, .1),2px 0 5px rgba(0, 0, 0, .1);
+  }
+
+  .journey-foot-card{
+    position: relative;
+    width: 23vw;height: 50px; margin-right: 5px;
   }
 }

@@ -77,11 +77,11 @@
         <ion-row style="width: 120vw;">
           <div *ngFor="let item of dayList">
             <p no-margin class="grey">{{item.gongli}}</p>
-            <ion-card style="width: 23vw;height: 50px;margin-right: 5px;" no-margin class="grey journey-foot-card"
+            <ion-card no-margin class="grey journey-foot-card"
                       text-center (click)="daySelect(item.index)" ngClass="{{item.index==dayIndex?'foot-card-select':'foot-card-unselect'}}">
-              <ion-row align-items-center>
+              <ion-row align-items-center class="center-center">
                 <ion-col col-2 ngClass="{{item.index==dayIndex?'foot-card-index-select':'foot-card-index-unselect'}}">{{item.index}}</ion-col>
-                <ion-col col-10 text-wrap class="grey">{{item.name}}</ion-col>
+                <ion-col col-10 text-wrap class="grey ">{{item.name}}</ion-col>
               </ion-row>
             </ion-card>
           </div>
