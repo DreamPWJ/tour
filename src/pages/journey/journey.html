@@ -29,7 +29,19 @@
         <div class="prices grey"> <span>￥</span><strong>{{item.price}}</strong></div>
         <img data-src="{{item.img}}">
         <div class="wave-bg"></div>
+        <ion-grid class="grey">
+          <div [ngClass]="{'isImg':item.header.isImg}">
+            <strong>{{item.header.title}}</strong> <span >{{item.header.subTitle}}</span>
+            <img *ngIf="item.header.isImg" [src]="item.header.imgUrl" alt="汽车图片">
+          </div>
+          <ion-row *ngFor="let items of item.details" nowrap=""  align-items-center="">
+            <ion-icon class="icon-round"></ion-icon>
+            <strong>{{items.title}} : </strong> <span> {{items.content}}</span>
+          </ion-row>
+
+        </ion-grid>
       </ion-card>
+      <p class=" time">{{item.time}}</p>
     </ion-slide>
   </ion-slides>
 

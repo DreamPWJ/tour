@@ -61,6 +61,7 @@ page-journey {
     }
 
     .swiper-pagination {
+       top: 46px;
       .swiper-pagination-bullet-active {
         background-color: rgba(255, 255, 255, 0.8) !important;
       }
@@ -77,6 +78,65 @@ page-journey {
       background: url('../assets/imgs/journey/wave-bg.png') no-repeat;
       background-size: cover;
 
+    }
+
+    ion-grid{
+      margin-top: -8vh;
+      height: 35vh;
+      padding: 10px 20px;
+
+      div{
+        position: relative;
+        &.isImg{
+          width: 50%;
+          display: inline-block;
+          text-align: center;
+          span{
+            font-size: 1.1rem;
+            display: block;
+          }
+          img{
+            position: absolute;
+            top: 0;
+            left: 110%;
+            width: 50%;
+            width: 110px;
+            height: 60px;
+          }
+
+        }
+        strong{
+          margin-left: 0;
+          padding-left: 0;
+        }
+        font-size: 1.7rem;
+        line-height: 22px;
+      }
+      ion-row{
+        padding-top: 10px;
+      }
+      ion-icon{
+        font-size: 1rem;
+        font-weight: 900;
+      }
+      strong{
+        padding-left: 8px;
+        font-size: 1.5rem;
+      }
+      span{
+       padding-left: 6px;
+        font-size: 1.4rem;
+        font-weight: 100;
+      }
+    }
+
+    .time{
+      position: absolute;
+      width: 100%;
+      bottom: 16px;
+      color: #fff;
+      text-align: center;
+      font-weight:100
     }
 
   }
