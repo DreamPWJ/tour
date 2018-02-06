@@ -61,7 +61,7 @@ page-journey {
     }
 
     .swiper-pagination {
-       top: 45px;
+       top: 43px;
       .swiper-pagination-bullet-active {
         background-color: rgba(255, 255, 255, 0.8) !important;
       }
@@ -126,14 +126,14 @@ page-journey {
       span{
        padding-left: 6px;
         font-size: 1.4rem;
-        font-weight: 100;
+        font-weight: 200;
       }
     }
 
     .time{
       position: absolute;
       width: 100%;
-      bottom: 15px;
+      bottom: 10px;
       color: #fff;
       text-align: center;
       font-weight:100
