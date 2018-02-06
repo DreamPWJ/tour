@@ -15,8 +15,8 @@ export class JourneyMapPage {
   dayIndex:number = -1; //footer选择
   dayList = [
     {gongli:'出发',index:1,name:'布达拉宫白塔',position:'93.600738,30.054808',icon:'assets/imgs/journey/marker1.png',img1:'assets/imgs/self-tour/guide1.jpg',content:'布达拉宫白塔,即布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔。'},
-    {gongli:'-93公里-',index:2,name:'米拉山口',position:'94.352642,29.641304',icon:'assets/imgs/journey/marker2.png',img1:'assets/imgs/self-tour/guide2.jpg',content:'米拉山口,即西藏米拉山的山口，地处拉萨市到墨竹米拉山口即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹。'},
-    {gongli:'-93公里-',index:3,name:'雅鲁藏布大峡谷',position:'93.021923,30.001119',icon:'assets/imgs/journey/marker3.png',img1:'assets/imgs/self-tour/guide3.jpg',content:'雅鲁藏布大峡谷,即西藏雅鲁藏布大峡谷，地处拉萨市雅鲁藏布大峡谷，雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷，雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷。'},
+    {gongli:'-93公里-',index:2,name:'米拉山口',position:'93.021923,30.001119',icon:'assets/imgs/journey/marker2.png',img1:'assets/imgs/self-tour/guide2.jpg',content:'米拉山口,即西藏米拉山的山口，地处拉萨市到墨竹米拉山口即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹。'},
+    {gongli:'-93公里-',index:3,name:'雅鲁藏布大峡谷',position:'94.352642,29.641304',icon:'assets/imgs/journey/marker3.png',img1:'assets/imgs/self-tour/guide3.jpg',content:'雅鲁藏布大峡谷,即西藏雅鲁藏布大峡谷，地处拉萨市雅鲁藏布大峡谷，雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷，雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷。'},
     {gongli:'-93公里-',index:4,name:'珠穆朗玛峰',position:'94.995342,29.788007',icon:'assets/imgs/journey/marker4.png',img1:'assets/imgs/self-tour/guide4.jpg',content:'珠穆朗玛峰，珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠，穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰，珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰。'},
   ];
 
@@ -60,6 +60,22 @@ export class JourneyMapPage {
         });
       });
     }
+
+    //连线 绘制轨迹
+    let lineArr = [];
+    for (let i = 0; i < this.dayList.length; i++) {
+      lineArr.push(this.dayList[i].position.split(','));
+    }
+
+    let polyline = new AMap.Polyline({
+      map: this.map,
+      path: lineArr,
+      strokeColor: "#6aeff3",  //线颜色
+      strokeOpacity: 0.8,     //线透明度
+      strokeWeight: 3,      //线宽
+      strokeStyle: "solid"  //线样式
+    });
+
   }
 
   daySelect(index:number){
