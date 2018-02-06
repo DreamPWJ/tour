@@ -14,6 +14,7 @@ export class JourneyPage {
 /*  slidesLength: number = 0;
   currentIndex: number = 1;*/
   slidesData:any=[{
+    type:1,
     title:"自驾游",
     img:'assets/imgs/journey/2.png',
     price:16999,
@@ -23,6 +24,7 @@ export class JourneyPage {
 
   } ,
     {
+      type:2,
       title:"租车",
       img:'assets/imgs/journey/1.png',
       price:280,
@@ -44,6 +46,13 @@ export class JourneyPage {
 
   ionViewDidEnter(){
 /*    this.slidesLength = this.slides.length()*/
+  }
+
+  navPage(type:number){
+    if(type==1){
+      this.navCtrl.push('SelfTourJourneyPage')
+    }
+
   }
 
   slideChanged() {

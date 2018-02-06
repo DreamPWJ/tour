@@ -22,11 +22,11 @@
               (ionSlideDidChange)="slideChanged()">
     <ion-slide *ngFor="let item of slidesData">
       <h4 class="title">{{item.title}}</h4>
-      <ion-card text-left >
+      <ion-card text-left tappable (click)="navPage(item.type)">
         <div class="prices grey"> <span>￥</span><strong>{{item.price}}</strong></div>
         <img data-src="{{item.img}}">
         <div class="wave-bg"></div>
-        <ion-grid class="grey">
+        <ion-grid class="grey" >
           <div [ngClass]="{'isImg':item.header.isImg}">
             <strong>{{item.header.title}}</strong> <span >{{item.header.subTitle}}</span>
             <img *ngIf="item.header.isImg" [src]="item.header.imgUrl" alt="汽车图片">
