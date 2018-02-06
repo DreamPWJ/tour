@@ -1,6 +1,10 @@
 <ion-header >
-  <ion-navbar color="white">
-
+  <ion-toolbar color="white">
+    <ion-buttons start>
+      <button  ion-button icon-only  navPop>
+        <ion-icon class="ion-ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
       <ion-row nowrap="">
         <ion-select   interface="popover">
           <ion-option value="成都" selected="true"  >成都出发</ion-option>
@@ -15,7 +19,7 @@
         <ion-icon class="icon-more_android_light "></ion-icon>
       </button>
     </ion-buttons>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>

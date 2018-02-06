@@ -1,5 +1,10 @@
 <ion-header >
-  <ion-navbar color="white" >
+  <ion-toolbar color="white" >
+    <ion-buttons start>
+      <button  ion-button icon-only  navPop>
+        <ion-icon class="ion-ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
     <!--    <ion-title>行程</ion-title>-->
     <ion-searchbar (input)="getItems($event)" placeholder="搜索景点关键字"></ion-searchbar>
     <ion-buttons end>
@@ -7,7 +12,7 @@
         <ion-icon class="icon-more_android_light"></ion-icon>
       </button>
     </ion-buttons>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 <ion-content >
   <div #maps class="map-container"></div>
