@@ -2,6 +2,8 @@ page-journey-map {
   .map-container {
     width: 100%;
     height: 100%;
+    position: fixed;
+    top:0;left: 0;
     z-index: -1;
   }
 
@@ -15,6 +17,7 @@ page-journey-map {
   .journey-mapon{
     position: absolute;
     top: 300px;
+    padding-bottom: 90px;
   }
 
   /*journey第一个card的标题*/
@@ -64,6 +67,12 @@ page-journey-map {
     color: #3e3e3e;
   }
   /*footer中的card*/
+  .footer-fixed{
+    position: fixed;
+    bottom:0;
+    left:0;
+    background-color: #ffffff;
+  }
   .foot-day-select{
     background-color: #ffdb27;
   }
@@ -106,11 +115,9 @@ page-journey-map {
   }
 
   /*地图标记*/
-  .amap-marker {
-    width: 25px;
-    height: 25px;
+  .marker-select{
+    width: 30px;
+    height: 30px;
     background-color: #ff6b54;
-    border:5px #ffffff solid;
-    border-radius:50%;
   }
 }

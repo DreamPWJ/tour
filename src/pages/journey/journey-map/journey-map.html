@@ -61,9 +61,7 @@
     </ion-card>
   </div>
 
-</ion-content>
-<ion-footer>
-  <ion-row>
+  <ion-row class="footer-fixed">
     <ion-col col-auto>
       <ion-card text-center class="journey-foot-card1" no-margin (click)="daySelect(0)" ngClass="{{dayIndex==0?'foot-day-select':'foot-day-unselect'}}">
         <h2>DAY1</h2>
@@ -73,23 +71,23 @@
       <ion-scroll scrollX="true" style="width: 80vw;height: 80px;" >
         <ion-row style="width: 120vw;">
           <div *ngFor="let item of dayList">
-              <p no-margin class="grey">{{item.gongli}}</p>
-              <ion-card style="width: 23vw;height: 50px;margin-right: 5px;" no-margin class="grey journey-foot-card"
-                        text-center (click)="daySelect(item.index)" ngClass="{{item.index==dayIndex?'foot-card-select':'foot-card-unselect'}}">
-                <ion-row align-items-center>
-                  <ion-col col-2 ngClass="{{item.index==dayIndex?'foot-card-index-select':'foot-card-index-unselect'}}">{{item.index}}</ion-col>
-                  <ion-col col-10 text-wrap class="grey">{{item.name}}</ion-col>
-                </ion-row>
-              </ion-card>
+            <p no-margin class="grey">{{item.gongli}}</p>
+            <ion-card style="width: 23vw;height: 50px;margin-right: 5px;" no-margin class="grey journey-foot-card"
+                      text-center (click)="daySelect(item.index)" ngClass="{{item.index==dayIndex?'foot-card-select':'foot-card-unselect'}}">
+              <ion-row align-items-center>
+                <ion-col col-2 ngClass="{{item.index==dayIndex?'foot-card-index-select':'foot-card-index-unselect'}}">{{item.index}}</ion-col>
+                <ion-col col-10 text-wrap class="grey">{{item.name}}</ion-col>
+              </ion-row>
+            </ion-card>
           </div>
         </ion-row>
       </ion-scroll>
     </ion-col>
     <ion-col col-2 class="foot-card-col2"  text-center>
-      <p  class="vertical-center" no-margin>
+      <p class="vertical-center" no-margin>
         <span>全部</span>
         <span>行程</span>
       </p>
     </ion-col>
   </ion-row>
-</ion-footer>
+</ion-content>

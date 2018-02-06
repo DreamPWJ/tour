@@ -13,6 +13,12 @@ export class JourneyMapPage {
   @ViewChild('maps') maps: ElementRef;
   map: any;//地图对象
   dayIndex:number = -1; //footer选择
+  dayList = [
+    {gongli:'出发',index:1,name:'布达拉宫白塔',position:'93.600738,30.054808',icon:'assets/imgs/journey/marker1.png',img1:'assets/imgs/self-tour/guide1.jpg',content:'布达拉宫白塔,即布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔。'},
+    {gongli:'-93公里-',index:2,name:'米拉山口',position:'94.352642,29.641304',icon:'assets/imgs/journey/marker2.png',img1:'assets/imgs/self-tour/guide2.jpg',content:'米拉山口,即西藏米拉山的山口，地处拉萨市到墨竹米拉山口即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹。'},
+    {gongli:'-93公里-',index:3,name:'雅鲁藏布大峡谷',position:'93.021923,30.001119',icon:'assets/imgs/journey/marker3.png',img1:'assets/imgs/self-tour/guide3.jpg',content:'雅鲁藏布大峡谷,即西藏雅鲁藏布大峡谷，地处拉萨市雅鲁藏布大峡谷，雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷，雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷。'},
+    {gongli:'-93公里-',index:4,name:'珠穆朗玛峰',position:'94.995342,29.788007',icon:'assets/imgs/journey/marker4.png',img1:'assets/imgs/self-tour/guide4.jpg',content:'珠穆朗玛峰，珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠，穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰，珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰。'},
+  ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public appService: AppService) {
   }
@@ -21,10 +27,9 @@ export class JourneyMapPage {
     this.appService.loadingShow();
   }
 
-
   ionViewDidEnter() {
     this.appService.loadingHide();
-    let map = new AMap.Map(this.maps.nativeElement, {
+    this.map = new AMap.Map(this.maps.nativeElement, {
       view: new AMap.View2D({//创建地图二维视口
         zoom: 8, //设置地图缩放级别
         center:[93.600738,30.054808],
@@ -32,40 +37,25 @@ export class JourneyMapPage {
         showBuildingBlock: true
       })
     });
-
-    let markers = [{
-      content: '<div class="amap-marker"></div>' , //自定义点标记覆盖物内容
-      position: [93.600738,30.054808]
-    }, {
-      content: '<div class="amap-marker"></div>' , //自定义点标记覆盖物内容
-      position: [94.352642,29.641304]
-    }, {
-      content: '<div class="amap-marker"></div>' , //自定义点标记覆盖物内容
-      position: [93.021923,30.001119]
-    },{
-      content: '<div class="amap-marker"></div>' , //自定义点标记覆盖物内容
-      position:[94.995342,29.788007]
-    }, {
-      content: '<div class="amap-marker"></div>' , //自定义点标记覆盖物内容
-      position:[93.983227,30.017767]
-    }];
-    // 添加一些分布不均的点到地图上,地图上添加三个点标记，作为参照
-    markers.forEach(function(marker) {
-      new AMap.Marker({
-        map: map,
-        content: marker.content,
-        position: [marker.position[0], marker.position[1]],
-        offset: new AMap.Pixel(-12, -12)
+    let markers = []; //标记
+    for (let i = 0; i < this.dayList.length; i += 1) {
+      let marker;
+      marker = new AMap.Marker({
+        offset: new AMap.Pixel(-12,-12),
+        zIndex: 101,
+        title: this.dayList[i].name,
+        extData:this.dayList[i].index,
+        position: this.dayList[i].position.split(','),
+        icon: this.dayList[i].icon,
+        // content: '<div class="">1</div>' , //自定义点标记覆盖物内容
+        map: this.map
       });
-    });
+      markers.push(marker);
+      marker.on('click',function(e){
+        marker.setContent(marker.getTitle());
+      });
+    }
   }
-
-  dayList = [
-    {gongli:'出发',index:1,name:'布达拉宫白塔',img1:'assets/imgs/self-tour/guide1.jpg',content:'布达拉宫白塔,即布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔，地处布达拉宫白塔。'},
-    {gongli:'-93公里-',index:2,name:'米拉山口',img1:'assets/imgs/self-tour/guide2.jpg',content:'米拉山口,即西藏米拉山的山口，地处拉萨市到墨竹米拉山口即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹即西藏米拉山的山口，地处拉萨市到墨竹。'},
-    {gongli:'-93公里-',index:3,name:'雅鲁藏布大峡谷',img1:'assets/imgs/self-tour/guide3.jpg',content:'雅鲁藏布大峡谷,即西藏雅鲁藏布大峡谷，地处拉萨市雅鲁藏布大峡谷，雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷，雅鲁藏布大峡谷雅鲁藏布大峡谷雅鲁藏布大峡谷。'},
-    {gongli:'-93公里-',index:4,name:'珠穆朗玛峰',img1:'assets/imgs/self-tour/guide4.jpg',content:'珠穆朗玛峰，珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠，穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰，珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰珠穆朗玛峰。'},
-  ];
 
   daySelect(index:number){
     this.dayIndex = index;
