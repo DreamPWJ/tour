@@ -115,9 +115,12 @@ page-journey-map {
   }
 
   /*地图标记*/
-  .marker-select{
-    width: 30px;
-    height: 30px;
-    background-color: #ff6b54;
+  .amap-marker-label{
+    z-index: -1;
+    height: 26px;
+    padding: 5px 8px 5px 18px;
+    border: 1px #ffffff solid;
+    border-radius: 0 50px 50px 0;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, .1),0 -2px 5px rgba(0, 0, 0, .1),0 2px 5px rgba(0, 0, 0, .1),2px 0 5px rgba(0, 0, 0, .1);
   }
 }

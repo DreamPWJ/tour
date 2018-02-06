@@ -52,7 +52,12 @@ export class JourneyMapPage {
       });
       markers.push(marker);
       marker.on('click',function(e){
-        marker.setContent(marker.getTitle());
+        // marker.setContent(marker.getTitle());
+        // 设置label标签
+        marker.setLabel({//label默认蓝框白底左上角显示，样式className为：amap-marker-label
+          offset: new AMap.Pixel(15, 2),//修改label相对于maker的位置
+          content: marker.getTitle()
+        });
       });
     }
   }
