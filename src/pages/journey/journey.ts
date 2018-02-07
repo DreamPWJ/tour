@@ -51,6 +51,8 @@ export class JourneyPage {
   navPage(type:number){
     if(type==1){
       this.navCtrl.push('SelfTourJourneyPage')
+    }else if(type==2){
+      this.navCtrl.push('RentCarJourneyPage')
     }
 
   }

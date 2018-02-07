@@ -1,0 +1,34 @@
+page-rent-car-journey {
+  .li-shi-btn {
+    position: relative;
+    font-size: 1.3rem !important;
+  }
+
+  .map-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    .amap-marker-label{
+      z-index: 1;
+      padding: 5px 15px;
+      border: none;
+      border-radius: 20px;
+    }
+
+    .amap-marker{
+      img{
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+      }
+    }
+  }
+
+  .fixed-card-bottom{
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    height: 38vh;
+    background-color: #fff;
+  }
+}
