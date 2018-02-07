@@ -4,4 +4,115 @@ page-self-tour-journey {
     font-size: 1.3rem !important;
   }
 
+  .margin-5 {
+    margin-bottom: 5px !important;
+  }
+  .color-8a {
+    color: #8a8a8a;
+  }
+  .font-size-16 {
+    font-size: 1.6rem;
+  }
+  .font-size-18 {
+    font-size: 1.8rem;
+  }
+  .font-size-12 {
+    font-size: 1.2rem;
+  }
+
+  .font-wb{
+    font-weight: bold;
+  }
+
+  .border-radius-img{
+    border-radius: 10px;
+  }
+
+  .date{
+    margin:5px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px #d6d6d6 solid;
+  }
+
+  .date-select{
+    background-color: #fedd35;
+    border: 1px #fedd35 solid;
+  }
+
+  /*地图*/
+  .map-container {
+    width: 100%;
+    height: 40%;
+  }
+
+  /*中间的border*/
+  .col-border:after {
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 2px;
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    background-color: #e5e5e5;
+  }
+
+  .tou-xiang {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    vertical-align: top;
+    border: 2px solid #eca722;
+    margin-right: 3px;
+  }
+
+  .tour-jour-card{
+    margin-top: 1rem;
+    padding:2px;
+    border: 1px #d1e0fb solid;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px #d5e4ff;
+  }
+
+  .quche-style{
+    color: #00abdc;
+  }
+  .quche-style ion-icon{
+    font-size: 24px;
+  }
+
+  .xingcheng-icon{
+    font-size: 14px;
+    color: #ffffff;
+    width: 18px;height: 18px;line-height:18px;
+    background-color: #94C762;
+    border-radius: 50%;
+  }
+
+  /*左侧icon*/
+  .self-jour-icon-left{
+    margin-top: 1rem;
+    font-size: 30px;
+    color: #ffffff;
+    width: 40px;height: 40px;
+    background-color: #6294FA;
+    border-radius: 50%;
+    line-height:40px;
+  }
+  .self-jour-icon-left-bkcol2{
+    background: -webkit-linear-gradient(top, #7D98F1, #A581FD)!important; /* Safari 5.1 - 6.0 */
+    background: linear-gradient(to bottom, #7D98F1, #A581FD)!important; /* 标准的语法（必须放在最后） */
+  }
+  .self-jour-icon-left-bkcol3{
+    background: -webkit-linear-gradient(top, #E572BF, #A47DFF)!important; /* Safari 5.1 - 6.0 */
+    background: linear-gradient(to bottom, #E572BF, #A47DFF)!important; /* 标准的语法（必须放在最后） */
+  }
+  .self-jour-icon-left-bkcol4{
+    background-color: #F3B352!important;
+  }
+  .self-jour-icon-left-bkcol5{
+    background-color: #D4C695!important;
+  }
 }
