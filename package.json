@@ -1,8 +1,8 @@
 {
   "name": "tour",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "version": "1.0.0",
+  "author": "潘维吉",
+  "homepage": "",
   "private": true,
   "scripts": {
     "ionic:serve": "ionic-app-scripts serve ",
