@@ -1,11 +1,4 @@
-<!--
-  Generated template for the SelfTourJourneyPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar color="white">
     <ion-title>最美林芝两日</ion-title>
     <ion-buttons end>
@@ -15,26 +8,28 @@
       </button>
     </ion-buttons>
   </ion-navbar>
+  <ion-toolbar color="white">
+    <ion-row>
+      <ion-col>
+        <ion-scroll scrollX="true" style="width: 100%;height: 40px;">
+          <ion-row style="width: 110vw;">
+            <div *ngFor="let item of selfJourList">
+              <button ion-button clear small class="grey date" ngClass="{{dateFlg==item.index?'date-select':''}}" (click)="dateSelect(item.index)">{{item.date}}</button>
+            </div>
+          </ion-row>
+        </ion-scroll>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-row>
-    <ion-col>
-      <ion-scroll scrollX="true" style="width: 100%;height: 50px;">
-        <ion-row style="width: 130vw;">
-          <div *ngFor="let item of selfJourList">
-            <button ion-button clear small class="grey date" ngClass="{{dateFlg==item.index?'date-select':''}}" (click)="dateSelect(item.index)">{{item.date}}</button>
-          </div>
-        </ion-row>
-      </ion-scroll>
-    </ion-col>
-  </ion-row>
   <div #maps class="map-container"></div>
 
   <div class="padding-lr-10 self-jour-div1">
     <ion-row>
-      <ion-col col-2><img src="assets/imgs/journey/D1.png" width="60" height="60"/></ion-col>
+      <ion-col col-2 no-padding><span class="day-img grey" text-center>D1</span></ion-col>
       <ion-col>
-        <ion-row class="grey font-wb" padding-left>拉萨•米拉山口•雅鲁藏布大峡谷•索松村</ion-row>
+        <ion-row class="grey font-wb font-size-15" padding-left style="padding-top: 5px">拉萨•米拉山口•雅鲁藏布大峡谷•索松村</ion-row>
         <ion-row class="font-size-12">
           <ion-col text-center>
             <p class="grey margin-5">293km</p>
@@ -66,7 +61,7 @@
     </ion-row>
 
     <ion-row align-items-center>
-      <ion-col col-2>
+      <ion-col col-2 class="border-after">
         <ion-icon class="icon-group_fill self-jour-icon-left" text-center></ion-icon>
       </ion-col>
       <ion-col>
@@ -80,8 +75,9 @@
         </ion-row>
       </ion-col>
     </ion-row>
+
     <ion-row align-items-center>
-      <ion-col col-2>
+      <ion-col col-2 class="border-after">
         <ion-icon class="icon-friendfamous self-jour-icon-left self-jour-icon-left-bkcol2" text-center></ion-icon>
       </ion-col>
       <ion-col>
@@ -93,8 +89,9 @@
         </ion-row>
       </ion-col>
     </ion-row>
+
     <ion-row align-items-center>
-      <ion-col col-2>
+      <ion-col col-2 class="border-after">
         <ion-icon class="icon-camera self-jour-icon-left self-jour-icon-left-bkcol3" text-center></ion-icon>
       </ion-col>
       <ion-col>
@@ -108,7 +105,7 @@
       </ion-col>
     </ion-row>
     <ion-row align-items-center>
-      <ion-col col-2>
+      <ion-col col-2 class="border-after">
         <ion-icon class="icon-taxi self-jour-icon-left self-jour-icon-left-bkcol4" text-center></ion-icon>
       </ion-col>
       <ion-col>
@@ -125,7 +122,7 @@
       </ion-col>
     </ion-row>
     <ion-row align-items-center>
-      <ion-col col-2>
+      <ion-col col-2 class="border-after-xingcheng">
         <ion-icon class="icon-form self-jour-icon-left self-jour-icon-left-bkcol5" text-center></ion-icon>
       </ion-col>
       <ion-col>
@@ -134,19 +131,17 @@
         </ion-row>
       </ion-col>
     </ion-row>
-    <ion-row align-items-center>
-      <ion-col col-2>
-        <ion-row *ngFor="let item of selfJourList">
-          <ion-col>{{item.gongli}}</ion-col>
-        </ion-row>
+    <ion-row align-items-center *ngFor="let item of selfJourList">
+      <ion-col col-2 align-self-end class="grey border-after-xunhuan">
+        {{item.gongli}}
       </ion-col>
       <ion-col>
-        <ion-row align-items-center class="tour-jour-card" *ngFor="let item of selfJourList">
+        <ion-row align-items-center class="tour-jour-card" >
           <ion-col class="grey" col-3>
             <img [src]="item.img1" class="border-radius-img"/>
           </ion-col>
           <ion-col class="grey" col-7>
-            <p class="margin-5" no-margin><strong class="font-size-16">{{item.name}}</strong> <ion-icon class="icon-evaluate xingcheng-icon" text-center></ion-icon></p>
+            <p class="margin-5" no-margin><strong class="font-size-16">{{item.name}}</strong> <ion-icon class="icon-jingdian xingcheng-icon" text-center></ion-icon></p>
             <p class="color-8a" no-margin>{{item.content}}</p>
           </ion-col>
           <ion-col align-self-center col-2 class="quche-style">
@@ -154,6 +149,14 @@
             <p no-margin>导航</p>
           </ion-col>
         </ion-row>
+
+      </ion-col>
+    </ion-row>
+    <ion-row align-items-center>
+      <ion-col col-2 align-self-end class="grey border-after-xunhuan">
+        93km
+      </ion-col>
+      <ion-col>
         <ion-row align-items-center class="tour-jour-card">
           <ion-col class="grey" col-3>
             <img src="assets/imgs/self-tour/china5.png" class="border-radius-img"/>
@@ -167,13 +170,19 @@
             <p no-margin>导航</p>
           </ion-col>
         </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row align-items-center>
+      <ion-col col-2>
+      </ion-col>
+      <ion-col>
         <ion-row align-items-center class="tour-jour-card">
           <ion-col class="grey" col-3>
             <img src="assets/imgs/self-tour/china6.png" class="border-radius-img"/>
           </ion-col>
           <ion-col class="grey" col-7>
             <p class="margin-5" no-margin><strong class="font-size-16">五星级酒店</strong>
-              <ion-icon class="icon-evaluate xingcheng-icon" text-center></ion-icon>  <ion-icon class="icon-evaluate xingcheng-icon" style="background-color: #82CDD2!important;" text-center></ion-icon>
+              <ion-icon class="icon-Hotel xingcheng-icon" text-center></ion-icon>  <ion-icon class="icon-tingche xingcheng-icon" style="background-color: #82CDD2!important;" text-center></ion-icon>
             </p>
             <p class="color-8a" no-margin>酒店  停车场</p>
           </ion-col>
@@ -184,6 +193,8 @@
         </ion-row>
       </ion-col>
     </ion-row>
+
+
   </div>
 
 </ion-content>

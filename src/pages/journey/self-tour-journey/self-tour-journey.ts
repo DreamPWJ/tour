@@ -22,10 +22,10 @@ export class SelfTourJourneyPage {
   dateFlg:number = 1;//日期选择flg
 
   selfJourList = [
-    {gongli:'出发',index:1,date:'全部',name:'布达拉宫白塔',position:'93.600738,30.054808',icon:'assets/imgs/journey/marker1.png',img1:'assets/imgs/self-tour/china1.png',content:'出发'},
-    {gongli:'-93公里-',index:2,date:'2018.03.15',name:'米拉山口',position:'93.021923,30.001119',icon:'assets/imgs/journey/marker2.png',img1:'assets/imgs/self-tour/china2.png',content:'景点 建议停留:30分钟'},
-    {gongli:'-93公里-',index:3,date:'2018.03.16',name:'雅鲁藏布大峡谷',position:'94.352642,29.641304',icon:'assets/imgs/journey/marker3.png',img1:'assets/imgs/self-tour/china3.png',content:'景点'},
-    {gongli:'-93公里-',index:4,date:'2018.03.17',name:'珠穆朗玛峰',position:'94.995342,29.788007',icon:'assets/imgs/journey/marker4.png',img1:'assets/imgs/self-tour/china4.png',content:'景点'},
+    {gongli:'93km',index:1,date:'全部',name:'布达拉宫白塔',position:'93.600738,30.054808',icon:'assets/imgs/journey/marker1.png',img1:'assets/imgs/self-tour/china1.png',content:'出发'},
+    {gongli:'93km',index:2,date:'2018.03.15',name:'米拉山口',position:'93.021923,30.001119',icon:'assets/imgs/journey/marker2.png',img1:'assets/imgs/self-tour/china2.png',content:'景点 建议停留:30分钟'},
+    {gongli:'93km',index:3,date:'2018.03.16',name:'雅鲁藏布大峡谷',position:'94.352642,29.641304',icon:'assets/imgs/journey/marker3.png',img1:'assets/imgs/self-tour/china3.png',content:'景点'},
+    {gongli:'93km',index:4,date:'2018.03.17',name:'珠穆朗玛峰',position:'94.995342,29.788007',icon:'assets/imgs/journey/marker4.png',img1:'assets/imgs/self-tour/china4.png',content:'景点'},
   ];
   constructor(public navCtrl: NavController, public navParams: NavParams,public appService: AppService) {
   }
