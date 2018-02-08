@@ -75,11 +75,14 @@ export class JourneyMapPage {
       strokeWeight: 3,      //线宽
       strokeStyle: "solid"  //线样式
     });
-
   }
 
   daySelect(index:number){
-    this.dayIndex = index;
+    if(this.dayIndex != index){
+      this.dayIndex = index;
+    }else{
+      this.dayIndex = -1;//点击两次隐藏
+    }
   }
 
 }

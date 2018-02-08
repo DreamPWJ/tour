@@ -91,7 +91,15 @@ page-self-tour-journey {
     border: 1px #d1e0fb solid;
     border-radius: 10px;
     box-shadow: 0 2px 2px #d5e4ff;
+  }
 
+  .jiao{
+    position: relative;
+    height: 0px;
+    width: 0px;
+    border-top: 90px solid transparent;
+    border-right: 100px solid black;
+    border-bottom: 100px solid transparent;
   }
 
   .quche-style{
@@ -114,10 +122,11 @@ page-self-tour-journey {
     margin-top: 1rem;
     font-size: 30px;
     color: #ffffff;
-    width: 40px;height: 40px;
+    width: 44px;height: 44px;
     background-color: #6294FA;
     border-radius: 50%;
     line-height:40px;
+    border: 2px rgba(255, 255, 255, 0.65) solid;
   }
   .self-jour-icon-left-bkcol2{
     background: -webkit-linear-gradient(top, #7D98F1, #A581FD)!important; /* Safari 5.1 - 6.0 */
