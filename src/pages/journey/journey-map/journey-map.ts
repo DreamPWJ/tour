@@ -47,17 +47,18 @@ export class JourneyMapPage {
         extData:this.dayList[i].index,
         position: this.dayList[i].position.split(','),
         icon: this.dayList[i].icon,
+        animation:"AMAP_ANIMATION_DROP",
         // content: '<div class="">1</div>' , //自定义点标记覆盖物内容
         map: this.map
       });
       markers.push(marker);
-      marker.on('click',function(e){
+      marker.on('click',(e)=>{
         // marker.setContent(marker.getTitle());
         // 设置label标签
-        marker.setLabel({//label默认蓝框白底左上角显示，样式className为：amap-marker-label
-          offset: new AMap.Pixel(15, 2),//修改label相对于maker的位置
-          content: marker.getTitle()
-        });
+          marker.setLabel({//label默认蓝框白底左上角显示，样式className为：amap-marker-label
+            offset: new AMap.Pixel(15, 2),//修改label相对于maker的位置
+            content: marker.getTitle()
+          });
       });
     }
 
@@ -85,4 +86,25 @@ export class JourneyMapPage {
     }
   }
 
+  /**
+   * 调起高德地图APP
+   */
+  aMapApp(){
+    AMap.plugin(["AMap.Driving"], ()=> {
+      let drivingOption = {
+        policy:AMap.DrivingPolicy.LEAST_TIME,
+        map:this.map
+      };
+      let driving = new AMap.Driving(drivingOption); //构造驾车导航类
+      //根据起终点坐标规划驾车路线
+      driving.search(
+        [{keyword:'成都'},{keyword:'成都大学'}],
+       (status,result)=>{
+            driving.searchOnAMAP({
+              origin:result.origin,
+              destination:result.destination
+            });
+        });
+    });
+  }
 }
