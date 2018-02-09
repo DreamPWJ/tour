@@ -144,7 +144,7 @@
             <p class="margin-5" no-margin><strong class="font-size-16">{{item.name}}</strong> <ion-icon class="icon-jingdian xingcheng-icon" text-center></ion-icon></p>
             <p class="color-8a" no-margin>{{item.content}}</p>
           </ion-col>
-          <ion-col align-self-center col-2 class="quche-style">
+          <ion-col (click)="aMapApp()" tappable align-self-center col-2 class="quche-style">
             <p class="margin-5" no-margin><ion-icon class="icon-daolanjiantouda"></ion-icon></p>
             <p no-margin>导航</p>
           </ion-col>
@@ -165,7 +165,7 @@
             <p class="margin-5" no-margin><strong class="font-size-16">一路阳光藏艺廊</strong> <ion-icon class="icon-tagfill xingcheng-icon" style="background-color: #E95D5E!important;" text-center></ion-icon></p>
             <p class="color-8a" no-margin>买好货</p>
           </ion-col>
-          <ion-col align-self-center col-2 class="quche-style">
+          <ion-col (click)="aMapApp()" tappable align-self-center col-2 class="quche-style">
             <p class="margin-5" no-margin><ion-icon class="icon-daolanjiantouda"></ion-icon></p>
             <p no-margin>导航</p>
           </ion-col>
@@ -186,9 +186,9 @@
             </p>
             <p class="color-8a" no-margin>酒店  停车场</p>
           </ion-col>
-          <ion-col align-self-center col-2 class="quche-style">
+          <ion-col (click)="aMapApp()" tappable  align-self-center col-2 class="quche-style">
             <p class="margin-5" no-margin><ion-icon class="icon-daolanjiantouda"></ion-icon></p>
-            <p no-margin>导航</p>
+            <p no-margin >导航</p>
           </ion-col>
         </ion-row>
       </ion-col>
