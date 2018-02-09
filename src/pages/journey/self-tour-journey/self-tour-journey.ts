@@ -74,7 +74,7 @@ export class SelfTourJourneyPage {
       lineArr.push(this.selfJourList[i].position.split(','));
     }
 
-    let polyline = new AMap.Polyline({
+    new AMap.Polyline({
       map: this.map,
       path: lineArr,
       strokeColor: "#6aeff3",  //线颜色
