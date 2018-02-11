@@ -1,0 +1,58 @@
+page-order {
+  .li-shi-btn {
+    position: relative;
+    font-size: 1.3rem !important;
+  }
+
+  .tool-btn{
+    margin: 8px 10px;
+  }
+  .tool-btn button{
+    background-color: #f2f3f8;
+    color: #666666;
+  }
+
+  .font-size-16{
+    font-size: 16px;
+  }
+  .font-size-12{
+    font-size: 12px;
+  }
+  .font-size-15{
+    font-size: 15px;
+  }
+  .color-8a {
+    color: #8a8a8a;
+  }
+
+  .order-ion-style{
+    width: 25px;height: 25px;line-height: 25px;
+    background-color: #22CAD3;color: #ffffff;
+    border-radius: 50%;
+    border: 1px rgba(255, 255, 255, 0.65) solid;
+    margin-right: 3px;
+  }
+  .order-ion-style-bkcol2{
+    background-color: #F3B352!important;
+  }
+  .order-ion-style-bkcol3{
+    background-color: #E95D5E!important;
+  }
+
+  .border-e5{
+    border: 1px #e5e5e5 solid;
+    margin: 5px!important;
+  }
+
+  /*button*/
+  .order-btn1 {
+    color: #fff;
+    background: -webkit-linear-gradient(left, #6b96fe, #a581fe); /* Safari 5.1 - 6.0 */
+    background: linear-gradient(to right, #6b96fe, #a581fe); /* 标准的语法（必须放在最后） */
+  }
+  .order-btn2 {
+    color: #838383;
+    background-color: #fff;
+    border: 1px #838383 solid;
+  }
+}

@@ -1,0 +1,147 @@
+<ion-header>
+  <ion-navbar color="white">
+    <ion-title>我的订单</ion-title>
+    <ion-buttons end>
+      <button ion-button small  class="li-shi-btn cut-btn">查看历史</button>
+      <button ion-button icon-only>
+        <ion-icon class="icon-more_android_light "></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+  <ion-toolbar color="white">
+    <ion-segment [(ngModel)]="orderseg" mode="md" (ionChange)="segmentChanged($event)">
+      <ion-segment-button *ngFor="let item of orderArr" value="{{item}}">
+        {{item}}
+        <div class="bolder-sm"></div>
+      </ion-segment-button>
+    </ion-segment>
+    <ion-scroll scrollX="true" style="width: 100%;height: 40px;">
+      <ion-row style="width: 110vw;">
+        <div class="tool-btn">
+          <button ion-button small color="light">自驾游</button>
+          <button ion-button small color="light">租车</button>
+          <button ion-button small color="light">商品</button>
+        </div>
+      </ion-row>
+    </ion-scroll>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div [ngSwitch]="orderseg" (swipe)="swipeEvnet($event)">
+    <p class="partition"></p>
+    <ion-scroll scrollY="true" style="height: 82vh" *ngSwitchCase="'全部'">
+      <ion-row align-items-center class="padding-lr-10">
+        <ion-col align-self-center><ion-icon class="icon-gonglu order-ion-style" text-center></ion-icon> <span class="font-size-16">自驾游</span></ion-col>
+        <ion-col text-right class="color-8a font-size-12">
+          未完成 <ion-icon class="icon-right"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <p class="border-e5"></p>
+      <ion-grid class="padding-lr-10">
+        <ion-row class="font-size-15">
+          <ion-col col-8>【最美林芝2日】<span class="grey">桃花季预售•雅鲁藏布大峡谷•嘎拉桃花村/拉如桃花村</span></ion-col>
+          <ion-col text-right><strong>￥16999.00</strong></ion-col>
+        </ion-row>
+        <ion-row class="grey">2018.03.15 至 2018.03.17</ion-row>
+        <ion-row class="color-8a font-size-12">豪华游 2人 拼2人 2日|2车 2司机 1地接</ion-row>
+        <ion-row>
+          <ion-col text-right>
+            <button ion-button small class="order-btn1">行程助手</button>
+            <button ion-button small class="order-btn2">点评得积分</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <p class="partition"></p>
+      <ion-grid class="padding-lr-10">
+        <ion-row align-items-center>
+          <ion-col align-self-center><ion-icon class="icon-taxi order-ion-style order-ion-style-bkcol2" text-center></ion-icon> <span class="font-size-16">租车</span></ion-col>
+          <ion-col text-right class="color-8a font-size-12">
+            未完成 <ion-icon class="icon-right"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <p class="border-e5"></p>
+        <ion-row>
+          <ion-col col-4><img src="assets/imgs/journey/car.png"/></ion-col>
+          <ion-col col-5>
+            <p no-margin><strong>雪佛兰迈锐宝</strong></p>
+            <p no-margin class="color-8a font-size-1">白色•三厢1.5T自动|乘坐5人</p>
+          </ion-col>
+          <ion-col text-right><strong>￥16999.00</strong></ion-col>
+        </ion-row>
+        <ion-row  text-center>
+          <ion-col class="grey" col-5>
+            <p no-margin>04.15 10:00</p>
+            <p no-margin>成都•电子科大维修中心</p>
+          </ion-col>
+          <ion-col col-2 class="zuche-ri">
+            <p no-margin style="color: #111111;">共2日</p>
+            <p no-margin style="border: 1px #e5e5e5 solid;"></p>
+          </ion-col>
+          <ion-col class="grey" col-5>
+            <p no-margin>04.17 10:00</p>
+            <p no-margin>成都•电子科大维修中心</p>
+          </ion-col>
+        </ion-row>
+        <ion-row class="color-8a">上门取送 2日 1车</ion-row>
+        <ion-row><ion-col text-right><button ion-button small class="order-btn1">行程助手</button></ion-col></ion-row>
+      </ion-grid>
+      <p class="partition"></p>
+      <ion-grid class="padding-lr-10">
+        <ion-row align-items-center>
+          <ion-col align-self-center><ion-icon class="icon-tagfill order-ion-style order-ion-style-bkcol3" text-center></ion-icon> <span class="font-size-16">商城</span></ion-col>
+          <ion-col text-right class="color-8a font-size-12">
+            已完成 <ion-icon class="icon-right"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-list style="padding-top: 10px" no-margin>
+          <ion-item *ngFor="let item of shopList" no-padding>
+            <ion-row>
+              <ion-col col-3><img [src]="item.img" width="74" height="55"/></ion-col>
+              <ion-col col-6>
+                <ion-row text-wrap class="font-size-15">
+                  {{item.title}}
+                </ion-row>
+                <ion-row>
+                  <span class="font-size-12 color-8a">
+                    颜色分类：{{item.color}}  数量：{{item.number}}件
+                  </span>
+                </ion-row>
+              </ion-col>
+              <ion-col text-right><strong class="font-size-15">￥{{item.price}}</strong></ion-col>
+            </ion-row>
+          </ion-item>
+        </ion-list>
+        <!--<ion-row *ngFor="let item of shopList">
+          <ion-col col-3 text-center><img [src]="item.img" width="60" height="60"/></ion-col>
+          <ion-col col-6>
+            <ion-row>
+              {{item.title}}
+            </ion-row>
+            <ion-row>
+                  <span class="font-size-12 color-8a">
+                    颜色分类：{{item.color}}  数量：{{item.number}}件
+                  </span>
+            </ion-row>
+          </ion-col>
+          <ion-col text-right><strong>￥{{item.price}}</strong></ion-col>
+        </ion-row>-->
+
+
+        <ion-row>
+          <ion-col col-4 class="grey">共计:2件商品</ion-col>
+          <ion-col text-right nowrap class="grey">合计: <strong style="color: #000000;">￥558.00</strong> <span class="font-size-12">(含运费￥0.00)</span></ion-col>
+        </ion-row>
+        <ion-row><ion-col text-right><button ion-button small class="order-btn2">点评得积分</button></ion-col></ion-row>
+      </ion-grid>
+    </ion-scroll>
+    <ion-scroll scrollY="true" style="height: 60vh" *ngSwitchCase="'未付款'" padding="">未付款
+    </ion-scroll>
+    <ion-scroll scrollY="true" style="height: 60vh" *ngSwitchCase="'未完成'" padding>未完成
+    </ion-scroll>
+    <ion-scroll scrollY="true" style="height: 60vh" *ngSwitchCase="'待点评'" padding>待点评
+    </ion-scroll>
+  </div>
+</ion-content>
