@@ -20,7 +20,71 @@
 
 
 <ion-content  >
+  <ion-card class="fixed-card-top">
+    <p>您预约的送车服务将于10:00准时送到。现在取消将产生取消费用</p>
+    <p text-center=""><ion-icon class="icon-pulldown1"></ion-icon></p>
+  </ion-card>
   <div #maps class="map-container"></div>
-  <ion-card class="fixed-card-bottom">
+  <ion-card class="fixed-card-bottom grey">
+    <ion-row  class="header" nowrap align-items-center>
+      <ion-col>
+        <p class="title"> 川A6ZIT3 · 送车中</p>
+        <p class="sub-title"> 白色 · 雪佛兰迈锐宝</p>
+      </ion-col>
+      <ion-col >
+       <img src="assets/imgs/journey/rent-car/car-show.png" />
+      </ion-col>
+    </ion-row>
+    <ion-grid class="content">
+    <ion-row  nowrap align-items-center>
+      <ion-col col-9>
+        <strong >时间 : </strong>
+        <span>03.15  10:00 - 03.17  10:00</span>
+      </ion-col>
+      <ion-col col-9>
+        <strong class="">数量 : </strong>
+        <span>1辆</span>
+      </ion-col>
+    </ion-row>
+    <ion-row  nowrap align-items-center>
+      <ion-col >
+        <strong >服务 : </strong>
+        <span>送货上门  山门取车</span>
+      </ion-col>
+    </ion-row>
+    <ion-row  nowrap align-items-center>
+      <ion-icon style="color: #3cbca3" class="icon-radioboxfill"></ion-icon>
+      <ion-col col-10>
+        <strong >取车 : </strong>
+        <span>成都·龙湖三千集</span>
+      </ion-col>
+      <ion-col col-2 class="cha-kan">
+       <ion-icon class="icon-locationfill"></ion-icon>
+        <p>查看</p>
+      </ion-col>
+    </ion-row>
+    <ion-row  nowrap align-items-center>
+      <ion-icon style="color: #ff6b54" class="icon-radioboxfill"></ion-icon>
+      <ion-col col-10>
+        <strong >还车 : </strong>
+        <span>成都·双流机场T2停车场</span>
+      </ion-col>
+      <ion-col col-2 class="cha-kan">
+        <ion-icon class="icon-locationfill"></ion-icon>
+        <p>查看</p>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+    <ion-row class="bottom-btn"  nowrap align-items-center>
+      <ion-col>
+        <ion-icon class="icon-roundclose"></ion-icon> 取消订单
+      </ion-col>
+      <ion-col>
+        <ion-icon class="icon-phone"></ion-icon> 联系司机
+      </ion-col>
+      <ion-col>
+        <ion-icon class="icon-service"></ion-icon> 联系客服
+      </ion-col>
+    </ion-row>
   </ion-card>
 </ion-content>

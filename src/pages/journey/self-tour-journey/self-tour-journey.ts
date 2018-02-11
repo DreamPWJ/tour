@@ -74,7 +74,7 @@ export class SelfTourJourneyPage {
       lineArr.push(this.selfJourList[i].position.split(','));
     }
 
-    let polyline = new AMap.Polyline({
+    new AMap.Polyline({
       map: this.map,
       path: lineArr,
       strokeColor: "#6aeff3",  //线颜色
@@ -87,5 +87,29 @@ export class SelfTourJourneyPage {
 
   dateSelect(index:number){
     this.dateFlg = index;
+  }
+
+
+
+  /**
+   * 调起高德地图APP
+   */
+  aMapApp(){
+    AMap.plugin(["AMap.Driving"], ()=> {
+      let drivingOption = {
+        policy:AMap.DrivingPolicy.LEAST_TIME,
+        map:this.map
+      };
+      let driving = new AMap.Driving(drivingOption); //构造驾车导航类
+      //根据起终点坐标规划驾车路线
+      driving.search(
+        [{keyword:'成都'},{keyword:'成都大学'}],
+        (status,result)=>{
+          driving.searchOnAMAP({
+            origin:result.origin,
+            destination:result.destination
+          });
+        });
+    });
   }
 }
