@@ -206,7 +206,7 @@
       <div *ngFor="let day of xingchengList" class="padding-lr-10">
         <ion-row>
           <ion-col class="font-size-18 "><span class="xingcheng-day"></span>{{day.day}}</ion-col>
-          <ion-col text-right class="xingcheng-map">
+          <ion-col text-right class="xingcheng-map" tappable (click)="openBaiDuMap()">
             <ion-icon class="icon-daolanjiantouda"></ion-icon>
             地图
           </ion-col>

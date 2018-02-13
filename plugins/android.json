@@ -27,6 +27,15 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.app.tour"
+        },
+        "cordova-plugin-appavailability": {
+            "PACKAGE_NAME": "com.app.tour"
+        },
+        "com.lampa.startapp": {
+            "PACKAGE_NAME": "com.app.tour"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.app.tour"
         }
     },
     "dependent_plugins": {
