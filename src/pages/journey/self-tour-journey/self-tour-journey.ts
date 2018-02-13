@@ -38,7 +38,7 @@ export class SelfTourJourneyPage {
     this.appService.loadingHide();
     this.map = new AMap.Map(this.maps.nativeElement, {
       view: new AMap.View2D({//创建地图二维视口
-        zoom: 8, //设置地图缩放级别
+        zoom: 7, //设置地图缩放级别
         center:[93.600738,30.054808],
         rotateEnable: true,
         showBuildingBlock: true

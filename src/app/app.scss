@@ -58,28 +58,28 @@ a {
   height: 100vh;
 }
 
-$border-color:rgba(0, 0, 0, 0.1);
+$border-color: rgba(0, 0, 0, 0.1);
 
 .center-center {
-  position: relative!important;
-  top: 50%!important;
-  left: 50%!important;
-  transform: translate(-50%, -50%)!important;
-  -webkit-transform: translate(-50%, -50%)!important;
+  position: relative !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  -webkit-transform: translate(-50%, -50%) !important;
 }
 
 .vertical-center {
-  position: relative!important;
-  top: 50%!important;
-  transform: translateY(-50%)!important;
-  -webkit-transform: translateY(-50%)!important;
+  position: relative !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  -webkit-transform: translateY(-50%) !important;
 }
 
-@mixin  center-center{
+@mixin center-center {
   @extend .center-center;
 }
 
-@mixin  vertical-center{
+@mixin vertical-center {
   @extend .vertical-center;
 }
 
@@ -109,7 +109,6 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
 
 .is-not-data {
   position: absolute;
@@ -148,10 +147,9 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
   background-color: #F9F9F9;
 }
 
-.font-size-1{
+.font-size-1 {
   font-size: 1rem;
 }
-
 
 /*.header-ios-white{
   .toolbar-content,
@@ -160,10 +158,9 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
   }
 }*/
 
-
-.content-top-0 .scroll-content{
-    margin-top: 0!important;
-    padding-top: 0!important;
+.content-top-0 .scroll-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 /*.transparent-header {
@@ -192,7 +189,6 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
 
 }*/
 
-
 /*
 .white-header {
   // This is just to make the header white and button/icon with #111111 color
@@ -218,11 +214,12 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
 }
 */
 
-.padding-lr-10{
+.padding-lr-10 {
   padding: 0 10px;
+
 }
 
-.cordova-statusbar-cover{
+.cordova-statusbar-cover {
   position: fixed;
   top: 0;
   left: 0;
@@ -233,12 +230,12 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
 }
 
 .platform-ios.platform-cordova {
-/*  ion-content{
-    ion-header {
-      padding-top: $cordova-ios-statusbar-padding;
-    }
-  }*/
-  .statusbar-cover{
+  /*  ion-content{
+      ion-header {
+        padding-top: $cordova-ios-statusbar-padding;
+      }
+    }*/
+  .statusbar-cover {
     @extend .cordova-statusbar-cover;
   }
 }
@@ -248,7 +245,7 @@ $opacity-list: (opacity-6:0.6, opacity-8 :0.8);
     padding-top: $cordova-md-statusbar-padding;
     /*    background-color: color($colors, primary);*/
   }
-  .statusbar-cover{
+  .statusbar-cover {
     @extend .cordova-statusbar-cover;
   }
 }
@@ -261,7 +258,6 @@ ion-content{
 }
 */
 
-
 /*
 .platform-android.platform-cordova {
   ion-content{
@@ -272,7 +268,7 @@ ion-content{
   }
 */
 
-.cut-btn{
+.cut-btn {
   position: relative;
   &:after {
     content: '';
@@ -285,8 +281,31 @@ ion-content{
     height: 50%;
     background-color: rgba(0, 0, 0, 0.65);
   }
+
 }
 
+@mixin border-scale {
+  position: relative;
+  &::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(0deg, transparent 50%, #e5e5e5 50%);
+  }
+}
+
+@mixin border-scale-bottom {
+  bottom: 0;
+  @include border-scale;
+
+}
+
+@mixin border-scale-top {
+  top: 0;
+  @include border-scale;
+}
 
 
 

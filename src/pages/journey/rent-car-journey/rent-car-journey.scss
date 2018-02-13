@@ -57,6 +57,7 @@ page-rent-car-journey {
     /*    height: 38vh;*/
     background-color: #fff;
     .header, .content {
+/*      @include border-scale*/
       border-bottom: 1px solid #e5e5e5;
     }
     .header {

@@ -32,7 +32,7 @@
 
   <div [ngSwitch]="orderseg" (swipe)="swipeEvnet($event)">
     <p class="partition"></p>
-    <ion-scroll scrollY="true" style="height: 82vh" *ngSwitchCase="'全部'">
+    <div *ngSwitchCase="'全部'">
       <ion-row align-items-center class="padding-lr-10">
         <ion-col align-self-center><ion-icon class="icon-gonglu order-ion-style" text-center></ion-icon> <span class="font-size-16">自驾游</span></ion-col>
         <ion-col text-right class="color-8a font-size-12">
@@ -42,12 +42,12 @@
       <p class="border-e5"></p>
       <ion-grid class="padding-lr-10">
         <ion-row class="font-size-15">
-          <ion-col col-8>【最美林芝2日】<span class="grey">桃花季预售•雅鲁藏布大峡谷•嘎拉桃花村/拉如桃花村</span></ion-col>
-          <ion-col text-right><strong>￥16999.00</strong></ion-col>
+          <ion-col col-8>【最美林芝2日】<span class="grey">桃花季预售•雅鲁藏布大峡谷•嘎拉桃花村</span></ion-col>
+          <ion-col text-right><strong><small>￥</small>16999.00</strong></ion-col>
         </ion-row>
         <ion-row class="grey">2018.03.15 至 2018.03.17</ion-row>
-        <ion-row class="color-8a font-size-12">豪华游 2人 拼2人 2日|2车 2司机 1地接</ion-row>
-        <ion-row>
+        <ion-row class="color-8a font-size-12">豪华游 2人 拼2人 2日 | 2车 2司机 1地接</ion-row>
+        <ion-row class="order-list-btn">
           <ion-col text-right>
             <button ion-button small class="order-btn1">行程助手</button>
             <button ion-button small class="order-btn2">点评得积分</button>
@@ -69,12 +69,12 @@
             <p no-margin><strong>雪佛兰迈锐宝</strong></p>
             <p no-margin class="color-8a font-size-1">白色•三厢1.5T自动|乘坐5人</p>
           </ion-col>
-          <ion-col text-right><strong>￥16999.00</strong></ion-col>
+          <ion-col text-right><strong><small>￥</small>16999.00</strong></ion-col>
         </ion-row>
         <ion-row  text-center>
           <ion-col class="grey" col-5>
             <p no-margin>04.15 10:00</p>
-            <p no-margin>成都•电子科大维修中心</p>
+            <p no-margin class="address">成都•电子科大维修中心</p>
           </ion-col>
           <ion-col col-2 class="zuche-ri">
             <p no-margin style="color: #111111;">共2日</p>
@@ -82,11 +82,11 @@
           </ion-col>
           <ion-col class="grey" col-5>
             <p no-margin>04.17 10:00</p>
-            <p no-margin>成都•电子科大维修中心</p>
+            <p no-margin class="address">成都•电子科大维修中心</p>
           </ion-col>
         </ion-row>
         <ion-row class="color-8a">上门取送 2日 1车</ion-row>
-        <ion-row><ion-col text-right><button ion-button small class="order-btn1">行程助手</button></ion-col></ion-row>
+        <ion-row class="order-list-btn"><ion-col text-right><button ion-button small class="order-btn1">行程助手</button></ion-col></ion-row>
       </ion-grid>
       <p class="partition"></p>
       <ion-grid class="padding-lr-10">
@@ -110,7 +110,7 @@
                   </span>
                 </ion-row>
               </ion-col>
-              <ion-col text-right><strong class="font-size-15">￥{{item.price}}</strong></ion-col>
+              <ion-col text-right><strong class="font-size-15"><small>￥</small>{{item.price}}</strong></ion-col>
             </ion-row>
           </ion-item>
         </ion-list>
@@ -134,9 +134,10 @@
           <ion-col col-4 class="grey">共计:2件商品</ion-col>
           <ion-col text-right nowrap class="grey">合计: <strong style="color: #000000;">￥558.00</strong> <span class="font-size-12">(含运费￥0.00)</span></ion-col>
         </ion-row>
-        <ion-row><ion-col text-right><button ion-button small class="order-btn2">点评得积分</button></ion-col></ion-row>
+        <ion-row class="order-list-btn"><ion-col text-right><button ion-button small class="order-btn2">点评得积分</button></ion-col></ion-row>
       </ion-grid>
-    </ion-scroll>
+      <p class="partition"></p>
+    </div>
     <ion-scroll scrollY="true" style="height: 60vh" *ngSwitchCase="'未付款'" padding="">未付款
     </ion-scroll>
     <ion-scroll scrollY="true" style="height: 60vh" *ngSwitchCase="'未完成'" padding>未完成

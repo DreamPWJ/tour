@@ -4,6 +4,10 @@ page-order {
     font-size: 1.3rem !important;
   }
 
+  .partition{
+    margin-top: 0;
+  }
+
   .tool-btn{
     margin: 8px 10px;
   }
@@ -40,7 +44,8 @@ page-order {
   }
 
   .border-e5{
-    border: 1px #e5e5e5 solid;
+    @include border-scale-bottom;
+/*    border: 1px #e5e5e5 solid;*/
     margin: 5px!important;
   }
 
@@ -54,5 +59,14 @@ page-order {
     color: #838383;
     background-color: #fff;
     border: 1px #838383 solid;
+  }
+
+  .order-list-btn{
+    margin-top: 10px;
+    @include border-scale-top;
+  }
+
+  .address{
+    font-size: 12px;
   }
 }
