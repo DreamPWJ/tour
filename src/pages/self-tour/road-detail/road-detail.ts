@@ -1,8 +1,10 @@
-import {Component, Optional, ViewChild} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {Content, IonicPage, ModalController, NavController, NavParams, Platform, Slides} from 'ionic-angular';
 import {CalendarModal, CalendarModalOptions, DayConfig} from "ion2-calendar";
-import {AppAvailability} from "@ionic-native/app-availability";
+import {AppService} from "../../../providers/util/app.service";
+
 declare  let startApp;
+declare  let appAvailability;
 
 @IonicPage()
 @Component({
@@ -21,7 +23,7 @@ export class RoadDetailPage {
   isTabTop: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController,
-              public  platform: Platform, @Optional() private  appAvailability: AppAvailability) {
+              public  platform: Platform,public  appService: AppService) {
   }
 
   segmentChanged(event) {
@@ -115,50 +117,50 @@ export class RoadDetailPage {
       scheme = 'com.baidu.BaiduMap';
     }
 
-    this.appAvailability.check(scheme)
-      .then(
-        (yes: boolean) => {
-          alert(scheme + ' is available')
-          console.log(scheme + ' is available');
-          if (this.platform.is('ios')) {
-            sApp = startApp.set("baidumap://");
-            sApp.start(function() { /* success */
+    appAvailability.check(
+      scheme,       // URI Scheme or Package Name
+      () =>{  // Success callback
+        if (this.platform.is('ios')) {
 
-            }, function(error) { /* fail */
+          sApp = startApp.set("baidumap://");
+          sApp.start(()=> { /* success */
 
-            });
-          } else if (this.platform.is('android')) {
-             sApp = startApp.set({ /* params */
-              "action":"ACTION_MAIN",
-              "category":"CATEGORY_DEFAULT",
-              "type":"text/css",
-              "package":"com.baidu.BaiduMap",
-              "uri":"file://data/index.html",
-              "flags":["FLAG_ACTIVITY_CLEAR_TOP","FLAG_ACTIVITY_CLEAR_TASK"],
-              // "component": ["com.android.GoBallistic","com.android.GoBallistic.Activity"],
-              "intentstart":"startActivity",
-            }, { /* extras */
-              "EXTRA_STREAM":"extraValue1",
-              "extraKey2":"extraValue2"
-            });
-            sApp.start(function() { /* success */
+          }, (error)=> { /* fail */
 
-            }, function(error) { /* fail */
+          });
+        } else if (this.platform.is('android')) {
 
-            });
-          }
+           sApp = startApp.set({ /* params */
+            "action":"ACTION_MAIN",
+            "category":"CATEGORY_DEFAULT",
+            "type":"text/css",
+            "package":"com.baidu.BaiduMap",
+            "uri":"file://data/index.html",
+            "flags":["FLAG_ACTIVITY_CLEAR_TOP","FLAG_ACTIVITY_CLEAR_TASK"],
+            // "component": ["com.android.GoBallistic","com.android.GoBallistic.Activity"],
+            "intentstart":"startActivity",
+          }, { /* extras */
+            "EXTRA_STREAM":"extraValue1",
+            "extraKey2":"extraValue2"
+          });
+          sApp.start(() => { /* success */
 
-        },
-        (no: boolean) => {
-          alert(scheme + ' is NOT available')
-          console.log(scheme + ' is NOT available')
-          if (this.platform.is('ios')) {
-            window.open("https://itunes.apple.com/cn/app/id452186370")
-          } else if (this.platform.is('android')) {
-            window.open("market://search?q=com.baidu.BaiduMap")
-          }
+          }, (error) => { /* fail */
+
+          });
         }
-      );
+
+
+      },
+      () =>{  // Error callback
+        this.appService.toast("百度地图未安装,请先安装APP")
+        if (this.platform.is('ios')) {
+          window.open("https://itunes.apple.com/cn/app/id452186370")
+        } else if (this.platform.is('android')) {
+          window.open("http://map.baidu.com/zt/client/index/")
+        }
+      }
+    );
   }
 
   //回到顶部

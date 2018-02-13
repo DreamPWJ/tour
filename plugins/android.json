@@ -7,6 +7,12 @@
         "files": {}
     },
     "installed_plugins": {
+        "com.lampa.startapp": {
+            "PACKAGE_NAME": "com.app.tour"
+        },
+        "cordova-plugin-appavailability": {
+            "PACKAGE_NAME": "com.app.tour"
+        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.app.tour"
         },
@@ -26,15 +32,6 @@
             "PACKAGE_NAME": "com.app.tour"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.app.tour"
-        },
-        "cordova-plugin-appavailability": {
-            "PACKAGE_NAME": "com.app.tour"
-        },
-        "com.lampa.startapp": {
-            "PACKAGE_NAME": "com.app.tour"
-        },
-        "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.app.tour"
         }
     },

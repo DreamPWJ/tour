@@ -15,6 +15,19 @@ zipalign -v 4 android-release-unsigned.apk ionic3.apk
 #启动全屏显示白色背景
 Theme.Light.NoTitleBar.Fullscreen
 
+#修改生成的apk名字 在build.gradle文件中，android节点下进行配置
+
+  applicationVariants.all { variant ->
+    variant.outputs.each { output ->
+      def oldFile = output.outputFile
+/*      if (variant.buildType.name.equals('release')) {*/
+        def releaseApkName = variant.buildType.name.equals('release')?'自驾游-release.apk':'自驾游.apk';
+        output.outputFile = new File(oldFile.parent, releaseApkName)
+    /*  }*/
+    }
+  }
+
+
 #支付宝支付相关       <resource-file src="src/ios/lib/AlipaySDK.bundle"/> 插件路径错了
 PID:
 
