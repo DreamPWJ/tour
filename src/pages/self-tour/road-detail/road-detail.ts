@@ -131,11 +131,11 @@ export class RoadDetailPage {
         } else if (this.platform.is('android')) {
 
            sApp = startApp.set({ /* params */
-            "action":"ACTION_MAIN",
+            "action":"ACTION_VIEW",
             "category":"CATEGORY_DEFAULT",
             "type":"text/css",
             "package":"com.baidu.BaiduMap",
-            "uri":"file://data/index.html",
+            "uri":"baidumap://map/direction?origin=我的位置&destination=成都大学&mode=driving&region=成都",
             "flags":["FLAG_ACTIVITY_CLEAR_TOP","FLAG_ACTIVITY_CLEAR_TASK"],
             // "component": ["com.android.GoBallistic","com.android.GoBallistic.Activity"],
             "intentstart":"startActivity",
