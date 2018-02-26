@@ -1,0 +1,183 @@
+page-rent-car {
+  ion-header {
+    button {
+      width: 30px !important;
+      height: 30px !important;
+      min-height: 30px !important;
+      background-color: rgba(0, 0, 0, .26) !important;
+      border-radius: 50% !important;
+    }
+  }
+
+  .icon-share_light, .icon-more_android_light {
+    font-size: 18px !important;
+  }
+
+  .slides {
+    height: auto;
+    z-index: -1;
+  }
+
+  .font-size-16{
+    font-size: 16px;
+  }
+  .font-size-12{
+    font-size: 12px;
+  }
+  .color-8a{
+    color: #8a8a8a;
+  }
+
+  /*第一个card*/
+  .rentcard-style{
+    margin-top: -4.2rem;width: 100%;
+    border-radius: 3px;
+  }
+
+  .row-style1{
+  }
+  .kuaijie-check{
+    background-color: #ffffff;
+    z-index: 2;
+    padding:8px 0;
+  }
+  .kuacheng-uncheck{
+    background-color: #ffffff;
+    background-image: url(../assets/imgs/rent-car/rentcar4.png);
+    background-size: cover;
+    color: #ffffff;z-index: 2;
+    padding:8px 0;
+  }
+
+  .tehui-wuzhe{
+    font-size: 12px;
+    color: #ffffff;
+    position: absolute;
+    top:0;
+    background-image: url(../assets/imgs/rent-car/rentcar5.png);
+    width: 70px;height: 25px;
+    background-size: cover;
+    z-index: 99;
+  }
+
+  .point-style{
+    padding-left: 10px;
+    font-size: 30px;
+    color: #3cbca3;
+  }
+  .point-style2{
+    padding-left: 10px;
+    font-size: 30px;
+    color: #ff6b54;
+  }
+  .songche-style{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+  .songche-style ion-icon{
+    font-size: 13px;
+    color: #8a8a8a;
+    padding-left: 2px;
+  }
+  .address{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .circle-day{
+    background-image: url(../assets/imgs/rent-car/rentcar6.png);
+    background-size:cover;
+    //background-repeat: no-repeat;
+    //width: 50px;height: 40px;
+    padding:0 5px;
+    text-align: center;
+  }
+  .circle-dayday{
+    color: #e2bd8c;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .tishi{
+    color: #d7d7d7;
+    font-size: 12px;
+    padding: 10px 0 20px 10px;
+  }
+
+  .icon4{
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    margin: auto;
+    background-color: #4D67CD;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 30px;
+  }
+
+  .jinri-title{
+    margin-bottom: 6px;
+    span:first-of-type{
+      font-size: 1.7rem;
+    }
+  }
+
+  .jin-ri-slides {
+    ion-card {
+      margin: 5px 5px 8px  9px;
+      padding-bottom: 8px;
+    }
+  }
+
+  .jin-ri-slides ion-slide {
+    width: 80vw;
+  }
+
+  .jin-ri-slides h5, .jin-ri-slides p {
+    padding: 1px 10px;
+  }
+
+  .jin-ri-slides h5 {
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .scale-img {
+    -webkit-transform: scale(0.8);
+  }
+
+  /*车型推荐*/
+  .chexingtuijian{
+    background-color: #f5f6f8;
+    border-radius: 3px;
+  }
+  .chexingtuijian p{
+    color: #93939e;font-size: 13px;
+    margin: 0 0 5px 0!important;
+  }
+  .chexingtuijian p span{
+    color: #fabe00!important;font-size: 15px!important;
+  }
+
+  /*.slopingside{
+    height:0px;
+    border: 1px solid red;
+    width: 10px;
+    transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+  }*/
+  .linear {
+    height:0;line-height: 0;
+    border: 1px solid red;
+  }
+  .slopingside{
+
+    height:0;
+    border: 1px solid red;
+    width: 5px;
+    transform:rotate(40deg);
+    -webkit-transform:rotate(40deg);
+  }
+}

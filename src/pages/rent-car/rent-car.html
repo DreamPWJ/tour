@@ -1,0 +1,191 @@
+<ion-header>
+  <ion-navbar color="transparent">
+    <!--     <ion-title>自驾游</ion-title>-->
+    <ion-buttons end>
+      <ion-buttons end>
+        <button ion-button icon-only>
+          <ion-icon class="icon-gifts"></ion-icon>
+        </button>
+        <span style="padding: 0 3px;"></span>
+        <button ion-button icon-only>
+          <ion-icon class="icon-more_android_light"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="content-top-0">
+  <ion-slides class="slides">
+    <ion-slide *ngFor="let image of [1]">
+      <img data-src="./assets/imgs/rent-car/rentcar{{image}}.png">
+    </ion-slide>
+  </ion-slides>
+  <div class="padding-lr-10">
+    <ion-card no-margin no-padding class="rentcard-style">
+      <ion-row class="font-size-16" text-center>
+        <ion-col col-6 class="kuaijie-check">快捷租车</ion-col>
+        <ion-col col-6 class="kuacheng-uncheck">跨城特惠
+          <!--<span class="tehui-wuzhe">特惠5折起</span>-->
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-center>
+        <ion-col col-1 class="point-style">•</ion-col>
+        <ion-col class="grey songche-style" col-3>
+          送车上门<ion-icon class="icon-triangledownfill"></ion-icon>
+        </ion-col>
+        <ion-col class="grey songche-style" col-2>
+          成都<ion-icon class="icon-triangledownfill"></ion-icon>
+        </ion-col>
+        <ion-col class="grey address">
+          成华区电子信息产业大厦
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-center>
+        <ion-col col-1 class="point-style2">•</ion-col>
+        <ion-col class="grey songche-style" col-3>
+          门店还车<ion-icon class="icon-triangledownfill"></ion-icon>
+        </ion-col>
+        <ion-col class="grey songche-style" col-2>
+          成都<ion-icon class="icon-triangledownfill"></ion-icon>
+        </ion-col>
+        <ion-col class="grey address">
+          成华区龙湖三千集
+        </ion-col>
+      </ion-row>
+      <ion-row align-items-center style="padding-bottom: 2rem">
+        <ion-col col-1 style="color: #d7d7d7;padding-left: 10px;"><ion-icon class="icon-countdown"></ion-icon></ion-col>
+        <ion-col col-3>
+          <p class="grey">02月03日</p>
+          <p class="color-8a font-size-12">周六 11:30</p>
+        </ion-col>
+        <ion-col col-5 class="circle-day" text-center no-padding>
+          <p class="circle-dayday" no-margin>2</p>
+          <p no-margin class="font-size-12">天</p>
+        </ion-col>
+        <ion-col col-3>
+          <p class="grey">02月03日</p>
+          <p class="color-8a font-size-12">周六 11:30</p>
+        </ion-col>
+      </ion-row>
+      <div class="padding-lr-10">
+        <button ion-button block class="light">去选车</button>
+      </div>
+      <div class="tishi">
+        温馨提示：请提前4个工作小时预约上门取送车 <ion-icon class="icon-questionfill"></ion-icon>
+      </div>
+    </ion-card>
+  </div>
+  <p class="partition"></p>
+  <div class="padding-lr-10">
+    <ion-row justify-content-around align-items-center text-center>
+      <ion-col col-3>
+        <p class="icon4">
+          <ion-icon class="icon-jiesongjitubiaobaisebufen"></ion-icon>
+        </p>
+        <p class="grey" style="margin: 8px 0 auto;">接送机</p>
+      </ion-col>
+      <ion-col col-3>
+        <p class="icon4">
+          <ion-icon class="icon-jiesongzhantubiaogaotiedongche"></ion-icon>
+        </p>
+        <p class="grey" style="margin: 8px 0 auto;">接送站</p>
+      </ion-col>
+      <ion-col col-3>
+        <p class="icon4">
+          <ion-icon class="icon-shunfengchetubiaofeng"></ion-icon>
+        </p>
+        <p class="grey" style="margin: 8px 0 auto;">顺风车</p>
+      </ion-col>
+      <ion-col col-3>
+        <p class="icon4" style="font-size: 22px!important;">
+          <ion-icon class="icon-baochetubiaosiji"></ion-icon>
+        </p>
+        <p class="grey" style="margin: 8px 0 auto;">包车</p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <p class="partition"></p>
+  <div class="padding-lr-10">
+    <ion-row align-items-center class="jinri-title" >
+      <span col>今日推荐</span>
+      <span col text-right><strong>{{currentIndex}}</strong>/{{slidesLength}}</span>
+    </ion-row>
+    <ion-slides #slides class="jin-ri-slides" freeMode="true" slidesPerView="auto" spaceBetween="-40px" loop="false"
+                (ionSlideDidChange)="slideChanged()">
+      <ion-slide *ngFor="let image of [1,2,3,4,5]">
+        <ion-card text-left ngClass="{{image==currentIndex?'':'scale-img'}}">
+          <img data-src="assets/imgs/slide/slide{{image}}.jpeg">
+          <h5>国庆旅游回程顺风车特价！持续特惠中！</h5>
+          <p>回程无忧, 部分城市套餐已售罄！</p>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <p class="partition"></p>
+  <div class="padding-lr-10">
+    <ion-row align-items-center class="jinri-title" >
+      <span col>车型推荐</span>
+    </ion-row>
+    <ion-row align-items-center>
+      <ion-col text-center class="chexingtuijian" style="margin-right: 10px;">
+        <img src="assets/imgs/journey/car.png"/>
+        <p>雪佛兰科鲁兹<span>￥78</span> /日均</p>
+      </ion-col>
+      <ion-col text-center class="chexingtuijian">
+        <img src="assets/imgs/journey/car.png"/>
+        <p>雪佛兰科鲁兹<span>￥78</span> /日均</p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <p class="partition"></p>
+  <div class="padding-lr-10">
+    <ion-row align-items-center class="jinri-title" >
+      <span col>顺风车推荐</span>
+      <span col text-right>更多 <ion-icon class="icon-right"></ion-icon></span>
+    </ion-row>
+    <ion-row align-items-center>
+      <ion-col col-4>
+        <img src="assets/imgs/journey/car.png"/>
+      </ion-col>
+      <ion-col>
+        <ion-row align-items-center>
+          <ion-col text-center col-5>
+            <p class="grey">成都</p>
+            <p class="color-8a">2017.10.13</p>
+          </ion-col>
+          <ion-col>
+            <div class="slopingside"></div>
+            <div class="linear"></div>
+
+          </ion-col>
+          <ion-col text-center col-5>
+            <p class="grey">兰州</p>
+            <p class="color-8a">2017.10.16</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="address grey">大众帕萨特/三厢/1.8T</ion-col>
+          <ion-col><span style="color: #fabe00;font-size: 18px;">￥100</span>￥2427</ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </div>
+  <p class="partition"></p>
+  <div>
+    <ion-card *ngFor="let item of jingpinRoad">
+      <img [src]="item.img">
+      <ion-card-content no-padding>
+        <ion-card-title style="font-size: 1.6rem;" class="grey">
+          <strong>{{item.name}}</strong>{{item.content}}
+        </ion-card-title>
+        <ion-row class="grey">
+          <ion-col>已售 {{item.num}}</ion-col>
+          <ion-col text-right><span style="color: #ff4a26;font-size: 18px;">{{item.price}}</span> 起</ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+</ion-content>
