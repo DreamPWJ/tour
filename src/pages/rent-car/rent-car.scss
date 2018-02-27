@@ -21,6 +21,9 @@ page-rent-car {
   .font-size-16{
     font-size: 16px;
   }
+  .font-size-15{
+    font-size: 15px;
+  }
   .font-size-12{
     font-size: 12px;
   }
@@ -34,19 +37,15 @@ page-rent-car {
     border-radius: 3px;
   }
 
-  .row-style1{
-  }
-  .kuaijie-check{
+  .kuaijie{
     background-color: #ffffff;
     z-index: 2;
     padding:8px 0;
   }
   .kuacheng-uncheck{
-    background-color: #ffffff;
     background-image: url(../assets/imgs/rent-car/rentcar4.png);
     background-size: cover;
-    color: #ffffff;z-index: 2;
-    padding:8px 0;
+    color: #ffffff;
   }
 
   .tehui-wuzhe{
@@ -86,18 +85,25 @@ page-rent-car {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  .circle-day{
-    background-image: url(../assets/imgs/rent-car/rentcar6.png);
-    background-size:cover;
-    //background-repeat: no-repeat;
-    //width: 50px;height: 40px;
-    padding:0 5px;
-    text-align: center;
+
+  /*圆圈里写天数*/
+  .circle-bk{
+    position: relative;text-align: center;
+    color: #E2BD8C;
+    font-size: 43px;
   }
   .circle-dayday{
     color: #e2bd8c;
-    font-size: 16px;
     font-weight: bold;
+    font-size:18px;
+    position: absolute;
+    top:3px;
+    width: 100%;
+  }
+  .circle-daytian{
+    position: absolute;
+    bottom:7px;
+    width: 100%;
   }
 
   .tishi{
@@ -161,23 +167,22 @@ page-rent-car {
     color: #fabe00!important;font-size: 15px!important;
   }
 
-  /*.slopingside{
-    height:0px;
-    border: 1px solid red;
-    width: 10px;
-    transform:rotate(45deg);
-    -webkit-transform:rotate(45deg);
-  }*/
+
   .linear {
     height:0;line-height: 0;
-    border: 1px solid red;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.1);
   }
-  .slopingside{
-
+  .linear::before{
+    content:"";
+    right:5px;position:absolute;
+    top:2px;
     height:0;
-    border: 1px solid red;
+    border: 1px solid rgba(0,0,0,.1);
     width: 5px;
     transform:rotate(40deg);
     -webkit-transform:rotate(40deg);
   }
+
+
 }

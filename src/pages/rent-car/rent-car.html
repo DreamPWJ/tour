@@ -15,7 +15,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="content-top-0">
+<ion-content class="content-top-0" (ionScroll)="scrollHandler($event)">
   <ion-slides class="slides">
     <ion-slide *ngFor="let image of [1]">
       <img data-src="./assets/imgs/rent-car/rentcar{{image}}.png">
@@ -24,8 +24,8 @@
   <div class="padding-lr-10">
     <ion-card no-margin no-padding class="rentcard-style">
       <ion-row class="font-size-16" text-center>
-        <ion-col col-6 class="kuaijie-check">快捷租车</ion-col>
-        <ion-col col-6 class="kuacheng-uncheck">跨城特惠
+        <ion-col col-6 class="kuaijie">快捷租车</ion-col>
+        <ion-col col-6 class="kuaijie kuacheng-uncheck" [navPush]="'CrossCityPage'">跨城特惠
           <!--<span class="tehui-wuzhe">特惠5折起</span>-->
         </ion-col>
       </ion-row>
@@ -59,9 +59,12 @@
           <p class="grey">02月03日</p>
           <p class="color-8a font-size-12">周六 11:30</p>
         </ion-col>
-        <ion-col col-5 class="circle-day" text-center no-padding>
-          <p class="circle-dayday" no-margin>2</p>
-          <p no-margin class="font-size-12">天</p>
+        <ion-col col-5 class="" text-center no-padding>
+          <ion-icon class="icon-zuchezucheshijianquan circle-bk">
+            <p class="circle-dayday" no-margin>2</p>
+            <p no-margin class="font-size-12 circle-daytian">天</p>
+          </ion-icon>
+
         </ion-col>
         <ion-col col-3>
           <p class="grey">02月03日</p>
@@ -151,22 +154,20 @@
       <ion-col>
         <ion-row align-items-center>
           <ion-col text-center col-5>
-            <p class="grey">成都</p>
-            <p class="color-8a">2017.10.13</p>
+            <p class="grey font-size-15">成都</p>
+            <p class="color-8a" no-margin>2017.10.13</p>
           </ion-col>
           <ion-col>
-            <div class="slopingside"></div>
             <div class="linear"></div>
-
           </ion-col>
           <ion-col text-center col-5>
-            <p class="grey">兰州</p>
-            <p class="color-8a">2017.10.16</p>
+            <p class="grey font-size-15">兰州</p>
+            <p class="color-8a" no-margin>2017.10.16</p>
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row align-items-center>
           <ion-col class="address grey">大众帕萨特/三厢/1.8T</ion-col>
-          <ion-col><span style="color: #fabe00;font-size: 18px;">￥100</span>￥2427</ion-col>
+          <ion-col><span style="color: #fabe00;font-size: 18px;">￥100 </span><del style="color: #c8c8ce;">￥2427</del></ion-col>
         </ion-row>
       </ion-col>
     </ion-row>
@@ -175,7 +176,7 @@
   <div>
     <ion-card *ngFor="let item of jingpinRoad">
       <img [src]="item.img">
-      <ion-card-content no-padding>
+      <ion-card-content style="padding: 0 5px!important;">
         <ion-card-title style="font-size: 1.6rem;" class="grey">
           <strong>{{item.name}}</strong>{{item.content}}
         </ion-card-title>
@@ -187,5 +188,9 @@
     </ion-card>
   </div>
 
-
+  <ion-fab *ngIf="isTabTop" right bottom>
+    <button (click)="scrollToTop()" ion-fab color="light" mini>
+      <ion-icon class="icon-top"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>

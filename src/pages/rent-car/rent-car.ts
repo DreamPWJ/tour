@@ -29,7 +29,6 @@ export class RentCarPage {
   }
 
   ionViewDidEnter(){
-
     this.slidesLength = this.slides.length()
   }
 
@@ -38,8 +37,12 @@ export class RentCarPage {
   }
 
   scrollHandler(event) {
-    this.content.scrollTop >= 900 ? this.isTabTop = true : this.isTabTop = false;
+    this.content.scrollTop >= 150 ? this.isTabTop = true : this.isTabTop = false;
 
+  }
+
+  scrollToTop() {
+    this.content.scrollToTop();
   }
 
 }
