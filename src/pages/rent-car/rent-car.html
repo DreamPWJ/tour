@@ -23,16 +23,22 @@
   </ion-slides>
   <div class="padding-lr-10">
     <ion-card no-margin no-padding class="rentcard-style">
-      <ion-row class="font-size-16" text-center>
+      <span class="tehui-wuzhe">特惠5折起</span>
+      <ion-row class="font-size-16 tabs-row" text-center  >
         <ion-col col-6 class="kuaijie">快捷租车</ion-col>
-        <ion-col col-6 class="kuaijie kuacheng-uncheck" [navPush]="'CrossCityPage'">跨城特惠
-          <!--<span class="tehui-wuzhe">特惠5折起</span>-->
+        <ion-col  col-6 class="kuaijie kuacheng-uncheck" [navPush]="'CrossCityPage'">跨城特惠
+
         </ion-col>
       </ion-row>
       <ion-row align-items-center>
         <ion-col col-1 class="point-style">•</ion-col>
-        <ion-col class="grey songche-style" col-3>
-          送车上门<ion-icon class="icon-triangledownfill"></ion-icon>
+        <!--<ion-col class="grey songche-style" col-3>-->
+        <ion-col class="grey" col-3>
+          <ion-select   interface="popover" col-12>
+            <ion-option value="成都" selected="true"  >成都出发</ion-option>
+            <ion-option value="武汉">武汉出发</ion-option>
+          </ion-select>
+          <!--送车上门<ion-icon class="icon-triangledownfill"></ion-icon>-->
         </ion-col>
         <ion-col class="grey songche-style" col-2>
           成都<ion-icon class="icon-triangledownfill"></ion-icon>
@@ -133,11 +139,11 @@
     <ion-row align-items-center>
       <ion-col text-center class="chexingtuijian" style="margin-right: 10px;">
         <img src="assets/imgs/journey/car.png"/>
-        <p>雪佛兰科鲁兹<span>￥78</span> /日均</p>
+        <p>雪佛兰科鲁兹<span><small>￥</small>78</span> /日均</p>
       </ion-col>
       <ion-col text-center class="chexingtuijian">
         <img src="assets/imgs/journey/car.png"/>
-        <p>雪佛兰科鲁兹<span>￥78</span> /日均</p>
+        <p>雪佛兰科鲁兹<span><small>￥</small>78</span> /日均</p>
       </ion-col>
     </ion-row>
   </div>
@@ -167,7 +173,7 @@
         </ion-row>
         <ion-row align-items-center>
           <ion-col class="address grey">大众帕萨特/三厢/1.8T</ion-col>
-          <ion-col><span style="color: #fabe00;font-size: 18px;">￥100 </span><del style="color: #c8c8ce;">￥2427</del></ion-col>
+          <ion-col><span style="color: #fabe00;font-size: 18px;"><small>￥</small>100 </span><del style="color: #c8c8ce;"><small>￥</small>2427</del></ion-col>
         </ion-row>
       </ion-col>
     </ion-row>
@@ -182,7 +188,7 @@
         </ion-card-title>
         <ion-row class="grey">
           <ion-col>已售 {{item.num}}</ion-col>
-          <ion-col text-right><span style="color: #ff4a26;font-size: 18px;">{{item.price}}</span> 起</ion-col>
+          <ion-col text-right><span style="color: #ff4a26;font-size: 18px;"><small>￥</small>{{item.price}}</span> 起</ion-col>
         </ion-row>
       </ion-card-content>
     </ion-card>
