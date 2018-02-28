@@ -1,0 +1,54 @@
+page-store-choose {
+
+  .color-8a{
+    color: #8a8a8a;
+  }
+  .font-size-16{
+    font-size: 16px;
+  }
+  .font-size-12{
+    font-size: 12px;
+  }
+  .font-size-14{
+    font-size: 14px;
+  }
+
+  .store-div{
+    width: 30%;
+    position: relative;
+    .huangxian{
+      border:2px solid #FFDE37;
+      background-color: #FFDE37;
+    }
+  }
+
+  .store-row{
+    padding: 12px 0;
+    border-bottom: 1px #d6d6db solid;
+    color: #666666;
+    background-color: #efeff4;
+  }
+
+  .store-select{
+    font-weight:bold;
+    color: #111111;
+    background-color: #ffffff;
+  }
+
+  .store-div2{
+    padding-left: 30%;
+  }
+
+  /*右侧地点*/
+  .place-style{
+    color: #8a8a8a;
+    background-color: #efeff4;
+    padding:6px;
+  }
+
+  .name-style{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

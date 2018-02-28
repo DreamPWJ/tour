@@ -27,38 +27,82 @@
       <ion-row class="font-size-16 tabs-row" text-center  >
         <ion-col col-6 class="kuaijie">快捷租车</ion-col>
         <ion-col  col-6 class="kuaijie kuacheng-uncheck" [navPush]="'CrossCityPage'">跨城特惠
-
         </ion-col>
       </ion-row>
       <ion-row align-items-center>
         <ion-col col-1 class="point-style">•</ion-col>
-        <!--<ion-col class="grey songche-style" col-3>-->
-        <ion-col class="grey" col-3>
-          <ion-select   interface="popover" col-12>
-            <ion-option value="成都" selected="true"  >成都出发</ion-option>
-            <ion-option value="武汉">武汉出发</ion-option>
-          </ion-select>
-          <!--送车上门<ion-icon class="icon-triangledownfill"></ion-icon>-->
+        <ion-col class="grey songche-style" col-3 (click)="songcheSelect()" tappable>
+          {{songche}}<ion-icon class="icon-triangledownfill" *ngIf="!songcheFlg"></ion-icon>
+          <ion-icon class="icon-triangleupfill" *ngIf="songcheFlg"></ion-icon>
         </ion-col>
-        <ion-col class="grey songche-style" col-2>
-          成都<ion-icon class="icon-triangledownfill"></ion-icon>
+        <ion-col class="grey" col-3>
+          <ion-select interface="popover" col-11>
+            <ion-option value="成都" selected="true">成都</ion-option>
+            <ion-option value="武汉">武汉</ion-option>
+          </ion-select>
         </ion-col>
         <ion-col class="grey address">
           成华区电子信息产业大厦
         </ion-col>
       </ion-row>
+      <ion-row align-items-center class="padding-lr-10" *ngIf="songcheFlg">
+        <ion-col col-6 class="border-songche" (click)="songcheChoose(1)" tappable>
+          <ion-row align-items-center class="color-8a">
+            <ion-col>
+              <p>门店取车</p>
+              <p class="font-size-12">100+门店</p>
+            </ion-col>
+            <ion-col text-right ngClass="{{songcheChoo==1?'check':'uncheck'}}"><ion-icon class="icon-roundcheckfill"></ion-icon></ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-6 class="border-left-no" (click)="songcheChoose(2)" tappable>
+          <ion-row align-items-center class="color-8a">
+            <ion-col col-auto>
+              <p>送车上门</p>
+              <p class="font-size-12">准时送车上门</p>
+            </ion-col>
+            <ion-col text-right ngClass="{{songcheChoo==2?'check':'uncheck'}}"><ion-icon class="icon-roundcheckfill"></ion-icon></ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
       <ion-row align-items-center>
         <ion-col col-1 class="point-style2">•</ion-col>
-        <ion-col class="grey songche-style" col-3>
-          门店还车<ion-icon class="icon-triangledownfill"></ion-icon>
+        <ion-col class="grey songche-style" col-3 (click)="huancheSelect()" tappable>
+          {{huanche}}<ion-icon class="icon-triangledownfill" *ngIf="!huancheFlg"></ion-icon>
+          <ion-icon class="icon-triangleupfill" *ngIf="huancheFlg"></ion-icon>
         </ion-col>
-        <ion-col class="grey songche-style" col-2>
-          成都<ion-icon class="icon-triangledownfill"></ion-icon>
+        <ion-col class="grey" col-3>
+          <ion-select interface="popover" col-11>
+            <ion-option value="成都" selected="true">成都</ion-option>
+            <ion-option value="武汉">武汉</ion-option>
+          </ion-select>
         </ion-col>
         <ion-col class="grey address">
           成华区龙湖三千集
         </ion-col>
       </ion-row>
+      <ion-row align-items-center class="padding-lr-10" *ngIf="huancheFlg" padding-bottom>
+        <ion-col col-6 class="border-songche" (click)="huancheChoose(1)" tappable>
+          <ion-row align-items-center class="color-8a">
+            <ion-col>
+              <p>门店还车</p>
+              <p class="font-size-12">100+门店</p>
+            </ion-col>
+            <ion-col text-right ngClass="{{huancheChoo==1?'check':'uncheck'}}"><ion-icon class="icon-roundcheckfill"></ion-icon></ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col col-6 class="border-left-no" (click)="huancheChoose(2)" tappable>
+          <ion-row align-items-center class="color-8a">
+            <ion-col col-auto>
+              <p>送车上门</p>
+              <p class="font-size-12">准时送车上门</p>
+            </ion-col>
+            <ion-col text-right ngClass="{{huancheChoo==2?'check':'uncheck'}}"><ion-icon class="icon-roundcheckfill"></ion-icon></ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
       <ion-row align-items-center style="padding-bottom: 2rem">
         <ion-col col-1 style="color: #d7d7d7;padding-left: 10px;"><ion-icon class="icon-countdown"></ion-icon></ion-col>
         <ion-col col-3>
@@ -78,7 +122,7 @@
         </ion-col>
       </ion-row>
       <div class="padding-lr-10">
-        <button ion-button block class="light">去选车</button>
+        <button ion-button block class="light" [navPush]="'StoreChoosePage'">去选车</button>
       </div>
       <div class="tishi">
         温馨提示：请提前4个工作小时预约上门取送车 <ion-icon class="icon-questionfill"></ion-icon>
