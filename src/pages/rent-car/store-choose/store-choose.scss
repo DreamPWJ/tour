@@ -15,8 +15,10 @@ page-store-choose {
 
   .store-div{
     width: 30%;
-    position: relative;
+    position: fixed;
+    top: 87px;
     .huangxian{
+      position: relative;
       border:2px solid #FFDE37;
       background-color: #FFDE37;
     }

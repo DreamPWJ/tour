@@ -1,5 +1,5 @@
 page-sendcar-map {
-  .searchbar{
+ /* .searchbar{
     padding-top: 30px;
     background-color: transparent;
   }
@@ -10,7 +10,7 @@ page-sendcar-map {
 
   .searchbar input {
     border: 1px solid rgba(0, 0, 0, 0.3);
-  }
+  }*/
 
   .map-container {
     position: fixed;
@@ -34,15 +34,15 @@ page-sendcar-map {
     z-index: 2;
     bottom: 0;
     background-color: #fff;
-    padding:0 15px;
+/*    padding:0 15px;*/
     .place{
+      font-size: 15px;
       color: #555555;
       .place-icon{
         color: #41D941;
-        margin-left: -10px;
-        z-index: 99;
       }
     }
+
 
   }
 }

@@ -16,9 +16,9 @@
       <ion-col class="first-row" [navPush]="'SendcarMapPage'">还车城市 <ion-icon class="icon-unfold font-size-1" ></ion-icon></ion-col>
       <ion-col class="first-row">用车时间 <ion-icon class="icon-unfold font-size-1" ></ion-icon></ion-col>
     </ion-row>
-    <ion-row align-items-center class="padding-lr-10 row-style color-8a">
+    <ion-row align-items-center class="padding-lr-10 row-style color-8a" (click)="wrapStyle()">
       <ion-col col-11 class=" font-size-12" ngClass="{{wrapFlg?'nowrap-style':''}}"><ion-icon class="icon-infofill"></ion-icon> 以下价格均为一口价，包含租车费、手续费、基本保险费、不计免费部分。</ion-col>
-      <ion-col text-right (click)="wrapStyle()">
+      <ion-col text-right >
         <ion-icon class="icon-unfold font-size-1" *ngIf="wrapFlg"></ion-icon>
         <ion-icon class="icon-fold font-size-1" *ngIf="!wrapFlg"></ion-icon>
       </ion-col>

@@ -9,14 +9,14 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-row align-items-center class="padding-lr-10" nowrap>
+  <ion-row  align-items-center class="padding-lr-10" nowrap>
     <span col-2 class="grey" align-self-center> 成都
       <ion-icon class="icon-unfold font-size-1" ></ion-icon></span>
     <ion-searchbar placeholder="搜索目的地" (ionInput)="filterItems($event)" style="background-color: #ffffff!important;"></ion-searchbar>
   </ion-row>
 
-  <div text-center class="store-div" *ngFor="let item of placeList">
-    <ion-row class="store-row" align-items-center ngClass="{{item.index==selectFlg?'store-select':''}}" (click)="placeSelect(item.index)">
+  <div text-center class="store-div" >
+    <ion-row *ngFor="let item of placeList" class="store-row" align-items-center ngClass="{{item.index==selectFlg?'store-select':''}}" (click)="placeSelect(item.index)">
       <ion-col col-1 no-padding text-left><span class="huangxian" *ngIf="item.index==selectFlg"></span></ion-col>
       <ion-col><p no-margin>{{item.place}}</p></ion-col>
     </ion-row>
