@@ -1,40 +1,75 @@
-<ion-header >
-  <ion-toolbar color="white">
+<ion-header>
+  <ion-navbar color="white">
     <ion-title>选择门店</ion-title>
-    <ion-buttons end>
-      <button ion-button (click)="dismiss()">
-        <span ion-text color="dark">取消</span>
-      </button>
-    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar color="white" style="border-bottom: 1px #d6d6db solid;">
+    <ion-row  align-items-center nowrap>
+    <span col-2 class="grey" align-self-center> 成都
+      <ion-icon class="icon-unfold head-icon" ></ion-icon></span>
+      <ion-searchbar placeholder="搜索目的地" (ionInput)="filterItems($event)" style="background-color: #ffffff!important;"></ion-searchbar>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-row  align-items-center class="padding-lr-10" nowrap>
-    <span col-2 class="grey" align-self-center> 成都
-      <ion-icon class="icon-unfold font-size-1" ></ion-icon></span>
-    <ion-searchbar placeholder="搜索目的地" (ionInput)="filterItems($event)" style="background-color: #ffffff!important;"></ion-searchbar>
-  </ion-row>
-
-  <div text-center class="store-div" >
+  <div text-center class="store-div">
     <ion-row *ngFor="let item of placeList" class="store-row" align-items-center ngClass="{{item.index==selectFlg?'store-select':''}}" (click)="placeSelect(item.index)">
       <ion-col col-1 no-padding text-left><span class="huangxian" *ngIf="item.index==selectFlg"></span></ion-col>
       <ion-col><p no-margin>{{item.place}}</p></ion-col>
     </ion-row>
   </div>
   <div class="store-div2">
-    <div>
-      <ion-list>
+    <ion-scroll scrollY="true" style="height: 80vh">
+      <ion-list *ngIf="selectFlg==1" no-margin>
         <p class="place-style" no-margin>附近网点</p>
-        <ion-item no-padding>
+        <ion-item no-padding no-margin *ngFor="let fujin of placeList[0].places">
           <ion-row align-items-center>
-            <ion-col class="font-size-16 grey name-style" col-9>成华区SM广场送车点</ion-col>
-            <ion-col class="font-size-14 color-8a" text-right>1.28km</ion-col>
+            <ion-col class="font-size-16 grey name-style" col-9>{{fujin.name}}</ion-col>
+            <ion-col class="font-size-13 color-8a" text-right>{{fujin.distance}}</ion-col>
           </ion-row>
           <ion-row>
-            <ion-col><p class="font-size-12 color-8a" text-wrap>成华区二环路东二段29号成华区二环路东二段29号</p></ion-col>
+            <ion-col class="padding-lr-5"><p class="font-size-12 color-8a" text-wrap>{{fujin.address}}</p></ion-col>
           </ion-row>
         </ion-item>
       </ion-list>
-    </div>
+      <ion-list no-margin *ngIf="selectFlg==2"><!--机场火车站-->
+        <p class="place-style" no-margin>机场/火车站</p>
+        <ion-item no-padding no-margin *ngFor="let jichang of placeList[1].places">
+          <ion-row align-items-center>
+            <ion-col class="font-size-16 grey name-style" col-9>{{jichang.name}}
+              <ion-icon class="icon-jiesongjitubiaobaisebufen places-icon" text-center *ngIf="jichang.distance==1"></ion-icon>
+              <ion-icon class="icon-jiesongzhantubiaogaotiedongche places-icon" text-center></ion-icon>
+            </ion-col>
+            <ion-col class="font-size-16 grey" text-right><ion-icon class="icon-more_light"></ion-icon></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="padding-lr-5"><p class="font-size-12 color-8a" text-wrap>{{jichang.address}}</p></ion-col>
+          </ion-row>
+        </ion-item>
+      </ion-list>
+      <ion-list no-margin *ngIf="selectFlg==3"><!--武侯区-->
+        <p class="place-style" no-margin>武侯区</p>
+        <ion-item no-padding no-margin *ngFor="let wuhou of placeList[2].places">
+          <ion-row align-items-center>
+            <ion-col class="font-size-16 grey name-style" col-9>{{wuhou.name}}</ion-col>
+            <ion-col class="font-size-16 grey" text-right><ion-icon class="icon-more_light"></ion-icon></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="padding-lr-5"><p class="font-size-12 color-8a" text-wrap>{{wuhou.address}}</p></ion-col>
+          </ion-row>
+        </ion-item>
+      </ion-list>
+      <ion-list no-margin *ngIf="selectFlg==4"><!--金牛区-->
+        <p class="place-style" no-margin>金牛区</p>
+        <ion-item no-padding no-margin *ngFor="let jinniu of placeList[3].places">
+          <ion-row align-items-center>
+            <ion-col class="font-size-16 grey name-style" col-9>{{jinniu.name}}</ion-col>
+            <ion-col class="font-size-16 grey" text-right><ion-icon class="icon-more_light"></ion-icon></ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="padding-lr-5"><p class="font-size-12 color-8a" text-wrap>{{jinniu.address}}</p></ion-col>
+          </ion-row>
+        </ion-item>
+      </ion-list>
+    </ion-scroll>
   </div>
 </ion-content>

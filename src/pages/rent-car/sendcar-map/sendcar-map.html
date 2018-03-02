@@ -1,11 +1,11 @@
 <ion-header >
-  <ion-toolbar color="white" >
+  <ion-toolbar color="white">
   <ion-buttons start>
-      <button  ion-button icon-only  navPop>
+      <button ion-button icon-only  navPop>
         <ion-icon class="ion-ios-arrow-back"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-searchbar   placeholder="送车上门地点"></ion-searchbar>
+    <ion-searchbar placeholder="送车上门地点"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 <ion-content>
@@ -14,8 +14,8 @@
 
   <ion-card class="fixed-card-bottom">
     <ion-list  *ngFor="let item of placeList">
-      <ion-item >
-        <h2 class="place">    <ion-icon icon-start class="icon-location_light place-icon" *ngIf="item.index==1"></ion-icon>{{item.place}}</h2>
+      <ion-item no-padding>
+        <h2 class="place"><ion-icon icon-start class="icon-location_light place-icon" *ngIf="item.index==1"></ion-icon>{{item.place}}</h2>
         <p class="color-8a font-size-12" text-wrap>{{item.address}}</p>
       </ion-item>
     </ion-list>

@@ -1,6 +1,5 @@
 page-sendcar-map {
  /* .searchbar{
-    padding-top: 30px;
     background-color: transparent;
   }
   .searchbar-ios {
@@ -34,7 +33,7 @@ page-sendcar-map {
     z-index: 2;
     bottom: 0;
     background-color: #fff;
-/*    padding:0 15px;*/
+    padding:0 15px;
     .place{
       font-size: 15px;
       color: #555555;
@@ -42,7 +41,5 @@ page-sendcar-map {
         color: #41D941;
       }
     }
-
-
   }
 }

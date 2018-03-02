@@ -9,23 +9,24 @@ page-store-choose {
   .font-size-12{
     font-size: 12px;
   }
-  .font-size-14{
-    font-size: 14px;
+  .font-size-13{
+    font-size: 13px;
+  }
+  .head-icon{
+    font-size: 1rem!important;
   }
 
   .store-div{
     width: 30%;
-    position: fixed;
-    top: 87px;
+    position: absolute;
     .huangxian{
-      position: relative;
       border:2px solid #FFDE37;
       background-color: #FFDE37;
     }
   }
 
   .store-row{
-    padding: 12px 0;
+    padding: 7px 0;
     border-bottom: 1px #d6d6db solid;
     color: #666666;
     background-color: #efeff4;
@@ -43,14 +44,29 @@ page-store-choose {
 
   /*右侧地点*/
   .place-style{
+    font-size: 12px;
     color: #8a8a8a;
     background-color: #efeff4;
-    padding:6px;
+    padding:5px;
   }
 
   .name-style{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .padding-lr-5{
+    padding: 0 5px!important;
+  }
+
+  .places-icon{
+    font-size: 15px;
+    color: #ffffff;
+    width: 18px;height: 18px;line-height:18px;
+    border-radius: 50%;
+    background: -webkit-linear-gradient(top, #7D98F1, #A581FD)!important; /* Safari 5.1 - 6.0 */
+    background: linear-gradient(to bottom, #7D98F1, #A581FD)!important; /* 标准的语法（必须放在最后） */
+    border:1px solid rgba(255,255,255,.65);
   }
 }

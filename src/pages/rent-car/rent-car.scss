@@ -121,23 +121,23 @@ page-rent-car {
 
   /*圆圈里写天数*/
   .circle-bk {
-    position: relative;
-    text-align: center;
+    //position: relative;
     color: #E2BD8C;
-    font-size: 43px;
+    font-size: 37px;
   }
   .circle-dayday {
+    position: absolute;
+    top: 2px;
+    width: 100%;
     color: #e2bd8c;
     font-weight: bold;
     font-size: 18px;
-    position: absolute;
-    top: 3px;
-    width: 100%;
   }
   .circle-daytian {
     position: absolute;
-    bottom: 7px;
+    bottom: 8px;
     width: 100%;
+    font-size: 12px;
   }
 
   .tishi {
@@ -204,18 +204,18 @@ page-rent-car {
   }
 
   .linear {
-    height: 0;
     line-height: 0;
     width: 100%;
-    border: 1px solid rgba(0, 0, 0, .1);
+    height: 2px;
+    background-image: linear-gradient(0deg, transparent 50%, #c7c7c7 50%);
   }
   .linear::before {
     content: "";
     right: 5px;
     position: absolute;
-    top: 2px;
-    height: 0;
-    border: 1px solid rgba(0, 0, 0, .1);
+    top: 3px;
+    height: 2px;
+    background-image: linear-gradient(0deg, transparent 50%, #c7c7c7 50%);
     width: 5px;
     transform: rotate(40deg);
     -webkit-transform: rotate(40deg);

@@ -17,7 +17,7 @@
       <ion-col class="first-row">用车时间 <ion-icon class="icon-unfold font-size-1" ></ion-icon></ion-col>
     </ion-row>
     <ion-row align-items-center class="padding-lr-10 row-style color-8a" (click)="wrapStyle()">
-      <ion-col col-11 class=" font-size-12" ngClass="{{wrapFlg?'nowrap-style':''}}"><ion-icon class="icon-infofill"></ion-icon> 以下价格均为一口价，包含租车费、手续费、基本保险费、不计免费部分。</ion-col>
+      <ion-col col-11 class=" font-size-12" ngClass="{{wrapFlg?'nowrap-style':''}}"><ion-icon class="icon-infofill"></ion-icon> 以下价格均为一口价，包含租车费、手续费、基本保险费、不计免赔、夜间服务费。</ion-col>
       <ion-col text-right >
         <ion-icon class="icon-unfold font-size-1" *ngIf="wrapFlg"></ion-icon>
         <ion-icon class="icon-fold font-size-1" *ngIf="!wrapFlg"></ion-icon>
@@ -29,20 +29,20 @@
     <ion-row align-items-center text-center>
       <ion-col>
         <p class="grey font-size-16 margin-p1" no-margin>{{item.gocity}}</p>
-        <p class="color-8a margin-p2">{{item.goday}}</p>
+        <p class="color-8a margin-p2 font-size-13">{{item.goday}}</p>
       </ion-col>
       <ion-col>
         <p class="margin-p1" no-margin><small style="color: #ecc141;">￥</small><span class="price-style">{{item.price}}</span></p>
-        <p class="color-8a margin-p2">自驾游<span style="color: #ecc141;">{{item.time}}</span>天</p>
+        <p class="color-8a margin-p2 font-size-13">自驾游<span style="color: #ecc141;">{{item.time}}</span>天</p>
       </ion-col>
       <ion-col>
         <p class="grey font-size-16 margin-p1" no-margin>{{item.endcity}}</p>
-        <p class="color-8a margin-p2">{{item.endday}}</p>
+        <p class="color-8a margin-p2 font-size-13">{{item.endday}}</p>
       </ion-col>
     </ion-row>
     <p class="border-span"></p>
     <ion-row align-items-center>
-      <ion-col col-9><img [src]="item.img" width="120" height="40"/></ion-col>
+      <ion-col col-9><img [src]="item.img" width="120" height="38"/></ion-col>
       <ion-col class="color-8a">{{item.cartype}}</ion-col>
     </ion-row>
     <p class="partition margin-p1"></p>
