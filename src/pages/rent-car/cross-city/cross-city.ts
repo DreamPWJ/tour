@@ -15,6 +15,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CrossCityPage {
   wrapFlg:boolean = true;
+  dateTime = '03-02';
+
   crossList = [
     {index:1,gocity:'成都',endcity:'三亚',goday:'02.23 周五',endday:'02.26 周一',price:'99',time:"4",cartype:'大众朗逸',img:'assets/imgs/rent-car/car.png'},
     {index:1,gocity:'成都',endcity:'三亚',goday:'02.23 周五',endday:'02.26 周一',price:'99',time:"4",cartype:'大众朗逸',img:'assets/imgs/rent-car/car.png'},
