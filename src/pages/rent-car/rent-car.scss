@@ -120,7 +120,7 @@ page-rent-car {
   }
 
   /*圆圈里写天数*/
-  .circle-bk {
+  /*.circle-bk {
     //position: relative;
     color: #E2BD8C;
     font-size: 37px;
@@ -138,6 +138,46 @@ page-rent-car {
     bottom: 8px;
     width: 100%;
     font-size: 12px;
+  }*/
+
+  .circle-bk{
+    background-color: #ffffff;
+    width:45px;height: 45px;
+    border-radius: 50%;
+    border:1px solid #e2bd8c;
+    padding:1px 0;
+    .circle-dayday {
+      color: #e2bd8c;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+  .circle-border1{
+    border-top:1px solid #e2bd8c;
+    position: relative;
+  }
+  .circle-border1::before{
+    position: absolute;
+    top:-3px;
+    left:-6px;
+    content: "";
+    width: 6px;height: 6px;
+    background-color: #e2bd8c;
+    border-radius: 50%;
+  }
+  .circle-border2{
+    border-top:1px solid #e2bd8c;
+  }
+  .circle-border2::before {
+    position: absolute;
+    bottom:1px;
+    right: 0;
+    content: "";
+    height: 2px;
+    background-image: linear-gradient(0deg, transparent 50%, #e2bd8c 50%);
+    width: 6px;
+    transform: rotate(40deg);
+    -webkit-transform: rotate(40deg);
   }
 
   .tishi {
