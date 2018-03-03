@@ -7,7 +7,7 @@
   "scripts": {
     "ionic:serve": "ionic-app-scripts serve ",
     "ionic cordova build android prod": "ionic cordova build android --prod",
-    "ionic cordova run android -l -c": "ionic cordova run android  -l -c --address 192.168.31.178",
+    "ionic cordova run android -l -c": "ionic cordova run android  --debug  -lc  --address 192.168.31.178 --port 8200",
     "ionic cordova build android release": "ionic cordova build android --prod --release",
     "ionic cordova platform rm android ": "ionic cordova platform rm android",
     "ionic cordova platform add android ": "ionic cordova platform add android",
@@ -37,11 +37,17 @@
     "moment": "^2.20.1",
     "rxjs": "5.5.2",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.18"
+    "zone.js": "0.8.18",
+    "cordova-android": "~6.1.2"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.6",
     "typescript": "2.4.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
+  }
 }

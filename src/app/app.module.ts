@@ -45,8 +45,11 @@ export const PROVIDERS = [
       mode: 'ios', //android 是 md
       tabsHideOnSubPages: true,//隐藏全部子页面tabs
       backButtonText: '',
-      spinner: 'crescent'
-    }),
+      spinner: 'crescent',
+      monthShortNames: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+    }
+
+    ),
     MODULES
   ],
   bootstrap: [IonicApp],

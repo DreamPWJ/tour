@@ -16,7 +16,7 @@
       <ion-col class="first-row" [navPush]="'SendcarMapPage'">还车城市 <ion-icon class="icon-unfold font-size-1" ></ion-icon></ion-col>
       <ion-col class="first-row">
         用车时间 <ion-icon class="icon-unfold font-size-1" ></ion-icon>
-        <ion-datetime displayFormat="DDDD MMM D" [(ngModel)]="dateTime" style="height: 0;" no-padding></ion-datetime>
+        <ion-datetime displayFormat="DDDD MMM D" cancelText="取消" doneText="确定" [(ngModel)]="dateTime" style="height: 0;" no-padding></ion-datetime>
       </ion-col>
     </ion-row>
     <ion-row align-items-center class="padding-lr-10 row-style color-8a" (click)="wrapStyle()">
