@@ -1,7 +1,10 @@
 import {Injectable} from '@angular/core';
-import {AlertController, LoadingController, Toast, ToastController} from 'ionic-angular';
+import {AlertController, LoadingController, Platform, Toast, ToastController} from 'ionic-angular';
 import {App, NavController} from "ionic-angular/index";
 import 'rxjs/add/operator/toPromise';
+
+declare  let startApp;
+declare  let appAvailability;
 
 @Injectable()
 export class AppGlobal {
@@ -24,6 +27,7 @@ export class AppGlobal {
     countdown: 60,
     disable: true
   }
+
 }
 
 @Injectable()
@@ -31,7 +35,7 @@ export class AppService {
   public nav: NavController;
   public toasts: Toast;
   public loading:any;
-  constructor(private app: App, public loadingCtrl: LoadingController, private alertCtrl: AlertController, private toastCtrl: ToastController) {
+  constructor(private app: App, public loadingCtrl: LoadingController, private alertCtrl: AlertController, private toastCtrl: ToastController,private  platform:Platform) {
     this.nav = this.app.getActiveNav();
   }
 
@@ -163,5 +167,63 @@ export class AppService {
     setTimeout(() => {
       this.getVerifyCode(verifyCode);
     }, 1000);
+  }
+
+  /**
+   * 打开百度地图APP
+   */
+  openBaiDuMap() {
+    let scheme;
+    let sApp;
+    if (this.platform.is('ios')) {
+      scheme = 'baidu://';
+    } else if (this.platform.is('android')) {
+      scheme = 'com.baidu.BaiduMap';
+    }
+
+    appAvailability.check(
+      scheme,       // URI Scheme or Package Name
+      () =>{  // Success callback
+        if (this.platform.is('ios')) {
+
+          sApp = startApp.set("baidumap://");
+          sApp.start(()=> { /* success */
+
+          }, (error)=> { /* fail */
+
+          });
+        } else if (this.platform.is('android')) {
+
+          sApp = startApp.set({ /* params */
+            "action":"ACTION_VIEW",
+            "category":"CATEGORY_DEFAULT",
+            "type":"text/css",
+            "package":"com.baidu.BaiduMap",
+            "uri":"baidumap://map/direction?origin=我的位置&destination=成都大学&mode=driving&region=成都",
+            "flags":["FLAG_ACTIVITY_CLEAR_TOP","FLAG_ACTIVITY_CLEAR_TASK"],
+            // "component": ["com.android.GoBallistic","com.android.GoBallistic.Activity"],
+            "intentstart":"startActivity",
+          }, { /* extras */
+            "EXTRA_STREAM":"extraValue1",
+            "extraKey2":"extraValue2"
+          });
+          sApp.start(() => { /* success */
+
+          }, (error) => { /* fail */
+
+          });
+        }
+
+
+      },
+      () =>{  // Error callback
+        this.toast("百度地图未安装,请先安装APP")
+        if (this.platform.is('ios')) {
+          window.open("https://itunes.apple.com/cn/app/id452186370")
+        } else if (this.platform.is('android')) {
+          window.open("http://map.baidu.com/zt/client/index/")
+        }
+      }
+    );
   }
 }

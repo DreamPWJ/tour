@@ -85,6 +85,14 @@ export class JourneyMapPage {
     }
   }
 
+
+  /**
+   * 打开百度地图APP
+   */
+  openBaiDuMap() {
+    this.appService.openBaiDuMap();
+  }
+
   /**
    * 调起高德地图APP
    */

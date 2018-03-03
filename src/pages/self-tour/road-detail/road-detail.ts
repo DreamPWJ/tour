@@ -3,8 +3,7 @@ import {Content, IonicPage, ModalController, NavController, NavParams, Platform,
 import {CalendarModal, CalendarModalOptions, DayConfig} from "ion2-calendar";
 import {AppService} from "../../../providers/util/app.service";
 
-declare  let startApp;
-declare  let appAvailability;
+
 
 @IonicPage()
 @Component({
@@ -109,58 +108,7 @@ export class RoadDetailPage {
    * 打开百度地图APP
    */
   openBaiDuMap() {
-    let scheme;
-    let sApp;
-    if (this.platform.is('ios')) {
-      scheme = 'baidu://';
-    } else if (this.platform.is('android')) {
-      scheme = 'com.baidu.BaiduMap';
-    }
-
-    appAvailability.check(
-      scheme,       // URI Scheme or Package Name
-      () =>{  // Success callback
-        if (this.platform.is('ios')) {
-
-          sApp = startApp.set("baidumap://");
-          sApp.start(()=> { /* success */
-
-          }, (error)=> { /* fail */
-
-          });
-        } else if (this.platform.is('android')) {
-
-           sApp = startApp.set({ /* params */
-            "action":"ACTION_VIEW",
-            "category":"CATEGORY_DEFAULT",
-            "type":"text/css",
-            "package":"com.baidu.BaiduMap",
-            "uri":"baidumap://map/direction?origin=我的位置&destination=成都大学&mode=driving&region=成都",
-            "flags":["FLAG_ACTIVITY_CLEAR_TOP","FLAG_ACTIVITY_CLEAR_TASK"],
-            // "component": ["com.android.GoBallistic","com.android.GoBallistic.Activity"],
-            "intentstart":"startActivity",
-          }, { /* extras */
-            "EXTRA_STREAM":"extraValue1",
-            "extraKey2":"extraValue2"
-          });
-          sApp.start(() => { /* success */
-
-          }, (error) => { /* fail */
-
-          });
-        }
-
-
-      },
-      () =>{  // Error callback
-        this.appService.toast("百度地图未安装,请先安装APP")
-        if (this.platform.is('ios')) {
-          window.open("https://itunes.apple.com/cn/app/id452186370")
-        } else if (this.platform.is('android')) {
-          window.open("http://map.baidu.com/zt/client/index/")
-        }
-      }
-    );
+    this.appService.openBaiDuMap();
   }
 
   //回到顶部
