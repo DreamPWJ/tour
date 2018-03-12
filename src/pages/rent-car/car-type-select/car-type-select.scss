@@ -1,0 +1,54 @@
+page-car-type-select {
+  .shaixuan-btn{
+    font-size: 14px!important;
+  }
+  .shaixuan-icon{
+    font-size: 18px!important;
+  }
+
+  .font-size-12{
+    font-size: 12px;
+  }
+  .font-size-13{
+    font-size: 13px;
+  }
+
+  .head-border{
+    margin: 0!important;
+    height: 1px;
+    background-image: linear-gradient(0deg, transparent 50%, #e5e5e5 50%);
+  }
+
+  .nowrap-head{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  .price-style{
+    color: #f1c141;
+    font-size: 18px;
+  }
+
+  /*head 中间的border*/
+  .car-border:after {
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 2px;
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    background-color: #e5e5e5;
+  }
+
+  .tool-btn{
+    margin: 8px 10px;
+  }
+  .tool-btn button{
+    background-color: #f2f3f8;
+    color: #666666;
+  }
+}

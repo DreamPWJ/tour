@@ -1,0 +1,51 @@
+<ion-header >
+  <ion-toolbar color="white">
+    <ion-title>筛选</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="dark">取消</span>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="padding-lr-10">
+    <ion-row>
+      <ion-col><h5 class="grey">价格</h5></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngFor="let item of cartypeList" col-3>
+        <button no-margin col-12 ion-button color="light" class="font-size-14 button-style" (click)="cartypeSelect(item.id)" style="position: relative;">{{item.price}}</button>
+        <ion-icon class="icon-youxiajiaogouxuanda jingdian-select" text-right *ngIf="cartypeSel==item.id"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><h5 class="grey">变速箱</h5></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngFor="let item of cartypeList" col-3>
+        <button no-margin col-12 ion-button color="light" class="font-size-14 button-style" (click)="biansuSelect(item.id)" style="position: relative;">{{item.biansu}}</button>
+        <ion-icon class="icon-youxiajiaogouxuanda jingdian-select" text-right *ngIf="biansuSel==item.id"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><h5 class="grey">常见品牌</h5></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngFor="let item of pinpaiList" col-3>
+        <button no-margin col-12 ion-button color="light" class="font-size-14 button-style" (click)="pinpaiSelect(item.id)" style="position: relative;">{{item.name}}</button>
+        <ion-icon class="icon-youxiajiaogouxuanda jingdian-select" text-right *ngIf="pinpaiSel==item.id"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+  </div>
+  <div style="margin-top: 5rem;"></div>
+
+
+</ion-content>
+<ion-footer>
+  <ion-row class="footer-row">
+    <ion-col><button full ion-button style="color:#ffffff;background-color: #41c6ad; ">重置</button></ion-col>
+    <ion-col><button full ion-button style="color:#474747;background-color: #f0f0f0; ">确认</button></ion-col>
+  </ion-row>
+</ion-footer>

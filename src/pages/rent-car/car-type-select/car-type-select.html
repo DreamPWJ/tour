@@ -1,0 +1,94 @@
+<ion-header >
+  <ion-navbar color="white">
+    <ion-title>选择车型</ion-title>
+    <ion-buttons end>
+      <button class="shaixuan-btn grey" ion-button icon-only [navPush]="'CarTypeFilterPage'">
+        筛选 <ion-icon class="icon-filter shaixuan-icon"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar color="white">
+    <p class="head-border" no-padding></p>
+    <ion-row align-items-center class="grey">
+      <ion-col col-4>
+        <ion-row align-items-center>
+          <ion-col class="font-size-12" col-10>
+            <p no-margin>取 02.27 18:00</p>
+            <p no-margin class="nowrap-head">还 02.27 18:00</p>
+          </ion-col>
+          <ion-col col-2 text-left class="color-8a"><ion-icon class="icon-right shaixuan-btn"></ion-icon></ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col col-4 class="car-border">
+        <ion-row align-items-center>
+          <ion-col class="font-size-12" col-10>
+            <p no-margin>取车</p>
+            <p no-margin class="nowrap-head">双流机场T2航站楼</p>
+          </ion-col>
+          <ion-col col-2 text-left class="color-8a"><ion-icon class="icon-right shaixuan-btn"></ion-icon></ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col col-4 class="car-border">
+        <ion-row align-items-center>
+          <ion-col class="font-size-12" col-10>
+            <p no-margin>还车</p>
+            <p no-margin class="nowrap-head">成都首座万丽酒店</p>
+          </ion-col>
+          <ion-col col-2 class="color-8a"><ion-icon class="icon-right shaixuan-btn"></ion-icon></ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <p class="head-border" no-padding></p>
+
+    <ion-segment [(ngModel)]="cartypeSeg" mode="md" (ionChange)="segmentChanged($event)">
+      <ion-segment-button *ngFor="let item of cartypeArr" value="{{item}}">
+        {{item}}
+        <div class="bolder-sm"></div>
+      </ion-segment-button>
+    </ion-segment>
+    <ion-scroll scrollX="true" style="width: 100%;height: 40px;">
+      <ion-row style="width: 110vw;">
+        <div class="tool-btn">
+          <button ion-button small color="light">宝马</button>
+          <button ion-button small color="light">大众</button>
+          <button ion-button small color="light">奔驰</button>
+          <button ion-button small color="light">奔驰</button>
+          <button ion-button small color="light">奔驰</button>
+          <button ion-button small color="light">奔驰</button>
+        </div>
+      </ion-row>
+    </ion-scroll>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div [ngSwitch]="cartypeSeg" (swipe)="swipeEvnet($event)">
+    <p class="partition"></p>
+    <div *ngSwitchCase="'全部'">
+      <ion-card *ngFor="let item of cartypeList">
+        <ion-row align-items-center style="padding-top: 5px;">
+          <ion-col col-4>
+            <img [src]="item.img" width="40" height="50"/>
+          </ion-col>
+          <ion-col>
+            <h2>{{item.name}}</h2>
+            <p class="font-size-12 color-8a">{{item.description}}</p>
+            <ion-row>
+              <ion-col no-padding style="padding: 6px 0 1px 0"><p class="head-border"></p></ion-col>
+            </ion-row>
+            <ion-row align-items-center >
+              <ion-col text-left class="color-8a font-size-13"><small style="color: #f1c141;font-size: 14px;">￥</small><span class="price-style">{{item.price}}</span>/日均</ion-col>
+              <ion-col text-right class="color-8a font-size-13">车辆详情 <ion-icon class="icon-triangledownfill font-size-13"></ion-icon></ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+      </ion-card>
+    </div>
+    <div *ngSwitchCase="'经济型'">经济型</div>
+    <div *ngSwitchCase="'舒适型'">舒适型</div>
+    <div *ngSwitchCase="'商务型'">商务型</div>
+    <div *ngSwitchCase="'经济型'">经济型</div>
+    <div *ngSwitchCase="'豪华型'">豪华型</div>
+    <div *ngSwitchCase="'SUV'">SUV</div>
+  </div>
+</ion-content>
