@@ -16,32 +16,38 @@
     <ion-row>
       <ion-col *ngFor="let item of cartypeList" col-3>
         <button no-margin col-12 ion-button color="light" class="font-size-14 button-style" (click)="cartypeSelect(item.id)" style="position: relative;">{{item.price}}</button>
-        <ion-icon class="icon-youxiajiaogouxuanda jingdian-select" text-right *ngIf="cartypeSel==item.id"></ion-icon>
+        <ion-icon class="icon-youxiajiaogouxuanda cartype-select" text-right *ngIf="cartypeSel==item.id"></ion-icon>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col><h5 class="grey">变速箱</h5></ion-col>
     </ion-row>
     <ion-row>
-      <ion-col *ngFor="let item of cartypeList" col-3>
-        <button no-margin col-12 ion-button color="light" class="font-size-14 button-style" (click)="biansuSelect(item.id)" style="position: relative;">{{item.biansu}}</button>
-        <ion-icon class="icon-youxiajiaogouxuanda jingdian-select" text-right *ngIf="biansuSel==item.id"></ion-icon>
+      <ion-col *ngFor="let item of cartypeList" col-3 (click)="biansuSelect(item.id)">
+        <button no-margin col-12 ion-button color="light" class="font-size-14 button-style" style="position: relative;">{{item.biansu}}</button>
+        <ion-icon class="icon-youxiajiaogouxuanda cartype-select" text-right *ngIf="biansuSel==item.id"></ion-icon>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col><h5 class="grey">常见品牌</h5></ion-col>
     </ion-row>
     <ion-row>
-      <ion-col *ngFor="let item of pinpaiList" col-3>
-        <button no-margin col-12 ion-button color="light" class="font-size-14 button-style" (click)="pinpaiSelect(item.id)" style="position: relative;">{{item.name}}</button>
-        <ion-icon class="icon-youxiajiaogouxuanda jingdian-select" text-right *ngIf="pinpaiSel==item.id"></ion-icon>
+      <ion-col *ngFor="let item of pinpaiList" col-3 (click)="pinpaiSelect(item.id)">
+        <button no-margin col-12 ion-button color="light" class="font-size-14 button-style" style="position: relative;">{{item.name}}</button>
+        <ion-icon class="icon-youxiajiaogouxuanda cartype-select" text-right *ngIf="pinpaiSel==item.id"></ion-icon>
       </ion-col>
     </ion-row>
-
+    <ion-row>
+      <ion-col><h5 class="grey">热门车型</h5></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngFor="let item of chexingList" col-3 (click)="chexingSelect(item.id)">
+        <button no-margin col-12 ion-button color="light" class="font-size-14 button-style" style="position: relative;">{{item.name}}</button>
+        <ion-icon class="icon-youxiajiaogouxuanda cartype-select" text-right *ngIf="item.selectFlg"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <p style="padding-top: 5rem;"></p>
   </div>
-  <div style="margin-top: 5rem;"></div>
-
-
 </ion-content>
 <ion-footer>
   <ion-row class="footer-row">

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {IonicPage, NavController, NavParams, ViewController} from 'ionic-angular';
+import {AppService} from "../../../providers/util/app.service";
 
 /**
  * Generated class for the CarTypeFilterPage page.
@@ -16,8 +17,16 @@ import {IonicPage, NavController, NavParams, ViewController} from 'ionic-angular
 export class CarTypeFilterPage {
   cartypeSel: number = 1;
   biansuSel: number = 1;
-  pinpaiSel: number = 1;
-  constructor(public navCtrl: NavController, public navParams: NavParams,private viewCtrl: ViewController) {
+  pinpaiSel: number = 1;//常见品牌
+  constructor(public navCtrl: NavController,public appService: AppService,private viewCtrl: ViewController) {
+  }
+
+  ionViewDidLoad() {
+    this.appService.loadingShow();
+  }
+
+  ionViewWillEnter(){
+    this.appService.loadingHide();
   }
 
   //关闭
@@ -42,7 +51,17 @@ export class CarTypeFilterPage {
     {id:8,name:'本田'},
     {id:9,name:'标致'},
     {id:10,name:'丰田'},
-  ]
+  ];
+  chexingList = [
+    {id:1,name:'不限',selectFlg:true},
+    {id:2,name:'朗逸',selectFlg:false},
+    {id:3,name:'宝来',selectFlg:false},
+    {id:4,name:'速腾',selectFlg:true},
+    {id:5,name:'高尔夫',selectFlg:true},
+    {id:6,name:'迈腾',selectFlg:false},
+    {id:7,name:'捷达',selectFlg:false},
+    {id:8,name:'开迪',selectFlg:true},
+  ];
 
   cartypeSelect(id){
     this.cartypeSel = id;
@@ -52,5 +71,16 @@ export class CarTypeFilterPage {
   }
   pinpaiSelect(id){
     this.pinpaiSel = id;
+  }
+  chexingSelect(id){
+    for (let i = 0; i < this.chexingList.length; i++) {
+      if(this.chexingList[i].id == id){
+        if(this.chexingList[i].selectFlg){
+          this.chexingList[i].selectFlg = false;
+        }else{
+          this.chexingList[i].selectFlg = true;
+        }
+      }
+    }
   }
 }

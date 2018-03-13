@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {AppService} from "../../../providers/util/app.service";
 
 /**
  * Generated class for the CarTypeSelectPage page.
@@ -28,6 +29,16 @@ export class CarTypeSelectPage {
     {index:1,img:'assets/imgs/journey/car.png',name:'雪佛兰科鲁兹',description:'三厢•1.5自动•乘坐5人',price:'99'},
   ];
 
+  constructor(public navCtrl: NavController,public appService: AppService) {
+  }
+  ionViewDidLoad() {
+    this.appService.loadingShow();
+  }
+
+  ionViewWillEnter(){
+    this.appService.loadingHide();
+  }
+
   segmentChanged(event){}
   swipeEvnet(event) {
     //向左滑
@@ -43,12 +54,4 @@ export class CarTypeSelectPage {
       }
     }
   }
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CarTypeSelectPage');
-  }
-
 }
