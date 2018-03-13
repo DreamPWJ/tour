@@ -77,7 +77,7 @@
             </ion-row>
             <ion-row align-items-center >
               <ion-col text-left class="color-8a font-size-13"><small style="color: #f1c141;font-size: 14px;">￥</small><span class="price-style">{{item.price}}</span>/日均</ion-col>
-              <ion-col text-right class="color-8a font-size-13">车辆详情 <ion-icon class="icon-triangledownfill font-size-13"></ion-icon></ion-col>
+              <ion-col text-right class="color-8a font-size-13" [navPush]="'CarDetailPage'">车辆详情 <ion-icon class="icon-triangledownfill font-size-13"></ion-icon></ion-col>
             </ion-row>
           </ion-col>
         </ion-row>

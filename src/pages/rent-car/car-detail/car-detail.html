@@ -1,0 +1,126 @@
+<ion-header>
+  <ion-navbar color="transparent">
+    <!--     <ion-title>自驾游</ion-title>-->
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon class="icon-share_light"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content class="content-top-0">
+  <ion-slides class="slides">
+    <ion-slide *ngFor="let image of [1]">
+      <img src="./assets/imgs/rent-car/car2.png"/>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="padding-lr-10">
+    <p no-margin class="tixing"><ion-icon class="icon-infofill"></ion-icon> 系统所选车辆型号及颜色仅供参考，具体以实物为准</p>
+    <p class="div-border"></p>
+    <ion-row align-items-center style="padding: 5px 0;">
+      <ion-col col-3><span class="font-size-17 grey">别克英朗</span></ion-col>
+      <ion-col class="color-8a"><small style="color: #f1c141;">￥</small><span class="price">99</span>/日均</ion-col>
+    </ion-row>
+    <ion-row align-items-center class="font-size-12 color-11">
+      <ion-col col-auto><ion-icon class="icon-radioboxfill font-size-8 color-8a"></ion-icon> 三厢车</ion-col>
+      <ion-col col-auto><ion-icon class="icon-radioboxfill font-size-8 color-8a"></ion-icon> 1.6T</ion-col>
+      <ion-col col-auto><ion-icon class="icon-radioboxfill font-size-8 color-8a"></ion-icon> 自动挡</ion-col>
+      <ion-col col-auto><ion-icon class="icon-radioboxfill font-size-8 color-8a"></ion-icon> 准乘5人</ion-col>
+      <ion-col col-auto><ion-icon class="icon-radioboxfill font-size-8 color-8a"></ion-icon> 空间说明 <ion-icon class="icon-questionfill color-8a"></ion-icon></ion-col>
+    </ion-row>
+  </div>
+  <p class="partition"></p>
+  <div class="padding-lr-10">
+    <p class="font-size-16 grey">价格日历 <span class="font-size-14 color-8a">  (3月3日-3月5日)</span></p>
+    <p class="div-border"></p>
+    <ion-row align-self-center text-center class="color-8a">
+      <ion-col>一</ion-col>
+      <ion-col>二</ion-col>
+      <ion-col>三</ion-col>
+      <ion-col>四</ion-col>
+      <ion-col>五</ion-col>
+      <ion-col>六</ion-col>
+      <ion-col>日</ion-col>
+    </ion-row>
+    <p class="div-border"></p>
+    <ion-row align-self-center text-center class="grey">
+      <ion-col></ion-col>
+      <ion-col></ion-col>
+      <ion-col></ion-col>
+      <ion-col></ion-col>
+      <ion-col></ion-col>
+      <ion-col class="cla-sel"><p no-margin class="font-size-16">3</p><p no-margin><span class="font-size-12">￥109</span></p></ion-col>
+      <ion-col class="cla-sel"><p no-margin class="font-size-16">4</p><p no-margin><span class="font-size-12">￥99</span></p></ion-col>
+    </ion-row>
+    <ion-row align-self-center text-center class="grey">
+      <ion-col><p no-margin class="font-size-16">5</p><p no-margin><span class="font-size-12">￥78</span></p></ion-col>
+      <ion-col><p no-margin class="font-size-16">6</p><p no-margin><span class="font-size-12">￥78</span></p></ion-col>
+      <ion-col><p no-margin class="font-size-16">7</p><p no-margin><span class="font-size-12">￥78</span></p></ion-col>
+      <ion-col><p no-margin class="font-size-16">8</p><p no-margin><span class="font-size-12">￥78</span></p></ion-col>
+      <ion-col><p no-margin class="font-size-16">9</p><p no-margin><span class="font-size-12">￥99</span></p></ion-col>
+      <ion-col><p no-margin class="font-size-16">10</p><p no-margin><span class="font-size-12">￥109</span></p></ion-col>
+      <ion-col><p no-margin class="font-size-16">11</p><p no-margin><span class="font-size-12">￥99</span></p></ion-col>
+    </ion-row>
+    <ion-row align-self-center text-center class="grey">
+      <ion-col><p no-margin class="font-size-16">12</p><p no-margin><span class="font-size-12">￥99</span></p></ion-col>
+      <ion-col><p no-margin class="font-size-16">13</p><p no-margin><span class="font-size-12">￥99</span></p></ion-col>
+      <ion-col><p no-margin class="font-size-16">14</p><p no-margin><span class="font-size-12">￥78</span></p></ion-col>
+      <ion-col><p no-margin class="font-size-16">15</p><p no-margin><span class="font-size-12">￥78</span></p></ion-col>
+      <ion-col><p no-margin class="font-size-16">16</p><p no-margin><span class="font-size-12">￥99</span></p></ion-col>
+      <ion-col><p no-margin class="font-size-16">17</p><p no-margin><span class="font-size-12">￥109</span></p></ion-col>
+      <ion-col><p no-margin class="font-size-16">18</p><p no-margin><span class="font-size-12">￥99</span></p></ion-col>
+    </ion-row>
+    <p class="div-border"></p>
+    <ion-row align-self-center class="font-size-13 color-8a" style="padding-top: 5px;">
+      <ion-col col-4>保险费：<span class="font-size-15 color-f1">40</span>/天</ion-col>
+      <ion-col>预授权：<small class="color-f1">￥</small><span class="font-size-15 color-f1">3000</span></ion-col>
+    </ion-row>
+  </div>
+  <p class="partition margin-8" no-margin></p>
+  <div class="padding-lr-10">
+    <p class="font-size-16 grey">车型配置</p>
+    <div>
+      <span><button ion-button class="button-style font-size-13 button-style-w4" color="light" round>自动挡</button></span>
+      <span><button ion-button class="button-style font-size-13 button-style-w5" color="light" round>92-93汽油</button></span>
+      <span><button ion-button class="button-style font-size-13 button-style-w5" color="light" round>油箱容量60</button></span>
+      <span><button ion-button class="button-style font-size-13 button-style-w5" color="light" round>无GPS导航</button></span>
+      <span><button ion-button class="button-style font-size-13 button-style-w3" color="light" round>CD</button></span>
+      <span><button ion-button class="button-style font-size-13 button-style-w5" color="light" round>有倒车雷达</button></span>
+      <span><button ion-button class="button-style font-size-13 button-style-w5" color="light" round>皮革座椅</button></span>
+      <span><button ion-button class="button-style font-size-13 button-style-w5" color="light" round>安全气囊4</button></span>
+    </div>
+  </div>
+  <p class="partition margin-8" no-margin></p>
+  <ion-segment [(ngModel)]="cardetailSeg" mode="md" (ionChange)="segmentChanged($event)">
+    <ion-segment-button *ngFor="let item of cardetailArr" value="{{item}}">
+      {{item}}
+      <div class="bolder-sm"></div>
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="cardetailSeg">
+    <div *ngSwitchCase="'订车流程'">订车流程</div>
+    <div *ngSwitchCase="'必备材料'" class="padding-lr-10">
+      <ion-row  align-items-center="" class="padding-5">
+        <ion-col col-auto class="aa-bg" text-center>1</ion-col>
+        <ion-col class="color-8a">请携带本人有效身份证+驾驶证+信用卡</ion-col>
+      </ion-row>
+      <ion-row align-items-center="" class="padding-5">
+        <ion-col col-auto class="aa-bg" text-center>2</ion-col>
+        <ion-col class="color-8a">取车前需刷取3000元预授权或押金</ion-col>
+      </ion-row>
+      <ion-row align-items-center="" class="padding-5">
+        <ion-col col-auto class="aa-bg" text-center>3</ion-col>
+        <ion-col class="color-8a">取车前需刷取3000元预授权或押金</ion-col>
+      </ion-row>
+    </div>
+    <div *ngSwitchCase="'租车须知'">租车须知</div>
+    <div *ngSwitchCase="'注意事项'">注意事项</div>
+  </div>
+  <p class="partition margin-8" no-margin></p>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="white">
+    <button full ion-button style="color:#ffffff;background-color: #f3bb44; ">预订车辆</button>
+  </ion-toolbar>
+</ion-footer>

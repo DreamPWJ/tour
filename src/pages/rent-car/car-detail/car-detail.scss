@@ -1,0 +1,78 @@
+page-car-detail {
+  ion-header {
+    button {
+      width: 30px !important;
+      height: 30px !important;
+      min-height: 30px !important;
+      background-color: rgba(0, 0, 0, .26) !important;
+      border-radius: 50% !important;
+    }
+
+    .icon-share_light{
+      font-size: 22px!important;
+    }
+  }
+  .slides {
+    height: auto;
+  }
+
+  .tixing{
+    padding:8px 0;
+    font-size: 12px;
+    color: #8a8a8a;
+  }
+
+  .price{
+    font-size: 18px;
+    color: #f1c141;
+  }
+
+  .font-size-8{
+    font-size: 8px!important;
+  }
+  .color-11{
+    color: #111111;
+  }
+  .color-f1{
+    color: #f1c141;
+  }
+
+  .button-style{
+    height: 25px;
+    color: #8a8a8a;
+    background-color: #f7f7f8;
+  }
+  .button-style-w3{
+    width:30px;
+  }
+  .button-style-w4{
+    width:40px;
+  }
+  .button-style-w5{
+    width:80px;
+  }
+
+  .aa-bg{
+    background-color: #aabcea;
+    color: #ffffff;
+    width:20px;height: 20px;line-height: 20px;
+    border-radius: 50%;
+    padding: 0;
+  }
+
+  .padding-5{
+    padding-top:5px;
+  }
+  .margin-8{
+    margin-top:8px;
+  }
+
+  .cla-sel{
+    margin: 1px;
+    border-radius: 5px;
+    background-color: #fdf1eb;
+    .font-size-12{
+      color: #f08c5c;
+    }
+  }
+}
