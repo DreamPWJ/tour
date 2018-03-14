@@ -1,0 +1,101 @@
+page-confirm-order {
+  .icon-search {
+    font-size: 2.2rem !important;
+  }
+  .more-btn:after {
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 2px;
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+
+  .cartype{
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .color-e5{
+    color: #e5e5e5;
+  }
+
+  .border-title{
+    position: relative;
+  }
+  .border-title::before{
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(0deg, transparent 50%, #8a8a8a 50%);
+  }
+
+  /*圆圈里写数字*/
+
+  .circle-bk{
+    background-color: #ffffff;
+    width:43px;height: 43px;
+    border-radius: 50%;
+    border:1px solid #e2bd8c;
+    padding:1px 0;
+    .circle-dayday {
+      color: #e2bd8c;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+  .circle-border1{
+    border-top:1px solid #e2bd8c;
+    position: relative;
+  }
+  .circle-border1::before{
+    position: absolute;
+    top:-3px;
+    left:-6px;
+    content: "";
+    width: 6px;height: 6px;
+    background-color: #e2bd8c;
+    border-radius: 50%;
+  }
+  .circle-border2{
+    border-top:1px solid #e2bd8c;
+    position: relative;
+  }
+  .circle-border2::before {
+    position: absolute;
+    bottom:1px;
+    right: 0;
+    content: "";
+    height: 2px;
+    background-image: linear-gradient(0deg, transparent 50%, #e2bd8c 50%);
+    width: 6px;
+    transform: rotate(40deg);
+    -webkit-transform: rotate(40deg);
+  }
+
+  .margin-tb-10{
+    margin: 10px 0 5px 0!important;
+  }
+
+  .padding-8{
+    padding: 8px 0;
+  }
+  .margin-top-0{
+    margin-top: 0!important;
+  }
+  .padding-l-10{
+    padding-left: 10px;
+  }
+
+  .font-size-icon{
+    font-size: 20px;
+  }
+}

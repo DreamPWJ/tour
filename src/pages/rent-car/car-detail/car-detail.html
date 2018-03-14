@@ -19,7 +19,7 @@
     <p no-margin class="tixing"><ion-icon class="icon-infofill"></ion-icon> 系统所选车辆型号及颜色仅供参考，具体以实物为准</p>
     <p class="div-border"></p>
     <ion-row align-items-center style="padding: 5px 0;">
-      <ion-col col-3><span class="font-size-17 grey">别克英朗</span></ion-col>
+      <ion-col col-3 [navPush]="'SpaceExplainPage'"><span class="font-size-17 grey">别克英朗</span></ion-col>
       <ion-col class="color-8a"><small class="color-f1">￥</small><span class="price">99</span>/日均</ion-col>
     </ion-row>
     <ion-row align-items-center class="font-size-12 color-11">
@@ -100,6 +100,6 @@
 </ion-content>
 <ion-footer>
   <ion-toolbar color="white">
-    <button full ion-button style="color:#ffffff;background-color: #f3bb44; ">预订车辆</button>
+    <button full ion-button style="color:#ffffff;background-color: #f3bb44; " [navPush]="'ConfirmOrderPage'">预订车辆</button>
   </ion-toolbar>
 </ion-footer>
