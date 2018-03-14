@@ -20,7 +20,7 @@
     <p class="div-border"></p>
     <ion-row align-items-center style="padding: 5px 0;">
       <ion-col col-3><span class="font-size-17 grey">别克英朗</span></ion-col>
-      <ion-col class="color-8a"><small style="color: #f1c141;">￥</small><span class="price">99</span>/日均</ion-col>
+      <ion-col class="color-8a"><small class="color-f1">￥</small><span class="price">99</span>/日均</ion-col>
     </ion-row>
     <ion-row align-items-center class="font-size-12 color-11">
       <ion-col col-auto><ion-icon class="icon-radioboxfill font-size-8 color-8a"></ion-icon> 三厢车</ion-col>
@@ -45,31 +45,10 @@
     </ion-row>
     <p class="div-border"></p>
     <ion-row align-self-center text-center class="grey">
-      <ion-col></ion-col>
-      <ion-col></ion-col>
-      <ion-col></ion-col>
-      <ion-col></ion-col>
-      <ion-col></ion-col>
-      <ion-col class="cla-sel"><p no-margin class="font-size-16">3</p><p no-margin><span class="font-size-12">￥109</span></p></ion-col>
-      <ion-col class="cla-sel"><p no-margin class="font-size-16">4</p><p no-margin><span class="font-size-12">￥99</span></p></ion-col>
-    </ion-row>
-    <ion-row align-self-center text-center class="grey">
-      <ion-col><p no-margin class="font-size-16">5</p><p no-margin><span class="font-size-12">￥78</span></p></ion-col>
-      <ion-col><p no-margin class="font-size-16">6</p><p no-margin><span class="font-size-12">￥78</span></p></ion-col>
-      <ion-col><p no-margin class="font-size-16">7</p><p no-margin><span class="font-size-12">￥78</span></p></ion-col>
-      <ion-col><p no-margin class="font-size-16">8</p><p no-margin><span class="font-size-12">￥78</span></p></ion-col>
-      <ion-col><p no-margin class="font-size-16">9</p><p no-margin><span class="font-size-12">￥99</span></p></ion-col>
-      <ion-col><p no-margin class="font-size-16">10</p><p no-margin><span class="font-size-12">￥109</span></p></ion-col>
-      <ion-col><p no-margin class="font-size-16">11</p><p no-margin><span class="font-size-12">￥99</span></p></ion-col>
-    </ion-row>
-    <ion-row align-self-center text-center class="grey">
-      <ion-col><p no-margin class="font-size-16">12</p><p no-margin><span class="font-size-12">￥99</span></p></ion-col>
-      <ion-col><p no-margin class="font-size-16">13</p><p no-margin><span class="font-size-12">￥99</span></p></ion-col>
-      <ion-col><p no-margin class="font-size-16">14</p><p no-margin><span class="font-size-12">￥78</span></p></ion-col>
-      <ion-col><p no-margin class="font-size-16">15</p><p no-margin><span class="font-size-12">￥78</span></p></ion-col>
-      <ion-col><p no-margin class="font-size-16">16</p><p no-margin><span class="font-size-12">￥99</span></p></ion-col>
-      <ion-col><p no-margin class="font-size-16">17</p><p no-margin><span class="font-size-12">￥109</span></p></ion-col>
-      <ion-col><p no-margin class="font-size-16">18</p><p no-margin><span class="font-size-12">￥99</span></p></ion-col>
+      <div *ngFor="let item of calendarList" class="calendar-list" tappable (click)="calendarCli(item.date)" ngClass="{{item.selectFlg?'cla-sel':''}}">
+        <p no-margin class="font-size-16">{{item.date}}</p>
+        <p no-margin><span class="font-size-12"><small *ngIf="item.price">￥</small>{{item.price}}</span></p>
+      </div>
     </ion-row>
     <p class="div-border"></p>
     <ion-row align-self-center class="font-size-13 color-8a" style="padding-top: 5px;">
