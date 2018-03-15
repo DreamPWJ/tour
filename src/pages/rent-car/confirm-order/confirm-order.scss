@@ -22,6 +22,13 @@ page-confirm-order {
   .color-e5{
     color: #e5e5e5;
   }
+  .back-e5{
+    background-color: #F9F9F9;
+    padding:8px;
+  }
+  .check-color{
+    color: #FFDB27;
+  }
 
   .border-title{
     position: relative;
@@ -91,11 +98,53 @@ page-confirm-order {
   .margin-top-0{
     margin-top: 0!important;
   }
+  .margin-tb-0{
+    margin: 0!important;
+  }
   .padding-l-10{
     padding-left: 10px;
   }
 
   .font-size-icon{
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .question-icon{
+    font-size: 26px;
+  }
+
+  .youhuiquan {
+    color: #fff;
+    font-size: 13px;
+    background: -webkit-linear-gradient(left, #7396f7, #a082f7); /* Safari 5.1 - 6.0 */
+    background: linear-gradient(to right, #7396f7, #a082f7); /* 标准的语法（必须放在最后） */
+    padding:5px 8px;border-radius: 3px;
+  }
+
+  .aa-bg{
+    background-color: #aabcea;
+    color: #ffffff;
+    width:20px;height: 20px;line-height: 20px;
+    border-radius: 50%;
+    padding: 0;
+  }
+  .padding-5{
+    padding-top:5px;
+  }
+
+  .footer-row ion-col {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .footer-row ion-col button {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .foot-price{
+    color: #f3bb44;
+    .font-size-price{
+      font-size:20px;
+    }
   }
 }

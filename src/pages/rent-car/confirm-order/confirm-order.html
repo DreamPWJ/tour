@@ -1,3 +1,4 @@
+
 <ion-header >
   <ion-navbar color="white">
     <ion-title>确认订单</ion-title>
@@ -101,35 +102,38 @@
   <div class="padding-lr-10">
     <ion-row align-items-center class="padding-8">
       <ion-col class="grey">尊享服务费  <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon></ion-col>
-      <ion-col text-right class="grey"><span class="color-8a">50×2= </span><small>￥</small>100
-          <ion-icon class="icon-roundcheckfill font-size-icon"></ion-icon>
+      <ion-col text-right class="grey" (click)="vipServiceFlg=!vipServiceFlg" tappable>
+        <span *ngIf="vipServiceFlg"><span class="color-8a">50×2= </span><small>￥</small>100</span>
+        <ion-icon class="icon-roundcheckfill font-size-icon" ngClass="{{vipServiceFlg?'check-color':'color-8a'}}"></ion-icon>
+
       </ion-col>
     </ion-row>
     <p class="div-border"></p>
     <ion-row align-items-center class="padding-8">
       <ion-col class="grey">指定车型</ion-col>
-      <ion-col text-right class="grey"><small>￥</small>20
-        <ion-icon class="icon-roundcheckfill font-size-icon"></ion-icon>
+      <ion-col text-right class="grey" (click)="specifyCarFlg=!specifyCarFlg" tappable>
+        <span *ngIf="specifyCarFlg"><small>￥</small>20</span>
+        <ion-icon class="icon-roundcheckfill font-size-icon" ngClass="{{specifyCarFlg?'check-color':'color-8a'}}"></ion-icon>
       </ion-col>
     </ion-row>
     <p class="div-border"></p>
     <ion-row align-items-center class="padding-8">
       <ion-col class="grey" col-8>第三方责任补充 <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon></ion-col>
-      <ion-col class="grey"><small>￥</small>100</ion-col>
-      <ion-col text-right col-2><ion-toggle checked="true"></ion-toggle></ion-col>
+      <ion-col class="grey"><span *ngIf="threeParty"><small>￥</small>100</span></ion-col>
+      <ion-col text-right col-2><ion-toggle [(ngModel)]="threeParty"></ion-toggle></ion-col>
     </ion-row>
-    <div class="padding-l-10">
-      <ion-row align-items-center class="padding-8">
+    <div class="padding-l-10" *ngIf="threeParty">
+      <ion-row align-items-center class="padding-8" (click)="threeParty1=1">
         <ion-col class="grey" col-auto>50万第三者责任补充 (￥50)</ion-col>
         <ion-col text-right class="grey">
-          <ion-icon class="icon-roundcheckfill font-size-icon"></ion-icon>
+          <ion-icon class="icon-roundcheckfill font-size-icon" ngClass="{{threeParty1==1?'check-color':'color-8a'}}"></ion-icon>
         </ion-col>
       </ion-row>
       <p class="div-border"></p>
-      <ion-row align-items-center class="padding-8">
+      <ion-row align-items-center class="padding-8" (click)="threeParty1=2">
         <ion-col class="grey" col-auto>100万第三者责任补充 (￥100)</ion-col>
         <ion-col text-right class="grey">
-          <ion-icon class="icon-roundcheckfill font-size-icon"></ion-icon>
+          <ion-icon class="icon-roundcheckfill font-size-icon" ngClass="{{threeParty1==2?'check-color':'color-8a'}}"></ion-icon>
         </ion-col>
       </ion-row>
     </div>
@@ -137,16 +141,17 @@
     <ion-row align-items-center class="padding-8">
       <ion-col class="grey" col-8>网点额外服务(儿童座椅、GPS) <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon></ion-col>
       <ion-col class="grey"><small>￥</small>100</ion-col>
-      <ion-col text-right col-2><ion-toggle checked="true"></ion-toggle></ion-col>
+      <ion-col text-right col-2><ion-toggle [(ngModel)]="extraService"></ion-toggle></ion-col>
     </ion-row>
-    <div class="padding-l-10">
+    <div class="padding-l-10" *ngIf="extraService">
       <ion-row align-items-center class="padding-8">
         <ion-col class="grey" col-auto>
           <p no-margin class="grey">婴儿座椅  (￥50/天)</p>
           <p no-margin class="font-size-12 color-8a">通常适用于0-15月的婴幼儿</p>
         </ion-col>
-        <ion-col text-right class="grey">
-          <ion-icon class="icon-roundadd font-size-icon"></ion-icon>
+        <ion-col text-right class="grey" align-self-center>
+          <ion-icon class="icon-jiankean font-size-icon color-8a"></ion-icon><span class="font-size-17 grey"> 5 </span>
+          <ion-icon class="icon-jiakean font-size-icon color-8a"></ion-icon>
         </ion-col>
       </ion-row>
       <p class="div-border"></p>
@@ -156,9 +161,91 @@
           <p no-margin class="font-size-12 color-8a">通常适用于9个月到4岁，体重约9-25斤的儿童</p>
         </ion-col>
         <ion-col text-right class="grey">
-          <ion-icon class="icon-roundcheckfill font-size-icon"></ion-icon>
+          <ion-icon class="icon-jiankean font-size-icon color-8a"></ion-icon><span class="font-size-17 grey"> 5 </span>
+          <ion-icon class="icon-jiakean font-size-icon color-8a"></ion-icon>
         </ion-col>
       </ion-row>
     </div>
   </div>
+  <p class="partition margin-top-0"></p>
+  <h5 class="color-8a padding-lr-10">里程限制与燃油说明</h5>
+  <p class="div-border"></p>
+  <div class="padding-lr-10">
+    <ion-row align-items-center class="padding-8">
+      <ion-col col-3 class="grey">里程限制</ion-col>
+      <ion-col col-3 class="color-11">不限里程</ion-col>
+      <ion-col text-right><ion-icon class="icon-questionfill color-e5 question-icon"></ion-icon></ion-col>
+    </ion-row>
+    <p class="div-border"></p>
+    <ion-row align-items-center class="padding-8">
+      <ion-col col-3 class="grey">燃油说明</ion-col>
+      <ion-col col-3 class="color-11">满油取还</ion-col>
+      <ion-col text-right><ion-icon class="icon-questionfill color-e5 question-icon"></ion-icon></ion-col>
+    </ion-row>
+  </div>
+  <p class="partition margin-tb-0"></p>
+  <div class="padding-lr-10">
+    <ion-row align-items-center class="padding-8">
+      <ion-col col-3 class="grey">支付方式</ion-col>
+      <ion-col class="color-11">在线支付</ion-col>
+      <ion-col text-right class="color-8a"><ion-icon class="icon-right"></ion-icon></ion-col>
+    </ion-row>
+    <p class="div-border"></p>
+    <ion-row align-items-center class="padding-8">
+      <ion-col col-3 class="grey">优惠折扣</ion-col>
+      <ion-col><button small class="youhuiquan">4张优惠券可用</button></ion-col>
+      <ion-col text-right><span style="color: #d8862f;" class="font-size-15">更多优惠 </span><ion-icon class="icon-right color-8a"></ion-icon></ion-col>
+    </ion-row>
+  </div>
+  <p class="partition margin-tb-0"></p>
+  <div class="padding-lr-10">
+    <ion-row align-items-center class="padding-8">
+      <ion-col col-3 class="grey">开具发票</ion-col>
+      <ion-col text-right class="color-8a">不开发票 <ion-icon class="icon-right"></ion-icon></ion-col>
+    </ion-row>
+  </div>
+  <p class="partition margin-tb-0"></p>
+
+  <ion-segment [(ngModel)]="cardetailSeg" mode="md" (ionChange)="segmentChanged($event)">
+    <ion-segment-button *ngFor="let item of cardetailArr" value="{{item}}">
+      {{item}}
+      <div class="bolder-sm"></div>
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="cardetailSeg">
+    <div *ngSwitchCase="'订车流程'">订车流程</div>
+    <div *ngSwitchCase="'必备材料'" class="padding-lr-10">
+      <ion-row  align-items-center="" class="padding-5">
+        <ion-col col-auto class="aa-bg" text-center>1</ion-col>
+        <ion-col class="color-8a">请携带本人有效身份证+驾驶证+信用卡</ion-col>
+      </ion-row>
+      <ion-row align-items-center="" class="padding-5">
+        <ion-col col-auto class="aa-bg" text-center>2</ion-col>
+        <ion-col class="color-8a">取车前需刷取3000元预授权或押金</ion-col>
+      </ion-row>
+      <ion-row align-items-center="" class="padding-5">
+        <ion-col col-auto class="aa-bg" text-center>3</ion-col>
+        <ion-col class="color-8a">取车前需刷取3000元预授权或押金</ion-col>
+      </ion-row>
+    </div>
+    <div *ngSwitchCase="'租车须知'">租车须知</div>
+    <div *ngSwitchCase="'注意事项'">注意事项</div>
+  </div>
+  <p class="grey padding-lr-10 back-e5 font-size-13" (click)="readAgreeFlg=!readAgreeFlg">
+    <ion-icon class="icon-roundcheckfill font-size-icon" ngClass="{{readAgreeFlg?'check-color':'color-8a'}}"></ion-icon> 已仔细阅读并同意  <span class="" style="color: #547fea;"> 租车须知 </span>
+  </p>
 </ion-content>
+<ion-footer>
+  <ion-row class="footer-row" align-items-center>
+    <ion-col col-5 class="foot-price" text-center>
+      <small>￥</small><span class="font-size-price">398</span>
+      <span class="color-8a">(日均￥199)</span>
+    </ion-col>
+    <ion-col col-3 class="grey font-size-16" text-center>
+      费用明细
+    </ion-col>
+    <ion-col col-4>
+      <button full ion-button style="color:#ffffff;background-color: #f3bb44; ">立即定制</button>
+    </ion-col>
+  </ion-row>
+</ion-footer>
