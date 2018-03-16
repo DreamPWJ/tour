@@ -119,7 +119,7 @@
     <p class="div-border"></p>
     <ion-row align-items-center class="padding-8">
       <ion-col class="grey" col-8>第三方责任补充 <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon></ion-col>
-      <ion-col class="grey"><span *ngIf="threeParty"><small>￥</small>100</span></ion-col>
+      <ion-col class="grey"><span *ngIf="threeParty"><small>￥</small>{{threeParty1==1?50:100}}</span></ion-col>
       <ion-col text-right col-2><ion-toggle [(ngModel)]="threeParty"></ion-toggle></ion-col>
     </ion-row>
     <div class="padding-l-10" *ngIf="threeParty">
@@ -140,8 +140,8 @@
     <p class="div-border"></p>
     <ion-row align-items-center class="padding-8">
       <ion-col class="grey" col-8>网点额外服务(儿童座椅、GPS) <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon></ion-col>
-      <ion-col class="grey"><small>￥</small>100</ion-col>
-      <ion-col text-right col-2><ion-toggle [(ngModel)]="extraService"></ion-toggle></ion-col>
+      <ion-col class="grey"><span *ngIf="extraService"><small>￥</small>{{(seatYinger+seatErtong)*50}}</span></ion-col>
+      <ion-col float-right><ion-toggle [(ngModel)]="extraService"></ion-toggle></ion-col>
     </ion-row>
     <div class="padding-l-10" *ngIf="extraService">
       <ion-row align-items-center class="padding-8">
@@ -150,8 +150,8 @@
           <p no-margin class="font-size-12 color-8a">通常适用于0-15月的婴幼儿</p>
         </ion-col>
         <ion-col text-right class="grey" align-self-center>
-          <ion-icon class="icon-jiankean font-size-icon color-8a"></ion-icon><span class="font-size-17 grey"> 5 </span>
-          <ion-icon class="icon-jiakean font-size-icon color-8a"></ion-icon>
+          <ion-icon class="icon-jianhao font-size-icon color-8a" (click)="yingerMinus()"></ion-icon><span class="font-size-18 grey"> {{seatYinger}} </span>
+          <ion-icon class="icon-jiajianxi font-size-icon color-8a" (click)="yingerPlus()"></ion-icon>
         </ion-col>
       </ion-row>
       <p class="div-border"></p>
@@ -160,9 +160,9 @@
           <p no-margin class="grey">儿童座椅  (￥50/天)</p>
           <p no-margin class="font-size-12 color-8a">通常适用于9个月到4岁，体重约9-25斤的儿童</p>
         </ion-col>
-        <ion-col text-right class="grey">
-          <ion-icon class="icon-jiankean font-size-icon color-8a"></ion-icon><span class="font-size-17 grey"> 5 </span>
-          <ion-icon class="icon-jiakean font-size-icon color-8a"></ion-icon>
+        <ion-col text-right class="grey" align-self-center>
+          <ion-icon class="icon-jianhao font-size-icon color-8a" (click)="ertongMinus()"></ion-icon><span class="font-size-18 grey"> {{seatErtong}} </span>
+          <ion-icon class="icon-jiajianxi font-size-icon color-8a" (click)="ertongPlus()"></ion-icon>
         </ion-col>
       </ion-row>
     </div>
@@ -231,7 +231,7 @@
     <div *ngSwitchCase="'租车须知'">租车须知</div>
     <div *ngSwitchCase="'注意事项'">注意事项</div>
   </div>
-  <p class="grey padding-lr-10 back-e5 font-size-13" (click)="readAgreeFlg=!readAgreeFlg">
+  <p class="grey padding-lr-10 back-e5 font-size-13 margin-bottom-0" (click)="readAgreeFlg=!readAgreeFlg">
     <ion-icon class="icon-roundcheckfill font-size-icon" ngClass="{{readAgreeFlg?'check-color':'color-8a'}}"></ion-icon> 已仔细阅读并同意  <span class="" style="color: #547fea;"> 租车须知 </span>
   </p>
 </ion-content>

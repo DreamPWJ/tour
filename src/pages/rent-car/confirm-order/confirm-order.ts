@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {AppService} from "../../../providers/util/app.service";
 
 /**
  * Generated class for the ConfirmOrderPage page.
@@ -20,19 +21,47 @@ export class ConfirmOrderPage {
   vipServiceFlg:boolean = true;//尊享服务费
   specifyCarFlg:boolean = true;//指定车型
   threeParty1:number = 1;
+  seatYinger:number = 1;//婴儿座椅
+  seatErtong:number = 1;//儿童座椅
 
   cardetailArr:string[]=[ '订车流程','必备材料' ,'租车须知','注意事项'];
   cardetailSeg:string=this.cardetailArr[1];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public appService: AppService) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ConfirmOrderPage');
+    this.appService.loadingShow();
+  }
+
+  ionViewWillEnter(){
+    this.appService.loadingHide();
   }
 
   segmentChanged(event){}
 
-
-
+  //婴儿座椅加
+  yingerPlus(){
+    if(this.seatYinger < 6){
+      this.seatYinger ++;
+    }
+  }
+  //婴儿座椅减
+  yingerMinus(){
+    if(this.seatYinger > 0){
+      this.seatYinger --;
+    }
+  }
+  //儿童座椅加
+  ertongPlus(){
+    if(this.seatErtong < 6){
+      this.seatErtong ++;
+    }
+  }
+  //儿童座椅减
+  ertongMinus(){
+    if(this.seatErtong > 0){
+      this.seatErtong --;
+    }
+  }
 }

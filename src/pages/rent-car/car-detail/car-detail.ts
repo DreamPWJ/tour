@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {AppService} from "../../../providers/util/app.service";
 
 /**
  * Generated class for the CarDetailPage page.
@@ -43,7 +44,15 @@ export class CarDetailPage {
     {date:'18',price:'99',selectFlg:false}
   ];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public appService: AppService) {
+  }
+
+  ionViewDidLoad() {
+    this.appService.loadingShow();
+  }
+
+  ionViewWillEnter(){
+    this.appService.loadingHide();
   }
 
   segmentChanged(event){}
@@ -51,13 +60,9 @@ export class CarDetailPage {
   //日历选择
   calendarCli(date){
     if(date!=''){
-      for(let i =0;i<this.calendarList.length;i++){
+      for (let i = 0; i < this.calendarList.length; i++) {
         if(this.calendarList[i].date == date){
-          if(this.calendarList[i].selectFlg){
-            this.calendarList[i].selectFlg = false;
-          }else {
-            this.calendarList[i].selectFlg = true;
-          }
+          this.calendarList[i].selectFlg = !this.calendarList[i].selectFlg;
         }
       }
     }
