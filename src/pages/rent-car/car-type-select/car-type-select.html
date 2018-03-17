@@ -8,7 +8,7 @@
     </ion-buttons>
   </ion-navbar>
   <ion-toolbar color="white">
-    <p class="head-border" no-padding></p>
+    <p class="div-border" no-padding></p>
     <ion-row align-items-center class="grey">
       <ion-col col-4>
         <ion-row align-items-center>
@@ -38,14 +38,17 @@
         </ion-row>
       </ion-col>
     </ion-row>
-    <p class="head-border" no-padding></p>
+    <p class="div-border" no-padding></p>
 
-    <ion-segment [(ngModel)]="cartypeSeg" mode="md" (ionChange)="segmentChanged($event)">
-      <ion-segment-button *ngFor="let item of cartypeArr" value="{{item}}">
-        {{item}}
-        <div class="bolder-sm"></div>
-      </ion-segment-button>
-    </ion-segment>
+    <ion-scroll scrollX="true" style="width: 100%;height: 43px;">
+      <ion-segment [(ngModel)]="cartypeSeg" mode="md" class="width-2vw">
+        <ion-segment-button *ngFor="let item of cartypeArr" value="{{item}}" >
+          {{item}}
+          <div class="bolder-sm"></div>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-scroll>
+
     <ion-scroll scrollX="true" style="width: 100%;height: 40px;">
       <ion-row style="width: 110vw;">
         <div class="tool-btn">
@@ -61,7 +64,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div [ngSwitch]="cartypeSeg" (swipe)="swipeEvnet($event)">
+  <div [ngSwitch]="cartypeSeg">
     <p class="partition"></p>
     <div *ngSwitchCase="'全部'">
       <ion-card *ngFor="let item of cartypeList">
@@ -73,7 +76,7 @@
             <h2>{{item.name}}</h2>
             <p class="font-size-12 color-8a">{{item.description}}</p>
             <ion-row>
-              <ion-col no-padding style="padding: 6px 0 1px 0"><p class="head-border"></p></ion-col>
+              <ion-col no-padding style="padding: 6px 0 1px 0"><p class="div-border"></p></ion-col>
             </ion-row>
             <ion-row align-items-center >
               <ion-col text-left class="color-8a font-size-13"><small style="color: #f1c141;font-size: 14px;">￥</small><span class="price-style">{{item.price}}</span>/日均</ion-col>
