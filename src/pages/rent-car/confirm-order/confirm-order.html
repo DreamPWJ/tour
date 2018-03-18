@@ -139,7 +139,7 @@
     </div>
     <p class="div-border"></p>
     <ion-row align-items-center class="padding-8">
-      <ion-col class="grey" col-8 text-nowrap>网点额外服务(儿童座椅、GPS) <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon></ion-col>
+      <ion-col class="grey nowrap" col-8 text-nowrap>网点额外服务(儿童座椅、GPS) <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon></ion-col>
       <ion-col class="grey"><span *ngIf="extraService"><small>￥</small>{{(seatYinger+seatErtong)*50}}</span></ion-col>
      <!-- <ion-col float-right>--><ion-toggle [(ngModel)]="extraService"></ion-toggle><!--</ion-col>-->
     </ion-row>
@@ -156,9 +156,9 @@
       </ion-row>
       <p class="div-border"></p>
       <ion-row align-items-center class="padding-8">
-        <ion-col class="grey" col-auto>
+        <ion-col class="grey" col-8>
           <p no-margin class="grey">儿童座椅  (￥50/天)</p>
-          <p no-margin class="font-size-12 color-8a">通常适用于9个月到4岁，体重约9-25斤的儿童</p>
+          <p no-margin class="font-size-12 color-8a " >通常适用于9个月到4岁，体重约9-25斤的儿童</p>
         </ion-col>
         <ion-col text-right class="grey" align-self-center>
           <ion-icon class="icon-jianhao font-size-icon color-8a" (click)="ertongMinus()"></ion-icon><span class="font-size-18 grey"> {{seatErtong}} </span>
