@@ -1,18 +1,135 @@
-<!--
-  Generated template for the CostDetailPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>cost-detail</ion-title>
-  </ion-navbar>
-
+  <ion-toolbar color="transparent">
+    <ion-title>费用明细</ion-title>
+    <!--<ion-buttons end>
+      <button ion-button (click)="dismiss()">
+        <span ion-text>取消</span>
+      </button>
+    </ion-buttons>-->
+  </ion-toolbar>
 </ion-header>
+<ion-content [fullscreen]="" class="cost-bk-color">
+  <div class="padding-lr-10">
+    <h5 class="color-8a">租车</h5>
+    <p class="div-border-cost"></p>
+    <ion-row>
+      <ion-col>车辆租赁费</ion-col>
+      <ion-col text-right>￥99×2天</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>基本服务费</ion-col>
+      <ion-col text-right>￥40×2天</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>基本保险费</ion-col>
+      <ion-col text-right>￥50×2天</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>网点手续费</ion-col>
+      <ion-col text-right>￥20</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>车损免赔</ion-col>
+      <ion-col text-right>￥0</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>100万第三者责任补充</ion-col>
+      <ion-col text-right>￥100</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>送取车费用(送车+取车)</ion-col>
+      <ion-col text-right>￥20+￥30</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>车辆返空费(异地)</ion-col>
+      <ion-col text-right>￥0</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>儿童座椅</ion-col>
+      <ion-col text-right>￥50×2天</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>新用户首日0租金(最高立减100元)</ion-col>
+      <ion-col col-2 text-right>-￥100</ion-col>
+    </ion-row>
+    <p class="div-border-cost"></p>
+    <ion-row>
+      <ion-col>违章押金 (可退) ￥2000</ion-col>
+      <ion-col text-right>租车：<span class="color-fa">￥548</span></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>预授权 (可退) ￥2000</ion-col>
+    </ion-row>
 
+    <h5 class="color-8a">酒店</h5>
+    <p class="div-border-cost"></p>
+    <ion-row>
+      <ion-col>弥勒可邑•帐篷度假酒店(五星)</ion-col>
+      <ion-col text-right col-3>1晚×1间</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="font-size-12 padding-l-5" no-padding>彝家标间 (双早)</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>弥勒湖泉酒店(原生态)</ion-col>
+      <ion-col text-right>1晚×1间</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="font-size-12 padding-l-5" no-padding>彝家标间 (双早)</ion-col>
+    </ion-row>
 
-<ion-content padding>
+    <h5 class="color-8a">门票</h5>
+    <p class="div-border-cost"></p>
+    <ion-row>
+      <ion-col>
+        <p no-margin>锦屏山风景区</p>
+        <p class="font-size-12" no-margin>锦屏山风景区</p>
+      </ion-col>
+      <ion-col text-right>1张</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p no-margin>九乡风景区</p>
+        <p class="font-size-12" no-margin>九乡风景区</p>
+      </ion-col>
+      <ion-col text-right>1张</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p no-margin>九乡风景区</p>
+        <p class="font-size-12" no-margin>九乡风景区</p>
+      </ion-col>
+      <ion-col text-right>1张</ion-col>
+    </ion-row>
+
+    <h5 class="color-8a">门票</h5>
+    <p class="div-border-cost"></p>
+    <ion-row>
+      <ion-col>旅游意外险 (保额120万)</ion-col>
+      <ion-col text-right>赠送</ion-col>
+    </ion-row>
+
+    <h5 class="color-8a">费用说明</h5>
+    <p class="div-border-cost"></p>
+    <p>1.预授权 (可退)：车辆保证金以“预授权”(冻结额度)形式支付，还车无问题情况下“预授权撤销”(解结额度);租期满15天，以消费形式支付。</p>
+    <p>2.违章押金 (可退)：以“预授权”(冻结额度)形式支付，交易日起、满30-35天，无违章前提下，由发卡银行自动解冻。</p>
+    <ion-row>
+      <ion-col text-right>总价：</ion-col>
+      <ion-col col-auto>￥16999</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-right>积分折扣：</ion-col>
+      <ion-col col-auto>﹣ ￥200</ion-col>
+    </ion-row>
+    <p class="div-border-cost"></p>
+    <ion-row>
+      <ion-col text-right>实付：</ion-col>
+      <ion-col col-auto>￥16799</ion-col>
+    </ion-row>
+  </div>
+  <p></p>
 
 </ion-content>
+<ion-footer class="foot-style">
+  <p text-center (click)="dismiss()" tappable><ion-icon class="icon-round_close_light font-size-icon"></ion-icon></p>
+</ion-footer>
