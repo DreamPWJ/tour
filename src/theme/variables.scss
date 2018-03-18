@@ -113,6 +113,9 @@ $segment-button-md-border-color-activated: #FFDE37;*/
 
 @import "ionic.theme.default";
 
+.item-block:first-child {
+  border-top: none !important;
+}
 .item-block:last-child {
   border-bottom: none !important;
 }

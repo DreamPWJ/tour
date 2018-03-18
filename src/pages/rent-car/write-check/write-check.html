@@ -22,7 +22,7 @@
         <ion-row class="font-size-15">
           <ion-col col-3>发票信息</ion-col>
           <ion-col class="title-border color-b6" (click)="checkAlert()" tappable>
-            <span *ngIf="!checkMessage">请选择公司名或个人 <ion-icon class="icon-right" float-right=""></ion-icon></span>
+            <span *ngIf="!checkMessage">请选择公司名或个人 <ion-icon class="icon-right" float-right></ion-icon></span>
             <span class="grey" *ngIf="checkMessage">{{checkMessage}}</span>
           </ion-col>
 
@@ -32,7 +32,7 @@
         <ion-row class="font-size-15" [navPush]="'AddressSelectPage'">
           <ion-col col-3>邮寄地址</ion-col>
           <ion-col class="title-border color-b6">请选择邮寄发票的地址</ion-col>
-          <ion-col text-right><ion-icon class="icon-right"></ion-icon></ion-col>
+          <ion-col text-right><ion-icon class="icon-right color-b6"></ion-icon></ion-col>
         </ion-row>
       </ion-item>
     </ion-list>

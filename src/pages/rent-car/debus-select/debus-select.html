@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="white" hideBackButton>
+    <ion-title>选择下车地点</ion-title>
+    <ion-buttons end >
+      <button ion-button navPop class="font-size-14">取消</button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar color="white">
+    <ion-row  align-items-center nowrap>
+    <span col-2 class="grey" align-self-center> 成都
+      <ion-icon class="icon-unfold head-icon" ></ion-icon></span>
+      <ion-searchbar placeholder="你要去哪儿" (ionInput)="filterItems($event)" style="background-color: #ffffff!important;"></ion-searchbar>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list no-margin>
+    <p class="place-style" no-margin>附近地点</p>
+    <ion-item no-margin class="padding-lr-10">
+      <h2 class="font-size-16"><span class="ding-wei">定位</span> 景区直通车(天府广场站)附近</h2>
+      <p class="font-size-12" text-wrap>人民东路天府广场一楼</p>
+    </ion-item>
+  </ion-list>
+  <ion-list no-margin>
+    <p class="place-style" no-margin>历史记录<span float-right>清空</span></p>
+    <ion-item no-margin *ngFor="let jichang of placeList[1].places" class="padding-lr-10">
+      <h2 class="font-size-16">{{jichang.name}}</h2>
+      <p class="font-size-12" text-wrap>{{jichang.address}}</p>
+    </ion-item>
+  </ion-list>
+  <ion-list no-margin>
+    <p class="place-style" no-margin>热门推荐</p>
+    <ion-item no-margin *ngFor="let jichang of placeList[1].places" class="padding-lr-10">
+      <h2 class="font-size-16">{{jichang.name}}</h2>
+      <p class="font-size-12" text-wrap>{{jichang.address}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

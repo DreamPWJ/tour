@@ -1,0 +1,50 @@
+<ion-header >
+  <ion-toolbar color="white">
+    <ion-buttons start>
+      <button  ion-button icon-only  navPop>
+        <ion-icon class="ion-ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <span padding-right ngClass="{{airFlg?'air-select':''}}" (click)="airFlg=true">接机</span>
+      <span ngClass="{{airFlg?'':'air-select'}}" (click)="airFlg=false">送机</span>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon class="icon-more_android_light "></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <p class="div-border"></p>
+</ion-header>
+<ion-content class="color-fd-bg">
+    <ion-card *ngIf="airFlg">
+      <ion-item>
+        <ion-icon class="icon-jiesongjitubiaobaisebufen color-8a" item-start></ion-icon>
+        <ion-input placeholder="请输入航班号"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon class="icon-radioboxfill qi-dian" item-start></ion-icon>
+        <ion-input placeholder="" value="双流国际机场T1航站楼"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon class="icon-radioboxfill zhong-dian" item-start></ion-icon>
+        <ion-input placeholder="你要去哪儿"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon class="icon-timefill time" item-start></ion-icon>
+        <ion-datetime displayFormat="YYYY年 MMM DD日 " cancelText="取消" doneText="确定" [(ngModel)]="dateTime" no-padding></ion-datetime>
+      </ion-item>
+    </ion-card>
+
+  <div text-center>
+  <p padding class="you-hui-quan color-8a font-size-12" text-center>
+    您有4张优惠券可用，最高可减￥100
+  </p>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar transparent>
+    <button full ion-button class="foot-btn light">查询</button>
+  </ion-toolbar>
+</ion-footer>

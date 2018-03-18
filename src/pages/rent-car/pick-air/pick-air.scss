@@ -1,0 +1,56 @@
+page-pick-air {
+  ion-card{
+    ion-item:not(:last-of-type){
+      ion-input{
+        border-bottom: 1px solid rgba(135, 135, 135, 0.1) !important;
+
+      }
+    }
+  }
+  .air-select{
+    color: #fabe00!important;
+    font-size: 19px;
+  }
+  .color-fd-bg{
+    background-color: #fdfdfd;
+  }
+
+  .foot-btn{
+    background-color: #f3bb44;
+  }
+
+  .qi-dian{
+    color: #3cbca3;
+    transform: scale(0.4);
+  }
+  .zhong-dian{
+    color: #ff6b54;
+    transform: scale(0.4);
+  }
+  .time{
+    color: #b5b5b5;
+    transform: scale(0.55);
+  }
+
+  .you-hui-quan{
+    display: inline-block;
+    position: relative;
+    &:before,&:after{
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 1px;
+      background-color: #e5e5e5;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      -webkit-transform: translateY(-50%) !important;
+    }
+    &:before{
+      right: 100%;
+    }
+    &:after{
+      left: 100%;
+
+    }
+  }
+}
