@@ -1,0 +1,42 @@
+page-write-check {
+  /*提示语的padding*/
+  .padding-check{
+    padding:0.5rem 1rem;
+  }
+  .color-6c ion-item{
+    color: #6c6c76;
+  }
+
+  .color-b6{
+    color: #b6b7b7;
+  }
+
+  .title-border:after {
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: -5px;
+    position: absolute;
+    width: 1px;
+    height: 90%;
+    background-color: #e5e5e5;
+  }
+
+  .footer-row ion-col {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .footer-row ion-col button {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+.check-alert{
+  .alert-button:nth-child(2){
+    border: 0!important;
+    background-color: #f3bb44;
+    color: #ffffff;
+  }
+}

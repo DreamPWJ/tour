@@ -29,8 +29,9 @@ $royal: #886aea;
 $grey: #474747;
 $dark: #000;
 $color-8a:#8a8a8a;
+$color-f7:#f7f7f8;
 
-$colors-list: (light:$light, stable:$stable, positive:$positive, calm:$calm, balanced:$balanced, energized:$energized, yellow:$yellow, assertive:$assertive, royal:$royal, grey:$grey, dark:$dark, color-8a:$color-8a);
+$colors-list: (light:$light, stable:$stable, positive:$positive, calm:$calm, balanced:$balanced, energized:$energized, yellow:$yellow, assertive:$assertive, royal:$royal, grey:$grey, dark:$dark, color-8a:$color-8a, color-f7:$color-f7);
 @each $key, $value in $colors-list {
   .#{$key} {
     color: $value !important;
@@ -308,23 +309,22 @@ ion-content{
   @include border-scale;
 }
 
-.font-size-12{
-  font-size:12px;
-}
-.font-size-13{
-  font-size:13px;
-}
-.font-size-14{
-  font-size:14px;
-}
-.font-size-15{
-  font-size:15px;
-}
-.font-size-16{
-  font-size:16px;
-}
-.font-size-17{
-  font-size: 17px;
+$font-size-10: 10;
+$font-size-12: 12;
+$font-size-13: 13;
+$font-size-14: 14;
+$font-size-15: 15;
+$font-size-16: 16;
+$font-size-17: 17;
+$font-size-18: 18;
+$font-size-20: 20;
+
+$font-size-list: (font-size-10:$font-size-10, font-size-12:$font-size-12, font-size-13:$font-size-13,font-size-14:$font-size-14, font-size-15:$font-size-15, font-size-16:$font-size-16,font-size-17:$font-size-17, font-size-18:$font-size-18, font-size-20:$font-size-20);
+@each $key, $value in $font-size-list {
+  .#{$key} {
+    font-size: #{$value}px !important;
+  }
+
 }
 .div-border{
   margin: 0!important;
