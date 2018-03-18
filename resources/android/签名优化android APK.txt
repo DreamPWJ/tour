@@ -21,7 +21,7 @@ Theme.Light.NoTitleBar.Fullscreen
     variant.outputs.each { output ->
       def oldFile = output.outputFile
 /*      if (variant.buildType.name.equals('release')) {*/
-        def releaseApkName = variant.buildType.name.equals('release')?'自驾游-release.apk':'自驾游.apk';
+        def releaseApkName = variant.buildType.name.equals('release')?'自驾游-release.apk':'自驾游-debug.apk';
         output.outputFile = new File(oldFile.parent, releaseApkName)
     /*  }*/
     }
