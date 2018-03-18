@@ -118,9 +118,9 @@
     </ion-row>
     <p class="div-border"></p>
     <ion-row align-items-center class="padding-8">
-      <ion-col class="grey" col-8>第三方责任补充 <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon></ion-col>
+      <ion-col class="grey" col-8 text-nowrap>第三方责任补充 <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon></ion-col>
       <ion-col class="grey"><span *ngIf="threeParty"><small>￥</small>{{threeParty1==1?50:100}}</span></ion-col>
-      <ion-col text-right col-2><ion-toggle [(ngModel)]="threeParty"></ion-toggle></ion-col>
+      <!--<ion-col text-right col-2>--><ion-toggle [(ngModel)]="threeParty"></ion-toggle><!--</ion-col>-->
     </ion-row>
     <div class="padding-l-10" *ngIf="threeParty">
       <ion-row align-items-center class="padding-8" (click)="threeParty1=1">
@@ -139,9 +139,9 @@
     </div>
     <p class="div-border"></p>
     <ion-row align-items-center class="padding-8">
-      <ion-col class="grey" col-8>网点额外服务(儿童座椅、GPS) <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon></ion-col>
+      <ion-col class="grey" col-8 text-nowrap>网点额外服务(儿童座椅、GPS) <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon></ion-col>
       <ion-col class="grey"><span *ngIf="extraService"><small>￥</small>{{(seatYinger+seatErtong)*50}}</span></ion-col>
-      <ion-col float-right><ion-toggle [(ngModel)]="extraService"></ion-toggle></ion-col>
+     <!-- <ion-col float-right>--><ion-toggle [(ngModel)]="extraService"></ion-toggle><!--</ion-col>-->
     </ion-row>
     <div class="padding-l-10" *ngIf="extraService">
       <ion-row align-items-center class="padding-8">
