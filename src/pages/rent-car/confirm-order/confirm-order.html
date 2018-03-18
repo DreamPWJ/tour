@@ -231,8 +231,9 @@
     <div *ngSwitchCase="'租车须知'">租车须知</div>
     <div *ngSwitchCase="'注意事项'">注意事项</div>
   </div>
-  <p class="grey padding-lr-10 back-e5 font-size-13 margin-bottom-0" (click)="readAgreeFlg=!readAgreeFlg">
-    <ion-icon class="icon-roundcheckfill font-size-icon" ngClass="{{readAgreeFlg?'check-color':'color-8a'}}"></ion-icon> 已仔细阅读并同意  <span class="" style="color: #547fea;"> 租车须知 </span>
+  <p class="grey padding-lr-10 back-e5 font-size-13 margin-bottom-0">
+    <span (click)="readAgreeFlg=!readAgreeFlg" tappable><ion-icon class="icon-roundcheckfill font-size-icon" ngClass="{{readAgreeFlg?'check-color':'color-8a'}}"></ion-icon> 已仔细阅读并同意  </span>
+    <span class="color-blue" (click)="doAlert()" tappable> 租车须知 </span>
   </p>
 </ion-content>
 <ion-footer>
@@ -241,7 +242,7 @@
       <small>￥</small><span class="font-size-price">398</span>
       <span class="color-8a">(日均￥199)</span>
     </ion-col>
-    <ion-col col-3 class="grey font-size-16" text-center>
+    <ion-col col-3 class="grey font-size-16" text-center (click)="costModal()" tappable>
       费用明细
     </ion-col>
     <ion-col col-4>

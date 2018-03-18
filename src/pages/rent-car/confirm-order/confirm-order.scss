@@ -153,4 +153,35 @@ page-confirm-order {
       font-size:20px;
     }
   }
+
+  .color-blue{
+    color: #547fea;
+  }
 }
+.doAlert{
+  .alert-message{
+    .color-blue{
+      color: #547fea;
+      padding-top: 5px;
+      font-size: 14px;
+    }
+    .color-dark{
+      padding-top: 5px;
+      font-size: 14px;
+    }
+
+    p{
+      margin: 0!important;
+      text-align: left;
+      color: #474747;
+    }
+  }
+
+  .alert-button{
+    border: 0!important;
+    background-color: #f3bb44;
+    color: #ffffff;
+  }
+
+}
+

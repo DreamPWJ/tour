@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {AlertController, IonicPage, ModalController, NavController, NavParams} from 'ionic-angular';
 import {AppService} from "../../../providers/util/app.service";
 
 /**
@@ -27,7 +27,8 @@ export class ConfirmOrderPage {
   cardetailArr:string[]=[ '订车流程','必备材料' ,'租车须知','注意事项'];
   cardetailSeg:string=this.cardetailArr[1];
 
-  constructor(public navCtrl: NavController, public appService: AppService) {
+  constructor(public navCtrl: NavController, public appService: AppService,
+              public alerCtrl: AlertController, public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
@@ -63,5 +64,23 @@ export class ConfirmOrderPage {
     if(this.seatErtong > 0){
       this.seatErtong --;
     }
+  }
+
+  doAlert() {
+    let alert = this.alerCtrl.create({
+      cssClass:'doAlert',
+      title: '网点额外服务说明',
+      message: `<p class="div-border "></p><p class="color-blue">GPS导航仪</p><p>租车门店提供的GPS导航仪通常为当地语言版本，价格和库存取决于门店</p>
+        <p class="color-blue">儿童座椅</p><p>汽车上的安全带是按成人标准来设计的，如果给儿童使用，安全带会卡在儿童的脖子上，发生事故对儿童的伤害更大。体重低于36KG或身高低于145CM的儿童必须使用安全座椅。座椅包括婴儿座椅、儿童座椅、儿童增高坐垫，语言版本，价格和库存取决于门店租车公司。</p>
+        <p class="color-dark">温馨提示</p><p>1.额外服务费用需另行支付</p><p>2.总费用=日单价×租用天数，当租期较长时一般会有封顶价格(约70~90元)，具体价格以各门店为准。</p>`,
+      buttons: ['关闭']
+    });
+    alert.present()
+  }
+
+  //费用明细弹出
+  costModal(){
+    let modal = this.modalCtrl.create("CostDetailPage");
+    modal.present();
   }
 }
