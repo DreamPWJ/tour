@@ -78,9 +78,4 @@ export class ConfirmOrderPage {
     alert.present()
   }
 
-  //费用明细弹出
-  costModal(){
-    let modal = this.modalCtrl.create("CostDetailPage");
-    modal.present();
-  }
 }
