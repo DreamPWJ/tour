@@ -10,32 +10,24 @@
   <p class="padding-check color-8a">
     2017年7月1日起，单位报销需填写纳税人识别号，如未填写不能报销，深驾一概不予退换。
   </p>
-  <div class="light-bg">
-    <ion-list class="color-6c">
-      <ion-item no-margin>
-        <ion-row  class="font-size-15">
-          <ion-col col-3>开票内容</ion-col>
-          <ion-col class="title-border grey">租车费 | 用车平台服务费</ion-col>
-        </ion-row>
-      </ion-item>
-      <ion-item>
-        <ion-row class="font-size-15">
-          <ion-col col-3>发票信息</ion-col>
-          <ion-col class="title-border color-b6" (click)="checkAlert()" tappable>
-            <span *ngIf="!checkMessage">请选择公司名或个人 <ion-icon class="icon-right" float-right></ion-icon></span>
-            <span class="grey" *ngIf="checkMessage">{{checkMessage}}</span>
-          </ion-col>
-
-        </ion-row>
-      </ion-item>
-      <ion-item>
-        <ion-row class="font-size-15" [navPush]="'AddressSelectPage'">
-          <ion-col col-3>邮寄地址</ion-col>
-          <ion-col class="title-border color-b6">请选择邮寄发票的地址</ion-col>
-          <ion-col text-right><ion-icon class="icon-right color-b6"></ion-icon></ion-col>
-        </ion-row>
-      </ion-item>
-    </ion-list>
+  <div class="light-bg padding-lr-10 color-8a">
+    <ion-row align-items-center class="padding-8">
+      <ion-col col-3 class="title-border">开票内容</ion-col>
+      <ion-col class="grey">租车费 | 用车平台服务费</ion-col>
+    </ion-row>
+    <p class="div-border"></p>
+    <ion-row align-items-center class="padding-8"(click)="checkAlert()" tappable>
+      <ion-col col-3 class="title-border">发票信息</ion-col>
+      <ion-col class="color-8a" text-nowrap *ngIf="!checkMessage">请选择公司名或个人</ion-col>
+      <ion-col text-right class="color-8a" *ngIf="!checkMessage"><ion-icon class="icon-right"></ion-icon></ion-col>
+      <ion-col class="grey" *ngIf="checkMessage">{{checkMessage}}</ion-col>
+    </ion-row>
+    <p class="div-border"></p>
+    <ion-row align-items-center class="padding-8" [navPush]="'AddressSelectPage'">
+      <ion-col col-3 class="title-border">邮寄地址</ion-col>
+      <ion-col class="color-8a" text-nowrap>请选择邮寄发票的地址</ion-col>
+      <ion-col text-right class="color-8a"><ion-icon class="icon-right"></ion-icon></ion-col>
+    </ion-row>
 
   </div>
 </ion-content>

@@ -7,20 +7,22 @@ page-write-check {
     color: #6c6c76;
   }
 
-  .color-b6{
-    color: #b6b7b7;
+  .padding-8{
+    padding: 8px 0;
   }
-
-  .title-border:after {
-    content: '';
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    left: -5px;
-    position: absolute;
-    width: 1px;
-    height: 90%;
-    background-color: #e5e5e5;
+  .title-border{
+    position: relative;
+    &:after {
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      right: 10%;
+      position: absolute;
+      width: 1px;
+      height: 80%;
+      background-color: #e5e5e5;
+    }
   }
 
   .footer-row ion-col {
