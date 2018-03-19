@@ -15,6 +15,8 @@ import {RankingListPage} from "../pages/ranking-list/ranking-list";
 import {MyProfilePage} from "../pages/account/my-profile/my-profile";
 import {DirectivesModule} from "../directives/directives.module";
 import {CalendarModule} from "ion2-calendar/dist";
+import {CityPickerModule} from "ionic2-city-picker";
+import {HttpClientModule} from "@angular/common/http";
 
 export const COMPONENTS = [
   MyApp,
@@ -25,8 +27,11 @@ export const COMPONENTS = [
 ]
 
 export const MODULES = [
+  HttpClientModule,
   DirectivesModule,
-  CalendarModule
+  CalendarModule,
+  CityPickerModule,
+
 ]
 
 export const PROVIDERS = [

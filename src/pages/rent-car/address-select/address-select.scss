@@ -5,4 +5,14 @@ page-address-select {
   .foot-btn{
     background-color: #f3bb44;
   }
+
+  ion-toggle{
+    &:after{
+      position: absolute;
+      top: 100%;
+      content:attr(id);
+      font-size: 12px;
+      color:#474747 ;
+    }
+  }
 }

@@ -2,7 +2,7 @@
   <ion-navbar color="white">
     <ion-title>选择收件地址</ion-title>
     <ion-buttons end>
-      <button ion-button small class="font-size-14">编辑</button>
+      <button ion-button small class="font-size-14" [navPush]="'AddAddressPage'">编辑</button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
@@ -11,13 +11,15 @@
   <ion-list>
     <ion-item *ngFor="let item of addressList">
       <ion-label>
-      <h2 class="grey">{{item.name}} <span float-right>{{item.mobphone}}</span></h2>
-      <p text-wrap class="font-size-13">{{item.address}}</p>
+        <h2 class="grey">{{item.name}} <span float-right>{{item.mobphone}}</span></h2>
+        <p text-wrap class="font-size-13">{{item.address}}</p>
       </ion-label>
-      <div item-end text-center  >
-        <ion-toggle (tap)="toggleClick(item)" [(ngModel)]="item.checked" class="padding-l-8"></ion-toggle>
-        <p class="font-size-12">{{item.checked?'默认地址':'设为默认'}}</p>
-      </div>
+
+        <ion-toggle  (tap)="toggleClick(item)" id="{{item.checked?'默认地址':'设为默认'}}" [(ngModel)]="item.checked" class="padding-l-8">
+
+        </ion-toggle>
+<!--      <p item-end class="font-size-12">{{item.checked?'默认地址':'设为默认'}}</p>-->
+
     </ion-item>
   </ion-list>
 
