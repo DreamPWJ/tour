@@ -17,6 +17,8 @@ import {DirectivesModule} from "../directives/directives.module";
 import {CalendarModule} from "ion2-calendar/dist";
 import {CityPickerModule} from "ionic2-city-picker";
 import {HttpClientModule} from "@angular/common/http";
+import {CameraProvider} from "../providers/native/camera";
+import {Camera} from "@ionic-native/camera";
 
 export const COMPONENTS = [
   MyApp,
@@ -38,6 +40,8 @@ export const PROVIDERS = [
   AppService,
   CityProvider,
   HardwareBackButtonProvider,
+  Camera,
+  CameraProvider,
 ]
 
 @NgModule({

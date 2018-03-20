@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {CameraProvider} from "../../../providers/native/camera";
 
 /**
- * Generated class for the DriverAddPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
+ * 新增驾驶员
  */
 
 @IonicPage()
@@ -15,11 +13,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DriverAddPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public camera: CameraProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DriverAddPage');
+
   }
 
+  upload() {
+    this.camera.cameraActionSheet();
+  }
 }
