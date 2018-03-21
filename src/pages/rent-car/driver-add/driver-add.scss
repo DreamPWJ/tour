@@ -1,4 +1,9 @@
 page-driver-add {
+  ion-content{
+    .scroll-content{
+     background-color:  $color-f7!important;
+    }
+  }
   ion-label{
     width:20%!important;
   }
