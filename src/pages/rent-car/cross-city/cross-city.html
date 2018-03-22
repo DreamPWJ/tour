@@ -7,7 +7,7 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-  <p class="head-border"></p>
+  <p class="div-border"></p>
 </ion-header>
 <ion-content>
   <div>
@@ -35,8 +35,11 @@
         <p class="color-8a margin-p2 font-size-13">{{item.goday}}</p>
       </ion-col>
       <ion-col>
-        <p class="margin-p1" no-margin><small style="color: #ecc141;">￥</small><span class="price-style">{{item.price}}</span></p>
-        <p class="color-8a margin-p2 font-size-13">自驾游<span style="color: #ecc141;">{{item.time}}</span>天</p>
+        <p no-margin text-center class="padding-t-2"><small style="color: #ecc141;">￥</small><span class="price-style">{{item.price}}</span></p>
+        <p class="color-8a" no-margin>
+          <ion-icon class="icon-kuachengtehuishijianquan day_circle_bk"></ion-icon>
+          <span class="day_circle_on">自驾游<span style="color: #ecc141;">{{item.time}}</span>天</span>
+        </p>
       </ion-col>
       <ion-col>
         <p class="grey font-size-16 margin-p1" no-margin>{{item.endcity}}</p>
