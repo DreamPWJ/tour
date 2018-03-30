@@ -1,0 +1,235 @@
+
+<ion-header >
+  <ion-navbar color="white">
+    <ion-title>确认订单</ion-title>
+    <ion-buttons end>
+      <button class="more-btn" ion-button icon-only>
+        <ion-icon class="icon-more_android_light "></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <p no-margin class="font-size-15 title-bk"><span>【最美林芝2日】</span>桃花季预售•雅鲁藏布大峡谷•嘎啦桃花村/拉如桃花村</p>
+  <ion-row align-items-center>
+    <ion-col></ion-col>
+    <ion-col class="border-title"></ion-col>
+    <ion-col class="font-size-12 grey" text-center col-auto>豪华套餐 • 成人1 • 儿童1</ion-col>
+    <ion-col class="border-title"></ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <div class="padding-lr-10">
+    <ion-row align-items-center>
+      <ion-col col-3 text-center>
+        <p no-margin class="grey font-size-16">03.07</p>
+        <p no-margin class="color-8a font-size-12">周三 11:30</p>
+        <ion-datetime displayFormat="MMM D" cancelText="取消" doneText="确定" [(ngModel)]="dateTime" style="height: 0;" no-padding></ion-datetime>
+      </ion-col>
+      <ion-col col-6 no-padding >
+        <ion-row align-items-center>
+          <ion-col no-padding col-2></ion-col>
+          <ion-col class="circle-border1" no-padding></ion-col>
+          <ion-col no-padding>
+            <div class="circle-bk" text-center>
+              <p no-margin class="circle-dayday">2</p>
+              <p no-margin class="font-size-12">天</p>
+            </div>
+          </ion-col>
+          <ion-col class="circle-border2" no-padding></ion-col>
+          <ion-col no-padding col-2></ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col col-3 text-center>
+        <p no-margin class="grey font-size-16">03.09</p>
+        <p no-margin class="color-8a font-size-12">周五 11:30</p>
+        <ion-datetime displayFormat="MMM D" cancelText="取消" doneText="确定" [(ngModel)]="dateTime" style="height: 0;" no-padding></ion-datetime>
+      </ion-col>
+    </ion-row>
+    <p class="div-border margin-tb-10"></p>
+    <ion-row align-items-center>
+      <ion-col col-1 text-right><ion-icon class="icon-location" color="primary"></ion-icon></ion-col>
+      <ion-col col-3 class="color-8a">出发送车</ion-col>
+      <ion-col>
+        <p no-margin class="font-size-15 grey">成都 <span [navPush]="'SendcarMapPage'">富力中心送车点</span></p>
+        <p no-margin class="font-size-12 color-8a">顺城大街269号富力中心1208号</p>
+      </ion-col>
+    </ion-row>
+    <ion-row align-items-center [navPush]="'DebusSelectPage'">
+      <ion-col col-1 text-right><ion-icon class="icon-location" color="primary"></ion-icon></ion-col>
+      <ion-col col-3 class="color-8a">结束还车</ion-col>
+      <ion-col>
+        <p no-margin class="font-size-15 grey">成都 <span [navPush]="'SendcarMapPage'">富力中心送车点</span></p>
+        <p no-margin class="font-size-12 color-8a">顺城大街269号富力中心1208号</p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <p class="partition margin-top-0"></p>
+  <h5 class="color-8a padding-lr-10">联系人信息</h5>
+  <p class="div-border"></p>
+  <div class="padding-lr-10">
+    <ion-row align-items-center class="padding-8">
+      <ion-col col-3 class="grey">姓名</ion-col>
+      <ion-col class="color-8a">请选择联系人姓名</ion-col>
+      <ion-col text-right class="color-8a"><ion-icon class="icon-right"></ion-icon></ion-col>
+    </ion-row>
+    <p class="div-border"></p>
+    <ion-row align-items-center class="">
+      <ion-col col-3 class="grey">手机</ion-col>
+      <ion-col><ion-input type="number" placeholder="用于接收预订信息"></ion-input></ion-col>
+    </ion-row>
+  </div>
+  <p class="partition margin-top-0"></p>
+
+  <h5 class="color-8a padding-lr-10">出行人信息</h5>
+  <p class="div-border"></p>
+  <div class="padding-lr-10">
+    <ion-row align-items-center class="padding-8">
+      <ion-col col-3 class="grey">出行人</ion-col>
+      <ion-col class="color-8a">请添加出行人</ion-col>
+      <ion-col text-right class="color-8a"><ion-icon class="icon-right"></ion-icon></ion-col>
+    </ion-row>
+  </div>
+  <p class="partition margin-top-0"></p>
+
+  <h5 class="color-8a padding-lr-10">保险</h5>
+  <p class="div-border"></p>
+  <div class="padding-lr-10">
+    <ion-row class="padding-8">
+      <ion-col class="grey">
+        基础保险费  <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon>
+        <p no-margin class="base-btn-style"><span>最全保障</span><span>0起赔额</span></p>
+      </ion-col>
+      <ion-col text-right class="grey" (click)="baseFlg=!baseFlg" tappable>
+        <span *ngIf="baseFlg"><span class="color-8a">50×2= </span><small>￥</small>100</span>
+        <ion-icon class="icon-roundcheckfill font-size-icon" ngClass="{{baseFlg?'check-color':'color-8a'}}"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <p class="div-border"></p>
+    <ion-row class="padding-8">
+      <ion-col class="grey" col-8 text-nowrap>
+        第三方责任补充 <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon> <span class="sanfang-btn-style">热门</span>
+        <p no-margin class="base-btn-style sanfang-btn-color"><span>最强保障</span><span>82%用户选择</span></p>
+      </ion-col>
+      <ion-col class="grey"><span *ngIf="threeParty"><small>￥</small>{{threeParty1==1?50:100}}</span></ion-col>
+      <!--<ion-col text-right col-2>--><ion-toggle [(ngModel)]="threeParty"></ion-toggle><!--</ion-col>-->
+    </ion-row>
+    <div class="padding-l-10" *ngIf="threeParty">
+      <ion-row align-items-center class="padding-8" (click)="threeParty1=1">
+        <ion-col class="grey" col-auto>50万第三者责任补充 (￥50)</ion-col>
+        <ion-col text-right class="grey">
+          <ion-icon class="icon-roundcheckfill font-size-icon" ngClass="{{threeParty1==1?'check-color':'color-8a'}}"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <p class="div-border"></p>
+      <ion-row align-items-center class="padding-8" (click)="threeParty1=2">
+        <ion-col class="grey" col-auto>100万第三者责任补充 (￥100)</ion-col>
+        <ion-col text-right class="grey">
+          <ion-icon class="icon-roundcheckfill font-size-icon" ngClass="{{threeParty1==2?'check-color':'color-8a'}}"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </div>
+    <p class="div-border"></p>
+    <ion-row class="padding-8">
+      <ion-col class="grey" col-8 text-nowrap>
+        超级全车驾乘险 <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon> <span class="sanfang-btn-style super-btn-style">推荐</span>
+        <p no-margin class="base-btn-style"><span>保人身意外</span><span>保随身物品</span><span class="super-btn-color">80%用户选择</span></p>
+      </ion-col>
+      <ion-col class="grey"><span *ngIf="superCar"><small>￥</small>{{superCar1==1?50:100}}</span></ion-col>
+      <!--<ion-col text-right col-2>--><ion-toggle [(ngModel)]="superCar"></ion-toggle><!--</ion-col>-->
+    </ion-row>
+    <div class="padding-l-10" *ngIf="superCar">
+      <ion-row align-items-center class="padding-8" (click)="superCar1=1">
+        <ion-col class="grey" col-auto>100万赔额 (￥50/人天)</ion-col>
+        <ion-col text-right class="grey" (click)="superFold=!superFold" tappable>
+          <span><span class="color-8a">50×{{checkNum}}= </span><small>￥</small>{{50*checkNum}}</span>
+          <ion-icon class="icon-unfold padding-8" *ngIf="superFold"></ion-icon>
+          <ion-icon class="icon-fold padding-8" *ngIf="!superFold"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-scroll scrollX="true" style="width: 100%;height: 30px;" *ngIf="superFold">
+        <ion-row style="width: 110vw;">
+          <ion-col class="grey font-size-13" col-auto *ngFor="let item of personList" align-self-center>
+            <span (click)="item.check=!item.check" tappable>
+              <ion-icon class="icon-roundcheckfill font-size-16" ngClass="{{item.check?'check-color':'color-8a'}}"></ion-icon> {{item.name}}
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-scroll>
+      <p class="div-border"></p>
+      <ion-row align-items-center class="padding-8" (click)="superCar1=2">
+        <ion-col class="grey" col-auto>200万赔额 (￥100/人天)</ion-col>
+        <ion-col text-right class="grey">
+          <small>￥</small>0 <ion-icon class="icon-right padding-8"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </div>
+
+  <p class="partition margin-tb-0"></p>
+  <div class="padding-lr-10">
+    <ion-row align-items-center class="padding-8">
+      <ion-col col-3 class="grey">支付方式</ion-col>
+      <ion-col class="color-11">在线支付</ion-col>
+      <ion-col text-right class="color-8a"><ion-icon class="icon-right"></ion-icon></ion-col>
+    </ion-row>
+    <p class="div-border"></p>
+    <ion-row align-items-center class="padding-8">
+      <ion-col col-3 class="grey">优惠折扣</ion-col>
+      <ion-col><button small class="youhuiquan">4张优惠券可用</button></ion-col>
+      <ion-col text-right><span style="color: #d8862f;" class="font-size-15">更多优惠 </span><ion-icon class="icon-right color-8a"></ion-icon></ion-col>
+    </ion-row>
+  </div>
+  <p class="partition margin-tb-0"></p>
+  <div class="padding-lr-10">
+    <ion-row align-items-center class="padding-8" [navPush]="'WriteCheckPage'">
+      <ion-col col-3 class="grey">开具发票</ion-col>
+      <ion-col text-right class="color-8a">不开发票 <ion-icon class="icon-right"></ion-icon></ion-col>
+    </ion-row>
+  </div>
+  <p class="partition margin-tb-0"></p>
+
+  <ion-segment [(ngModel)]="confirmSeg" mode="md" (ionChange)="segmentChanged($event)">
+    <ion-segment-button *ngFor="let item of confirmArr" value="{{item}}">
+      {{item}}
+      <div class="bolder-sm"></div>
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="confirmSeg">
+    <div *ngSwitchCase="'购买流程'">购买流程</div>
+    <div *ngSwitchCase="'必备材料'" class="padding-lr-10">
+      <ion-row  align-items-center class="padding-5">
+        <ion-col col-auto class="aa-bg" text-center>1</ion-col>
+        <ion-col class="color-8a">请携带本人有效身份证+驾驶证+信用卡</ion-col>
+      </ion-row>
+      <ion-row align-items-center="" class="padding-5">
+        <ion-col col-auto class="aa-bg" text-center>2</ion-col>
+        <ion-col class="color-8a">取车前需刷取3000元预授权或押金</ion-col>
+      </ion-row>
+      <ion-row align-items-center="" class="padding-5">
+        <ion-col col-auto class="aa-bg" text-center>3</ion-col>
+        <ion-col class="color-8a">取车前需刷取3000元预授权或押金</ion-col>
+      </ion-row>
+    </div>
+    <div *ngSwitchCase="'预定须知'">预定须知</div>
+    <div *ngSwitchCase="'重要条款'">重要条款</div>
+  </div>
+  <p class="grey padding-lr-10 back-e5 font-size-13 margin-bottom-0">
+    <span (click)="readAgreeFlg=!readAgreeFlg" tappable><ion-icon class="icon-roundcheckfill font-size-icon" ngClass="{{readAgreeFlg?'check-color':'color-8a'}}"></ion-icon> 已仔细阅读并同意  </span>
+    <span class="color-blue" (click)="doAlert()" tappable> 预定须知 </span>与<span class="color-blue" (click)="doAlert()" tappable> 重要条款 </span>
+  </p>
+</ion-content>
+<ion-footer>
+  <ion-row class="footer-row" align-items-center>
+    <ion-col col-5 class="foot-price" text-center>
+      <small>￥</small><span class="font-size-price">16985</span>
+      <span class="color-8a">(省￥2000)</span>
+    </ion-col>
+    <ion-col col-3 class="grey font-size-16" text-center>
+      费用明细
+    </ion-col>
+    <ion-col col-4>
+      <button full ion-button style="background-color: #f9da65;" class="grey">提交订单</button>
+    </ion-col>
+  </ion-row>
+</ion-footer>

@@ -1,0 +1,181 @@
+page-confirm-order2 {
+  .check-color{
+    color: #FFDB27;
+  }
+  .color-e5{
+    color: #e5e5e5;
+  }
+  .title-bk{
+    color: #ffffff;
+    background: -webkit-linear-gradient(left, #9881d6, #6b94f7); /* Safari 5.1 - 6.0 */
+    background: linear-gradient(to right, #9881d6, #6b94f7); /* 标准的语法（必须放在最后） */
+    padding: 16px 12px;
+    span{
+      font-weight: bold;
+    }
+  }
+  .border-title{
+    position: relative;
+  }
+  .border-title::before{
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(0deg, transparent 50%, #8a8a8a 50%);
+  }
+
+  /*圆圈里写数字*/
+  .circle-bk{
+    background-color: #ffffff;
+    width:43px;height: 43px;
+    border-radius: 50%;
+    border:1px solid #e2bd8c;
+    padding:1px 0;
+    .circle-dayday {
+      color: #e2bd8c;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+  .circle-border1{
+    border-top:1px solid #e2bd8c;
+    position: relative;
+  }
+  .circle-border1::before{
+    position: absolute;
+    top:-3px;
+    left:-6px;
+    content: "";
+    width: 6px;height: 6px;
+    background-color: #e2bd8c;
+    border-radius: 50%;
+  }
+  .circle-border2{
+    border-top:1px solid #e2bd8c;
+    position: relative;
+  }
+  .circle-border2::before {
+    position: absolute;
+    bottom:1px;
+    right: 0;
+    content: "";
+    height: 2px;
+    background-image: linear-gradient(0deg, transparent 50%, #e2bd8c 50%);
+    width: 6px;
+    transform: rotate(40deg);
+    -webkit-transform: rotate(40deg);
+  }
+
+  .margin-tb-10{
+    margin: 10px 0 5px 0!important;
+  }
+
+  .padding-8{
+    padding: 8px 0;
+  }
+  .margin-top-0{
+    margin-top: 0!important;
+  }
+  .margin-bottom-0{
+    margin-bottom: 0!important;
+  }
+  .margin-tb-0{
+    margin: 0!important;
+  }
+  .padding-l-10{
+    padding-left: 10px;
+  }
+
+  .font-size-icon{
+    font-size: 22px;
+  }
+  .font-size-18{
+    font-size: 18px;
+  }
+  .back-e5{
+    background-color: #F9F9F9;
+    padding:8px;
+  }
+
+  .question-icon{
+    font-size: 26px;
+  }
+
+  .youhuiquan {
+    color: #fff;
+    font-size: 13px;
+    background: -webkit-linear-gradient(left, #7396f7, #a082f7); /* Safari 5.1 - 6.0 */
+    background: linear-gradient(to right, #7396f7, #a082f7); /* 标准的语法（必须放在最后） */
+    padding:5px 8px;border-radius: 3px;
+  }
+
+  .aa-bg{
+    background-color: #aabcea;
+    color: #ffffff;
+    width:20px;height: 20px;line-height: 20px;
+    border-radius: 50%;
+    padding: 0;
+  }
+  .padding-5{
+    padding-top:5px;
+  }
+
+  /*基础保险费 下面的button*/
+  .base-btn-style{
+    font-size: 10px;
+    color: #547fea;
+    margin-top: 3px;
+    span{
+      text-align: center;
+      border: 1px solid #5a88fb;
+      padding: 2px 4px 1px 4px;
+      margin-right: 3px;
+      border-radius: 3px;
+    }
+  }
+  .sanfang-btn-color{
+    span{
+      color: #e15d75;
+      border: 1px solid #e15d75;
+    }
+  }
+  .sanfang-btn-style{
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #e15d75;
+    padding: 1px 3px;
+    border-radius: 1px;
+  }
+  .super-btn-style{
+    background-color: #5a88fb;
+  }
+  .super-btn-color{
+    color: #e15d75;
+    border: 1px solid #e15d75!important;
+  }
+
+  .footer-row ion-col {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .footer-row ion-col button {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .foot-price{
+    color: #f3bb44;
+    .font-size-price{
+      font-size:20px;
+    }
+  }
+
+  .color-blue{
+    color: #547fea;
+  }
+}
