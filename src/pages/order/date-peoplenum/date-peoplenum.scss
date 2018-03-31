@@ -1,0 +1,60 @@
+page-date-peoplenum {
+  .more-btn:after {
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 2px;
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+  .icon-service{
+    font-size: 22px!important;
+  }
+
+  .calendar-list{
+    width: 13.5%;padding:4px;
+    margin: 1px;
+  }
+
+  .cla-sel{
+    border-radius: 5px;
+    background-color: #fdf1eb;
+    .font-size-12{
+      color: #f08c5c;
+    }
+  }
+  ion-segment-button{
+    height: 52px!important;
+    &>div:nth-child(1){
+      p{
+        font-size: 13px;
+        height: 18px;
+        font-weight: normal;
+      }
+      p:first-child{
+        font-weight: 600;
+      }
+      p:last-child{
+        font-size: 11px;
+      }
+      height: 50px;
+    }
+    &.segment-activated{
+      .bolder-sm {
+        border: 1px solid color($colors, primary)!important;
+        width: 36px;
+        margin: 0 auto;
+      }
+    }
+
+  }
+
+  .week-style{
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    margin: 5px 0;
+  }
+}

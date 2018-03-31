@@ -129,7 +129,7 @@ page-confirm-order2 {
   .base-btn-style{
     font-size: 10px;
     color: #547fea;
-    margin-top: 3px;
+    margin-top: 5px;
     span{
       text-align: center;
       border: 1px solid #5a88fb;
@@ -177,5 +177,23 @@ page-confirm-order2 {
 
   .color-blue{
     color: #547fea;
+  }
+
+  /*客服*/
+  .kefu-style{
+    z-index: 9;
+    position: fixed;
+    bottom: 8rem;
+    right: 2rem;
+    text-align: center;
+    padding-top: 2px;
+    background-color: #ffffff;
+    width: 45px;height: 45px;
+    border-radius: 50%;
+    border: 2px solid #E5E5E5;
+    p:nth-child(2){
+      margin-top: -2px;
+      font-size: 9px!important;
+    }
   }
 }

@@ -83,7 +83,7 @@
   <h5 class="color-8a padding-lr-10">出行人信息</h5>
   <p class="div-border"></p>
   <div class="padding-lr-10">
-    <ion-row align-items-center class="padding-8">
+    <ion-row align-items-center class="padding-8" [navPush]="'DatePeoplenumPage'">
       <ion-col col-3 class="grey">出行人</ion-col>
       <ion-col class="color-8a">请添加出行人</ion-col>
       <ion-col text-right class="color-8a"><ion-icon class="icon-right"></ion-icon></ion-col>
@@ -134,7 +134,7 @@
         超级全车驾乘险 <ion-icon class="icon-questionfill color-e5 font-size-16"></ion-icon> <span class="sanfang-btn-style super-btn-style">推荐</span>
         <p no-margin class="base-btn-style"><span>保人身意外</span><span>保随身物品</span><span class="super-btn-color">80%用户选择</span></p>
       </ion-col>
-      <ion-col class="grey"><span *ngIf="superCar"><small>￥</small>{{superCar1==1?50:100}}</span></ion-col>
+      <ion-col class="grey"><span *ngIf="superCar"><small>￥</small>{{superCar1==1?50*checkNum:100}}</span></ion-col>
       <!--<ion-col text-right col-2>--><ion-toggle [(ngModel)]="superCar"></ion-toggle><!--</ion-col>-->
     </ion-row>
     <div class="padding-l-10" *ngIf="superCar">
@@ -148,7 +148,7 @@
       </ion-row>
       <ion-scroll scrollX="true" style="width: 100%;height: 30px;" *ngIf="superFold">
         <ion-row style="width: 110vw;">
-          <ion-col class="grey font-size-13" col-auto *ngFor="let item of personList" align-self-center>
+          <ion-col class="grey font-size-13" col-3 *ngFor="let item of personList" align-self-center>
             <span (click)="item.check=!item.check" tappable>
               <ion-icon class="icon-roundcheckfill font-size-16" ngClass="{{item.check?'check-color':'color-8a'}}"></ion-icon> {{item.name}}
             </span>
@@ -218,6 +218,10 @@
     <span (click)="readAgreeFlg=!readAgreeFlg" tappable><ion-icon class="icon-roundcheckfill font-size-icon" ngClass="{{readAgreeFlg?'check-color':'color-8a'}}"></ion-icon> 已仔细阅读并同意  </span>
     <span class="color-blue" (click)="doAlert()" tappable> 预定须知 </span>与<span class="color-blue" (click)="doAlert()" tappable> 重要条款 </span>
   </p>
+  <div class="kefu-style grey">
+    <p no-margin><ion-icon class="icon-service font-size-icon"></ion-icon></p>
+    <p no-margin class="">客服</p>
+  </div>
 </ion-content>
 <ion-footer>
   <ion-row class="footer-row" align-items-center>

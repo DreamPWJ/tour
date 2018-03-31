@@ -1,0 +1,49 @@
+<ion-header >
+  <ion-navbar color="white">
+    <ion-title>出游时间及人数选择</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon class="icon-service"></ion-icon>
+      </button>
+      <button class="more-btn" ion-button icon-only>
+        <ion-icon class="icon-more_android_light "></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <p class="div-border"></p>
+  <ion-segment [(ngModel)]="datePeopleSeg" mode="md" (ionChange)="segmentChanged($event)">
+    <ion-segment-button *ngFor="let item of datePeopleArr" value="{{item.month}}" >
+      <div>
+        <p no-margin>{{item.month}}</p>
+        <p no-margin>{{item.price}}</p>
+      </div>
+      <div class="bolder-sm" ></div>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+<ion-content>
+  <div [ngSwitch]="datePeopleSeg">
+    <div *ngSwitchCase="'3月'" class="padding-lr-10">
+      <ion-row align-self-center text-center class="color-8a week-style font-size-13">
+        <ion-col>一</ion-col>
+        <ion-col>二</ion-col>
+        <ion-col>三</ion-col>
+        <ion-col>四</ion-col>
+        <ion-col>五</ion-col>
+        <ion-col>六</ion-col>
+        <ion-col>日</ion-col>
+      </ion-row>
+      <ion-row align-self-center text-center class="grey">
+        <div *ngFor="let item of calendarList" class="calendar-list" tappable (click)="calendarCli(item.date)" ngClass="{{item.selectFlg?'cla-sel':''}}">
+          <p no-margin class="font-size-16">{{item.date}}</p>
+          <p no-margin><span class="font-size-12"><small *ngIf="item.price">￥</small>{{item.price}}</span></p>
+        </div>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar no-margin no-padding>
+    <button full ion-button style="background-color: #f9da65;" no-margin class="grey">下一步，选择行程资源</button>
+  </ion-toolbar>
+</ion-footer>
