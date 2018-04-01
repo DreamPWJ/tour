@@ -3,7 +3,7 @@
     <ion-title>出游时间及人数选择</ion-title>
     <ion-buttons end>
       <button ion-button icon-only>
-        <ion-icon class="icon-service"></ion-icon>
+        <ion-icon class="icon-kefu"></ion-icon>
       </button>
       <button class="more-btn" ion-button icon-only>
         <ion-icon class="icon-more_android_light "></ion-icon>
@@ -24,7 +24,7 @@
 <ion-content>
   <div [ngSwitch]="datePeopleSeg">
     <div *ngSwitchCase="'3月'" class="padding-lr-10">
-      <ion-row align-self-center text-center class="color-8a week-style font-size-13">
+      <ion-row align-self-center text-center class="color-8a week-style font-size-12">
         <ion-col>一</ion-col>
         <ion-col>二</ion-col>
         <ion-col>三</ion-col>
@@ -36,14 +36,53 @@
       <ion-row align-self-center text-center class="grey">
         <div *ngFor="let item of calendarList" class="calendar-list" tappable (click)="calendarCli(item.date)" ngClass="{{item.selectFlg?'cla-sel':''}}">
           <p no-margin class="font-size-16">{{item.date}}</p>
-          <p no-margin><span class="font-size-12"><small *ngIf="item.price">￥</small>{{item.price}}</span></p>
+          <p no-margin class="color-8a"><span class="font-size-1"><small *ngIf="item.price">￥</small>{{item.price}}</span></p>
         </div>
       </ion-row>
     </div>
   </div>
+
+  <div text-center>
+    <p class="english-style" no-margin>MEMBER &nbsp;&nbsp;SELECTION</p>
+    <ion-row align-items-center>
+      <ion-col></ion-col>
+      <ion-col class="border-title" col-1></ion-col>
+      <ion-col col-3 text-center class="font-size-17">成员选择</ion-col>
+      <ion-col class="border-title" col-1></ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </div>
+
+  <div class="padding-lr-10">
+    <ion-row align-items-center>
+      <ion-col col-1><ion-icon class="icon-renyuan icon-font color-8a"></ion-icon></ion-col>
+      <ion-col>成人</ion-col>
+      <ion-col col-1 (click)="chengren>1?chengren=chengren-1:chengren=chengren" tappable><ion-icon class="icon-jianhao icon-font color-8a"></ion-icon></ion-col>
+      <ion-col col-1 text-right class="font-size-16 font-num">{{chengren}}</ion-col>
+      <ion-col col-1 (click)="chengren=chengren+1" tappable><ion-icon class="icon-jiajianxi icon-font color-8a"></ion-icon></ion-col>
+    </ion-row>
+    <ion-row align-items-center>
+      <ion-col col-1><ion-icon class="icon-ertongquan icon-font color-8a"></ion-icon></ion-col>
+      <ion-col>儿童 <span class="color-8a font-size-12">2-12岁</span></ion-col>
+      <ion-col col-1 (click)="ertong>0?ertong=ertong-1:ertong=ertong" tappable><ion-icon class="icon-jianhao icon-font color-8a"></ion-icon></ion-col>
+      <ion-col col-1 text-right class="font-size-16 font-num">{{ertong}}</ion-col>
+      <ion-col col-1 (click)="ertong=ertong+1" tappable><ion-icon class="icon-jiajianxi icon-font color-8a"></ion-icon></ion-col>
+    </ion-row>
+    <ion-row align-items-center>
+      <ion-col col-1><ion-icon class="icon-yingerquan icon-font color-8a"></ion-icon></ion-col>
+      <ion-col>婴儿 <span class="color-8a font-size-12">0-2岁</span></ion-col>
+      <ion-col col-1 (click)="yinger>0?yinger=yinger-1:yinger=yinger" tappable><ion-icon class="icon-jianhao icon-font color-8a"></ion-icon></ion-col>
+      <ion-col col-1 text-right class="font-size-16 font-num">{{yinger}}</ion-col>
+      <ion-col col-1 (click)="yinger=yinger+1" tappable><ion-icon class="icon-jiajianxi icon-font color-8a"></ion-icon></ion-col>
+    </ion-row>
+    <p class="color-8a font-size-13">
+      <span class="font-size-17" text-center> · </span> 请阅读 <span class="lianjie-color"> 预定须知 </span> 及 <span class="lianjie-color"> 价格说明 </span>
+    </p>
+
+  </div>
 </ion-content>
 <ion-footer>
-  <ion-toolbar no-margin no-padding>
-    <button full ion-button style="background-color: #f9da65;" no-margin class="grey">下一步，选择行程资源</button>
+  <ion-toolbar no-margin no-padding class="foot-btn-sh">
+    <button full ion-button no-margin class="grey " [navPush]="'SourceSelectPage'">下一步，选择行程资源</button>
   </ion-toolbar>
 </ion-footer>

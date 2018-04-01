@@ -1,0 +1,94 @@
+page-source-select {
+  .more-btn:after {
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 2px;
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+  .icon-kefu{
+    font-size: 22px!important;
+  }
+
+  .font-bold{
+    font-weight: bold;
+  }
+  .color-d7{
+    color: #d7d7d7;
+  }
+  .padding-t-5{
+    padding-top: 5px;
+  }
+  .color-73{
+    color: #73b4d0;
+  }
+  .padding-tb-5{
+    padding: 8px 0;
+  }
+
+  .border-l-r{
+    position: relative;
+  }
+  .border-l-r::before{
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 3rem;
+    position: absolute;
+    width: 25%;
+    height: 1px;
+    background-image: linear-gradient(0deg, transparent 50%, #8a8a8a 50%);
+  }
+  .border-l-r::after{
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    right: 3rem;
+    position: absolute;
+    width: 25%;
+    height: 1px;
+    background-image: linear-gradient(0deg, transparent 50%, #8a8a8a 50%);
+  }
+
+  .user-car-top{
+    width: 40px;
+    height: 30px;
+    background-color: #FAD934;
+    color: #000;
+  }
+  .ri-qi {
+    position: absolute;
+    background-color: #FFDE37;
+    border-radius: 0 0 2px 2px;
+    padding: 0 8px;
+    top: 0;
+    left: 15px;
+    color: #474747;
+    z-index: 10;
+    > span {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    div {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      font-size: 8px;
+      p, span {
+        margin: 0;
+        padding: 0;
+      }
+      span {
+        position: relative;
+        top: 0;
+      }
+    }
+
+  }
+}

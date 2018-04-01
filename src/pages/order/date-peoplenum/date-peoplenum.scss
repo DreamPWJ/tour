@@ -10,7 +10,7 @@ page-date-peoplenum {
     height: 50%;
     background-color: rgba(0, 0, 0, 0.65);
   }
-  .icon-service{
+  .icon-kefu{
     font-size: 22px!important;
   }
 
@@ -22,7 +22,7 @@ page-date-peoplenum {
   .cla-sel{
     border-radius: 5px;
     background-color: #fdf1eb;
-    .font-size-12{
+    .font-size-1{
       color: #f08c5c;
     }
   }
@@ -56,5 +56,46 @@ page-date-peoplenum {
     background-color: #f6f6f6;
     border-radius: 20px;
     margin: 5px 0;
+    ion-col{
+      padding: 3px 5px!important;
+    }
+  }
+
+  .english-style{
+    padding-top: 4rem;
+    font-size: 24px;
+    color: #e6e6e6;
+    transform: scaleX(0.8);
+  }
+  .border-title{
+    position: relative;
+  }
+  .border-title::before{
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(0deg, transparent 50%, #8a8a8a 50%);
+  }
+
+  .icon-font{
+    font-size: 24px;
+  }
+
+  .font-num{
+    font-weight: 400;
+  }
+
+  .lianjie-color{
+    color: #547fea;
+  }
+
+  .foot-btn-sh{
+    background-color: #f9da65;
+    box-shadow: 0 -4px 10px rgba(62,62,62,.15);
   }
 }
