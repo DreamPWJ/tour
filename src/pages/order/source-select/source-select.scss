@@ -62,33 +62,38 @@ page-source-select {
     background-color: #FAD934;
     color: #000;
   }
-  .ri-qi {
-    position: absolute;
-    background-color: #FFDE37;
-    border-radius: 0 0 2px 2px;
-    padding: 0 8px;
-    top: 0;
-    left: 15px;
-    color: #474747;
-    z-index: 10;
-    > span {
-      font-size: 15px;
-      font-weight: 600;
-    }
-    div {
-      margin: 0;
-      padding: 0;
-      display: inline-block;
-      font-size: 8px;
-      p, span {
+  ion-card{
+    position: relative;
+    .ri-qi {
+      position: absolute;
+      background-color: #FFDE37;
+      border-radius: 0 0 3px 3px;
+      padding: 0 6px;
+      top: 0;
+      left: 6px;
+      color: #474747;
+      z-index: 10;
+
+      &>span {
+        position: relative;
+        top: -4px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      &>div {
         margin: 0;
         padding: 0;
-      }
-      span {
-        position: relative;
-        top: 0;
-      }
-    }
+        display: inline-block;
+        p, span {
+          font-size: 8px;
+          margin: 0;
+          padding: 0;
+          color:#474747!important;
+        }
 
+      }
+
+    }
   }
+
 }
