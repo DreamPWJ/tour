@@ -10,40 +10,40 @@ page-source-select {
     height: 50%;
     background-color: rgba(0, 0, 0, 0.65);
   }
-  .icon-kefu{
-    font-size: 22px!important;
+  .icon-kefu {
+    font-size: 22px !important;
   }
 
-  .font-bold{
+  .font-bold {
     font-weight: bold;
   }
-  .color-d7{
+  .color-d7 {
     color: #d7d7d7;
   }
 
-  .color-73{
+  .color-73 {
     color: #73b4d0;
   }
-  .color-f9{
+  .color-f9 {
     color: #F9D934;
   }
-  .color-5a{
-    background-color: #5a88fb!important;
+  .color-5a {
+    background-color: #5a88fb !important;
   }
-  .padding-t-5{
+  .padding-t-5 {
     padding-top: 5px;
   }
-  .padding-tb-5{
+  .padding-tb-5 {
     padding: 8px 0;
   }
-  .border-padding{
+  .border-padding {
     padding: 5px 0 1px 0;
   }
 
-  .border-l-r{
+  .border-l-r {
     position: relative;
   }
-  .border-l-r::before{
+  .border-l-r::before {
     content: '';
     top: 50%;
     transform: translateY(-50%);
@@ -54,7 +54,7 @@ page-source-select {
     height: 1px;
     background-image: linear-gradient(0deg, transparent 50%, #8a8a8a 50%);
   }
-  .border-l-r::after{
+  .border-l-r::after {
     content: '';
     top: 50%;
     transform: translateY(-50%);
@@ -66,7 +66,7 @@ page-source-select {
     background-image: linear-gradient(0deg, transparent 50%, #8a8a8a 50%);
   }
 
-  ion-card{
+  ion-card {
     position: relative;
     .ri-qi {
       position: absolute;
@@ -78,13 +78,13 @@ page-source-select {
       color: #474747;
       z-index: 10;
 
-      &>span {
+      & > span {
         position: relative;
         top: -4px;
         font-size: 12px;
         font-weight: 600;
       }
-      &>div {
+      & > div {
         margin: 0;
         padding: 0;
         display: inline-block;
@@ -92,23 +92,23 @@ page-source-select {
           font-size: 8px;
           margin: 0;
           padding: 0;
-          color:#474747!important;
+          color: #474747 !important;
         }
 
       }
 
     }
 
-    .driver-top{
+    .driver-top {
       position: absolute;
       left: 6px;
       top: 4px;
-      span{
+      span {
         font-weight: bold;
       }
     }
 
-    .close-div{
+    .close-div {
       position: absolute;
       right: 0;
       top: 0;
@@ -117,32 +117,32 @@ page-source-select {
     }
   }
 
-  .driver-btn{
-    span{
+  .driver-btn {
+    span {
       font-size: 11px;
       background-color: #f8f8f8;
       padding: 2px 5px;
       margin-right: 3px;
       border-radius: 3px;
     }
-    margin:2px 0 4px 0;
+    margin: 2px 0 4px 0;
   }
 
-  .service-btn{
-    span{
+  .service-btn {
+    span {
       background-color: #ffffff;
       color: #e15d75;
       border: 1px solid #e15d75;
     }
-    margin:4px 0 4px 0;
+    margin: 4px 0 4px 0;
   }
-  .camera-color{
-    span{
+  .camera-color {
+    span {
       color: #5a88fb;
       border: 1px solid #5a88fb;
     }
   }
-  .remen{
+  .remen {
     font-size: 11px;
     color: #ffffff;
     background-color: #e15d75;
@@ -150,39 +150,38 @@ page-source-select {
     border-radius: 1px;
   }
 
-  .seat-border{
-    position: relative;
-    span{
-      position: absolute;
-      top: 0;right: 0;
-      font-size: 22px;
-      color: #ECECEC;
-    }
+
+  button.seat-border {
+    float: right;
+    padding: 0;
+    background-color: transparent!important;
+    font-size: 22px;
+    color: #ECECEC;
   }
 
-  .hotel-btn{
+  .hotel-btn {
     color: #ffffff;
-    span:first-child{
+    span:first-child {
       background: -webkit-linear-gradient(left, #7396f7, #a182f6); /* Safari 5.1 - 6.0 */
       background: linear-gradient(to right, #7396f7, #a182f6); /* 标准的语法（必须放在最后） */
     }
-    span:last-child{
+    span:last-child {
       background: -webkit-linear-gradient(left, #a281f6, #ec739c); /* Safari 5.1 - 6.0 */
       background: linear-gradient(to right, #a281f6, #ec739c); /* 标准的语法（必须放在最后） */
     }
   }
 
-  .tour-top{
-    background-color: #ffffff!important;
+  .tour-top {
+    background-color: #ffffff !important;
   }
 
-  .tour-btn{
-    span:nth-child(1){
+  .tour-btn {
+    span:nth-child(1) {
       color: #ffffff;
       background: -webkit-linear-gradient(left, #7396f7, #a182f6); /* Safari 5.1 - 6.0 */
       background: linear-gradient(to right, #7396f7, #a182f6); /* 标准的语法（必须放在最后） */
     }
-    span:nth-child(2){
+    span:nth-child(2) {
       background-color: #ffffff;
       color: #8a8a8a;
       border: 1px solid #8a8a8a;
@@ -192,19 +191,25 @@ page-source-select {
   .footer-row ion-col {
     padding: 0 !important;
     margin: 0 !important;
-    button{
+    button {
       padding: 0 !important;
       margin: 0 !important;
     }
   }
 
-  .foot-price{
+  .foot-price {
     color: #f3bb44;
-    .font-size-price{
-      font-size:20px;
+    .font-size-price {
+      font-size: 20px;
     }
-    span:last-child{
+    span:last-child {
       font-size: 11px;
+    }
+  }
+  .num-middle {
+    ion-icon {
+      font-size: 22px !important;
+      vertical-align: middle !important;
     }
   }
 }
