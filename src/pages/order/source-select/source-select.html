@@ -31,7 +31,7 @@
     </div>
     <ion-row align-items-center class="padding-t-5">
       <ion-col col-4 margin-top>
-        <img src="../assets/imgs/journey/car.png" width="50" height="50"/>
+        <img src="assets/imgs/journey/car.png" width="50" height="50"/>
       </ion-col>
       <ion-col>
         <h2>雪佛兰科鲁兹<span float-right class="color-8a font-size-12">车辆说明 <ion-icon
@@ -57,7 +57,7 @@
     <div class="driver-top"><span>司机 · </span>2日</div>
     <ion-row align-items-center class="padding-t-5">
       <ion-col col-4 margin-top>
-        <img src="../assets/imgs/journey/car.png" width="50" height="50"/>
+        <img src="assets/imgs/journey/car.png" width="50" height="50"/>
       </ion-col>
       <ion-col>
         <h2>专业司机</h2>
@@ -85,69 +85,76 @@
   </ion-card>
   <ion-card>
     <div class="driver-top"><span>服务 · </span>升级</div>
-    <div class="close-div">
-      <ion-icon class="icon-guanbi" (click)="guideFlg=!guideFlg" tappable></ion-icon>
+    <div text-center class="color-73 padding-tb-5" *ngIf="!guideFlg" (click)="guideFlg=!guideFlg" tappable>+ 私人导游  <span class="remen">热门</span></div>
+    <div *ngIf="guideFlg">
+      <button class="seat-border" (click)="guideFlg=!guideFlg">
+        <ion-icon class="icon-guanbi"></ion-icon>
+      </button>
+      <ion-row align-items-center class="padding-t-5">
+        <ion-col col-4 margin-top>
+          <img src="assets/imgs/journey/car.png" width="50" height="50"/>
+        </ion-col>
+        <ion-col>
+          <h2>私人导游 <span class="remen">热门</span></h2>
+          <p class="grey driver-btn service-btn">
+            <span> 全程1对1 </span><span> 92%出游用户选择 </span>
+          </p>
+          <ion-row>
+            <ion-col no-padding class="border-padding"><p class="div-border"></p></ion-col>
+          </ion-row>
+          <ion-row align-items-center>
+            <ion-col text-left class="grey font-size-13" col-auto>
+              <ion-icon class="icon-favor_fill_light color-f9"></ion-icon>
+              5星级服务标准
+              <ion-icon class="icon-questionfill color-d7"></ion-icon>
+            </ion-col>
+            <ion-col text-right class="color-8a font-size-15 num-middle" align-self-center>
+              <ion-icon class="icon-jianhao font-size-18" (click)="guideNum>0?guideNum=guideNum-1:guideNum"
+                        tappable></ion-icon>
+              <span class="font-bold grey"> {{guideNum}} </span>
+              <ion-icon class="icon-jiajianxi font-size-18" (click)="guideNum=guideNum+1" tappable></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
     </div>
-    <ion-row align-items-center class="padding-t-5" *ngIf="guideFlg">
-      <ion-col col-4 margin-top>
-        <img src="../assets/imgs/journey/car.png" width="50" height="50"/>
-      </ion-col>
-      <ion-col>
-        <h2>私人导游 <span class="remen">热门</span></h2>
-        <p class="grey driver-btn service-btn">
-          <span> 全程1对1 </span><span> 92%出游用户选择 </span>
-        </p>
-        <ion-row>
-          <ion-col no-padding class="border-padding"><p class="div-border"></p></ion-col>
-        </ion-row>
-        <ion-row align-items-center>
-          <ion-col text-left class="grey font-size-13" col-auto>
-            <ion-icon class="icon-favor_fill_light color-f9"></ion-icon>
-            5星级服务标准
-            <ion-icon class="icon-questionfill color-d7"></ion-icon>
-          </ion-col>
-          <ion-col text-right class="color-8a font-size-15 num-middle" align-self-center>
-            <ion-icon class="icon-jianhao font-size-18" (click)="guideNum>0?guideNum=guideNum-1:guideNum"
-                      tappable></ion-icon>
-            <span class="font-bold grey"> {{guideNum}} </span>
-            <ion-icon class="icon-jiajianxi font-size-18" (click)="guideNum=guideNum+1" tappable></ion-icon>
-          </ion-col>
-        </ion-row>
-      </ion-col>
-    </ion-row>
   </ion-card>
   <ion-card>
     <div class="driver-top"><span>服务 · </span>升级</div>
-    <div class="close-div">
-      <ion-icon class="icon-guanbi"></ion-icon>
+    <div text-center class="color-73 padding-tb-5" *ngIf="!cameraFlg" (click)="cameraFlg=!cameraFlg" tappable>+ 跟拍摄影师  <span class="remen color-5a">推荐</span></div>
+
+    <div *ngIf="cameraFlg">
+      <button class="seat-border" (click)="cameraFlg=!cameraFlg">
+        <ion-icon class="icon-guanbi"></ion-icon>
+      </button>
+      <ion-row align-items-center class="padding-t-5">
+        <ion-col col-4 margin-top>
+          <img src="assets/imgs/journey/car.png" width="50" height="50"/>
+        </ion-col>
+        <ion-col>
+          <h2>跟拍摄影师 <span class="remen color-5a">推荐</span></h2>
+          <p class="driver-btn service-btn camera-color">
+            <span> 私人订制化 </span><span> 100%好评 </span>
+          </p>
+          <ion-row>
+            <ion-col no-padding class="border-padding"><p class="div-border"></p></ion-col>
+          </ion-row>
+          <ion-row align-items-center>
+            <ion-col text-left class="grey font-size-13 nowrap" col-8>
+              <ion-icon class="icon-favor_fill_light color-f9"></ion-icon>
+              可提供服装等服务
+              <ion-icon class="icon-questionfill color-d7"></ion-icon>
+            </ion-col>
+            <ion-col text-right class="color-8a font-size-15 num-middle" align-self-center>
+              <ion-icon class="icon-jianhao font-size-18" (click)="cameraNum>0?cameraNum=cameraNum-1:cameraNum"
+                        tappable></ion-icon>
+              <span class="font-bold grey"> {{cameraNum}} </span>
+              <ion-icon class="icon-jiajianxi font-size-18" (click)="cameraNum=cameraNum+1" tappable></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
     </div>
-    <ion-row align-items-center class="padding-t-5">
-      <ion-col col-4 margin-top>
-        <img src="../assets/imgs/journey/car.png" width="50" height="50"/>
-      </ion-col>
-      <ion-col>
-        <h2>跟拍摄影师 <span class="remen color-5a">推荐</span></h2>
-        <p class="driver-btn service-btn camera-color">
-          <span> 私人订制化 </span><span> 100%好评 </span>
-        </p>
-        <ion-row>
-          <ion-col no-padding class="border-padding"><p class="div-border"></p></ion-col>
-        </ion-row>
-        <ion-row align-items-center>
-          <ion-col text-left class="grey font-size-13 nowrap" col-8>
-            <ion-icon class="icon-favor_fill_light color-f9"></ion-icon>
-            可提供服装等服务
-            <ion-icon class="icon-questionfill color-d7"></ion-icon>
-          </ion-col>
-          <ion-col text-right class="color-8a font-size-15 num-middle" align-self-center>
-            <ion-icon class="icon-jianhao font-size-18" (click)="cameraNum>0?cameraNum=cameraNum-1:cameraNum"
-                      tappable></ion-icon>
-            <span class="font-bold grey"> {{cameraNum}} </span>
-            <ion-icon class="icon-jiajianxi font-size-18" (click)="cameraNum=cameraNum+1" tappable></ion-icon>
-          </ion-col>
-        </ion-row>
-      </ion-col>
-    </ion-row>
   </ion-card>
   <p class="border-l-r color-8a" text-center>豪华·额外配备</p>
   <ion-card>
@@ -155,30 +162,33 @@
       <div><span>01.05</span>
         <p>01.07</p></div>
     </div>
-    <div class="close-div">
-      <ion-icon class="icon-guanbi"></ion-icon>
+
+    <div *ngIf="ertongFlg">
+      <button class="seat-border" (click)="ertongFlg=!ertongFlg">
+        <ion-icon class="icon-guanbi"></ion-icon>
+      </button>
+      <ion-row align-items-center class="padding-t-5">
+        <ion-col col-4 margin-top>
+          <img src="assets/imgs/journey/car.png" width="50" height="50"/>
+        </ion-col>
+        <ion-col>
+          <h2>儿童座椅</h2>
+          <p class="font-size-12 color-8a">通常适用于9个月-4岁，体重9-25公斤儿童</p>
+          <ion-row>
+            <ion-col no-padding class="border-padding"><p class="div-border"></p></ion-col>
+          </ion-row>
+          <ion-row align-items-center>
+            <ion-col text-left class="grey font-size-12" col-auto>物品以实物为准</ion-col>
+            <ion-col text-right class="color-8a font-size-15 num-middle" align-self-center>
+              <ion-icon class="icon-jianhao font-size-18" (click)="ertongNum>0?ertongNum=ertongNum-1:ertongNum"
+                        tappable></ion-icon>
+              <span class="font-bold grey"> {{ertongNum}} </span>
+              <ion-icon class="icon-jiajianxi font-size-18" (click)="ertongNum=ertongNum+1" tappable></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
     </div>
-    <ion-row align-items-center class="padding-t-5">
-      <ion-col col-4 margin-top>
-        <img src="../assets/imgs/journey/car.png" width="50" height="50"/>
-      </ion-col>
-      <ion-col>
-        <h2>儿童座椅</h2>
-        <p class="font-size-12 color-8a">通常适用于9个月-4岁，体重9-25公斤儿童</p>
-        <ion-row>
-          <ion-col no-padding class="border-padding"><p class="div-border"></p></ion-col>
-        </ion-row>
-        <ion-row align-items-center>
-          <ion-col text-left class="grey font-size-12" col-auto>物品以实物为准</ion-col>
-          <ion-col text-right class="color-8a font-size-15 num-middle" align-self-center>
-            <ion-icon class="icon-jianhao font-size-18" (click)="ertongNum>0?ertongNum=ertongNum-1:ertongNum"
-                      tappable></ion-icon>
-            <span class="font-bold grey"> {{ertongNum}} </span>
-            <ion-icon class="icon-jiajianxi font-size-18" (click)="ertongNum=ertongNum+1" tappable></ion-icon>
-          </ion-col>
-        </ion-row>
-      </ion-col>
-    </ion-row>
     <div *ngIf="yingerFlg">
       <p class="div-border "></p>
       <button class="seat-border" (click)="yingerFlg=!yingerFlg">
@@ -186,7 +196,7 @@
       </button>
       <ion-row align-items-center class="padding-t-5">
         <ion-col col-4>
-          <img src="../assets/imgs/journey/car.png" width="50" height="50"/>
+          <img src="assets/imgs/journey/car.png" width="50" height="50"/>
         </ion-col>
         <ion-col>
           <h2>婴儿座椅</h2>
@@ -206,14 +216,14 @@
         </ion-col>
       </ion-row>
     </div>
-    <div *ngIf="yingerFlg">
+    <div *ngIf="zenggaoFlg">
       <p class="div-border "></p>
-      <button class="seat-border" (click)="yingerFlg=!yingerFlg">
+      <button class="seat-border"  (click)="zenggaoFlg=!zenggaoFlg">
         <ion-icon class="icon-guanbi"></ion-icon>
       </button>
       <ion-row align-items-center class="padding-t-5">
         <ion-col col-4>
-          <img src="../assets/imgs/journey/car.png" width="50" height="50"/>
+          <img src="assets/imgs/journey/car.png" width="50" height="50"/>
         </ion-col>
         <ion-col>
           <h2>儿童增高坐垫</h2>
@@ -232,9 +242,10 @@
           </ion-row>
         </ion-col>
       </ion-row>
+      <p class="div-border"></p>
     </div>
-    <p class="div-border"></p>
-    <p text-center class="color-73 padding-tb-5">更多座椅选择</p>
+
+    <p text-center class="color-73 padding-tb-5" (click)="erTongSeat(ertongFlg,yingerFlg,zenggaoFlg)" tappable>{{!ertongFlg&&!yingerFlg&&!zenggaoFlg?'+  儿童座椅':'更多座椅选择'}}</p>
   </ion-card>
   <p class="border-l-r color-8a" text-center>豪华·行程安排</p>
   <ion-card>
@@ -251,7 +262,7 @@
 
     <ion-row align-items-center class="padding-t-5">
       <ion-col col-4 margin-top>
-        <img src="../assets/imgs/journey/car.png" width="50" height="50"/>
+        <img src="assets/imgs/journey/car.png" width="50" height="50"/>
       </ion-col>
       <ion-col>
         <h2>普者黑老馆了心度假庄园</h2>
@@ -293,7 +304,7 @@
 
     <ion-row align-items-center class="padding-t-5">
       <ion-col col-4 margin-top>
-        <img src="../assets/imgs/journey/car.png" width="50" height="50"/>
+        <img src="assets/imgs/journey/car.png" width="50" height="50"/>
       </ion-col>
       <ion-col>
         <h2>尼洋河</h2>
@@ -317,7 +328,7 @@
     <p class="div-border"></p>
     <ion-row align-items-center class="padding-t-5">
       <ion-col col-4 margin-top>
-        <img src="../assets/imgs/journey/car.png" width="50" height="50"/>
+        <img src="assets/imgs/journey/car.png" width="50" height="50"/>
       </ion-col>
       <ion-col>
         <h2>雅鲁藏布大峡谷</h2>

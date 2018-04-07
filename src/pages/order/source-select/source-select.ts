@@ -27,7 +27,10 @@ export class SourceSelectPage {
   yaluNum:number = 0;//雅鲁藏布大峡谷数量
 
   guideFlg:boolean = true;//导游flg
+  cameraFlg:boolean = true;//摄影师flg
+  ertongFlg:boolean = true;//儿童flg
   yingerFlg:boolean = true;//婴儿flg
+  zenggaoFlg:boolean = true;//儿童增高坐垫flg
 
   constructor(public navCtrl: NavController,public appService: AppService) {
   }
@@ -39,5 +42,15 @@ export class SourceSelectPage {
   ionViewWillEnter(){
     this.appService.loadingHide();
   }
+
+  erTongSeat(ertongFlg,yingerFlg,zenggaoFlg){
+    if(!ertongFlg&&!yingerFlg&&!zenggaoFlg){
+      this.ertongFlg = !ertongFlg;
+      this.yingerFlg = !yingerFlg;
+      this.zenggaoFlg = !zenggaoFlg;
+    }
+  }
+
+
 
 }

@@ -1,49 +1,46 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.lampa.startapp": {
+      "PACKAGE_NAME": "com.app.tour"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-appavailability": {
+      "PACKAGE_NAME": "com.app.tour"
     },
-    "installed_plugins": {
-        "com.lampa.startapp": {
-            "PACKAGE_NAME": "com.app.tour"
-        },
-        "cordova-plugin-appavailability": {
-            "PACKAGE_NAME": "com.app.tour"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.app.tour"
-        },
-        "cordova-plugin-ionic-webview": {
-            "PACKAGE_NAME": "com.app.tour"
-        },
-        "cordova-plugin-screen-orientation": {
-            "PACKAGE_NAME": "com.app.tour"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.app.tour"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.app.tour"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.app.tour"
-        },
-        "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.app.tour"
-        },
-        "cordova-plugin-camera": {
-            "PACKAGE_NAME": "com.app.tour"
-        }
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.app.tour"
     },
-    "dependent_plugins": {
-        "es6-promise-plugin": {
-            "PACKAGE_NAME": "com.app.tour"
-        },
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.app.tour"
-        }
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.app.tour"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.app.tour"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.app.tour"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.app.tour"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.app.tour"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.app.tour"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.app.tour"
     }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.app.tour"
+    }
+  }
 }
