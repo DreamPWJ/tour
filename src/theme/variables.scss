@@ -68,6 +68,27 @@ $action-sheet-ios-button-min-height: 4.6rem !default;
 $action-sheet-ios-border-color: $border-color !default;
 $action-sheet-ios-button-font-size: 1.8rem !default;
 $action-sheet-ios-button-cancel-font-weight: 400 !default;
+$toast-ios-background: rgba(0, 0, 0, .88) !default;
+$toast-ios-title-padding-top: 0.8rem !default;
+$toast-ios-border-radius: .4rem !default;
+$toast-ios-title-font-size: 1.4rem !default;
+$alert-ios-border-radius: 5px !default;
+$alert-ios-button-main-font-weight: 0 !default;
+/*$alert-ios-button-background-color: #f0f0f0 !default;*/
+$alert-ios-background: #fff !default;
+$alert-ios-title-font-weight: 500 !default;
+$alert-ios-message-font-size: 16px !default;
+$alert-ios-button-border-color: $border-color !default;
+$popover-ios-border-radius: 5px !default;
+$popover-ios-background: #fff !default;
+$loading-ios-border-radius: 5px !default;
+$loading-ios-background: rgba(0, 0, 0, 0.8) !default;
+$loading-ios-content-font-weight: 200 !default;
+$loading-ios-text-color: #fff !default;
+$loading-ios-spinner-color: #fff !default;
+$loading-ios-padding-top: 15px !default;
+$loading-ios-padding-end: 20px !default;
+
 .ion-ios-arrow-back:before {
   content: "\e7ed" !important;
   font-size: 2.2rem;
