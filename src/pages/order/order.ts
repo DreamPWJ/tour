@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {IonicPage, NavController, NavParams, PopoverController} from 'ionic-angular';
 
 /**
  * Generated class for the OrderPage page.
@@ -17,7 +17,7 @@ export class OrderPage {
   orderArr:string[]=[ '全部','未付款' ,'未完成','待点评'];
   orderseg:string=this.orderArr[0];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController) {
   }
 
   segmentChanged(event){}
@@ -40,4 +40,19 @@ export class OrderPage {
     {img:'assets/imgs/self-tour/china1.png',title:'西藏手工产品西藏手工产品西藏手工产品',color:'白色',number:1,price:279.00},
     {img:'assets/imgs/self-tour/china2.png',title:'西藏手工产品西藏手工产品西藏手工产品',color:'白色',number:1,price:279.00},
   ];
+
+  /**
+   * 菜单Popover
+   * @param myEvent
+   */
+  showPopover(myEvent) {
+    let popover = this.popoverCtrl.create('BillPopover');
+    popover.onDidDismiss(data => {
+
+    });
+    popover.present({
+      ev: myEvent
+    });
+  }
+
 }

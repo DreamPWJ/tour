@@ -3,8 +3,8 @@
     <ion-title>我的订单</ion-title>
     <ion-buttons end>
       <button ion-button small  class="li-shi-btn cut-btn">查看历史</button>
-      <button ion-button icon-only>
-        <ion-icon class="icon-more_android_light "></ion-icon>
+      <button ion-button icon-only (click)="showPopover($event)">
+        <ion-icon class="icon-more_android_light " ></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
