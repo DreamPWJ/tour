@@ -1,0 +1,205 @@
+<ion-header>
+  <ion-navbar color="transparent">
+    <!--     <ion-title>目的地</ion-title>-->
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon class="icon-more_android_light"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  (ionScroll)="scrollHandler($event)" class="content-top-0">
+  <ion-slides class="top-slides">
+    <ion-slide *ngFor="let image of [2]">
+      <img data-src="./assets/imgs/self-tour/{{image}}.png">
+      <ion-row class="card-title" align-items-center>
+        <ion-col text-left>
+          <p no-margin><span>西藏</span> 中国 <ion-icon class="icon-roundcheckfill"></ion-icon></p>
+          <p no-margin>Tibet · China</p>
+        </ion-col>
+        <ion-col text-right class="font-size-12">更多精彩图片 <ion-icon class="icon-right"></ion-icon></ion-col>
+      </ion-row>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-row class="img-list grey" text-center>
+    <ion-col>
+      <img src="assets/imgs/self-tour/05精品线路.png" alt="精品线路">
+      <p text-nowrap="">精品线路</p>
+    </ion-col>
+    <ion-col>
+      <img src="assets/imgs/self-tour/06攻略.png" alt="攻略">
+      <p>攻略</p>
+    </ion-col>
+    <ion-col>
+      <img src="assets/imgs/self-tour/07游记.png" alt="游记">
+      <p>游记</p>
+    </ion-col>
+    <ion-col>
+      <img src="assets/imgs/self-tour/08视频.png" alt="视频">
+      <p>视频</p>
+    </ion-col>
+    <ion-col>
+      <img src="assets/imgs/self-tour/09定制.png" alt="定制">
+      <p>定制</p>
+    </ion-col>
+  </ion-row>
+
+  <p class="partition"></p>
+  <ion-row align-items-center class="header-title" ><span col>深度玩法</span>
+    <span col text-right>全部攻略 <ion-icon class="icon-right"></ion-icon></span>
+  </ion-row>
+
+  <ion-slides #slides class="jin-ri-slides" freeMode="true" slidesPerView="auto" spaceBetween="-40px" loop="false"
+              (ionSlideDidChange)="slideChanged()" pager>
+    <ion-slide *ngFor="let image of [1,2,3,4,5]">
+      <ion-card text-left ngClass="{{image==currentIndex?'':'scale-img'}}">
+        <img data-src="assets/imgs/slide/slide{{image}}.jpeg">
+        <h5>涤荡心灵的朝佛之旅</h5>
+        <p>游历神山, 领略不一样的恢宏！</p>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+  <p class="partition" no-margin></p>
+  <ion-row class="header-title padding-top-14"><span>热门城市</span></ion-row>
+  <ion-scroll scrollX="true" class="remen-scroll">
+    <ion-row align-items-center nowrap *ngFor="let city of remenCity">
+      <ion-col col-5  *ngFor="let item of city.city">
+        <ion-row align-items-center>
+          <ion-col col-7><img [src]="item.img" width="100" height="60"></ion-col>
+          <ion-col no-padding><p no-margin>{{item.name}}</p><p no-margin>{{item.english}}</p></ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-scroll>
+  <div class="padding-lr-10">
+    <p class="div-border"></p>
+    <p text-center class="grey">查看更多 <ion-icon class="icon-right"></ion-icon></p>
+  </div>
+  <p class="partition"></p>
+
+  <ion-row class="header-title" ><span>热门景点TOP9</span></ion-row>
+  <ion-scroll class="re-men-scroll"  scrollX="true" style="height: 218px;">
+    <div style="width:calc(200vw + 50px)">
+      <ion-card *ngFor="let image of [1,2,3,4,5]" style="width:40vw;height: 200px;">
+        <ion-img src="assets/imgs/self-tour/china{{image}}.png" width="100%" height="100px"></ion-img>
+        <ion-card-content >
+          <img src="assets/imgs/self-tour/15小推荐线路图标背景.png" width="70"/>
+          <div>TOP {{image}}</div>
+          <ion-card-title>布达拉宫</ion-card-title>
+          <p><ion-icon class="icon-appreciate_fill_light"></ion-icon>
+            知名寺庙 · 藏传佛教 · 必游TOP1 · 人气 No{{image}}</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-scroll>
+  <div class="padding-lr-10">
+    <p class="div-border"></p>
+    <p text-center class="grey">查看更多 <ion-icon class="icon-right"></ion-icon></p>
+  </div>
+
+  <p class="partition"></p>
+  <ion-row class="header-title" align-items-center>
+    <span col>精华游记 <ion-icon class="icon-xihangqujingjinghuatubiaon yellow"></ion-icon></span>
+    <span col text-right class="more">查看更多 <ion-icon class="icon-right"></ion-icon></span>
+  </ion-row>
+
+  <ion-slides class="xi-xing" freeMode="true" slidesPerView="auto" spaceBetween="-25px" loop="false">
+    <ion-slide *ngFor="let image of [1,2,3,4,5]">
+      <ion-card  style="width:90vw;height: 300px;">
+        <div class="ri-qi"> <span class="roboto">10 | </span><div><span>2018</span><p>JAN</p></div></div>
+        <img src="assets/imgs/slide/slide{{image}}.jpeg" />
+        <ion-card-content >
+          <ion-card-title no-padding>
+            远方很远,藏行川西,只为许你一个魔幻神奇的世界
+          </ion-card-title>
+          <ion-row no-padding align-items-center nowrap>
+            <ion-col col-7 align-self-center text-left>
+              <img no-margin="" class="header-item" src="assets/imgs/main/head.jpg"/>
+              <span class="name ">Sea-Cen  <ion-icon class="icon-dingweitubiaodan yellow"></ion-icon>川西</span>
+            </ion-col>
+
+            <ion-col col-2>
+              <button ion-button color="dark" clear small icon-left >
+                <ion-icon class="icon-markfill grey"></ion-icon>
+                {{image}}
+              </button>
+            </ion-col>
+            <ion-col col-3 class="zan" text-right>
+              <button ion-button color="dark" clear small  >
+                <img src="assets/imgs/icon/09赞图标.png" />   {{image}}</button>
+
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+  <p class="partition" ></p>
+  <div class="qiang-gou">
+    <span class="title">限时抢购</span>
+  </div>
+  <ion-scroll class="qianggou-scroll" scrollX="true">
+    <div class="padding-lr-10">
+      <ion-row align-items-center nowrap>
+        <ion-col col-8 *ngFor="let item of qianggouList">
+          <ion-row class="qianggou-row">
+            <ion-col col-5 text-left no-padding><img [src]="item.img" width="95%" height="100%"/></ion-col>
+            <ion-col col-7 class="qianggou-col2">
+              <p no-margin>{{item.name}}</p>
+              <p no-margin class="font-size-12 grey qianggou-p2"><small>￥</small> <span class="qianggou-p2-money">{{item.price}}</span> 起 <span float-right class="zhekou">7折</span></p>
+              <p text-center no-margin><span>15</span> : <span>01</span> : <span>34</span> : <span>33</span></p>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-scroll>
+  <div class="padding-lr-10">
+    <p class="div-border"></p>
+    <p text-center class="grey">查看更多 <ion-icon class="icon-right"></ion-icon></p>
+  </div>
+
+
+  <p class="partition" ></p>
+  <ion-row class="header-title" align-items-center=""><span col>特惠精品路线</span>
+    <span text-right col class="more" [navPush]="'RoadlistPage'">查看更多 <ion-icon class="icon-right"></ion-icon></span>
+  </ion-row>
+  <ion-scroll scrollX="true" style="width: 100%;height: 40px;" class="padding-lr-10">
+    <ion-row nowrap>
+      <div *ngFor="let item of roadList">
+        <button ion-button clear small class="grey road-style" ngClass="{{selectFlg==item.index?'road-style-select':''}}" (click)="selectFlg=item.index">{{item.name}}</button>
+      </div>
+    </ion-row>
+  </ion-scroll>
+
+  <ion-list class="jin-pin-list" no-lines>
+    <ion-item class="card" *ngFor="let image of [1,2,3,4,5]" >
+      <img item-start src="assets/imgs/self-tour/china{{image}}.png">
+      <h2 text-wrap=""><strong>【西藏探秘{{image}}日游】</strong> 临近不丹40号冰川  · 珠穆拉玛峰 </h2>
+      <ion-row class="btn" no-padding=""><span  class="one" >当地自驾</span> <span class="two" >减500</span> <span  class="three">五星导游</span></ion-row>
+      <ion-row class="sell-price" no-padding="" justify-content-between="" align-items-center=""><ion-col class="grey">已售 106</ion-col> <ion-col text-right=""><span class="assertive">￥<strong class=" price roboto">3390</strong></span> <span class="grey">起</span></ion-col></ion-row>
+    </ion-item>
+
+  </ion-list>
+  <ion-card class="jin-pin-card">
+    <div style="position: relative;">
+      <img src="assets/imgs/slide/slide1.jpeg"/>
+      <p>12天</p>
+    </div>
+
+    <ion-card-content>
+      <ion-card-title>
+        <strong>【川滇臧大香格里拉环线定制12日游】</strong>观梅里十三峰全景 · 聆听茶马古道传奇 · 探秘香巴拉王国
+      </ion-card-title>
+      <p > <span>每一公里都是精彩</span> <span>寻找消失的地平线</span> <span>俯瞰金沙江</span></p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab *ngIf="isTabTop" right style="bottom:5rem;">
+    <button (click)="scrollToTop()" ion-fab color="light" mini>
+      <ion-icon class="icon-top"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
