@@ -1,0 +1,79 @@
+page-travel-share {
+  .icon-share {
+    font-size: 2.2rem !important;
+  }
+  .more-btn:after {
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 2px;
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+  .slides{
+    height: auto;
+  }
+
+  .city-style{
+    width: 7rem;
+    border-radius: 3px;
+    background-color: #f3f4f7;
+  }
+  .city-select{
+    background-color: #fedd35;
+  }
+
+  .fold{
+    color: #4e7cdd;
+    background-color: #F9F9F9;
+    padding: 0.5rem 0;
+    position: relative;
+    p{
+      position: absolute;
+      top: -1rem;
+      left: 40%;
+      padding: 0 2rem 0.5rem 2rem;
+      background-color: #ffffff;
+      border-radius: 0 0 15px 15px;
+    }
+  }
+
+  .tou-xiang {
+    display: inline-block;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    border: 2px solid rgba(133,133,133,.32);
+    vertical-align: middle;
+    margin-right: 1px;
+  }
+
+  .youji-div{
+    padding-top: 0.5rem;
+    .title{
+      font-weight: 600;
+      font-size: 15px;
+      margin: 0.5rem 0!important;
+    }
+    .youji-img img{
+      width: 100%;
+      height: 85px;
+    }
+
+    .last-row{
+      margin-top: -8px!important;
+      .zan button {
+        img {
+          width: 20px !important;
+          height: 20px !important;
+          margin-right: 0.3rem;
+        }
+      }
+    }
+  }
+
+
+}
