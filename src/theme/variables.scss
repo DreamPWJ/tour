@@ -43,6 +43,12 @@ $tabs-background: #fff !default;
 $list-border-color: #EBEBEB !default;
 $toast-max-width: 100% !default;
 $img-placeholder-background: transparent !default;
+$refresher-border-color: transparent !default;
+$refresher-icon-color: $grey !default;
+$refresher-text-color: $grey !default;
+$refresher-text-font-size: 14px !default;
+$refresher-height: 66px !default;
+$infinite-scroll-loading-color: $grey !default;
 
 // App iOS Variables
 // --------------------------------------------------
@@ -144,21 +150,73 @@ $segment-button-md-border-color-activated: #FFDE37;*/
 
 @import "ionic.theme.default";
 
-.item-block:first-child {
-  border-top: none !important;
-}
-.item-block:last-child {
-  border-bottom: none !important;
+
+/*自定义ion-datetime样式*/
+
+ion-picker-cmp{
+  .picker-wrapper{
+    border: none!important;
+    .picker-button{
+      font-weight: 100!important;
+    }
+  }
 }
 
-.toast, .toast-error {
+
+/*自定义item样式*/
+
+.item {
+  &.item-block {
+    &:first-child {
+      border-top: none !important;
+    }
+    &:last-child {
+      border-bottom: none !important;
+    }
+  }
+
+}
+
+/*自定义toast样式*/
+
+ion-toast {
   text-align: center !important;
+  &.toast-error, &.toast-success {
+    .toast-wrapper {
+      background-color: transparent !important;
+      .toast-container {
+        min-width: 120px !important;
+        display: inline-block !important;
+        border-radius: 20px !important;
+        .toast-message {
+          padding: 5px 22px;
+          font-size: 15px;
+        }
+      }
+
+    }
+  }
+  @mixin toast-bg-color($color) {
+    .toast-container {
+      background-color: color($colors, $color) !important;
+    }
+  }
+
+  &.toast-error {
+    @include toast-bg-color(danger);
+  }
+
+  &.toast-success {
+    @include toast-bg-color(secondary);
+  }
+
+
 }
 
-.toast-error .toast-wrapper {
-  background-color: #ef473a !important;
-}
+/*真机环境的样式*/
+.platform-ios.platform-cordova, .platform-android.platform-cordova {
 
+}
 
 
 // Ionicons
