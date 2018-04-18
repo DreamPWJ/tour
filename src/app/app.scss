@@ -17,29 +17,6 @@
 /*@import "../assets/fonts/roboto.scss";*/
 @import "../theme/animations.scss";
 
-$light: #fff;
-$stable: #f8f8f8;
-$positive: #00ACFF;
-$calm: #11c1f3;
-$balanced: #33cd5f;
-$energized: #f26604;
-$yellow: #FFDE37;
-$assertive: #ff3334;
-$royal: #886aea;
-$grey: #474747;
-$dark: #000;
-$color-8a:#8a8a8a;
-$color-f7:#f7f7f8;
-
-$colors-list: (light:$light, stable:$stable, positive:$positive, calm:$calm, balanced:$balanced, energized:$energized, yellow:$yellow, assertive:$assertive, royal:$royal, grey:$grey, dark:$dark, color-8a:$color-8a, color-f7:$color-f7);
-@each $key, $value in $colors-list {
-  .#{$key} {
-    color: $value !important;
-  }
-  .#{$key}-bg {
-    background-color: $value !important;
-  }
-}
 
 .radikal {
   font-family: Radikal !important;
