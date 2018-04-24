@@ -12,6 +12,7 @@
     "ionic cordova platform rm android ": "ionic cordova platform rm android",
     "ionic cordova platform add android ": "ionic cordova platform add android",
     "clean": "ionic-app-scripts clean",
+    "build --prod": "ionic-app-scripts build --prod",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint"
   },
