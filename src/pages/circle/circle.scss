@@ -1,0 +1,25 @@
+page-circle {
+  .top-img{
+    img{
+      width: 100%;
+    }
+    img:last-child{
+      position: absolute;
+      top: 2rem;
+    }
+  }
+
+  .circle-row{
+    .row-img{
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+    }
+
+    ion-col p:first-child{
+      font-size: 17px;
+      font-weight: bold;
+      color: #111111;
+    }
+  }
+}

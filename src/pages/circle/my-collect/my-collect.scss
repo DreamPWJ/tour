@@ -1,0 +1,34 @@
+page-my-collect {
+  .collect-content{
+    p:first-child{
+      font-size: 15px;
+      font-weight: bold;
+      color: #474747;
+    }
+
+    .price{
+      color: #111111;
+      font-size: 12px;
+      small,span{
+        color: #da6344;
+      }
+      span{
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+
+    ion-row{
+      color: #6a6b6b;
+      font-size: 11px;
+      ion-col:first-child{
+        border: 1px solid #e7e7e7;
+        padding: 0 5px;
+        border-radius: 3px;
+      }
+      ion-col:last-child{
+
+      }
+    }
+  }
+}
