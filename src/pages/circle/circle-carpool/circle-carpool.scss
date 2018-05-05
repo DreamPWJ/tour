@@ -1,11 +1,18 @@
 page-circle-carpool {
   .carpoll-select{
-    font-size: 19px;
-    font-weight: 500;
-    color: #111111;
+    color: #111111!important;
     border-bottom: 2px solid red;
+    z-index: 100;
   }
 
+  ion-toolbar{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 0!important;
+      .segment-md {
+        border-bottom: 0!important;
+      }
+
+  }
   .carpool-row{
     ion-col:first-child img{
       border-radius: 50%;
@@ -13,11 +20,17 @@ page-circle-carpool {
   }
 
   .carpool-row2{
-    ion-col:first-child{
-      ion-icon,img{
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
+    ion-col:nth-child(1){
+      ion-icon{
+        font-size: 25px;
+        color: $color-8a;
+      }
+    }
+    ion-col:nth-child(2){
+      img{
+        margin-right: 3px;
+        width: 32px;
+        height: 32px;
       }
     }
     ion-col:last-child{

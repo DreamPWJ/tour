@@ -1,18 +1,24 @@
 <ion-header >
-  <ion-navbar color="white">
-    <ion-title>
-      <span padding-right ngClass="{{carpollFlg?'':'carpoll-select'}}" (click)="carpollFlg=false">聊天
+  <ion-toolbar color="white" >
+    <ion-buttons start>
+      <button  ion-button icon-only  navPop>
+        <ion-icon class="ion-ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-segment [(ngModel)]="carpool" mode="md" (ionChange)="segmentChanged($event)">
+      <ion-segment-button *ngFor="let item of carpoolArr" value="{{item}}">
+        {{item}}
+        <div class="bolder-sm"></div>
+      </ion-segment-button>
+    </ion-segment>
 
-      </span>
-      <span ngClass="{{carpollFlg?'carpoll-select':''}}" (click)="carpollFlg=true">去拼车</span>
-    </ion-title>
     <ion-buttons end>
       <button ion-button icon-only>
         <ion-icon class="icon-more_android_light "></ion-icon>
       </button>
     </ion-buttons>
-  </ion-navbar>
-  <p class="div-border"></p>
+  </ion-toolbar>
+  <!--<p class="div-border"></p>-->
   <ion-toolbar color="white">
     <ion-row align-items-center text-center>
       <ion-col>我的拼车</ion-col>
@@ -22,38 +28,47 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div *ngFor="let item of carpoolList">
-    <p class="partition" no-margin></p>
-    <ion-row align-items-center class="carpool-row padding-lr-10">
-      <ion-col col-auto><img [src]="item.img" width="40" height="40"/></ion-col>
-      <ion-col>
-        <p no-margin class="grey">{{item.name}}</p>
-        <p no-margin class="color-8a font-size-12">4小时前</p>
-      </ion-col>
-      <ion-col text-right class="font-size-13">预约3人·加入<span class="color-ff">{{item.person}}</span>人 <ion-icon class="icon-right"></ion-icon></ion-col>
-    </ion-row>
-    <p class="div-border"></p>
-    <ion-row align-items-center class="padding-lr-10">
-      <ion-col col-8 class="grey font-size-15">{{item.title}}</ion-col>
-      <ion-col text-right>
-        <p no-margin class="color-11"><small>￥</small>{{item.price}}</p>
-        <p no-margin class="font-size-12 grey">(人均<span class="color-ff"><small>￥</small>{{item.perprice}}</span>)</p>
-      </ion-col>
-    </ion-row>
-    <p class="margin-t-5 padding-lr-10 font-size-13 color-11">2018.03.15 至 2018.03.18</p>
-    <p class="margin-5 padding-lr-10 font-size-12 color-8a">豪华游 共8人·拼3人 2日|2车 2司机 1地接</p>
-    <p class="div-border"></p>
-    <ion-row class="carpool-row2 padding-lr-10" align-items-center>
-      <ion-col align-self-center justify-content-center>
-        <ion-icon class="icon-add"></ion-icon>
-        <img src="assets/imgs/self-tour/termini6.png"  class="border-radius-50"/>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button small clear>加入</button>
-        <button ion-button small>去聊聊</button>
-      </ion-col>
-    </ion-row>
+
+  <div [ngSwitch]="carpool" (swipe)="swipeEvent($event)">
+    <div *ngSwitchCase="'聊天'" padding>聊天</div>
+    <div *ngSwitchCase="'去拼车'">
+      <div *ngFor="let item of carpoolList">
+        <p class="partition" no-margin></p>
+        <ion-row align-items-center class="carpool-row padding-lr-10">
+          <ion-col col-auto><img [src]="item.img" width="40" height="40"/></ion-col>
+          <ion-col>
+            <p no-margin class="grey">{{item.name}}</p>
+            <p no-margin class="color-8a font-size-12">4小时前</p>
+          </ion-col>
+          <ion-col text-right class="font-size-13">预约3人·加入<span class="color-ff">{{item.person}}</span>人 <ion-icon class="icon-right"></ion-icon></ion-col>
+        </ion-row>
+        <p class="div-border"></p>
+        <ion-row align-items-center class="padding-lr-10">
+          <ion-col col-8 class="grey font-size-15">{{item.title}}</ion-col>
+          <ion-col text-right>
+            <p no-margin class="color-11"><small>￥</small>{{item.price}}</p>
+            <p no-margin class="font-size-12 grey">(人均<span class="color-ff"><small>￥</small>{{item.perprice}}</span>)</p>
+          </ion-col>
+        </ion-row>
+        <p class="margin-t-5 padding-lr-10 font-size-13 color-11">2018.03.15 至 2018.03.18</p>
+        <p class="margin-5 padding-lr-10 font-size-12 color-8a">豪华游 共8人·拼3人 2日|2车 2司机 1地接</p>
+        <p class="div-border"></p>
+        <ion-row class="carpool-row2 padding-lr-10" align-items-center>
+          <ion-col col-auto><ion-icon class="icon-add"></ion-icon></ion-col>
+          <ion-col align-self-center justify-content-center>
+            <img src="assets/imgs/self-tour/termini6.png"  class="border-radius-50"/>
+            <img src="assets/imgs/self-tour/termini8.png"  class="border-radius-50"/>
+          </ion-col>
+          <ion-col text-right>
+            <button ion-button small clear>加入</button>
+            <button ion-button small>去聊聊</button>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+
   </div>
+
 
   <ion-fab bottom center>
     <button ion-fab mini>

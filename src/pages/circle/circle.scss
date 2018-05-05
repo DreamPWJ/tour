@@ -1,13 +1,18 @@
 page-circle {
-  .top-img{
-    img{
-      width: 100%;
-    }
-    img:last-child{
-      position: absolute;
-      top: 2rem;
+  ion-toolbar{
+    padding: 0!important;
+    .top-img{
+      img{
+        width: 100%;
+        max-height: 46vh;
+      }
+      img:last-child{
+        position: absolute;
+        top: 2rem;
+      }
     }
   }
+
 
   .circle-row{
     .row-img{
@@ -17,7 +22,7 @@ page-circle {
     }
 
     ion-col p:first-child{
-      font-size: 17px;
+      font-size: 15px;
       font-weight: bold;
       color: #111111;
     }

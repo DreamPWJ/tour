@@ -24,7 +24,7 @@ export class OrderPage {
   swipeEvnet(event) {
     //向左滑
     if (event.direction == 2) {
-      if (this.orderArr.indexOf(this.orderseg) < 4) {
+      if (this.orderArr.indexOf(this.orderseg) < 3) {
         this.orderseg = this.orderArr[this.orderArr.indexOf(this.orderseg) + 1];
       }
     }

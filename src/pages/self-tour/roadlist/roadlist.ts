@@ -95,7 +95,7 @@ export class RoadlistPage {
   swipeEvnet(event) {
     //向左滑
     if (event.direction == 2) {
-      if (this.roadsegArr.indexOf(this.roadseg) < 7) {
+      if (this.roadsegArr.indexOf(this.roadseg) < 6) {
         this.roadseg = this.roadsegArr[this.roadsegArr.indexOf(this.roadseg) + 1];
       }
     }

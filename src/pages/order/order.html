@@ -138,11 +138,8 @@
       </ion-grid>
       <p class="partition"></p>
     </div>
-    <ion-scroll scrollY="true" style="height: 60vh" *ngSwitchCase="'未付款'" padding="">未付款
-    </ion-scroll>
-    <ion-scroll scrollY="true" style="height: 60vh" *ngSwitchCase="'未完成'" padding>未完成
-    </ion-scroll>
-    <ion-scroll scrollY="true" style="height: 60vh" *ngSwitchCase="'待点评'" padding>待点评
-    </ion-scroll>
+    <div *ngSwitchCase="'未付款'">未付款</div>
+    <div *ngSwitchCase="'未完成'">未完成</div>
+    <div *ngSwitchCase="'待点评'">待点评</div>
   </div>
 </ion-content>

@@ -37,14 +37,14 @@ export class MyCollectPage {
       title: '纳木错', time: '2018-02-12', type: '线路'},
   ];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+
   segmentChanged(event){}
 
   swipeEvent(event) {
     //向左滑
     if (event.direction == 2) {
-      if (this.collectArr.indexOf(this.collect) < 4) {
+      if (this.collectArr.indexOf(this.collect) < 3) {
         this.collect = this.collectArr[this.collectArr.indexOf(this.collect) + 1];
       }
     }

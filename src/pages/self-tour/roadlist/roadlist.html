@@ -31,7 +31,7 @@
     </ion-segment-button>
   </ion-segment>
   <div [ngSwitch]="roadseg" (swipe)="swipeEvnet($event)">
-    <ion-scroll scrollY="true" style="height: 82vh" *ngSwitchCase="'全部'">
+    <ion-scroll style="height: 82vh" *ngSwitchCase="'全部'">
       <ion-list>
         <ion-item *ngFor="let road of roadList">
           <ion-row no-margin (click)="goRoadDetail(road.title)">
@@ -51,34 +51,20 @@
               </ion-row>
             </ion-col>
           </ion-row>
-
-          <!--<ion-thumbnail item-start class="roadlist-img">
-            <img [src]="road.roadImageUrl" >
-          </ion-thumbnail>
-          <h2>{{road.title}}</h2>
-          <p text-wrap>{{road.content}}</p>
-          <ion-row>
-            <ion-col col-7>
-              <p>{{road.ticket}}</p>
-            </ion-col>
-            <ion-col>
-              <p style="margin-top: -0.5rem;"><span style="color: red;font-size: 18px;">{{road.price}}</span> 起</p>
-            </ion-col>
-          </ion-row>-->
         </ion-item>
       </ion-list>
     </ion-scroll>
-    <ion-scroll scrollY="true" style="height: 60vh" *ngSwitchCase="'当季'" padding="">当季
+    <ion-scroll style="height: 82vh" *ngSwitchCase="'当季'" padding="">当季
     </ion-scroll>
-    <ion-scroll scrollY="true" style="height: 60vh" *ngSwitchCase="'热门'" padding>热门
+    <ion-scroll style="height: 82vh" *ngSwitchCase="'热门'" padding>热门
     </ion-scroll>
-    <ion-scroll scrollY="true" style="height: 60vh" *ngSwitchCase="'朝圣'" padding>朝圣
+    <ion-scroll style="height: 82vh" *ngSwitchCase="'朝圣'" padding>朝圣
     </ion-scroll>
-    <ion-scroll scrollY="true" style="height: 60vh" *ngSwitchCase="'亲子'" padding>亲子
+    <ion-scroll style="height: 82vh" *ngSwitchCase="'亲子'" padding>亲子
     </ion-scroll>
-    <ion-scroll scrollY="true" style="height: 60vh" *ngSwitchCase="'拓展'" padding>拓展
+    <ion-scroll style="height: 82vh" *ngSwitchCase="'拓展'" padding>拓展
     </ion-scroll>
-    <ion-scroll scrollY="true" style="height: 60vh" *ngSwitchCase="'摄影'" padding>摄影
+    <ion-scroll style="height: 60vh" *ngSwitchCase="'摄影'" padding>摄影
     </ion-scroll>
   </div>
 

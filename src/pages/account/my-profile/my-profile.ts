@@ -95,7 +95,7 @@ export class MyProfilePage {
     }
     //向左滑
     if (event.direction == 2) {
-      if (this.segmentArr.indexOf(this.segment) < 3) {
+      if (this.segmentArr.indexOf(this.segment) < 2) {
         this.segment = this.segmentArr[this.segmentArr.indexOf(this.segment) + 1];
       }
     }

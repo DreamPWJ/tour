@@ -8,16 +8,19 @@
     </ion-buttons>
   </ion-navbar>
   <p class="div-border"></p>
+  <ion-toolbar color="white" no-padding>
+    <ion-segment [(ngModel)]="collect" mode="md" (ionChange)="segmentChanged($event)">
+      <ion-segment-button *ngFor="let item of collectArr" value="{{item}}">
+        {{item}}
+        <div class="bolder-sm"></div>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-segment [(ngModel)]="collect" mode="md" (ionChange)="segmentChanged($event)">
-    <ion-segment-button *ngFor="let item of collectArr" value="{{item}}">
-      {{item}}
-      <div class="bolder-sm"></div>
-    </ion-segment-button>
-  </ion-segment>
+
   <div [ngSwitch]="collect" (swipe)="swipeEvent($event)">
-    <ion-scroll scrollY="true" style="height: 82vh" *ngSwitchCase="'全部'">
+    <div *ngSwitchCase="'全部'" class="padding-t-1">
       <ion-list>
         <ion-item *ngFor="let item of collectList">
           <ion-row align-items-center [navPush]="'CircleCarpoolPage'">
@@ -35,9 +38,9 @@
           </ion-row>
         </ion-item>
       </ion-list>
-    </ion-scroll>
-    <ion-scroll scrollY="true" style="height: 82vh" *ngSwitchCase="'线路'">线路</ion-scroll>
-    <ion-scroll scrollY="true" style="height: 82vh" *ngSwitchCase="'商品'">商品</ion-scroll>
-    <ion-scroll scrollY="true" style="height: 82vh" *ngSwitchCase="'游记'">游记</ion-scroll>
+    </div>
+    <div *ngSwitchCase="'线路'" padding>线路</div>
+    <div *ngSwitchCase="'商品'" padding>商品</div>
+    <div *ngSwitchCase="'游记'" padding>游记</div>
   </div>
 </ion-content>
