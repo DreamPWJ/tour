@@ -110,7 +110,7 @@ page-guide-menu {
     border-radius: 3px;
     font-size: 11px;
     color: #fff;
-    background: -webkit-linear-gradient(left, #DF0807, #FC7163); /* Safari 5.1 - 6.0 */
+    background: -webkit-linear-gradient( to right, #DF0807, #FC7163); /* Safari 5.1 - 6.0 */
     background: linear-gradient(to right, #DF0807, #FC7163); /* 标准的语法（必须放在最后） */
   }
 
@@ -121,7 +121,7 @@ page-guide-menu {
     border-radius: 3px;
     font-size: 11px;
     color: #fff;
-    background: -webkit-linear-gradient(left, #528BFB, #7DA8FF); /* Safari 5.1 - 6.0 */
+    background: -webkit-linear-gradient( to right, #528BFB, #7DA8FF); /* Safari 5.1 - 6.0 */
     background: linear-gradient(to right, #528BFB, #7DA8FF); /* 标准的语法（必须放在最后） */
   }
 }

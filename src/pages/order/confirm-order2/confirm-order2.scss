@@ -7,7 +7,7 @@ page-confirm-order2 {
   }
   .title-bk{
     color: #ffffff;
-    background: -webkit-linear-gradient(left, #9881d6, #6b94f7); /* Safari 5.1 - 6.0 */
+    background: -webkit-linear-gradient(to right, #9881d6, #6b94f7); /* Safari 5.1 - 6.0 */
     background: linear-gradient(to right, #9881d6, #6b94f7); /* 标准的语法（必须放在最后） */
     padding: 16px 12px;
     span{
@@ -109,7 +109,7 @@ page-confirm-order2 {
   .youhuiquan {
     color: #fff;
     font-size: 13px;
-    background: -webkit-linear-gradient(left, #7396f7, #a082f7); /* Safari 5.1 - 6.0 */
+    background: -webkit-linear-gradient( to right, #7396f7, #a082f7); /* Safari 5.1 - 6.0 */
     background: linear-gradient(to right, #7396f7, #a082f7); /* 标准的语法（必须放在最后） */
     padding:5px 8px;border-radius: 3px;
   }

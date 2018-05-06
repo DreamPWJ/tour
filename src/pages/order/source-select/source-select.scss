@@ -164,11 +164,11 @@ page-source-select {
   .hotel-btn {
     color: #ffffff;
     span:first-child {
-      background: -webkit-linear-gradient(left, #7396f7, #a182f6); /* Safari 5.1 - 6.0 */
+      background: -webkit-linear-gradient( to right, #7396f7, #a182f6); /* Safari 5.1 - 6.0 */
       background: linear-gradient(to right, #7396f7, #a182f6); /* 标准的语法（必须放在最后） */
     }
     span:last-child {
-      background: -webkit-linear-gradient(left, #a281f6, #ec739c); /* Safari 5.1 - 6.0 */
+      background: -webkit-linear-gradient( to right, #a281f6, #ec739c); /* Safari 5.1 - 6.0 */
       background: linear-gradient(to right, #a281f6, #ec739c); /* 标准的语法（必须放在最后） */
     }
   }
@@ -180,7 +180,7 @@ page-source-select {
   .tour-btn {
     span:nth-child(1) {
       color: #ffffff;
-      background: -webkit-linear-gradient(left, #7396f7, #a182f6); /* Safari 5.1 - 6.0 */
+      background: -webkit-linear-gradient( to right, #7396f7, #a182f6); /* Safari 5.1 - 6.0 */
       background: linear-gradient(to right, #7396f7, #a182f6); /* 标准的语法（必须放在最后） */
     }
     span:nth-child(2) {

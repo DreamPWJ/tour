@@ -78,16 +78,16 @@ page-road-detail {
 
   .detail-btn1 {
     color: #fff;
-    background: -webkit-linear-gradient(left, #6b96fe, #a581fe); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(right, #6b96fe, #a581fe); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(right, #6b96fe, #a581fe); /* Firefox 3.6 - 15 */
+    background: -webkit-linear-gradient( to right, #6b96fe, #a581fe); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(to right, #6b96fe, #a581fe); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(to right, #6b96fe, #a581fe); /* Firefox 3.6 - 15 */
     background: linear-gradient(to right, #6b96fe, #a581fe); /* 标准的语法（必须放在最后） */
   }
   .detail-btn2 {
     color: #fff;
-    background: -webkit-linear-gradient(left, #ab7ffa, #fd6a9d); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(right, #ab7ffa, #fd6a9d); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(right, #ab7ffa, #fd6a9d); /* Firefox 3.6 - 15 */
+    background: -webkit-linear-gradient( to right, #ab7ffa, #fd6a9d); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(to right, #ab7ffa, #fd6a9d); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(to right, #ab7ffa, #fd6a9d); /* Firefox 3.6 - 15 */
     background: linear-gradient(to right, #ab7ffa, #fd6a9d); /* 标准的语法（必须放在最后） */
   }
   .detail-btn3 {

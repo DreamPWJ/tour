@@ -389,13 +389,13 @@ page-self-tour {
         color: #fff;
         font-size: 1.3rem;
         &.one {
-          background: -webkit-linear-gradient(right, #6F96FB, #A67EF8);
-          background: linear-gradient(right, #6F96FB, #A67EF8);
+          background: -webkit-linear-gradient(to right, #6F96FB, #A67EF8);
+          background: linear-gradient(to right, #6F96FB, #A67EF8);
         }
 
         &.two {
-          background: -webkit-linear-gradient(right, #A67EF8, #F76A9E);
-          background: linear-gradient(right, #A67EF8, #F76A9E);
+          background: -webkit-linear-gradient(to right, #A67EF8, #F76A9E);
+          background: linear-gradient(to right, #A67EF8, #F76A9E);
         }
 
         &.three {

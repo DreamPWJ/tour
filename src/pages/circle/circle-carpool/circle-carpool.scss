@@ -42,7 +42,7 @@ page-circle-carpool {
 
       button:last-child{
         color: #fff;
-        background: -webkit-linear-gradient(left, #6b96fe, #a581fe); /* Safari 5.1 - 6.0 */
+        background: -webkit-linear-gradient(to right, #6b96fe, #a581fe); /* Safari 5.1 - 6.0 */
         background: linear-gradient(to right, #6b96fe, #a581fe); /* 标准的语法（必须放在最后） */
       }
     }
