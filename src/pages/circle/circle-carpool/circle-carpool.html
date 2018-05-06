@@ -19,7 +19,7 @@
     </ion-buttons>
   </ion-toolbar>
   <!--<p class="div-border"></p>-->
-  <ion-toolbar color="white">
+  <ion-toolbar color="white" [hidden]="carpool=='聊天'">
     <ion-row align-items-center text-center>
       <ion-col>我的拼车</ion-col>
       <ion-col col-1 class="color-8a">|</ion-col>
@@ -28,7 +28,6 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-
   <div [ngSwitch]="carpool" (swipe)="swipeEvent($event)">
     <div *ngSwitchCase="'聊天'" padding>聊天</div>
     <div *ngSwitchCase="'去拼车'">
@@ -65,14 +64,13 @@
           </ion-col>
         </ion-row>
       </div>
+      <div class="color-f9" padding></div>
+      <div class="release"><img src="assets/imgs/circle/16发布按钮.png"/></div>
     </div>
-
   </div>
-
-
-  <ion-fab bottom center>
+  <!--<ion-fab bottom center>
     <button ion-fab mini>
       <ion-icon class="icon-add"></ion-icon>
     </button>
-  </ion-fab>
+  </ion-fab>-->
 </ion-content>

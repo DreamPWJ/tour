@@ -63,4 +63,18 @@ page-circle-carpool {
   .margin-t-5{
     margin: 5px 0 0 0!important;
   }
+
+  .color-f9{
+    background-color: #F9F9F9;
+  }
+
+  .release{
+    position: fixed;
+    bottom: -5px;text-align: center;
+    width: 100%;
+    img{
+      width: 13%;
+      height: 13%;
+    }
+  }
 }
