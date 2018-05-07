@@ -7,14 +7,12 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-  <ion-toolbar>
-    <div class="top-img">
-      <img src="assets/imgs/circle/01沙漠背景.png"/>
-      <img src="assets/imgs/circle/02沙漠上遮盖可移动图层.png"/>
-    </div>
-  </ion-toolbar>
+
 </ion-header>
-<ion-content>
+<ion-content >
+  <div class="top-img">
+    <img src="assets/imgs/circle/02沙漠上遮盖可移动图层.png"/>
+  </div>
   <ion-card *ngFor="let item of circleList">
     <ion-row align-items-center class="circle-row" [navPush]="'DestinationPage'">
       <ion-col col-auto>
