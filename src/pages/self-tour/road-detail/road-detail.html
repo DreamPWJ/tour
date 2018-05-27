@@ -55,7 +55,7 @@
     </ion-segment-button>
   </ion-segment>
   <div [ngSwitch]="roadDetailseg" class="price-tab-content">
-    <div style="height: 182px" *ngSwitchCase="'豪华游'" padding="">
+    <div style="height: 190px" *ngSwitchCase="'豪华游'" padding="">
       <ion-row align-items-center>
         <ion-col class="font-size-16">出发日期及价格</ion-col>
         <ion-col text-right><span class="color-8a">以下价格均为起价 <ion-icon class="icon-tishi" style="color: #6fb5e9"></ion-icon></span>
@@ -172,7 +172,7 @@
     </ion-col>
   </ion-row>
   <p class="partition"></p>
-  <ion-grid ngClass="{{menuFlg?'menu-left-abso':''}}">
+  <ion-grid>
     <ion-row style="border: 1px #474747 solid;">
       <ion-col text-center col-3 no-padding>
         <button ion-button clear small class="{{btnFlg==1?'btnFlg-select':'btnFlg-unselect'}}"
@@ -217,21 +217,19 @@
         <div class="grey" *ngIf="zhankaiFlg">
           <!--取车-->
           <p class="div-border padding-l-r-0"></p>
-          <ion-row align-items-center>
-            <ion-col col-1><ion-icon class="icon-i icon-style" text-center></ion-icon></ion-col>
-            <ion-col><span class="day-title">取车 </span> 提供拉萨机场或地铁的送车服务，落地自驾尽享旅游一站式服务体验。</ion-col>
-          </ion-row>
+          <div ion-row align-items-center>
+            <ion-icon class="icon-i icon-style" text-center></ion-icon>
+            <span class="icon-span"><span class="day-title">取车 </span> 提供拉萨机场或地铁的送车服务，落地自驾尽享旅游一站式服务体验。</span>
+          </div>
           <!--行程-->
           <p class="div-border padding-l-r-0"></p>
+          <div ion-row align-items-center>
+            <ion-icon class="icon-ditu icon-style" text-center></ion-icon>
+            <span class="icon-span"><span class="day-title">行程 </span> 拉萨取车，住索松村，途经米拉山口及雅鲁藏布大峡谷</span>
+          </div>
           <ion-row align-items-center>
-            <ion-col col-1><ion-icon class="icon-ditu icon-style" text-center></ion-icon></ion-col>
-            <ion-col>
-              <p no-margin><span class="day-title">行程 </span> 拉萨取车，住索松村，途经米拉山口及雅鲁藏布大峡谷</p>
-            </ion-col>
-          </ion-row>
-          <ion-row align-items-center>
-            <ion-col col-1 class="padding-t-b-0"></ion-col>
-            <ion-col  class="padding-t-b-0">
+            <ion-col col-1 no-padding></ion-col>
+            <ion-col no-padding>
               <p no-margin>行车里程：330公里</p>
               <p no-margin>时间：6小时</p>
             </ion-col>
@@ -239,15 +237,13 @@
           <ion-row padding><img src="assets/imgs/self-tour/18行程栏目地图图片.png" height="150"/></ion-row>
           <!--景点-->
           <p class="div-border padding-l-r-0"></p>
+          <div ion-row align-items-center>
+            <ion-icon class="icon-jingdian icon-style icon-style-jingdian" text-center></ion-icon>
+            <span class="icon-span"><span class="day-title">景点 </span> 米拉山口</span>
+          </div>
           <ion-row align-items-center>
-            <ion-col col-1><ion-icon class="icon-jingdian icon-style icon-style-jingdian" text-center></ion-icon></ion-col>
-            <ion-col>
-              <p no-margin><span class="day-title">景点 </span> 米拉山口</p>
-            </ion-col>
-          </ion-row>
-          <ion-row align-items-center>
-            <ion-col col-1  class="padding-t-b-0"></ion-col>
-            <ion-col  class="padding-t-b-0">
+            <ion-col col-1 no-padding></ion-col>
+            <ion-col no-padding>
               <p no-margin>米拉山口是雅鲁藏布江谷底东西两侧地貌、植被气候重要界山，山口海拔5013米，站在山口，山风劲吹，蓝天白云，五彩经幡，连地接天，将虔诚愿望传到上苍神灵。</p>
               <p no-margin>建议停留时间：30分钟</p>
             </ion-col>
@@ -267,12 +263,10 @@
           </ion-scroll>
           <!--推荐-->
           <p class="div-border padding-l-r-0"></p>
-          <ion-row align-items-center>
-            <ion-col col-1><ion-icon class="icon-appreciate_light icon-style icon-style-tuijian" text-center></ion-icon></ion-col>
-            <ion-col>
-              <p no-margin><span class="day-title">推荐 </span> 当地美食</p>
-            </ion-col>
-          </ion-row>
+          <div ion-row align-items-center>
+            <ion-icon class="icon-appreciate_light icon-style icon-style-tuijian" text-center></ion-icon>
+            <span class="icon-span"><span class="day-title">推荐 </span> 当地美食</span>
+          </div>
           <ion-scroll scrollX="true" class="meishi-scroll">
             <ion-row nowrap>
               <ion-col col-8>
@@ -291,31 +285,25 @@
           </ion-scroll>
           <!--用餐-->
           <p class="div-border padding-l-r-0"></p>
-          <ion-row align-items-center>
-            <ion-col col-1><ion-icon class="icon-canyin icon-style icon-style-canyin" text-center></ion-icon></ion-col>
-            <ion-col>
-              <p no-margin><span class="day-title">用餐 </span> 豪华套餐均涵盖早晚餐，午餐自理。餐饮水平均为当地五星级。</p>
-            </ion-col>
-          </ion-row>
+          <div ion-row align-items-center>
+            <ion-icon class="icon-canyin icon-style icon-style-canyin" text-center></ion-icon>
+            <span class="icon-span"><span class="day-title">用餐 </span> 豪华套餐均涵盖早晚餐，午餐自理。餐饮水平均为当地五星级。</span>
+          </div>
           <!--停车-->
           <p class="div-border padding-l-r-0"></p>
-          <ion-row align-items-center>
-            <ion-col col-1><ion-icon class="icon-tingche icon-style icon-style-tingche" text-center></ion-icon></ion-col>
-            <ion-col>
-              <p no-margin><span class="day-title">停车 </span> 住宿酒店提供停车位，可免费停车</p>
-            </ion-col>
-          </ion-row>
+          <div ion-row align-items-center>
+            <ion-icon class="icon-tingche icon-style icon-style-tingche" text-center></ion-icon>
+            <span class="icon-span"><span class="day-title">停车 </span> 住宿酒店提供停车位，可免费停车</span>
+          </div>
           <!--住宿-->
           <p class="div-border padding-l-r-0"></p>
+          <div ion-row align-items-center>
+            <ion-icon class="icon-Hotel icon-style icon-style-tingche" text-center></ion-icon>
+            <span class="icon-span"><span class="day-title">住宿 </span> 索松村酒店【五星级酒店】(含第二天双早)</span>
+          </div>
           <ion-row align-items-center>
-            <ion-col col-1><ion-icon class="icon-Hotel icon-style icon-style-tingche" text-center></ion-icon></ion-col>
-            <ion-col>
-              <p no-margin><span class="day-title">住宿 </span> 索松村酒店【五星级酒店】(含第二天双早)</p>
-            </ion-col>
-          </ion-row>
-          <ion-row align-items-center>
-            <ion-col col-1></ion-col>
-            <ion-col>
+            <ion-col col-1 no-padding></ion-col>
+            <ion-col no-padding>
               <p no-margin>索松村酒店客房安静、整洁，配以完善高级的设施。同时窗外风景美不胜收，一簇簇艳丽桃花溢满视线，蓝天白云，雪山冰川，与桃花遥相呼应形成静谧的“人间桃花源”。</p>
             </ion-col>
           </ion-row>
@@ -337,6 +325,8 @@
     </div>
   </ion-grid>
 
+  <div ngClass="{{menuFlg?'menu-left-abso':''}}">
+  </div>
   <!--侧边栏-->
   <div *ngIf="menuFlg" class="menu-right-abso">
     <div class="center-icon" (click)="menuFlg=false"><ion-icon class="icon-right" ></ion-icon></div>

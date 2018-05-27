@@ -20,7 +20,7 @@ export class RoadDetailPage {
   currentIndex: number = 1;
   btnFlg: number = 1;
   isTabTop: boolean = false;
-  zhankaiFlg: boolean = false;
+  zhankaiFlg: boolean = true;
   menuFlg:boolean = false;//侧边栏显示隐藏
   menuDay:number = 1;
 
