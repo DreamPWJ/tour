@@ -20,6 +20,9 @@ export class RoadDetailPage {
   currentIndex: number = 1;
   btnFlg: number = 1;
   isTabTop: boolean = false;
+  zhankaiFlg: boolean = false;
+  menuFlg:boolean = false;//侧边栏显示隐藏
+  menuDay:number = 1;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController,
               public  platform: Platform,public  appService: AppService) {

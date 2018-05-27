@@ -31,7 +31,7 @@
     </ion-segment-button>
   </ion-segment>
   <div [ngSwitch]="roadseg" (swipe)="swipeEvnet($event)">
-    <ion-scroll style="height: 82vh" *ngSwitchCase="'全部'">
+    <ion-scroll style="height: 82vh" scrollY="true" *ngSwitchCase="'全部'">
       <ion-list>
         <ion-item *ngFor="let road of roadList">
           <ion-row no-margin (click)="goRoadDetail(road.title)">
